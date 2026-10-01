@@ -2,8 +2,8 @@ import { profile } from "@/data/portfolio";
 
 const links = [
   { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Work" },
+  { href: "#skills", label: "Expertise" },
 ];
 
 export default function Nav() {

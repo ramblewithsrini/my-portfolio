@@ -2,14 +2,14 @@ import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import {
+  education,
   experience,
+  marquee,
   profile,
   projects,
   skills,
   stats,
 } from "@/data/portfolio";
-
-const allSkills = skills.flatMap((s) => s.items);
 
 export default function Home() {
   return (
@@ -60,12 +60,21 @@ export default function Home() {
               >
                 View my work
               </a>
-              <a
-                href={profile.resumeUrl}
-                className="rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:border-foreground"
-              >
-                Download résumé
-              </a>
+              {profile.resumeUrl ? (
+                <a
+                  href={profile.resumeUrl}
+                  className="rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:border-foreground"
+                >
+                  Download résumé
+                </a>
+              ) : (
+                <a
+                  href="#contact"
+                  className="rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:border-foreground"
+                >
+                  Get in touch
+                </a>
+              )}
             </Reveal>
             <Reveal intro delay={500}>
               <dl className="mt-16 grid max-w-xl grid-cols-3 gap-6 border-t border-border pt-8">
@@ -89,7 +98,7 @@ export default function Home() {
           aria-hidden
         >
           <div className="animate-marquee flex w-max gap-10 whitespace-nowrap font-display text-2xl font-bold uppercase">
-            {[...allSkills, ...allSkills].map((s, i) => (
+            {[...marquee, ...marquee].map((s, i) => (
               <span key={i} className="flex items-center gap-10">
                 {s} <span>✦</span>
               </span>
@@ -109,9 +118,11 @@ export default function Home() {
                     {job.start} — {job.end}
                   </p>
                   <h3 className="mt-1 font-display text-2xl font-bold sm:text-3xl">
-                    {job.role}{" "}
-                    <span className="text-accent">@ {job.company}</span>
+                    {job.role}
                   </h3>
+                  <p className="mt-1 font-display text-lg font-medium text-accent">
+                    {job.company}
+                  </p>
                   <ul className="mt-4 max-w-3xl space-y-2 text-muted">
                     {job.highlights.map((h) => (
                       <li key={h} className="flex gap-3">
@@ -128,7 +139,7 @@ export default function Home() {
 
         {/* Projects */}
         <section id="projects" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-          <SectionHeading index="02" title="Projects" />
+          <SectionHeading index="02" title="Selected Work" />
           <div className="grid gap-6 md:grid-cols-2">
             {projects.map((p, i) => (
               <Reveal key={p.title} delay={(i % 2) * 100}>
@@ -138,9 +149,12 @@ export default function Home() {
                     aria-hidden
                   />
                   <span className="font-display text-sm text-muted">
-                    {String(i + 1).padStart(2, "0")}
+                    {String(i + 1).padStart(2, "0")} · {p.client}
                   </span>
-                  <h3 className="mt-3 font-display text-3xl font-bold tracking-tight">
+                  <p className="text-gradient mt-4 font-display text-2xl font-bold tracking-tight">
+                    {p.impact}
+                  </p>
+                  <h3 className="mt-2 font-display text-3xl font-bold tracking-tight">
                     {p.title}
                   </h3>
                   <p className="mt-3 flex-1 leading-relaxed text-muted">
@@ -156,18 +170,16 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-6 flex gap-5 text-sm font-semibold">
-                    {p.href && (
-                      <a href={p.href} target="_blank" rel="noreferrer" className="text-accent hover:underline">
-                        Live ↗
-                      </a>
-                    )}
-                    {p.repo && (
-                      <a href={p.repo} target="_blank" rel="noreferrer" className="hover:text-accent">
-                        Code ↗
-                      </a>
-                    )}
-                  </div>
+                  {p.href && (
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-6 text-sm font-semibold text-accent hover:underline"
+                    >
+                      Read more ↗
+                    </a>
+                  )}
                 </article>
               </Reveal>
             ))}
@@ -176,7 +188,7 @@ export default function Home() {
 
         {/* Skills */}
         <section id="skills" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-          <SectionHeading index="03" title="Skills" />
+          <SectionHeading index="03" title="Expertise" />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {skills.map((g, i) => (
               <Reveal key={g.group} delay={i * 80}>
@@ -195,6 +207,16 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+          <Reveal className="mt-6 flex flex-col gap-3 rounded-3xl border border-border p-7 sm:flex-row sm:items-center sm:gap-8">
+            <h3 className="font-display text-lg font-bold text-accent">
+              Education &amp; Certifications
+            </h3>
+            <ul className="flex flex-wrap gap-x-8 gap-y-2 text-foreground/90">
+              {education.map((e) => (
+                <li key={e}>{e}</li>
+              ))}
+            </ul>
+          </Reveal>
         </section>
 
         {/* Contact */}
@@ -205,11 +227,12 @@ export default function Home() {
               04 — Contact
             </p>
             <h2 className="relative mt-4 font-display text-[clamp(2.5rem,7vw,5.5rem)] leading-none font-bold tracking-tighter">
-              Let&apos;s build something.
+              Let&apos;s talk.
             </h2>
             <p className="relative mx-auto mt-6 max-w-xl text-lg text-white/75">
-              I&apos;m based in {profile.location}. Whether it&apos;s a role, a
-              project, or just a hello — my inbox is open.
+              I&apos;m based in {profile.location}. Whether it&apos;s a leadership
+              role, an advisory engagement or a transformation that needs
+              shaping — my inbox is open.
             </p>
             <a
               href={`mailto:${profile.email}`}

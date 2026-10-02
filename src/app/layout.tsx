@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
 import { profile } from "@/data/portfolio";
 import "./globals.css";
 
@@ -14,7 +16,10 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: `${profile.name} — ${profile.headline}`,
+  title: {
+    default: `${profile.name} — ${profile.headline}`,
+    template: `%s — ${profile.name}`,
+  },
   description: profile.tagline,
 };
 
@@ -24,7 +29,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-      <body className="min-h-full font-sans">{children}</body>
+      <body className="min-h-full font-sans">
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

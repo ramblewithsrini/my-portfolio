@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import CareerTimeline from "@/components/CareerTimeline";
 import Contact from "@/components/Contact";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -11,6 +13,7 @@ import {
   skills,
   stats,
 } from "@/data/portfolio";
+import { formatDuration } from "@/lib/career";
 
 export const metadata: Metadata = {
   title: "Experience",
@@ -112,28 +115,50 @@ export default function ExperiencePage() {
       {/* Experience */}
       <section id="experience" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
         <SectionHeading index="01" title="Experience" />
+        <Reveal className="mb-20">
+          <CareerTimeline />
+        </Reveal>
         <ol className="relative border-l border-border">
           {experience.map((job, i) => (
-            <li key={job.company + job.role} className="relative mb-14 ml-8 last:mb-0">
+            <li key={job.slug} id={job.slug} className="relative mb-14 ml-8 scroll-mt-24 last:mb-0">
               <span className="absolute -left-[39.5px] top-1 h-3.5 w-3.5 rounded-full border-2 border-accent bg-background" />
               <Reveal delay={i * 80}>
-                <p className="font-display text-sm font-medium text-muted">
-                  {job.start} — {job.end}
+                <p className="flex flex-wrap items-center gap-x-3 gap-y-1 font-display text-sm font-medium text-muted">
+                  <span>
+                    {job.start} — {job.end} · {formatDuration(job)}
+                  </span>
+                  <span
+                    className={`rounded-full border px-2.5 py-0.5 text-xs ${
+                      job.type === "in-house"
+                        ? "border-accent/50 text-accent"
+                        : "border-accent-2/50 text-[#c5b8ff]"
+                    }`}
+                  >
+                    {job.type === "in-house" ? "In-house" : "Consulting"}
+                  </span>
                 </p>
-                <h3 className="mt-1 font-display text-2xl font-bold sm:text-3xl">
-                  {job.role}
+                <h3 className="mt-2 font-display text-2xl font-bold sm:text-3xl">
+                  <Link href={`/experience/${job.slug}`} className="hover:text-accent">
+                    {job.role}
+                  </Link>
                 </h3>
                 <p className="mt-1 font-display text-lg font-medium text-accent">
                   {job.company}
                 </p>
                 <ul className="mt-4 max-w-3xl space-y-2 text-muted">
-                  {job.highlights.map((h) => (
+                  {job.highlights.slice(0, 3).map((h) => (
                     <li key={h} className="flex gap-3">
                       <span className="mt-2.5 h-1 w-3 shrink-0 bg-accent-2" />
                       {h}
                     </li>
                   ))}
                 </ul>
+                <Link
+                  href={`/experience/${job.slug}`}
+                  className="mt-5 inline-block font-semibold text-accent hover:underline"
+                >
+                  Read the full story →
+                </Link>
               </Reveal>
             </li>
           ))}

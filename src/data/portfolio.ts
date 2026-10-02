@@ -38,19 +38,29 @@ export const marquee = [
 ];
 
 export type Job = {
+  slug: string; // URL of the role's page: /experience/<slug>
+  short: string; // compact label for the career timeline
+  type: "in-house" | "consulting";
   role: string;
   company: string;
   start: string;
   end: string;
+  startDate: string; // YYYY-MM, used to position the timeline
+  endDate: string; // YYYY-MM
   highlights: string[];
 };
 
 export const experience: Job[] = [
   {
+    slug: "discover",
+    short: "Discover",
+    type: "in-house",
     role: "Head of Technology, Partner Experience & Payments",
     company: "Discover Financial Services (a Capital One company)",
     start: "May 2023",
     end: "Aug 2026",
+    startDate: "2023-05",
+    endDate: "2026-08",
     highlights: [
       "Owned the target architecture and transition roadmap for partner-enablement and payment platforms processing 200M transactions a day at 10K+ TPS.",
       "Led and coached a 30-person architecture and engineering organisation through Architecture and Engineering Managers.",
@@ -60,10 +70,15 @@ export const experience: Job[] = [
     ],
   },
   {
+    slug: "ricoh",
+    short: "Ricoh",
+    type: "in-house",
     role: "Lead Solution Architect",
     company: "Ricoh Europe",
     start: "Sep 2020",
     end: "May 2023",
+    startDate: "2020-09",
+    endDate: "2023-05",
     highlights: [
       "Shaped the Oracle Cloud migration and integration strategy for a multiyear $500M transformation.",
       "Modernised HR and corporate platforms including SAP SuccessFactors and ServiceNow.",
@@ -71,10 +86,15 @@ export const experience: Job[] = [
     ],
   },
   {
+    slug: "pitney-bowes",
+    short: "Pitney Bowes",
+    type: "consulting",
     role: "Senior Architect, Client Advisory & Pre-Sales",
     company: "Pitney Bowes",
     start: "Jan 2018",
     end: "Apr 2020",
+    startDate: "2018-01",
+    endDate: "2020-04",
     highlights: [
       "Client-facing architecture adviser to financial services clients including HSBC, MUFG and Broadridge.",
       "Architected GDPR, KYC and finance-screening solutions built on data governance and master data management.",
@@ -82,30 +102,45 @@ export const experience: Job[] = [
     ],
   },
   {
+    slug: "allianz",
+    short: "Allianz",
+    type: "in-house",
     role: "Senior Digital Architect & Product Manager",
     company: "Allianz Insurance",
     start: "Nov 2014",
     end: "Dec 2017",
+    startDate: "2014-11",
+    endDate: "2017-12",
     highlights: [
       "Defined the vision, target operating model and capability roadmap for Allianz UK shared digital services.",
       "Led multidisciplinary teams across customer data, master data and reusable digital services.",
     ],
   },
   {
+    slug: "interglobe",
+    short: "InterGlobe",
+    type: "consulting",
     role: "Head of Enterprise Architecture, Europe",
     company: "InterGlobe Technologies",
     start: "Mar 2010",
     end: "Oct 2014",
+    startDate: "2010-03",
+    endDate: "2014-10",
     highlights: [
       "Led a 15-person consulting architecture team across the UK, US and India for clients including Travelport and SITA.",
       "Supported pre-sales and proposals for opportunities worth $2M to $20M.",
     ],
   },
   {
+    slug: "tcs",
+    short: "TCS",
+    type: "consulting",
     role: "Architect Lead / Manager",
     company: "Tata Consultancy Services",
     start: "Mar 2001",
     end: "Feb 2010",
+    startDate: "2001-03",
+    endDate: "2010-02",
     highlights: [
       "Progressed from hands-on Developer to Architect Lead / Manager over nine years.",
       "Managed a $25M integration programme for Saudia integrating 112 systems, including Amadeus and Sabre.",

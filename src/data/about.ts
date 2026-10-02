@@ -3,18 +3,89 @@
 
 export const intro = {
   eyebrow: "About me",
-  title: "Twenty-five years in.",
-  titleAccent: "Still building.",
-  lead: "I'm Srini — an architecture and engineering leader who has spent a career turning complex technology estates into decisions a business can fund and teams can deliver. I started as a developer at TCS in 2001; most recently I led a 30-person architecture and engineering organisation for payment platforms processing 200M transactions a day.",
+  title: "Fluent at sea level.",
+  titleAccent: "Trusted at 30,000 feet.", // non-breaking space keeps "30,000 feet" together
+  lead: "I'm Srini. I started as a developer in 2001, grew into an architect, and went on to lead the architects and engineers who build payment platforms at scale. That path means I can go deep into the code with an engineer in the morning, make the investment case to an executive board in the afternoon — and translate faithfully between the two.",
 };
 
 export const glance = [
+  { label: "Path", value: "Developer → Architect → Technology leader" },
   { label: "Based in", value: "London, UK" },
   { label: "Experience", value: "25 years · 15+ in consulting" },
   { label: "Focus", value: "Financial services & payments" },
   { label: "Clearance", value: "Eligible for SC" },
   { label: "Status", value: "Open to new opportunities" },
 ];
+
+export const progression = {
+  title: "From code to leadership",
+  lead: "Every step up the ladder added a wider view — without giving up the one before it. That's the strength I bring: a technology leader with an engineer's instincts and an architect's eye.",
+  stages: [
+    {
+      role: "Developer",
+      altitude: "Sea level",
+      era: "TCS · from 2001",
+      body: "I started by writing and shipping code for enterprise integration. I learned how systems really behave under load — and exactly how they fail.",
+      strength: "Engineers trust my judgement because I've done their job.",
+    },
+    {
+      role: "Architect",
+      altitude: "The systems view",
+      era: "TCS to Ricoh Europe",
+      body: "I moved from components to whole estates — integrating 112 systems for Saudia, designing data and regulatory platforms for global banks, and shaping a $500M cloud transformation.",
+      strength: "I see how every decision ripples across platforms, data and teams.",
+    },
+    {
+      role: "Technology leader",
+      altitude: "30,000 feet",
+      era: "InterGlobe to Discover",
+      body: "I now lead the people who do that work. Most recently, a 30-person organisation of architects and engineers, led through Architecture and Engineering Managers, for platforms processing 200M transactions a day.",
+      strength: "Executives get strategy grounded in engineering reality.",
+    },
+  ],
+};
+
+export const altitude = {
+  title: "The advantage of both altitudes",
+  seaLevel: {
+    label: "At sea level",
+    items: [
+      "Reviewing designs in detail with engineers",
+      "Triaging high-severity incidents through to root cause",
+      "Turning PCI DSS 4.0 requirements into real controls",
+      "Rolling up my sleeves to unblock a stubborn problem",
+    ],
+  },
+  highLevel: {
+    label: "At 30,000 feet",
+    items: [
+      "Building investment cases that win Investment Council approval",
+      "Owning target architecture and multi-year roadmaps",
+      "Leading build-buy-partner decisions with strategic vendors",
+      "Directing a £40M, 144-platform convergence programme",
+    ],
+  },
+  bridge:
+    "Most leaders are comfortable at one altitude. My value is moving between them in the same day — so strategy stays honest, and engineering stays aligned to what the business needs.",
+};
+
+export const consulting = {
+  title: "Consulting and pre-sales, built in",
+  body: "Before leading in-house, I spent 15+ years in client-facing consulting at TCS, InterGlobe and Pitney Bowes. I learned to listen first, shape a proposition, size a solution honestly — and then deliver what was sold.",
+  stats: [
+    { value: "$50M", label: "In wins I contributed to at TCS" },
+    { value: "$2–25M", label: "Opportunities shaped across TCS and InterGlobe" },
+    { value: "$25M", label: "Saudia programme delivered across 112 systems" },
+  ],
+  capabilities: [
+    "Proposals & RFP/RFI responses",
+    "Solution sizing",
+    "Proof-of-concept leadership",
+    "Executive presentations",
+    "Trusted-adviser relationships",
+  ],
+  clients: ["HSBC", "MUFG", "Broadridge", "Travelport", "SITA", "Saudia", "Qwest"],
+};
 
 export const philosophy = {
   title: "Leadership philosophy",

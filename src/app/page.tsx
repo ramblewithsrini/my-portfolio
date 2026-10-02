@@ -3,13 +3,16 @@ import Contact from "@/components/Contact";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import {
+  altitude,
   buildLog,
+  consulting,
   glance,
   intro,
   journey,
   now,
   philosophy,
   principles,
+  progression,
   why,
 } from "@/data/about";
 import { relationshipLabels, testimonials } from "@/data/testimonials";
@@ -40,7 +43,7 @@ export default function AboutPage() {
               </p>
             </Reveal>
             <Reveal intro delay={100}>
-              <h1 className="font-display text-[clamp(2.75rem,8vw,6.5rem)] leading-[0.95] font-bold tracking-tighter">
+              <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.98] font-bold tracking-tighter">
                 {intro.title}
                 <br />
                 <span className="text-gradient">{intro.titleAccent}</span>
@@ -86,9 +89,140 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Progression */}
+      <section id="progression" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
+        <SectionHeading index="01" title={progression.title} />
+        <Reveal>
+          <p className="max-w-3xl text-xl leading-relaxed text-foreground/85 sm:text-2xl">
+            {progression.lead}
+          </p>
+        </Reveal>
+
+        {/* Three stages, rising in altitude */}
+        <ol className="mt-16 grid gap-6 lg:grid-cols-3 lg:items-end">
+          {progression.stages.map((st, i) => (
+            <li key={st.role} className={i === 1 ? "lg:mb-10" : i === 2 ? "lg:mb-20" : ""}>
+              <Reveal
+                delay={i * 120}
+                className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface p-8"
+              >
+                <div
+                  className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-accent to-accent-2"
+                  style={{ opacity: 0.35 + i * 0.3 }}
+                  aria-hidden
+                />
+                <div className="flex items-center justify-between gap-3 text-xs font-medium uppercase tracking-widest">
+                  <span className="text-accent">{st.altitude}</span>
+                  <span className="text-muted">{st.era}</span>
+                </div>
+                <h3 className="mt-5 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+                  <span className="mr-3 text-accent-2">{String(i + 1).padStart(2, "0")}</span>
+                  {st.role}
+                </h3>
+                <p className="mt-4 flex-1 leading-relaxed text-muted">{st.body}</p>
+                <p className="mt-6 border-t border-border pt-4 font-medium">
+                  <span className="mb-1 block text-xs font-medium uppercase tracking-widest text-muted">
+                    Strength carried forward
+                  </span>
+                  {st.strength}
+                </p>
+              </Reveal>
+            </li>
+          ))}
+        </ol>
+
+        {/* Sea level vs 30,000 feet */}
+        <Reveal className="mt-24">
+          <h3 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+            {altitude.title}
+          </h3>
+        </Reveal>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {[altitude.seaLevel, altitude.highLevel].map((side, i) => (
+            <Reveal key={side.label} delay={i * 120}>
+              <div
+                className={`h-full rounded-3xl border p-8 ${
+                  i === 0
+                    ? "border-[#5fe3c0]/30 bg-[#5fe3c0]/[0.04]"
+                    : "border-accent-2/40 bg-accent-2/[0.07]"
+                }`}
+              >
+                <p
+                  className={`font-display text-sm font-medium uppercase tracking-widest ${
+                    i === 0 ? "text-[#5fe3c0]" : "text-[#b3a3ff]"
+                  }`}
+                >
+                  {i === 0 ? "▼" : "▲"} {side.label}
+                </p>
+                <ul className="mt-6 space-y-4">
+                  {side.items.map((it) => (
+                    <li key={it} className="flex gap-3 text-lg leading-snug">
+                      <span
+                        className={`mt-2.5 h-1 w-3 shrink-0 ${i === 0 ? "bg-[#5fe3c0]" : "bg-accent-2"}`}
+                        aria-hidden
+                      />
+                      {it}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal className="mt-6">
+          <p className="rounded-3xl border border-accent/40 bg-accent/[0.06] p-8 font-display text-xl leading-snug font-medium sm:text-2xl">
+            {altitude.bridge}
+          </p>
+        </Reveal>
+
+        {/* Consulting & pre-sales */}
+        <Reveal className="mt-24">
+          <div className="relative overflow-hidden rounded-[2rem] border border-border bg-surface p-8 sm:p-12">
+            <div className="grid-bg absolute inset-0 opacity-60" aria-hidden />
+            <div className="relative grid gap-10 lg:grid-cols-[3fr_2fr]">
+              <div>
+                <h3 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+                  {consulting.title}
+                </h3>
+                <p className="mt-5 text-lg leading-relaxed text-foreground/85">
+                  {consulting.body}
+                </p>
+                <ul className="mt-6 flex flex-wrap gap-2">
+                  {consulting.capabilities.map((c) => (
+                    <li
+                      key={c}
+                      className="rounded-full border border-border bg-background/60 px-3 py-1 text-sm text-foreground/85"
+                    >
+                      {c}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <dl className="grid gap-6 self-start sm:grid-cols-3 lg:grid-cols-1">
+                {consulting.stats.map((st) => (
+                  <div key={st.label} className="lg:border-l-2 lg:border-accent lg:pl-5">
+                    <dt className="sr-only">{st.label}</dt>
+                    <dd className="text-gradient font-display text-3xl font-bold sm:text-4xl">
+                      {st.value}
+                    </dd>
+                    <dd className="mt-1 text-sm text-muted">{st.label}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+            <p className="relative mt-10 border-t border-border pt-6 text-sm text-muted">
+              <span className="mr-3 font-medium uppercase tracking-widest text-foreground/70">
+                Clients advised
+              </span>
+              {consulting.clients.join("  ·  ")}
+            </p>
+          </div>
+        </Reveal>
+      </section>
+
       {/* Philosophy */}
       <section id="philosophy" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="01" title={philosophy.title} />
+        <SectionHeading index="02" title={philosophy.title} />
         <Reveal>
           <p className="font-display text-[clamp(2.25rem,6vw,4.75rem)] leading-[1.02] font-bold tracking-tighter">
             {philosophy.headline[0]}
@@ -160,7 +294,7 @@ export default function AboutPage() {
 
       {/* Now */}
       <section className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="02" title={now.title} />
+        <SectionHeading index="03" title={now.title} />
         <div className="grid gap-12 lg:grid-cols-[3fr_2fr]">
           <Reveal className="space-y-6 text-lg leading-relaxed text-foreground/85 sm:text-xl">
             {now.paragraphs.map((p) => (
@@ -186,7 +320,7 @@ export default function AboutPage() {
 
       {/* Why */}
       <section id="why" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="03" title="Why I built this" />
+        <SectionHeading index="04" title="Why I built this" />
         <div className="grid gap-6 md:grid-cols-2">
           {why.map((w, i) => (
             <Reveal key={w.title} delay={i * 100}>
@@ -206,7 +340,7 @@ export default function AboutPage() {
 
       {/* Principles */}
       <section className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="04" title="What 25 years taught me" />
+        <SectionHeading index="05" title="What 25 years taught me" />
         <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {principles.map((p, i) => (
             <Reveal key={p.title} delay={(i % 3) * 80} className="bg-background">
@@ -226,7 +360,7 @@ export default function AboutPage() {
 
       {/* Journey */}
       <section className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="05" title="The journey" />
+        <SectionHeading index="06" title="The journey" />
         <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-7 lg:gap-0">
           {journey.map((j, i) => {
             const isNext = i === journey.length - 1;
@@ -259,7 +393,7 @@ export default function AboutPage() {
 
       {/* Build log */}
       <section className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="06" title={buildLog.title} />
+        <SectionHeading index="07" title={buildLog.title} />
         <div className="grid gap-12 lg:grid-cols-[2fr_3fr]">
           <Reveal>
             <p className="text-xl leading-relaxed text-foreground/85">{buildLog.lead}</p>

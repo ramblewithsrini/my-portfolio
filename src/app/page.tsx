@@ -12,6 +12,10 @@ import {
   principles,
   why,
 } from "@/data/about";
+import { relationshipLabels, testimonials } from "@/data/testimonials";
+
+const teaser = testimonials.find((t) => t.teaser && !t.hidden);
+const testimonialCount = testimonials.filter((t) => !t.hidden).length;
 
 export default function AboutPage() {
   return (
@@ -123,6 +127,35 @@ export default function AboutPage() {
             </li>
           ))}
         </ol>
+        {teaser && (
+          <Reveal className="mt-6">
+            <figure className="relative overflow-hidden rounded-3xl border border-border bg-surface p-8 sm:p-12">
+              <span
+                className="absolute -left-2 -top-10 font-display text-[12rem] leading-none text-accent/10"
+                aria-hidden
+              >
+                “
+              </span>
+              <blockquote className="relative max-w-4xl font-display text-2xl leading-snug font-medium sm:text-3xl">
+                {teaser.teaser}
+              </blockquote>
+              <figcaption className="relative mt-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <p className="font-medium">{teaser.title}</p>
+                  <p className="text-sm text-muted">
+                    {teaser.company} · {relationshipLabels[teaser.relationship]}
+                  </p>
+                </div>
+                <Link
+                  href="/testimonials"
+                  className="font-semibold text-accent hover:underline"
+                >
+                  Read all {testimonialCount} recommendations →
+                </Link>
+              </figcaption>
+            </figure>
+          </Reveal>
+        )}
       </section>
 
       {/* Now */}

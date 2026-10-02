@@ -7,8 +7,7 @@ import { profile } from "@/data/portfolio";
 const links = [
   { href: "/", label: "About" },
   { href: "/experience", label: "Experience" },
-  { href: "/experience#projects", label: "Work", desktopOnly: true },
-  { href: "/experience#skills", label: "Expertise", desktopOnly: true },
+  { href: "/testimonials", label: "Testimonials" },
 ];
 
 export default function Nav() {
@@ -33,9 +32,7 @@ export default function Nav() {
                 key={l.href}
                 href={l.href}
                 aria-current={active ? "page" : undefined}
-                className={`rounded-full px-3 py-2 text-sm transition-colors sm:px-4 ${
-                  l.desktopOnly ? "hidden md:block" : ""
-                } ${active ? "text-foreground" : "text-muted hover:text-foreground"}`}
+                className={`rounded-full px-2.5 py-2 text-sm transition-colors sm:px-4 ${active ? "text-foreground" : "text-muted hover:text-foreground"}`}
               >
                 {l.label}
               </Link>
@@ -43,7 +40,7 @@ export default function Nav() {
           })}
           <a
             href="#contact"
-            className="ml-1 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-background transition-transform hover:scale-105"
+            className="ml-1 hidden rounded-full bg-accent px-4 py-2 text-sm font-semibold text-background transition-transform hover:scale-105 sm:block"
           >
             Contact
           </a>

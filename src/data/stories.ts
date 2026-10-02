@@ -19,6 +19,7 @@ export type Story = {
     approach: string;
     outcome?: string;
   }[];
+  leadershipStory?: { title: string; situation: string; action: string; result: string };
   leadership?: string[]; // how I led: people, coaching, culture
   lessons?: string[];
   tech?: string[];
@@ -110,10 +111,30 @@ export const stories: Record<string, Story> = {
       "ServiceNow",
       "Salesforce",
     ],
+    leadershipStory: {
+      title: "From stressed, siloed teams to one team",
+      situation:
+        "With a heavy delivery agenda, people were stretched and stressed. Teams were working in silos, and collaboration between them had broken down.",
+      action:
+        "I led people first. I made a point of recognising the hard work behind the results, visibly and specifically. When things went wrong, I took ownership of the mistake myself — no blame game.",
+      result:
+        "The friction went out of the system. Without the fear of blame, teams stopped protecting their own boundaries and started collaborating across them.",
+    },
+    leadership: [
+      "Recognise the effort behind the outcome, not just the outcome.",
+      "Own the mistakes as the leader; give the credit to the team.",
+      "No blame game — fix problems together, then learn from them.",
+      "Absorb pressure from above so teams can focus on what matters.",
+    ],
+    lessons: [
+      "Silos are rarely a structure problem — they're a trust problem. Remove the fear of blame and collaboration follows.",
+      "When a leader owns the mistakes and gives away the credit, teams stop protecting themselves and start protecting the outcome.",
+    ],
     quotes: [
       "Srini set clear technical direction and consistently brought the right issues to leadership’s attention, influencing decisions with sound judgment rather than just executing instructions.",
       "Srini led the development of a comprehensive vision for a consolidated customer portal that unified the customer experience, eliminated friction points, and significantly improved overall customer satisfaction.",
       "High-demand work tends to route through a manager first, and instead of passing that pressure down, he absorbed it himself.",
+      "No matter how challenging the situation, he remains cool and helps the team focus on finding the right solution rather than assigning blame.",
     ],
   },
 

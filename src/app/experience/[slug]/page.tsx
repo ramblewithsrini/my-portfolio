@@ -191,8 +191,30 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
           </ul>
         </Section>
 
-        {story.leadership && (
+        {(story.leadershipStory || story.leadership) && (
           <Section title="How I led">
+            {story.leadershipStory && (
+              <article className="mb-8 overflow-hidden rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/[0.08] via-surface to-accent-2/[0.08] p-7 sm:p-9">
+                <h3 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
+                  {story.leadershipStory.title}
+                </h3>
+                <dl className="mt-6 grid gap-6 md:grid-cols-3">
+                  {(
+                    [
+                      ["The situation", story.leadershipStory.situation],
+                      ["What I did", story.leadershipStory.action],
+                      ["What changed", story.leadershipStory.result],
+                    ] as const
+                  ).map(([k, v]) => (
+                    <div key={k}>
+                      <dt className="text-xs font-medium uppercase tracking-widest text-accent">{k}</dt>
+                      <dd className="mt-2 leading-relaxed text-foreground/85">{v}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </article>
+            )}
+            {story.leadership && (
             <ul className="space-y-3 text-lg leading-relaxed text-foreground/85">
               {story.leadership.map((l) => (
                 <li key={l} className="flex gap-3">
@@ -201,6 +223,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
                 </li>
               ))}
             </ul>
+            )}
           </Section>
         )}
 

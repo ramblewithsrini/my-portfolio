@@ -73,10 +73,11 @@ export default function AboutPage() {
           </div>
 
           <Reveal intro delay={400}>
-            <dl className="rounded-3xl border border-border bg-surface/70 p-7 backdrop-blur">
+            <div className="rounded-3xl border border-border bg-surface/70 p-7 backdrop-blur">
               <p className="mb-5 font-display text-sm font-medium uppercase tracking-widest text-muted">
                 At a glance
               </p>
+              <dl>
               {glance.map((g) => (
                 <div
                   key={g.label}
@@ -86,7 +87,8 @@ export default function AboutPage() {
                   <dd className="mt-0.5 font-medium">{g.value}</dd>
                 </div>
               ))}
-            </dl>
+              </dl>
+            </div>
           </Reveal>
         </div>
       </section>

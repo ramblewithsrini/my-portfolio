@@ -105,7 +105,7 @@ export default function TestimonialsPage() {
             href={linkedInRecommendationsUrl}
             target="_blank"
             rel="noreferrer"
-            className="text-accent hover:underline"
+            className="text-accent underline underline-offset-4"
           >
             View the originals on LinkedIn ↗
           </a>

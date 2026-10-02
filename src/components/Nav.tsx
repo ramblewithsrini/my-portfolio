@@ -21,10 +21,10 @@ export default function Nav() {
         <Link
           href="/"
           className="font-display text-lg font-bold tracking-tight"
-          aria-label="Home"
         >
           {profile.initials}
           <span className="text-accent">.</span>
+          <span className="sr-only"> home</span>
         </Link>
         <div className="flex items-center gap-1 sm:gap-2">
           {links.map((l) => {

@@ -198,6 +198,14 @@ export default function ExperiencePage() {
                     </li>
                   ))}
                 </ul>
+                {p.caseStudy && (
+                  <Link
+                    href={`/experience/${p.caseStudy}`}
+                    className="mt-6 text-sm font-semibold text-accent hover:underline"
+                  >
+                    Read the case study →
+                  </Link>
+                )}
                 {p.href && (
                   <a
                     href={p.href}

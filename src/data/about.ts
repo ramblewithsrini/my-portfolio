@@ -17,7 +17,7 @@ export const glance = [
     value: "Regulated industries — fintech, payments, insurtech, airlines, retail",
   },
   { label: "Clearance", value: "Eligible for SC" },
-  { label: "Status", value: "Open to new opportunities" },
+  { label: "Availability", value: "Available immediately" },
 ];
 
 export const uniqueness = {

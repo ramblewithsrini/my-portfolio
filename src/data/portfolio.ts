@@ -9,7 +9,7 @@ export const profile = {
     "25 years turning complex financial-services estates into investment cases, target architectures and executable roadmaps.",
   bio: "Most recently Head of Technology for Partner Experience and Payments at Discover Financial Services, leading a 30-person architecture and engineering organisation — and the data strategy — for platforms processing 200M transactions a day.",
   location: "London, UK",
-  availability: "Open to new opportunities · Eligible for SC Clearance",
+  availability: "Available immediately · Eligible for SC Clearance",
   email: "srini.vankee@gmail.com",
   // Add a PDF at public/resume.pdf and set this to "/resume.pdf" to show the
   // "Download résumé" button.
@@ -158,12 +158,14 @@ export type Project = {
   impact: string;
   description: string;
   tech: string[];
+  caseStudy?: string; // role slug: links the card to /experience/<slug>
   href?: string;
 };
 
 export const projects: Project[] = [
   {
     title: "Post-merger platform convergence",
+    caseStudy: "discover",
     client: "Discover Financial Services",
     impact: "£40M · 144 platforms",
     description:
@@ -172,6 +174,7 @@ export const projects: Project[] = [
   },
   {
     title: "High-throughput payment platforms",
+    caseStudy: "discover",
     client: "Discover & Diners Club",
     impact: "200M txns/day · 10K+ TPS",
     description:
@@ -180,6 +183,7 @@ export const projects: Project[] = [
   },
   {
     title: "Oracle Cloud transformation",
+    caseStudy: "ricoh",
     client: "Ricoh Europe",
     impact: "$500M programme",
     description:
@@ -188,6 +192,7 @@ export const projects: Project[] = [
   },
   {
     title: "Airline systems integration",
+    caseStudy: "tcs",
     client: "Saudia (Saudi Arabian Airlines)",
     impact: "$25M · 112 systems",
     description:
@@ -196,6 +201,7 @@ export const projects: Project[] = [
   },
   {
     title: "Regulatory data solutions",
+    caseStudy: "pitney-bowes",
     client: "HSBC · MUFG · Broadridge",
     impact: "GDPR · KYC",
     description:
@@ -204,6 +210,7 @@ export const projects: Project[] = [
   },
   {
     title: "Governed Agentic AI",
+    caseStudy: "discover",
     client: "Discover Financial Services",
     impact: "Security & audit",
     description:

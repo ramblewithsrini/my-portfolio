@@ -60,7 +60,7 @@ export default function TestimonialWall({ items }: { items: Testimonial[] }) {
                   : "border-border text-muted hover:border-foreground hover:text-foreground"
               }`}
             >
-              {f.label} <span className="opacity-60">{count}</span>
+              {f.label} <span className="opacity-80">{count}</span>
             </button>
           );
         })}

@@ -12,7 +12,10 @@ export const glance = [
   { label: "Path", value: "Developer → Architect → Technology leader" },
   { label: "Based in", value: "London, UK" },
   { label: "Experience", value: "25 years · 15+ in consulting" },
-  { label: "Focus", value: "Financial services & payments" },
+  {
+    label: "Focus",
+    value: "Regulated industries — fintech, payments, insurtech, airlines, retail",
+  },
   { label: "Clearance", value: "Eligible for SC" },
   { label: "Status", value: "Open to new opportunities" },
 ];
@@ -121,8 +124,22 @@ export const now = {
     "Restructuring is something I understand from the inside — I directed the £40M, 144-platform convergence programme after the merger. Being on the other side of it hasn't changed my view: well-run integration is how organisations get stronger.",
     "It has also given me something rare in a 25-year career: time to step back, sharpen my tools and choose my next chapter deliberately.",
   ],
-  lookingFor:
-    "Senior architecture and engineering leadership — in consulting or in-house — in financial services and payments, where I can turn complex estates into investment cases and deliverable roadmaps, and grow the next generation of leaders.",
+  lookingFor: {
+    summary:
+      "Senior roles where I can turn complex estates into investment cases and deliverable roadmaps — and grow the next generation of leaders.",
+    tracks: [
+      {
+        label: "In-house",
+        roles: ["Engineering leadership", "Architecture leadership", "Data leadership"],
+      },
+      {
+        label: "Consulting",
+        roles: ["Pre-sales", "Client engagement", "Customer-facing leadership"],
+      },
+    ],
+    focus:
+      "Sectors: Fintech · Payments · Insurtech · Airlines · Retail — or any regulated environment",
+  },
 };
 
 export const why = [

@@ -310,7 +310,29 @@ export default function AboutPage() {
               <p className="font-display text-sm font-medium uppercase tracking-widest text-accent">
                 What I&apos;m looking for
               </p>
-              <p className="mt-4 text-lg leading-relaxed">{now.lookingFor}</p>
+              <p className="mt-4 text-lg leading-relaxed">{now.lookingFor.summary}</p>
+              <div className="mt-6 space-y-5">
+                {now.lookingFor.tracks.map((t) => (
+                  <div key={t.label}>
+                    <p className="text-xs font-medium uppercase tracking-widest text-muted">
+                      {t.label}
+                    </p>
+                    <ul className="mt-2 flex flex-wrap gap-2">
+                      {t.roles.map((r) => (
+                        <li
+                          key={r}
+                          className="rounded-full border border-accent/40 bg-background/60 px-3 py-1 text-sm font-medium"
+                        >
+                          {r}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 border-t border-accent/20 pt-4 text-sm text-muted">
+                {now.lookingFor.focus}
+              </p>
               <a
                 href="#contact"
                 className="mt-6 inline-block font-semibold text-accent hover:underline"

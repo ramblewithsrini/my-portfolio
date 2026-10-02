@@ -459,12 +459,17 @@ export default function AboutPage() {
               <p className="mt-6 border-t border-accent/20 pt-4 text-sm text-muted">
                 {now.lookingFor.focus}
               </p>
-              <a
-                href="#contact"
-                className="mt-6 inline-block font-semibold text-accent hover:underline"
-              >
-                Start a conversation →
-              </a>
+              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                <Link
+                  href="/what-i-bring"
+                  className="font-semibold text-accent hover:underline"
+                >
+                  The value I bring to each role →
+                </Link>
+                <a href="#contact" className="font-semibold text-foreground/80 hover:underline">
+                  Start a conversation →
+                </a>
+              </div>
             </div>
           </Reveal>
         </div>

@@ -4,9 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { profile } from "@/data/portfolio";
 
-const links = [
+// `short` is the label shown on phones, where space is tight.
+const links: { href: string; label: string; short?: string }[] = [
   { href: "/", label: "About" },
-  { href: "/experience", label: "Experience" },
+  { href: "/what-i-bring", label: "What I bring", short: "Value" },
+  { href: "/experience", label: "Experience", short: "Career" },
   { href: "/testimonials", label: "Testimonials" },
 ];
 
@@ -26,15 +28,23 @@ export default function Nav() {
         </Link>
         <div className="flex items-center gap-1 sm:gap-2">
           {links.map((l) => {
-            const active = l.href === pathname;
+            const active =
+              l.href === "/" ? pathname === "/" : pathname === l.href || pathname.startsWith(`${l.href}/`);
             return (
               <Link
                 key={l.href}
                 href={l.href}
                 aria-current={active ? "page" : undefined}
-                className={`rounded-full px-2.5 py-2 text-sm transition-colors sm:px-4 ${active ? "text-foreground" : "text-muted hover:text-foreground"}`}
+                className={`rounded-full px-2 py-2 text-sm transition-colors sm:px-3 lg:px-4 ${active ? "text-foreground" : "text-muted hover:text-foreground"}`}
               >
-                {l.label}
+                {l.short ? (
+                  <>
+                    <span className="sm:hidden">{l.short}</span>
+                    <span className="hidden sm:inline">{l.label}</span>
+                  </>
+                ) : (
+                  l.label
+                )}
               </Link>
             );
           })}

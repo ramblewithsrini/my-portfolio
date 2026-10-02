@@ -14,6 +14,7 @@ import {
   philosophy,
   principles,
   progression,
+  uniqueness,
   why,
 } from "@/data/about";
 import { relationshipLabels, testimonials } from "@/data/testimonials";
@@ -90,9 +91,133 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Uniqueness */}
+      <section id="different" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
+        <SectionHeading index="01" title={uniqueness.title} />
+        <Reveal>
+          <p className="max-w-5xl font-display text-[clamp(2rem,5vw,3.75rem)] leading-[1.05] font-bold tracking-tighter">
+            {uniqueness.headline}{" "}
+            <span className="text-gradient">{uniqueness.headlineAccent}</span>
+          </p>
+        </Reveal>
+
+        {/* The formula: three pillars joined by "+", then "=" the result */}
+        <div className="mt-16 grid items-stretch gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr]">
+          {uniqueness.pillars.flatMap((p, i) => [
+            <Reveal key={p.title} delay={i * 120} className="h-full">
+              <article className="flex h-full flex-col rounded-3xl border border-border bg-surface p-7">
+                <p className="text-xs font-medium uppercase tracking-widest text-accent">
+                  {p.eyebrow}
+                </p>
+                <h3 className="mt-3 font-display text-2xl font-bold tracking-tight sm:text-3xl">
+                  {p.title}
+                </h3>
+                <p className="mt-3 flex-1 leading-relaxed text-muted">{p.body}</p>
+                <p className="mt-5 border-t border-border pt-4 text-sm text-foreground/80">
+                  <span className="mr-2 text-accent-2">▸</span>
+                  {p.proof}
+                </p>
+              </article>
+            </Reveal>,
+            i < uniqueness.pillars.length - 1 && (
+              <span
+                key={`${p.title}-plus`}
+                className="flex items-center justify-center font-display text-4xl font-bold text-accent-2"
+                aria-hidden
+              >
+                +
+              </span>
+            ),
+          ])}
+        </div>
+        <div className="mt-4 flex flex-col items-stretch gap-4 lg:flex-row lg:items-center">
+          <span
+            className="flex items-center justify-center font-display text-4xl font-bold text-accent lg:w-10"
+            aria-hidden
+          >
+            =
+          </span>
+          <Reveal className="flex-1">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent-2 via-[#4b3bd6] to-[#1b1640] p-8 sm:p-10">
+              <div className="grid-bg absolute inset-0" aria-hidden />
+              <div className="relative grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
+                <div>
+                  <h3 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+                    {uniqueness.result.title}
+                  </h3>
+                  <p className="mt-3 max-w-2xl text-lg leading-relaxed text-white/80">
+                    {uniqueness.result.body}
+                  </p>
+                </div>
+                <ul className="flex flex-wrap gap-2 lg:max-w-xs lg:justify-end">
+                  {uniqueness.result.rooms.map((r) => (
+                    <li
+                      key={r}
+                      className="rounded-full bg-accent px-3 py-1 text-sm font-semibold text-background"
+                    >
+                      {r}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+
+        {/* Both worlds */}
+        <Reveal className="mt-24">
+          <h3 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+            {uniqueness.bothWorlds.title}
+          </h3>
+          <p className="mt-3 max-w-2xl text-lg text-muted">{uniqueness.bothWorlds.lead}</p>
+        </Reveal>
+        <div className="relative mt-10 grid gap-6 md:grid-cols-2">
+          <span
+            className="absolute left-1/2 top-1/2 z-10 hidden h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background font-display text-xl text-accent md:flex"
+            aria-hidden
+          >
+            ⇄
+          </span>
+          {uniqueness.bothWorlds.sides.map((side, i) => (
+            <Reveal key={side.label} delay={i * 120} className="h-full">
+              <div
+                className={`h-full rounded-3xl border p-8 sm:p-10 ${
+                  i === 0
+                    ? "border-accent-2/40 bg-accent-2/[0.07]"
+                    : "border-accent/40 bg-accent/[0.06]"
+                }`}
+              >
+                <p
+                  className={`text-xs font-medium uppercase tracking-widest ${
+                    i === 0 ? "text-[#c5b8ff]" : "text-accent"
+                  }`}
+                >
+                  {side.label}
+                </p>
+                <h4 className="mt-3 font-display text-2xl font-bold tracking-tight sm:text-3xl">
+                  {side.title}
+                </h4>
+                <p className="mt-3 leading-relaxed text-foreground/85">{side.body}</p>
+                <ul className="mt-6 space-y-3">
+                  {side.points.map((pt) => (
+                    <li key={pt} className="flex gap-3 leading-snug">
+                      <span
+                        className={`mt-2 h-1 w-3 shrink-0 ${i === 0 ? "bg-accent-2" : "bg-accent"}`}
+                        aria-hidden
+                      />
+                      {pt}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
       {/* Progression */}
       <section id="progression" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="01" title={progression.title} />
+        <SectionHeading index="02" title={progression.title} />
         <Reveal>
           <p className="max-w-3xl text-xl leading-relaxed text-foreground/85 sm:text-2xl">
             {progression.lead}
@@ -227,7 +352,7 @@ export default function AboutPage() {
 
       {/* Philosophy */}
       <section id="philosophy" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="02" title={philosophy.title} />
+        <SectionHeading index="03" title={philosophy.title} />
         <Reveal>
           <p className="font-display text-[clamp(2.25rem,6vw,4.75rem)] leading-[1.02] font-bold tracking-tighter">
             {philosophy.headline[0]}
@@ -299,7 +424,7 @@ export default function AboutPage() {
 
       {/* Now */}
       <section className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="03" title={now.title} />
+        <SectionHeading index="04" title={now.title} />
         <div className="grid gap-12 lg:grid-cols-[3fr_2fr]">
           <Reveal className="space-y-6 text-lg leading-relaxed text-foreground/85 sm:text-xl">
             {now.paragraphs.map((p) => (
@@ -347,7 +472,7 @@ export default function AboutPage() {
 
       {/* Why */}
       <section id="why" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="04" title="Why I built this" />
+        <SectionHeading index="05" title="Why I built this" />
         <div className="grid gap-6 md:grid-cols-2">
           {why.map((w, i) => (
             <Reveal key={w.title} delay={i * 100}>
@@ -367,7 +492,7 @@ export default function AboutPage() {
 
       {/* Principles */}
       <section className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="05" title="What 25 years taught me" />
+        <SectionHeading index="06" title="What 25 years taught me" />
         <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {principles.map((p, i) => (
             <Reveal key={p.title} delay={(i % 3) * 80} className="bg-background">
@@ -387,7 +512,7 @@ export default function AboutPage() {
 
       {/* Journey */}
       <section className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="06" title="The journey" />
+        <SectionHeading index="07" title="The journey" />
         <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-7 lg:gap-0">
           {journey.map((j, i) => {
             const isNext = i === journey.length - 1;
@@ -420,7 +545,7 @@ export default function AboutPage() {
 
       {/* Build log */}
       <section className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="07" title={buildLog.title} />
+        <SectionHeading index="08" title={buildLog.title} />
         <div className="grid gap-12 lg:grid-cols-[2fr_3fr]">
           <Reveal>
             <p className="text-xl leading-relaxed text-foreground/85">{buildLog.lead}</p>
@@ -461,7 +586,7 @@ export default function AboutPage() {
 
       {/* Beyond work */}
       <section id="beyond-work" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="08" title={beyondWork.title} />
+        <SectionHeading index="09" title={beyondWork.title} />
         <Reveal>
           <p className="max-w-3xl text-xl leading-relaxed text-foreground/85 sm:text-2xl">
             {beyondWork.lead}

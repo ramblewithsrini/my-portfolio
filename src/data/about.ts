@@ -20,6 +20,65 @@ export const glance = [
   { label: "Status", value: "Open to new opportunities" },
 ];
 
+export const uniqueness = {
+  title: "What makes me different",
+  headline: "I've built it, designed it and led it —",
+  headlineAccent: "and I've sat on both sides of the table.",
+  pillars: [
+    {
+      eyebrow: "How I lead",
+      title: "People-centric leader",
+      body: "People first, clarity next, delivery always. I recognise the effort behind the outcome, own the mistakes and keep blame out of the room — so teams collaborate instead of protecting themselves.",
+      proof: "“A true servant leader” — in my team's own words",
+    },
+    {
+      eyebrow: "Where I come from",
+      title: "Grown from the code up",
+      body: "Developer, then architect, then technology leader. I can challenge a design with an engineer at sea level and make the investment case to an executive board at 30,000 feet.",
+      proof: "25 years, from writing code to leading a 30-person organisation",
+    },
+    {
+      eyebrow: "Where I've worked",
+      title: "Both sides of the table",
+      body: "15+ years in consulting and pre-sales, plus in-house leadership at Allianz, Ricoh and Discover. I know how suppliers win and deliver — and how clients buy, fund and own change.",
+      proof: "$50M in pre-sales wins · £40M programme directed in-house",
+    },
+  ],
+  result: {
+    title: "A leader who's credible in every room",
+    body: "The combination is rare: someone engineers trust, executives back, clients believe and suppliers respect — because I've stood where each of them stands.",
+    rooms: ["Engineers", "Architects", "Executives", "Clients", "Vendors"],
+  },
+  bothWorlds: {
+    title: "Two worlds, one perspective",
+    lead: "Whichever side of the table you're on, I bring the view from the other side.",
+    sides: [
+      {
+        label: "For consulting firms",
+        title: "I bring the client's view",
+        body: "I've been the client. I know how buyers evaluate proposals, fund programmes and judge delivery — which makes for propositions that land and engagements clients renew.",
+        points: [
+          "Proposals written from the buyer's side of the table",
+          "Credibility with client CTOs and architecture leaders",
+          "Honest solution sizing — I've lived with the consequences",
+          "Deep domain knowledge in payments, banking, insurance and travel",
+        ],
+      },
+      {
+        label: "For in-house teams",
+        title: "I bring the consultant's edge",
+        body: "I know how suppliers scope, price and staff their work. That makes me a sharper buyer, a better partner, and a leader who brings pace and structure to change.",
+        points: [
+          "Stronger vendor selection, contracts and statements of work",
+          "Build-buy-partner decisions grounded in how vendors really operate",
+          "Business cases and executive storytelling sharpened in pre-sales",
+          "Delivery discipline from fixed-scope client programmes",
+        ],
+      },
+    ],
+  },
+};
+
 export const progression = {
   title: "From code to leadership",
   lead: "Every step up the ladder added a wider view — without giving up the one before it. That's the strength I bring: a technology leader with an engineer's instincts and an architect's eye.",

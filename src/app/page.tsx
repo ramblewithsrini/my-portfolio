@@ -100,15 +100,18 @@ export default function AboutPage() {
 
         {/* Three stages, rising in altitude */}
         <ol className="mt-16 grid gap-6 lg:grid-cols-3 lg:items-end">
-          {progression.stages.map((st, i) => (
-            <li key={st.role} className={i === 1 ? "lg:mb-10" : i === 2 ? "lg:mb-20" : ""}>
+          {progression.stages.map((st, i) => {
+            // Stages are listed most recent first; level 0 = developer (sea level).
+            const level = progression.stages.length - 1 - i;
+            return (
+            <li key={st.role} className={level === 1 ? "lg:mb-10" : level === 2 ? "lg:mb-20" : ""}>
               <Reveal
                 delay={i * 120}
                 className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface p-8"
               >
                 <div
                   className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-accent to-accent-2"
-                  style={{ opacity: 0.35 + i * 0.3 }}
+                  style={{ opacity: 0.35 + level * 0.3 }}
                   aria-hidden
                 />
                 <div className="flex items-center justify-between gap-3 text-xs font-medium uppercase tracking-widest">
@@ -116,7 +119,7 @@ export default function AboutPage() {
                   <span className="text-muted">{st.era}</span>
                 </div>
                 <h3 className="mt-5 font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                  <span className="mr-3 text-accent-2">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="mr-3 text-accent-2">{String(level + 1).padStart(2, "0")}</span>
                   {st.role}
                 </h3>
                 <p className="mt-4 flex-1 leading-relaxed text-muted">{st.body}</p>
@@ -128,7 +131,8 @@ export default function AboutPage() {
                 </p>
               </Reveal>
             </li>
-          ))}
+            );
+          })}
         </ol>
 
         {/* Sea level vs 30,000 feet */}

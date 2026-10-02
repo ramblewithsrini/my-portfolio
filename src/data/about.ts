@@ -21,12 +21,13 @@ export const progression = {
   title: "From code to leadership",
   lead: "Every step up the ladder added a wider view — without giving up the one before it. That's the strength I bring: a technology leader with an engineer's instincts and an architect's eye.",
   stages: [
+    // Most recent first (reverse chronological).
     {
-      role: "Developer",
-      altitude: "Sea level",
-      era: "TCS · from 2001",
-      body: "I started by writing and shipping code for enterprise integration. I learned how systems really behave under load — and exactly how they fail.",
-      strength: "Engineers trust my judgement because I've done their job.",
+      role: "Technology leader",
+      altitude: "30,000 feet",
+      era: "InterGlobe to Discover",
+      body: "I now lead the people who do that work. Most recently, a 30-person organisation of architects and engineers, led through Architecture and Engineering Managers, for platforms processing 200M transactions a day.",
+      strength: "Executives get strategy grounded in engineering reality.",
     },
     {
       role: "Architect",
@@ -36,11 +37,11 @@ export const progression = {
       strength: "I see how every decision ripples across platforms, data and teams.",
     },
     {
-      role: "Technology leader",
-      altitude: "30,000 feet",
-      era: "InterGlobe to Discover",
-      body: "I now lead the people who do that work. Most recently, a 30-person organisation of architects and engineers, led through Architecture and Engineering Managers, for platforms processing 200M transactions a day.",
-      strength: "Executives get strategy grounded in engineering reality.",
+      role: "Developer",
+      altitude: "Sea level",
+      era: "TCS · from 2001",
+      body: "I started by writing and shipping code for enterprise integration. I learned how systems really behave under load — and exactly how they fail.",
+      strength: "Engineers trust my judgement because I've done their job.",
     },
   ],
 };

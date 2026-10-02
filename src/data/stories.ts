@@ -29,7 +29,7 @@ export type Story = {
 export const stories: Record<string, Story> = {
   discover: {
     summary:
-      "Brought in to set the technology direction for a newly formed Partner Enablement and Experience domain — then to carry it through the Capital One merger. Accountable for architecture and engineering of Discover and Diners partner-experience and payment platforms, and for platform convergence after the merger.",
+      "Brought in to set the technology direction for a newly formed Partner Enablement and Experience domain — then to carry it through the Capital One merger. Accountable for architecture, engineering and data strategy for Discover and Diners partner-experience and payment platforms, and for platform convergence after the merger.",
     context: [
       "Partner Enablement and Experience was a newly formed domain with a sprawling estate of in-house, SaaS and legacy applications. Functionality was duplicated across systems, and the partner and customer experience suffered for it.",
       "Onboarding a new partner took 73 days, with manual steps — including testing — along the way. Applications were slow, Party Hierarchy performance was poor, and legacy applications and the modern Profile data were frequently out of sync.",
@@ -40,6 +40,7 @@ export const stories: Record<string, Story> = {
       { label: "Remit", value: "Partner Enablement and Experience, plus platform convergence after the Capital One merger" },
       { label: "Team", value: "30-person architecture & engineering organisation, led through Architecture and Engineering Managers" },
       { label: "Platforms", value: "Discover and Diners partner-experience and payment platforms, integrated with settlement, fraud and disputes" },
+      { label: "Data", value: "Data strategy and governance: metadata curation, data at rest, OLTP/OLAP integration and data lake ingestion" },
       { label: "Stakeholders", value: "Product, business and executive leadership; the post-merger Integration Management Office" },
       { label: "Scale", value: "200M transactions a day at 10K+ TPS, against 99.999% availability expectations" },
     ],
@@ -91,6 +92,11 @@ export const stories: Record<string, Story> = {
         outcome: "Supported a smooth transition of the Capital One network; secured Investment Council approval and directed the £40M, 144-platform convergence programme.",
       },
       {
+        title: "Data strategy & governance",
+        challenge: "Data spread across in-house, SaaS and legacy applications, with legacy and modern Profile data out of sync.",
+        approach: "Led metadata curation and the strategy for data at rest; integrated OLTP and OLAP workloads; drove ingestion into the data lake; and anchored it all in domain-driven data models and data governance.",
+      },
+      {
         title: "Resilient, modern foundations",
         challenge: "Slow applications, legacy and modern Profile data out of sync, and a poorly performing Party Hierarchy.",
         approach: "Moved Profile data to multi-region, multi-cluster OpenShift on AWS; standardised on event-driven architecture with DDD, CQRS and hexagonal architecture; proved GraphQL on MongoDB Atlas for Party Hierarchy.",
@@ -105,6 +111,10 @@ export const stories: Record<string, Story> = {
       "Hexagonal architecture",
       "MongoDB Atlas",
       "GraphQL",
+      "Data governance",
+      "Metadata management",
+      "Data lake",
+      "OLTP / OLAP",
       "Agentic AI",
       "PCI DSS 4.0",
       "CI/CD",
@@ -153,6 +163,7 @@ export const stories: Record<string, Story> = {
     scope: [
       { label: "Clients", value: "HSBC, MUFG, Broadridge; retail and public-sector-adjacent markets" },
       { label: "Focus", value: "GDPR, KYC and finance screening; smart cities and IoT" },
+      { label: "Data", value: "Data governance and master data management as the foundation for regulatory solutions; digital, integration and master-data roadmaps" },
     ],
     tech: ["Data governance", "Master data management", "IoT"],
     quotes: [
@@ -162,8 +173,14 @@ export const stories: Record<string, Story> = {
   },
 
   allianz: {
-    tech: ["Master data management", "Java services", "IBM", "Data governance"],
+    scope: [
+      { label: "Teams", value: "Multidisciplinary teams across customer data, master data and reusable digital services" },
+      { label: "Data", value: "Customer and master data management, data governance and integration patterns" },
+      { label: "Governance", value: "Supplier, procurement and roadmap governance, including IBM licensing, SOWs and POCs" },
+    ],
+    tech: ["Master data management", "Customer data", "Data governance", "Java services", "IBM"],
     quotes: [
+      "Srini was the MDM Solution Architect working at Allianz.",
       "During a complex design phase around Java services he was a leading light but also very supportive to my team.",
       "understands the importance of putting himself in the business/customer shoes and has strong presentation skills.",
     ],

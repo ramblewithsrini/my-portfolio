@@ -4,10 +4,10 @@
 export const profile = {
   name: "Srini Vankeepuram",
   initials: "SV",
-  headline: "Architecture & Engineering Leader",
+  headline: "Architecture, Engineering & Data Leader",
   tagline:
     "25 years turning complex financial-services estates into investment cases, target architectures and executable roadmaps.",
-  bio: "Most recently Head of Technology for Partner Experience and Payments at Discover Financial Services, leading a 30-person architecture and engineering organisation for platforms processing 200M transactions a day.",
+  bio: "Most recently Head of Technology for Partner Experience and Payments at Discover Financial Services, leading a 30-person architecture and engineering organisation — and the data strategy — for platforms processing 200M transactions a day.",
   location: "London, UK",
   availability: "Open to new opportunities · Eligible for SC Clearance",
   email: "srini.vankee@gmail.com",
@@ -29,6 +29,8 @@ export const marquee = [
   "Banking",
   "Capital Markets",
   "Enterprise Architecture",
+  "Data Strategy",
+  "Data Governance",
   "Cloud-Native",
   "AWS",
   "Oracle Cloud",
@@ -64,6 +66,7 @@ export const experience: Job[] = [
     highlights: [
       "Owned the target architecture and transition roadmap for partner-enablement and payment platforms processing 200M transactions a day at 10K+ TPS.",
       "Led and coached a 30-person architecture and engineering organisation through Architecture and Engineering Managers.",
+      "Led data strategy and governance: metadata curation, data at rest, OLTP/OLAP integration and data lake ingestion, built on domain-driven data models.",
       "Identified enterprise capacity risks after the Capital One merger, secured Investment Council approval and directed the £40M, 144-platform convergence programme.",
       "Drove AWS East/West multi-region resilience, CI/CD and automated quality controls to support 99.999% availability.",
       "Translated PCI DSS 4.0 and other regulatory requirements into architecture and controls; applied governed Agentic AI to vulnerability identification and audit monitoring.",
@@ -233,14 +236,25 @@ export const skills: { group: string; items: string[] }[] = [
     ],
   },
   {
+    group: "Data",
+    items: [
+      "Data strategy & governance",
+      "Metadata management",
+      "Master data management",
+      "Data lakes & ingestion",
+      "OLTP / OLAP integration",
+      "Domain-driven data models",
+    ],
+  },
+  {
     group: "Sectors & Regulation",
     items: [
       "Payments & banking",
       "Capital markets",
       "Insurance",
       "Travel & aviation",
+      "Retail & telecoms",
       "PCI DSS 4.0 · GDPR · KYC",
-      "Data governance & MDM",
     ],
   },
   {

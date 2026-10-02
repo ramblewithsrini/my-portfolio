@@ -5,7 +5,7 @@ export const intro = {
   eyebrow: "About me",
   title: "Fluent at sea level.",
   titleAccent: "Trusted at 30,000 feet.", // non-breaking space keeps "30,000 feet" together
-  lead: "I'm Srini. I started as a developer in 2001, grew into an architect, and went on to lead the architects and engineers who build payment platforms at scale. That path means I can go deep into the code with an engineer in the morning, make the investment case to an executive board in the afternoon — and translate faithfully between the two.",
+  lead: "I'm Srini. I started as a developer in 2001, grew into an architect, and went on to lead the architects and engineers who build payment platforms at scale — and the data strategy behind them. That path means I can go deep into the code with an engineer in the morning, make the investment case to an executive board in the afternoon — and translate faithfully between the two.",
 };
 
 export const glance = [

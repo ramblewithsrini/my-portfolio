@@ -217,10 +217,10 @@ export default function ExperiencePage() {
       {/* Skills */}
       <section id="skills" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
         <SectionHeading index="03" title="Expertise" />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {skills.map((g, i) => (
             <Reveal key={g.group} delay={i * 80}>
-              <div className="h-full rounded-3xl border border-border bg-surface p-7">
+              <div className="h-full rounded-3xl border border-border bg-surface p-6">
                 <h3 className="font-display text-lg font-bold text-accent">
                   {g.group}
                 </h3>

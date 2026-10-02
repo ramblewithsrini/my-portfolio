@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ChapterNav from "@/components/ChapterNav";
 import Contact from "@/components/Contact";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -6,14 +7,15 @@ import {
   altitude,
   beyondWork,
   buildLog,
+  chapters,
   consulting,
   glance,
   intro,
-  journey,
   now,
   philosophy,
   principles,
   progression,
+  summary,
   uniqueness,
   why,
 } from "@/data/about";
@@ -21,6 +23,36 @@ import { relationshipLabels, testimonials } from "@/data/testimonials";
 
 const teaser = testimonials.find((t) => t.teaser && !t.hidden);
 const testimonialCount = testimonials.filter((t) => !t.hidden).length;
+
+function ChapterHeader({ chapter }: { chapter: (typeof chapters)[number] }) {
+  return (
+    <header className="mx-auto max-w-6xl px-5 pt-24 sm:px-8">
+      <Reveal className="border-t border-border pt-10">
+        <p className="font-display text-sm font-medium uppercase tracking-widest text-accent">
+          Chapter {chapter.number}
+        </p>
+        <h2 className="mt-3 font-display text-[clamp(2.75rem,7vw,5rem)] leading-none font-bold tracking-tighter">
+          {chapter.title}
+        </h2>
+        <p className="mt-4 max-w-2xl text-lg text-muted">{chapter.teaser}</p>
+        {chapter.sections.length > 1 && (
+          <ul className="mt-6 flex flex-wrap gap-2">
+            {chapter.sections.map((s) => (
+              <li key={s.id}>
+                <a
+                  href={`#${s.id}`}
+                  className="inline-block rounded-full border border-border px-4 py-1.5 text-sm text-foreground/85 transition-colors hover:border-accent hover:text-accent"
+                >
+                  {s.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </Reveal>
+    </header>
+  );
+}
 
 export default function AboutPage() {
   return (
@@ -64,7 +96,7 @@ export default function AboutPage() {
                 See my experience
               </Link>
               <a
-                href="#why"
+                href="#built"
                 className="rounded-full border border-border px-7 py-3.5 font-semibold transition-colors hover:border-foreground"
               >
                 Why I built this
@@ -93,9 +125,43 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* In 30 seconds */}
+      <section aria-labelledby="summary-title" className="mx-auto max-w-6xl px-5 pb-16 sm:px-8">
+        <Reveal>
+          <div className="rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/[0.07] via-surface to-accent-2/[0.07] p-7 sm:p-10">
+            <h2
+              id="summary-title"
+              className="font-display text-sm font-medium uppercase tracking-widest text-accent"
+            >
+              {summary.title}
+            </h2>
+            <ul className="mt-5 grid gap-x-10 gap-y-3 md:grid-cols-2">
+              {summary.items.map((s) => (
+                <li key={s.text}>
+                  <a
+                    href={s.href}
+                    className="group flex gap-3 text-lg leading-snug hover:text-accent"
+                  >
+                    <span className="mt-1 text-accent transition-transform group-hover:translate-x-0.5" aria-hidden>
+                      →
+                    </span>
+                    {s.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
+      </section>
+
+      <ChapterNav chapters={chapters} />
+
+      {/* Chapter 1 */}
+      <div id={chapters[0].id} className="scroll-mt-28">
+        <ChapterHeader chapter={chapters[0]} />
       {/* Uniqueness */}
-      <section id="different" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="01" title={uniqueness.title} />
+      <section id="different" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
+        <SectionHeading title={uniqueness.title} />
         <Reveal>
           <p className="max-w-5xl font-display text-[clamp(2rem,5vw,3.75rem)] leading-[1.05] font-bold tracking-tighter">
             {uniqueness.headline}{" "}
@@ -218,8 +284,8 @@ export default function AboutPage() {
       </section>
 
       {/* Progression */}
-      <section id="progression" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="02" title={progression.title} />
+      <section id="progression" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
+        <SectionHeading title={progression.title} />
         <Reveal>
           <p className="max-w-3xl text-xl leading-relaxed text-foreground/85 sm:text-2xl">
             {progression.lead}
@@ -351,10 +417,14 @@ export default function AboutPage() {
           </div>
         </Reveal>
       </section>
+      </div>
 
+      {/* Chapter 2 */}
+      <div id={chapters[1].id} className="scroll-mt-28">
+        <ChapterHeader chapter={chapters[1]} />
       {/* Philosophy */}
-      <section id="philosophy" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="03" title={philosophy.title} />
+      <section id="philosophy" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
+        <SectionHeading title={philosophy.title} />
         <Reveal>
           <p className="font-display text-[clamp(2.25rem,6vw,4.75rem)] leading-[1.02] font-bold tracking-tighter">
             {philosophy.headline[0]}
@@ -424,9 +494,33 @@ export default function AboutPage() {
         )}
       </section>
 
+      {/* Principles */}
+      <section id="principles" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
+        <SectionHeading title="What 25 years taught me" />
+        <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          {principles.map((p, i) => (
+            <Reveal key={p.title} delay={(i % 3) * 80} className="bg-background">
+              <div className="h-full p-8 transition-colors hover:bg-surface">
+                <span className="font-display text-sm text-accent">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-3 font-display text-2xl font-bold tracking-tight">
+                  {p.title}
+                </h3>
+                <p className="mt-3 leading-relaxed text-muted">{p.body}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+      </div>
+
+      {/* Chapter 3 */}
+      <div id={chapters[2].id} className="scroll-mt-28">
+        <ChapterHeader chapter={chapters[2]} />
       {/* Now */}
-      <section className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="04" title={now.title} />
+      <section id="situation" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
+        <SectionHeading title={now.title} />
         <div className="grid gap-12 lg:grid-cols-[3fr_2fr]">
           <Reveal className="space-y-6 text-lg leading-relaxed text-foreground/85 sm:text-xl">
             {now.paragraphs.map((p) => (
@@ -477,9 +571,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why */}
-      <section id="why" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="05" title="Why I built this" />
+      {/* Why and how I built this site */}
+      <section id="built" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
+        <SectionHeading title="Why — and how — I built this site" />
         <div className="grid gap-6 md:grid-cols-2">
           {why.map((w, i) => (
             <Reveal key={w.title} delay={i * 100}>
@@ -495,64 +589,11 @@ export default function AboutPage() {
             </Reveal>
           ))}
         </div>
-      </section>
-
-      {/* Principles */}
-      <section className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="06" title="What 25 years taught me" />
-        <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {principles.map((p, i) => (
-            <Reveal key={p.title} delay={(i % 3) * 80} className="bg-background">
-              <div className="h-full p-8 transition-colors hover:bg-surface">
-                <span className="font-display text-sm text-accent">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-3 font-display text-2xl font-bold tracking-tight">
-                  {p.title}
-                </h3>
-                <p className="mt-3 leading-relaxed text-muted">{p.body}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* Journey */}
-      <section className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="07" title="The journey" />
-        <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-7 lg:gap-0">
-          {journey.map((j, i) => {
-            const isNext = i === journey.length - 1;
-            return (
-              <li key={j.year} className="relative lg:pr-4">
-                <Reveal delay={i * 60}>
-                  <div className="mb-4 hidden items-center lg:flex" aria-hidden>
-                    <span
-                      className={`h-3.5 w-3.5 shrink-0 rounded-full border-2 ${
-                        isNext ? "border-accent bg-accent" : "border-accent bg-background"
-                      }`}
-                    />
-                    {!isNext && <span className="h-px flex-1 bg-border" />}
-                  </div>
-                  <p
-                    className={`font-display text-3xl font-bold ${
-                      isNext ? "text-gradient" : ""
-                    }`}
-                  >
-                    {j.year}
-                  </p>
-                  <p className="mt-1 font-semibold text-accent">{j.org}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">{j.theme}</p>
-                </Reveal>
-              </li>
-            );
-          })}
-        </ol>
-      </section>
-
-      {/* Build log */}
-      <section className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="08" title={buildLog.title} />
+        <Reveal className="mt-20 mb-10">
+          <h3 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+            {buildLog.title}
+          </h3>
+        </Reveal>
         <div className="grid gap-12 lg:grid-cols-[2fr_3fr]">
           <Reveal>
             <p className="text-xl leading-relaxed text-foreground/85">{buildLog.lead}</p>
@@ -590,10 +631,13 @@ export default function AboutPage() {
           </ol>
         </div>
       </section>
+      </div>
 
+      {/* Chapter 4 */}
+      <div id={chapters[3].id} className="scroll-mt-28">
+        <ChapterHeader chapter={chapters[3]} />
       {/* Beyond work */}
-      <section id="beyond-work" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
-        <SectionHeading index="09" title={beyondWork.title} />
+      <section id="beyond-work" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
         <Reveal>
           <p className="max-w-3xl text-xl leading-relaxed text-foreground/85 sm:text-2xl">
             {beyondWork.lead}
@@ -641,6 +685,7 @@ export default function AboutPage() {
           </div>
         </Reveal>
       </section>
+      </div>
 
       <Contact />
     </main>

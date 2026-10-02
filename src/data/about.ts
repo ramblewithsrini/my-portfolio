@@ -177,7 +177,7 @@ export const philosophy = {
 };
 
 export const now = {
-  title: "Where I am now",
+  title: "My situation",
   paragraphs: [
     "In August 2026, my role as Head of Technology for Partner Experience and Payments at Discover was made redundant as part of Capital One's restructuring following the acquisition.",
     "Restructuring is something I understand from the inside — I directed the £40M, 144-platform convergence programme after the merger. Being on the other side of it hasn't changed my view: well-run integration is how organisations get stronger.",
@@ -239,15 +239,71 @@ export const principles = [
   },
 ];
 
-export const journey = [
-  { year: "2001", org: "TCS", theme: "Learned the craft — developer to architect lead" },
-  { year: "2010", org: "InterGlobe", theme: "Built and led a European architecture practice" },
-  { year: "2014", org: "Allianz", theme: "Saw transformation from the client side" },
-  { year: "2018", org: "Pitney Bowes", theme: "Advised global banks on data and regulation" },
-  { year: "2020", org: "Ricoh Europe", theme: "Shaped a $500M Oracle Cloud transformation" },
-  { year: "2023", org: "Discover", theme: "Led payments technology at scale" },
-  { year: "Next", org: "Your organisation?", theme: "Open to the next chapter" },
+// The About page is organised into chapters; the sticky navigator and the
+// chapter headers read from here. Section ids match the page's anchors.
+export const chapters = [
+  {
+    id: "who",
+    number: "01",
+    title: "Who I am",
+    teaser: "What makes me different — and how I grew from developer to technology leader.",
+    sections: [
+      { id: "different", title: "What makes me different" },
+      { id: "progression", title: "From code to leadership" },
+    ],
+  },
+  {
+    id: "lead",
+    number: "02",
+    title: "How I lead",
+    teaser: "My leadership philosophy, and the principles 25 years have taught me.",
+    sections: [
+      { id: "philosophy", title: "Leadership philosophy" },
+      { id: "principles", title: "What 25 years taught me" },
+    ],
+  },
+  {
+    id: "now",
+    number: "03",
+    title: "Where I am now",
+    teaser: "My situation, the roles I'm looking for, and why I built this site.",
+    sections: [
+      { id: "situation", title: "My situation" },
+      { id: "built", title: "Why — and how — I built this site" },
+    ],
+  },
+  {
+    id: "beyond",
+    number: "04",
+    title: "Beyond work",
+    teaser: "Family first — and what I love outside work.",
+    sections: [{ id: "beyond-work", title: "Beyond work" }],
+  },
 ];
+
+// "In 30 seconds" summary card under the opening, each line linking deeper.
+export const summary = {
+  title: "In 30 seconds",
+  items: [
+    {
+      text: "Architecture, engineering & data leader — 25 years, from developer to Head of Technology.",
+      href: "#different",
+    },
+    {
+      text: "Led payments platforms at 200M transactions a day; cut partner onboarding from 73 days to 5–7.",
+      href: "/experience/discover",
+    },
+    {
+      text: "15+ years in consulting and pre-sales, plus in-house leadership — I bring the view from both sides.",
+      href: "#different",
+    },
+    { text: "People first. Clarity next. Delivery always.", href: "#philosophy" },
+    {
+      text: "Available immediately · London · SC-eligible · in-house or consulting roles.",
+      href: "#situation",
+    },
+  ],
+};
 
 export const buildLog = {
   title: "How this site was built",

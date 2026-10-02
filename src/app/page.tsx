@@ -4,6 +4,7 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import {
   altitude,
+  beyondWork,
   buildLog,
   consulting,
   glance,
@@ -456,6 +457,57 @@ export default function AboutPage() {
             ))}
           </ol>
         </div>
+      </section>
+
+      {/* Beyond work */}
+      <section id="beyond-work" className="mx-auto max-w-6xl px-5 py-32 sm:px-8">
+        <SectionHeading index="08" title={beyondWork.title} />
+        <Reveal>
+          <p className="max-w-3xl text-xl leading-relaxed text-foreground/85 sm:text-2xl">
+            {beyondWork.lead}
+          </p>
+        </Reveal>
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {beyondWork.items.map((it, i) => (
+            <Reveal
+              key={it.title}
+              delay={(i % 3) * 100}
+              className={it.featured ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""}
+            >
+              <article
+                className={`flex h-full flex-col rounded-3xl border p-8 ${
+                  it.featured
+                    ? "border-accent/40 bg-gradient-to-br from-accent/[0.12] via-surface to-accent-2/[0.12] lg:justify-end"
+                    : "border-border bg-surface"
+                }`}
+              >
+                <p className="text-xs font-medium uppercase tracking-widest text-accent">
+                  {it.eyebrow}
+                </p>
+                <h3
+                  className={`mt-3 font-display font-bold tracking-tight ${
+                    it.featured ? "text-4xl sm:text-5xl" : "text-2xl"
+                  }`}
+                >
+                  {it.title}
+                </h3>
+                <p className={`mt-3 leading-relaxed text-muted ${it.featured ? "text-lg" : ""}`}>
+                  {it.body}
+                </p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal className="mt-6">
+          <div className="flex flex-col gap-4 rounded-3xl border border-border p-8 sm:flex-row sm:items-center sm:gap-10 sm:p-10">
+            <p className="text-gradient shrink-0 font-display text-4xl font-bold tracking-tight sm:text-5xl">
+              {beyondWork.closing.title}
+            </p>
+            <p className="text-lg leading-relaxed text-foreground/85">
+              {beyondWork.closing.body}
+            </p>
+          </div>
+        </Reveal>
       </section>
 
       <Contact />

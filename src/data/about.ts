@@ -219,3 +219,40 @@ export const buildLog = {
   takeaway:
     "The lesson for leaders: AI doesn't remove the need for judgement — it moves it. The valuable work became framing the problem, making trade-offs and reviewing the output.",
 };
+
+export const beyondWork = {
+  title: "Beyond work",
+  lead: "Family first — always. Everything else, including how I lead, flows from that.",
+  items: [
+    {
+      eyebrow: "Family",
+      title: "Dad, husband, son",
+      body: "The roles I'm proudest of. They keep me grounded, teach me patience daily, and remind me what really matters when work gets loud.",
+      featured: true,
+    },
+    {
+      eyebrow: "On the pitch",
+      title: "Cricket & badminton",
+      body: "Cricket taught me early that the team's total matters more than any one innings. Badminton keeps the reflexes sharp.",
+    },
+    {
+      eyebrow: "On foot",
+      title: "Long walks",
+      body: "Some of my best thinking happens walking — it's where tangled problems tend to untangle themselves.",
+    },
+    {
+      eyebrow: "Giving back",
+      title: "Parent Governor & fundraiser",
+      body: "I serve as a Parent Governor at my son's school and help raise funds for his cricket club. Governance and stakeholders — with tougher critics.",
+    },
+    {
+      eyebrow: "Downtime",
+      title: "The Big Bang Theory & Ted Lasso",
+      body: "My favourite comfort viewing. Ted Lasso is quietly one of the best leadership manuals around: lead with belief, kindness and a biscuit.",
+    },
+  ],
+  closing: {
+    title: "Family first.",
+    body: "It isn't a slogan — it's why \"People first\" comes so naturally at work. Every person on the teams I lead is someone's family too, and I lead them that way.",
+  },
+};

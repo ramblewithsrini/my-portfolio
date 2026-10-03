@@ -347,12 +347,97 @@ export const stories: Record<string, Story> = {
   },
 
   allianz: {
-    scope: [
-      { label: "Teams", value: "Multidisciplinary teams across customer data, master data and reusable digital services" },
-      { label: "Data", value: "Customer and master data management, data governance and integration patterns" },
-      { label: "Governance", value: "Supplier, procurement and roadmap governance, including IBM licensing, SOWs and POCs" },
+    summary:
+      "Senior digital architect and product manager for Allianz UK's shared digital platform, with customer data and master data management at its heart. I built a single, household-level view of the customer that fed marketing and analytics, and a platform six projects reused instead of building their own — recognised by the steering committee as one of the key reasons for the programme's success.",
+    context: [
+      "Projects across Allianz UK were building and maintaining their own separate solutions — duplicating effort, cost and risk. Customer records were spread across many systems, duplicated and inconsistent.",
+      "The answer was a shared digital platform: generic services, including a Customer Hub built on master data management, created once and reused across the business. My job was to define it, build the team and capabilities behind it, and win the projects that would adopt it.",
     ],
-    tech: ["Master data management", "Customer data", "Data governance", "Java services", "IBM"],
+    scope: [
+      { label: "Role", value: "Senior Digital Architect & Product Manager" },
+      { label: "Platform", value: "Shared digital services and the Customer Hub, reused by projects across Allianz UK" },
+      { label: "Customer data", value: "MDM on IBM MDM Server: probabilistic matching, survivorship rules, reference data and a household view of the customer" },
+      { label: "Integrations", value: "Adobe marketing suite, data lakehouse and data warehouse; federated ESB patterns" },
+      { label: "Team", value: "Led and managed a 15-person third-party TCS team, onsite and offshore; built teams around customer data and MDM" },
+      { label: "Adoption", value: "Six projects across Allianz UK consuming the shared platform" },
+      { label: "Engineering", value: "Directed release management, configuration management and test automation for corporate IT developments" },
+      { label: "Vendors", value: "IBM (products, licensing, consulting, SOWs, pilot POC) with procurement; TCS as implementation partner" },
+    ],
+    outcomes: [
+      { value: "21%", label: "Better MDM matching rates" },
+      { value: "6", label: "Projects reusing the shared platform" },
+      { value: "15", label: "Person TCS team led, onsite and offshore" },
+    ],
+    achievements: [
+      {
+        title: "A single, trusted view of the customer",
+        challenge: "Customer records were spread across many systems — duplicated, inconsistent and hard to trust.",
+        approach: "Built the customer data and MDM capability on IBM MDM Server: tuned probabilistic matching scores, cleansed the data, clarified survivorship rules and managed reference data — then built a household view of each customer.",
+        outcome: "Matching rates improved by 21%, and the business gained a trusted, household-level view of its customers.",
+      },
+      {
+        title: "Customer data that powers marketing and analytics",
+        challenge: "Trusted customer data only creates value when marketing and analytics can use it.",
+        approach: "Integrated the Customer Hub with the Adobe marketing suite and with the data lakehouse and data warehouse, using defined integration patterns and data governance.",
+        outcome: "Householded, trusted customer data available for marketing and analytics.",
+      },
+      {
+        title: "A shared digital platform for Allianz UK",
+        challenge: "Separate solutions for every project meant duplicated build, higher running costs and more delivery risk.",
+        approach: "Formulated and implemented the vision and strategy for the next generation of digital services, designed the Customer Hub and generic services, and defined the target operating model.",
+        outcome: "Faster delivery and a lower cost of ownership than building and maintaining separate solutions — and a robust platform that de-risked future projects.",
+      },
+      {
+        title: "Winning six projects to the platform",
+        challenge: "A shared platform only pays back if projects choose to use it — and each was used to building its own.",
+        approach: "Led architecture workshops with the consuming applications to share the platform's scope, and helped them see how it would shorten their time to build and remove duplicated functionality. Prepared programme mandates and a reuse roadmap.",
+        outcome: "Six projects adopted the shared platform instead of building their own.",
+      },
+      {
+        title: "Modern, reliable engineering",
+        challenge: "Shared services demand consistent releases and an architecture that can grow with adoption.",
+        approach: "Directed release management, configuration management and test automation; defined non-functional requirements on a tested platform; developed the containerisation strategy for the Customer Data Solution; and led proof-of-technology and design of federated ESB patterns.",
+      },
+      {
+        title: "A productive partnership with IBM and TCS",
+        challenge: "The platform depended on IBM products and on a third-party implementation partner.",
+        approach: "Worked with procurement to shape the IBM relationship — products, licence management, consulting, statements of work and a pilot POC — and led and managed a 15-person TCS implementation team, onsite and offshore.",
+      },
+    ],
+    leadershipStory: {
+      title: "Winning adoption, not mandating it",
+      situation:
+        "The shared platform would only succeed if other projects chose to build on it — and every one of them was used to building its own solutions.",
+      action:
+        "I invited the consuming applications into architecture workshops, shared the scope of our work openly, and helped their teams think through how the platform would shorten their time to build and remove duplicated functionality.",
+      result:
+        "Six projects adopted the platform, and the steering committee highlighted my work as one of the key reasons for the programme's success.",
+    },
+    leadership: [
+      "Bring consumers in early: architecture workshops before commitments.",
+      "Sell the outcome, not the platform — faster delivery and no duplicated build.",
+      "Build teams around clear focus areas — like customer data and MDM — with real ownership.",
+      "Keep sub-system solution architects and partners working as one team.",
+    ],
+    lessons: [
+      "Adoption is earned in the room, not mandated from above. Show each team what's in it for them.",
+      "Customer data is only as valuable as the decisions it powers — design for the people who'll consume it from day one.",
+    ],
+    tech: [
+      "IBM MDM Server",
+      "Probabilistic matching",
+      "Survivorship rules",
+      "Reference data management",
+      "Household view",
+      "Adobe marketing suite",
+      "Data lakehouse",
+      "Data warehouse",
+      "Data governance",
+      "Data quality",
+      "Federated ESB",
+      "Containerisation",
+      "Test automation",
+    ],
     quotes: [
       "Srini was the MDM Solution Architect working at Allianz.",
       "During a complex design phase around Java services he was a leading light but also very supportive to my team.",

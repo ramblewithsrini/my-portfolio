@@ -62,12 +62,13 @@ export const roleValues: RoleValue[] = [
     value: [
       "Data strategy and governance aligned to regulation and business value",
       "Metadata curation, master data management and domain-driven data models",
+      "Single and household customer views that feed marketing and analytics",
       "Modern data platforms: data-at-rest strategy, OLTP/OLAP integration, data lake ingestion",
       "Regulatory data solutions: GDPR compliance for McDonald's, a KYC solution with EY",
     ],
     evidence: [
       { value: "200M", label: "Transactions a day on the platforms whose data strategy I led" },
-      { value: "3", label: "Organisations where I've led data strategy or MDM" },
+      { value: "21%", label: "Better MDM matching rates at Allianz UK" },
       { value: "GDPR · KYC", label: "Data solutions for McDonald's, EY, HSBC and Broadridge" },
     ],
     quote:

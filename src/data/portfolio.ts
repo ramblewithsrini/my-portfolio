@@ -122,8 +122,13 @@ export const experience: Job[] = [
     startDate: "2014-11",
     endDate: "2017-12",
     highlights: [
-      "Defined the vision, target operating model and capability roadmap for Allianz UK shared digital services.",
-      "Led multidisciplinary teams across customer data, master data and reusable digital services.",
+      "Built Allianz UK's customer data and MDM capability — a household view of the customer, integrated with the Adobe marketing suite, the data lakehouse and the data warehouse.",
+      "Improved MDM matching rates by 21% through probabilistic matching tuning on IBM MDM Server, data cleansing, clearer survivorship rules and reference data management.",
+      "Defined the vision, strategy and target operating model for the shared digital platform — adopted by six projects; recognised by the steering committee as a key reason for the programme's success.",
+      "Led and managed a 15-person TCS implementation team, onsite and offshore.",
+      "Directed release management, configuration management and test automation for corporate IT developments.",
+      "Shaped the IBM relationship with procurement — licensing, SOWs and a pilot POC — and managed third-party implementation partners.",
+      "Developed the containerisation strategy for the Customer Data Solution and designed federated ESB patterns.",
     ],
   },
   {

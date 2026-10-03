@@ -256,10 +256,11 @@ export const chapters = [
     id: "lead",
     number: "02",
     title: "How I lead",
-    teaser: "My leadership philosophy, and the principles 25 years have taught me.",
+    teaser: "My leadership philosophy, the principles 25 years have taught me, and the books that shaped them.",
     sections: [
       { id: "philosophy", title: "Leadership philosophy" },
       { id: "principles", title: "What 25 years taught me" },
+      { id: "bookshelf", title: "What shapes how I lead" },
     ],
   },
   {
@@ -319,6 +320,47 @@ export const impact = [
   { value: "£40M", label: "Convergence across 144 platforms", href: "/experience/discover" },
   { value: "£1.5M+", label: "Annual revenue from a function I built", href: "/experience/interglobe" },
 ];
+
+// Books that shaped my leadership — each tied to where it shows up in my work.
+export const bookshelf = {
+  title: "What shapes how I lead",
+  lead: "Four books I keep coming back to — and where each one shows up in my work.",
+  books: [
+    {
+      title: "Leaders Eat Last",
+      author: "Simon Sinek",
+      idea: "Leaders create safety by taking the pressure themselves, so their teams don't have to.",
+      inPractice: "When work surged at Discover, I absorbed the pressure rather than passing it down — one of my architects described exactly that in their recommendation.",
+      href: "/testimonials",
+      linkLabel: "Read the recommendations",
+    },
+    {
+      title: "Start With Why",
+      author: "Simon Sinek",
+      idea: "People commit to a purpose long before they commit to a plan.",
+      inPractice: "At Allianz UK I opened with why a shared platform mattered to each team — and six projects chose to adopt it instead of building their own.",
+      href: "/experience/allianz",
+      linkLabel: "The Allianz story",
+    },
+    {
+      title: "The 7 Habits of Highly Effective People",
+      author: "Stephen R. Covey",
+      idea: "Understand before you try to be understood, and start with the end in mind.",
+      inPractice: "Discovery workshops before any solution design, and a North Star before any roadmap — from Pitney Bowes clients to Discover's convergence.",
+      href: "/experience/discover",
+      linkLabel: "The Discover story",
+    },
+    {
+      title: "The 21 Irrefutable Laws of Leadership",
+      author: "John C. Maxwell",
+      idea: "Leadership is influence — it isn't a job title.",
+      inPractice: "At Ricoh I had no direct reports. Progress came from influence: giving partners clarity and clearing their blockers.",
+      href: "/experience/ricoh",
+      linkLabel: "The Ricoh story",
+    },
+  ],
+  podcast: "And I keep learning: Simon Sinek's podcast, A Bit of Optimism, is a regular listen.",
+};
 
 export const buildLog = {
   title: "How this site was built",

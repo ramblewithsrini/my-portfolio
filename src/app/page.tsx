@@ -6,6 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import {
   altitude,
   beyondWork,
+  bookshelf,
   buildLog,
   chapters,
   consulting,
@@ -539,6 +540,55 @@ export default function AboutPage() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      {/* What shapes how I lead */}
+      <section id="bookshelf" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
+        <SectionHeading title={bookshelf.title} />
+        <Reveal>
+          <p className="-mt-6 mb-10 max-w-3xl text-lg text-muted">{bookshelf.lead}</p>
+        </Reveal>
+        <ul className="grid gap-6 md:grid-cols-2">
+          {bookshelf.books.map((b, i) => (
+            <li key={b.title}>
+              <Reveal delay={(i % 2) * 100} className="h-full">
+                <article className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface p-8">
+                  <span
+                    className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-accent to-accent-2"
+                    aria-hidden
+                  />
+                  <h3 className="font-display text-2xl leading-tight font-bold tracking-tight">
+                    {b.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-muted">{b.author}</p>
+                  <p className="mt-5 font-display text-lg leading-snug font-medium text-foreground/90">
+                    {b.idea}
+                  </p>
+                  <p className="mt-4 flex-1 border-t border-border pt-4 leading-relaxed text-muted">
+                    <span className="mb-1 block text-xs font-medium uppercase tracking-widest text-accent">
+                      In my work
+                    </span>
+                    {b.inPractice}
+                  </p>
+                  <Link
+                    href={b.href}
+                    className="mt-5 text-sm font-semibold text-accent hover:underline"
+                  >
+                    {b.linkLabel} →
+                  </Link>
+                </article>
+              </Reveal>
+            </li>
+          ))}
+        </ul>
+        <Reveal className="mt-6">
+          <p className="rounded-2xl border border-border px-6 py-4 text-foreground/85">
+            <span className="mr-2" aria-hidden>
+              🎧
+            </span>
+            {bookshelf.podcast}
+          </p>
+        </Reveal>
       </section>
       </div>
 

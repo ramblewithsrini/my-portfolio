@@ -136,9 +136,9 @@ export const consulting = {
   title: "Consulting and pre-sales, built in",
   body: "Before leading in-house, I spent 15+ years in client-facing consulting at TCS, InterGlobe and Pitney Bowes — from RFI to go-live, and on stage at industry conferences in Dallas and London. I learned to listen first, shape a proposition, size a solution honestly — and then deliver what was sold.",
   stats: [
+    { value: "£1.5M+", label: "Annual revenue from the architecture function I built at IGT" },
+    { value: "PSS → GSL", label: "SITA account grown into a second line — IGT Game Changer Award, 2014" },
     { value: "$50M", label: "In wins I contributed to at TCS" },
-    { value: "RFI → live", label: "KYC solution partnership with EY, end to end" },
-    { value: "2", label: "Industry conference talks, in Dallas and London" },
   ],
   capabilities: [
     "Proposals & RFP/RFI responses",
@@ -298,8 +298,8 @@ export const summary = {
       href: "/experience/allianz",
     },
     {
-      text: "15+ years in consulting and pre-sales — from EY's KYC partnership to HSBC and Broadridge.",
-      href: "/experience/pitney-bowes",
+      text: "15+ years in consulting and pre-sales — built a £1.5M-a-year architecture function at IGT, and grew SITA into a second business line.",
+      href: "/experience/interglobe",
     },
     {
       text: "Available immediately · London · SC-eligible · in-house or consulting roles.",
@@ -317,7 +317,7 @@ export const impact = [
   { value: "21%", label: "Better MDM matching rates", href: "/experience/allianz" },
   { value: "$500M", label: "Oracle Cloud transformation", href: "/experience/ricoh" },
   { value: "£40M", label: "Convergence across 144 platforms", href: "/experience/discover" },
-  { value: "$50M", label: "Pre-sales wins contributed to", href: "/experience/tcs" },
+  { value: "£1.5M+", label: "Annual revenue from a function I built", href: "/experience/interglobe" },
 ];
 
 export const buildLog = {

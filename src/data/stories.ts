@@ -446,14 +446,78 @@ export const stories: Record<string, Story> = {
   },
 
   interglobe: {
+    summary:
+      "Head of Enterprise Architecture for InterGlobe Technologies (IGT) in Europe. I built a 15-member Architecture & Design function from the ground up — delivering £1.5M+ in annual revenue — while architecting SITA's passenger and border management platforms and growing IGT's SITA business into a second business line. Recognised with IGT's Game Changer Award in 2014.",
+    context: [
+      "SITA, the air transport industry's technology provider, was modernising its passenger service systems and building out a government line of business around border management.",
+      "As Head of Enterprise Architecture for IGT in Europe, I led the architecture on both fronts — and turned our delivery credibility in one SITA business line into new work in another.",
+    ],
     scope: [
-      { label: "Team", value: "15-person consulting architecture team across the UK, US and India" },
-      { label: "Clients", value: "Travel and aviation technology, including Travelport and SITA" },
-      { label: "Pre-sales", value: "Opportunities worth $2M to $20M" },
+      { label: "Role", value: "Head of Enterprise Architecture, Europe" },
+      { label: "Function", value: "Built a 15-member Architecture & Design function from the ground up, across the UK, US and India" },
+      { label: "Revenue", value: "£1.5M+ a year from architectural strategy, solution design and enterprise technology direction" },
+      { label: "Clients", value: "SITA (Passenger Service Systems and Government Service Line); Travelport" },
+      { label: "Account growth", value: "Grew IGT's SITA business from passenger systems into the Government Service Line" },
+      { label: "Pre-sales", value: "Led RFI/RFP proposals across clients, for opportunities worth $2M to $20M" },
+      { label: "Recognition", value: "IGT Game Changer Award, 2014" },
     ],
     outcomes: [
-      { value: "15", label: "Architects across three countries" },
-      { value: "$2–20M", label: "Opportunities shaped" },
+      { value: "£1.5M+", label: "Annual revenue from the function I built" },
+      { value: "PSS → GSL", label: "SITA account grown into a second business line" },
+      { value: "15", label: "Member Architecture & Design function" },
+      { value: "2", label: "Governments that bought iBorders: Oman and Saudi Arabia" },
+    ],
+    achievements: [
+      {
+        title: "Growing the SITA account",
+        challenge: "IGT's work with SITA was concentrated in a single business line: passenger service systems.",
+        approach: "Used the credibility we built delivering SITA's passenger systems to open the door to its Government Service Line — and shaped the architecture that won the work.",
+        outcome: "IGT's SITA business grew from passenger systems into the Government Service Line — recognised with IGT's Game Changer Award in 2014.",
+      },
+      {
+        title: "Modernising SITA's passenger service system",
+        challenge: "SITA's Voyager Passenger Management and Distribution platform — reservations, ticketing, inventory, check-in and departure control — needed a modern, service-oriented architecture that could scale with growing carriers.",
+        approach: "Produced the reference architecture and functional design on Oracle SOA Suite; identified the services; designed token-based authentication and authorisation across every layer; defined the service and message versioning strategy; led performance and capacity tuning; and worked with the programme's other solution architects to keep integration seamless.",
+      },
+      {
+        title: "Border management with SITA iBorders",
+        challenge: "Oman needed to modernise border security while speeding up travel for the low-risk majority of travellers.",
+        approach: "Lead Architect for SITA iBorders in Oman — an integrated border management solution that combines risk assessment of traveller data with the tools to manage, monitor and operate border controls, focusing resources on higher-risk travellers.",
+        outcome: "iBorders was purchased by Oman and Saudi Arabia.",
+      },
+      {
+        title: "An Architecture & Design function, built from the ground up",
+        challenge: "IGT had no dedicated Architecture & Design function — it had to be built alongside live client delivery.",
+        approach: "Built and led a 15-member function across the UK, US and India; led RFI/RFP proposals across clients for $2M–$20M opportunities; and established reusable architecture standards and delivery methods adopted across client engagements.",
+        outcome: "£1.5M+ in annual revenue through architectural strategy, solution design and enterprise-wide technology direction.",
+      },
+    ],
+    leadershipStory: {
+      title: "Building an architecture business from zero",
+      situation:
+        "There was no dedicated Architecture & Design function — and it had to be built while I was leading live architecture for SITA.",
+      action:
+        "I built and grew a 15-member function across the UK, US and India, set shared standards and delivery methods, and led RFI/RFP proposals across clients — while staying hands-on as SITA's architect.",
+      result:
+        "A function delivering £1.5M+ in annual revenue, and a SITA account that grew into a second business line — recognised with IGT's Game Changer Award in 2014.",
+    },
+    leadership: [
+      "Earn the next piece of work through the current one: delivery is the best business development.",
+      "Run a team across three countries as one practice, with shared standards and methods.",
+      "Work as one architecture community with the client's own solution architects.",
+    ],
+    lessons: [
+      "Credibility is the most valuable thing a consultant builds. Deliver well in one business line and the client will invite you into the next.",
+    ],
+    tech: [
+      "Oracle SOA Suite",
+      "Token-based authentication & authorisation",
+      "Service & message versioning",
+      "Performance & capacity tuning",
+      "Passenger service systems (PSS)",
+      "Reservations & departure control",
+      "Border management",
+      "Traveller risk assessment",
     ],
     quotes: [
       "Srini joined SITA as a Solution Architect and brought a solution to the acute and long standing issues.",

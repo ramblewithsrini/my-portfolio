@@ -142,8 +142,10 @@ export const experience: Job[] = [
     startDate: "2011-03",
     endDate: "2014-10",
     highlights: [
-      "Led a 15-person consulting architecture team across the UK, US and India for clients including Travelport and SITA.",
-      "Supported pre-sales and proposals for opportunities worth $2M to $20M.",
+      "Built a 15-member Architecture & Design function from the ground up, delivering £1.5M+ in annual revenue.",
+      "Grew IGT's SITA business from passenger systems into SITA's Government Service Line — recognised with IGT's Game Changer Award (2014).",
+      "Lead Architect for SITA iBorders border management, purchased by Oman and Saudi Arabia; Architect for the modernisation of SITA's Voyager passenger service system on Oracle SOA Suite.",
+      "Led RFI/RFP proposals for clients including SITA and Travelport, for opportunities worth $2M to $20M.",
     ],
   },
   {

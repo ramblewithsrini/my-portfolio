@@ -134,6 +134,7 @@ export const roleValues: RoleValue[] = [
       "I've led a 30-person architecture and engineering organisation through its managers, for payment platforms processing 200M transactions a day — through a merger, a platform convergence and a 3,200% volume surge.",
     value: [
       "Leaders who grow leaders: clear decision rights, service ownership and coaching",
+      "Functions built from the ground up — a 15-member Architecture & Design practice delivering £1.5M+ a year at IGT",
       "Teams that collaborate instead of protecting their silos — no blame, shared credit",
       "Resilience as a culture: multi-region design, CI/CD and automated quality gates",
       "Delivery at scale through mergers, platform convergence and volume surges",
@@ -160,8 +161,9 @@ export const roleValues: RoleValue[] = [
     stat: { value: "$50M", label: "in pre-sales wins" },
     headline: "Propositions that win — and engagements that deliver what was sold.",
     intro:
-      "15+ years client-facing at TCS, InterGlobe and Pitney Bowes — from RFI to go-live, and on stage at industry conferences in Dallas and London. Then nine years as the buyer, at Allianz, Ricoh and Discover. I've sat on both sides of the table, so I know what makes a client say yes — and what makes them walk away.",
+      "15+ years client-facing at TCS, InterGlobe and Pitney Bowes — from RFI to go-live, building and running a £1.5M-a-year architecture function, and on stage at industry conferences in Dallas and London. Then nine years as the buyer, at Allianz, Ricoh and Discover. I've sat on both sides of the table, so I know what makes a client say yes — and what makes them walk away.",
     value: [
+      "Account growth: grew IGT's SITA business from passenger systems into its Government Service Line, where iBorders was bought by Oman and Saudi Arabia — IGT's Game Changer Award, 2014",
       "Bid qualification that chases the right work: fit, capability and an honest view of the competition",
       "Discovery workshops and proofs of concept on the client's own ground",
       "Partnerships that extend a client's offering — like a KYC solution built with EY",
@@ -169,9 +171,9 @@ export const roleValues: RoleValue[] = [
       "Delivery and enablement after the win, until the client is self-sufficient",
     ],
     evidence: [
+      { value: "£1.5M+", label: "Annual revenue from the Architecture & Design function I built at IGT" },
+      { value: "PSS → GSL", label: "SITA account grown into a second business line — IGT Game Changer Award, 2014" },
       { value: "$50M", label: "In wins I contributed to at TCS" },
-      { value: "RFI → live", label: "KYC partnership with EY, through to training EY's team" },
-      { value: "2", label: "Financial services clients (HSBC, Broadridge) taken from RFP to post-implementation" },
     ],
     quote:
       "I was particularly impressed by Srini's ability to handle even the toughest clients. That skill often takes years to develop among Professional Services people, but it seemed to come perfectly naturally to him.",

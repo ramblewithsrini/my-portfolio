@@ -1,4 +1,4 @@
-// "What I bring" page: one section per kind of role. Each section has an
+// "How I can help" page (URL: /what-i-bring): one section per kind of role. Each section has an
 // anchor (/what-i-bring#<id>) so a tailored link can go with each application.
 //
 // `quote` must be a verbatim excerpt from src/data/testimonials.ts (checked at
@@ -27,7 +27,7 @@ export type RoleValue = {
 };
 
 export const valueIntro = {
-  eyebrow: "What I bring",
+  eyebrow: "How I can help",
   title: "One leader.",
   titleAccent: "Four ways to add value.",
   lead: "I'm open to architecture, data, engineering leadership and client-facing roles. Choose the one you're hiring for — each section shows what I'd bring, the results behind it, and how I'd start.",

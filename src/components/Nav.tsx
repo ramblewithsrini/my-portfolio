@@ -8,7 +8,7 @@ import { profile } from "@/data/portfolio";
 // `short` is the label shown on phones, where space is tight.
 const links: { href: string; label: string; short?: string; wideOnly?: boolean }[] = [
   { href: "/", label: "About" },
-  { href: "/what-i-bring", label: "What I bring", short: "Value" },
+  { href: "/what-i-bring", label: "How I can help", short: "Help" },
   { href: "/experience", label: "Experience", short: "Career" },
   { href: "/testimonials", label: "Testimonials" },
   // Shown once an article is published; wider screens only (the phone nav is full).

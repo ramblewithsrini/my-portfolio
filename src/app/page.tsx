@@ -586,7 +586,7 @@ export default function AboutPage() {
                   href="/what-i-bring"
                   className="font-semibold text-accent hover:underline"
                 >
-                  The value I bring to each role →
+                  How I can help in each role →
                 </Link>
                 <a href="#contact" className="font-semibold text-foreground/80 hover:underline">
                   Start a conversation →

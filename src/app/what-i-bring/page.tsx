@@ -7,9 +7,9 @@ import { roleValues, valueIntro } from "@/data/value";
 import { attributeQuote } from "@/lib/career";
 
 export const metadata: Metadata = {
-  title: "What I bring",
+  title: "How I can help",
   description:
-    "The value I bring as an architect, Head of Data & AI, Head of Engineering & Architecture, and in pre-sales and client engagement.",
+    "How I can help as an architect, Head of Data & AI, Head of Engineering & Architecture, and in pre-sales and client engagement.",
 };
 
 const roles = roleValues.map((r) => ({

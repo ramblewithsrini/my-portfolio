@@ -296,5 +296,6 @@ export const skills: { group: string; items: string[] }[] = [
 export const education = [
   "B.Eng., Electronics & Communication — Madras University",
   "TOGAF Certified Professional",
+  "BCS Data Management Certificate",
   "Leading SAFe (Scaled Agile)",
 ];

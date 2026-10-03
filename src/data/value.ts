@@ -101,7 +101,7 @@ export const roleValues: RoleValue[] = [
     stat: { value: "21%", label: "better MDM matching rates" },
     headline: "Data and AI that earn their keep — trusted, governed and in production.",
     intro:
-      "I've led data from the architecture side — so strategy, governance and platforms are designed together, not bolted on. And I've put AI to work on top of it: from a household view of the customer at Allianz UK, to Agentic AI absorbing a 3,200% surge at Discover, to a conversational AI that cut support-desk load by 27% at Ricoh.",
+      "BCS-certified in data management, I've led data from the architecture side — so strategy, governance and platforms are designed together, not bolted on. And I've put AI to work on top of it: from a household view of the customer at Allianz UK, to Agentic AI absorbing a 3,200% surge at Discover, to a conversational AI that cut support-desk load by 27% at Ricoh.",
     value: [
       "AI-ready data: trusted, governed data that analytics and AI can safely build on",
       "Governed AI in production — Agentic AI at Discover, conversational AI at Ricoh — with guardrails a regulator would recognise",

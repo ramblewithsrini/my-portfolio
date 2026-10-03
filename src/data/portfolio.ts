@@ -104,7 +104,8 @@ export const experience: Job[] = [
       "Led RFI/RFP responses, estimation and go/no-go decisions, and ran data governance due-diligence workshops for clients.",
       "Presented operational MDM with Spectrum and GraphQL at the Pitney Bowes conference in Dallas and a Neo4j conference in London.",
       "Led RFI/RFP, workshops, proofs of concept and Spectrum ETL integration for HSBC and Broadridge — through to post-implementation.",
-      "Client-facing architecture adviser to financial services clients including HSBC, MUFG and Broadridge; led architecture for smart-cities and IoT propositions.",
+      "Lead Architect building IoT-enabled smart city capabilities on Spectrum and AWS for a Saudi Arabian smart city programme.",
+      "Client-facing architecture adviser to financial services clients including HSBC, MUFG and Broadridge.",
     ],
   },
   {

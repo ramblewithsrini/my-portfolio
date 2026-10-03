@@ -215,6 +215,11 @@ export const stories: Record<string, Story> = {
         outcome: "A GDPR-compliant system with a trusted, analytical single view of employee data.",
       },
       {
+        title: "Smart city architecture, enabled by IoT",
+        challenge: "A Saudi Arabian smart city programme needed an architecture to connect IoT-enabled city services.",
+        approach: "As Lead Architect, built the smart city capabilities on Pitney Bowes' own Spectrum platform and AWS, designing the IoT-enabled architecture to bring devices, data and city services together.",
+      },
+      {
         title: "Data governance by design",
         challenge: "Clients needed a practical strategy for data quality and governance, not just a product.",
         approach: "Led due-diligence workshops to shape each client's data governance strategy — data quality and ETL transformations — and trained client teams on Spectrum and Neo4j.",
@@ -236,6 +241,8 @@ export const stories: Record<string, Story> = {
       "GDPR",
       "KYC",
       "IoT",
+      "Smart cities",
+      "AWS",
     ],
     leadershipStory: {
       title: "Leaving clients self-sufficient",

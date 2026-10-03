@@ -457,24 +457,129 @@ export const stories: Record<string, Story> = {
     ],
     quotes: [
       "Srini joined SITA as a Solution Architect and brought a solution to the acute and long standing issues.",
-      "He also knows how to convince people with his thought process and how to make people understand something very lucidly which they can’t.",
     ],
   },
 
   tcs: {
+    summary:
+      "Ten years at Tata Consultancy Services, growing from lead developer on a US telecoms platform to Lead Solution Architect for Saudi Arabian Airlines' enterprise-wide integration and architect on British Airways' Travel Programme — and leading TCS's airline innovation lab, whose demonstrations were used by British Airways, KLM and SITA.",
+    context: [
+      "I joined TCS in 2001 as a developer and spent ten years growing into an architect — first in US telecoms, then across some of the world's best-known airlines.",
+      "Airlines ran on a tangle of custom messaging, middleware and industry protocols. The work was to replace that complexity with standard, service-oriented integration that cut the cost of ownership and let airlines launch new products faster.",
+    ],
     scope: [
-      { label: "Progression", value: "Developer to Architect Lead / Manager over nine years" },
-      { label: "Clients", value: "Saudia (Saudi Arabian Airlines), Qwest" },
+      { label: "Progression", value: "Lead Developer → Technical Lead → Lead Integration Designer → Solution Architect → Lead Solution Architect → Architect, British Airways" },
+      { label: "Clients", value: "Qwest, British Airways, SITA, Singapore Airlines, Hawaiian Airlines, Saudi Arabian Airlines" },
+      { label: "Innovation", value: "Led the TCS airline innovation lab; demonstrations used by British Airways, KLM and SITA" },
+      { label: "Pre-sales", value: "Pre-sales and RFP responses for $3M–$25M opportunities, contributing to $50M in wins" },
+      { label: "Integration", value: "IBM integration suite (Saudia), Progress (BA Travel Programme), WSO2 (BA SOA governance); airline schedule messaging; Amadeus and Sabre" },
+      { label: "Delivery", value: "Coordinated client, onsite and offshore teams; liaised with product vendors" },
     ],
     outcomes: [
       { value: "$25M", label: "Saudia integration programme" },
       { value: "112", label: "Systems integrated" },
       { value: "$50M", label: "Pre-sales wins contributed to" },
+      { value: "6", label: "Airline and telecoms clients" },
     ],
-    tech: ["IBM integration suite", "Amadeus", "Sabre", "Enterprise integration"],
+    milestones: [
+      {
+        date: "Mar 2001 – Nov 2004",
+        title: "Lead Developer — Qwest (US telecoms)",
+        body: "Built the Instant Activation module and web services for a Customer Request Management platform, migrated ColdFusion pages to J2EE on WebLogic with Struts, and coordinated client, onsite and offshore teams.",
+      },
+      {
+        date: "May 2004 – May 2005",
+        title: "Technical Lead — British Airways",
+        body: "Technical lead across multiple British Airways projects.",
+      },
+      {
+        date: "Jun 2005 – Apr 2006",
+        title: "Lead Integration Designer — SITA",
+      },
+      {
+        date: "May 2006 – Sep 2007",
+        title: "Solution Architect — Singapore Airlines",
+      },
+      {
+        date: "Oct – Dec 2007",
+        title: "Enterprise Consultant — Hawaiian Airlines",
+      },
+      {
+        date: "Dec 2007 – Apr 2009",
+        title: "Lead Solution Architect — Saudi Arabian Airlines",
+        body: "Architected the ESB platform on the IBM integration suite, integrating all of Saudia's applications: 112 systems, including Amadeus and Sabre, in a $25M programme.",
+      },
+      {
+        date: "Late 2008",
+        title: "Led the TCS airline innovation lab",
+        body: "Built demonstrations of airline capabilities, used by British Airways, KLM and SITA.",
+      },
+      {
+        date: "May 2010 – Feb 2011",
+        title: "Architect — British Airways Travel Programme",
+        body: "Messaging and integration architecture for a major business and IT transformation of BA's most critical operational systems.",
+      },
+    ],
+    achievements: [
+      {
+        title: "One integration platform for an entire airline",
+        challenge: "Saudia ran a plethora of custom messaging and middleware platforms on legacy and home-grown protocols — costly to maintain year on year, and a brake on integrating new systems and launching new products.",
+        approach: "Identified the right SOA product suite (IBM), produced the reference architecture and functional design, and architected an ESB-based solution integrating all of Saudia's applications — including a scheduling application to parse complex MVT, ASM and SSM airline messages. Liaised with the product vendor and supported construction.",
+        outcome: "A $25M programme integrating 112 systems, including Amadeus and Sabre — the foundation for a lower cost of ownership and a phased move to SOA and business process management.",
+      },
+      {
+        title: "An airline innovation lab",
+        challenge: "Airlines and their advisers wanted to see new capabilities working before investing in them.",
+        approach: "Led the TCS airline innovation lab, building demonstrations of airline capabilities.",
+        outcome: "Demonstrations used by British Airways, KLM and SITA.",
+      },
+      {
+        title: "Messaging architecture for BA's Travel Programme",
+        challenge: "British Airways' Travel Programme was replacing and modernising some of its most critical business and operational systems — and they all had to talk to each other reliably.",
+        approach: "Set the publish/subscribe strategy for messages across BA's integration architecture; designed the messaging deployment, identifying active-active and active-passive use cases; established message patterns ratified by the technical working group; produced the reference architecture on Progress; and built a simple/medium/complex estimation model.",
+      },
+      {
+        title: "SOA governance for British Airways",
+        challenge: "BA was rolling out SOA across its core operations, and every new business service needed governing from concept to production.",
+        approach: "Designed and implemented design-time governance on WSO2: the service development lifecycle, versioning strategy, deployment architecture and capacity tuning, and integration with the Service Delivery Platform. Liaised with the vendor and embedded process governance in the service repository.",
+      },
+      {
+        title: "Hands-on engineering at Qwest",
+        challenge: "Wholesale service delivery centres needed a single point of contact to track service requests through ordering, provisioning and billing.",
+        approach: "As Lead Developer, built the Instant Activation module and the web services other systems used to reach the Customer Request Management platform, and migrated ColdFusion pages to J2EE on WebLogic with Struts.",
+      },
+      {
+        title: "Pre-sales that won work",
+        challenge: "Large integration opportunities needed credible solutions and sizing.",
+        approach: "Supported pre-sales and RFP responses for opportunities worth $3M to $25M, and defined delivery methods and reusable architecture standards across client engagements.",
+        outcome: "Contributed to wins worth $50M.",
+      },
+    ],
+    leadership: [
+      "Learn the craft first: years of hands-on development before designing for others.",
+      "Coordinate as one team across client, onsite and offshore locations.",
+      "Make vendors partners in the solution, not just suppliers of a product.",
+    ],
+    tech: [
+      "IBM integration suite",
+      "Progress",
+      "WSO2",
+      "Enterprise Service Bus (ESB)",
+      "SOA governance",
+      "Publish/subscribe messaging",
+      "Airline messaging (MVT, ASM, SSM)",
+      "Amadeus",
+      "Sabre",
+      "J2EE",
+      "WebLogic",
+      "Struts",
+      "Web services",
+    ],
     quotes: [
       "One can assign him a huge / complex task and be assured that it will get done within the deadline.",
       "what impressed me most about him were his self-confidence, hunger for challenging work, ability to get things done, and readiness to stretch himself to deliver on his commitments.",
+      "He also knows how to convince people with his thought process and how to make people understand something very lucidly which they can’t.",
+      "Srini's dedication and enthusiasm has been clear to see on this project and he has no problem in going the extra mile in his approach to work.",
     ],
   },
 };

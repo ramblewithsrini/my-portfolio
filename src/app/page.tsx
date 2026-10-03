@@ -21,6 +21,7 @@ import {
   why,
 } from "@/data/about";
 import { relationshipLabels, testimonials } from "@/data/testimonials";
+import { sourceUrl } from "@/data/underTheHood";
 
 const teaser = testimonials.find((t) => t.teaser && !t.hidden);
 const testimonialCount = testimonials.filter((t) => !t.hidden).length;
@@ -636,6 +637,22 @@ export default function AboutPage() {
             <blockquote className="mt-10 border-l-2 border-accent pl-6 font-display text-xl leading-snug font-medium">
               {buildLog.takeaway}
             </blockquote>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/under-the-hood"
+                className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-background transition-transform hover:scale-105"
+              >
+                See what&apos;s under the hood →
+              </Link>
+              <a
+                href={sourceUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-border px-5 py-2.5 text-sm font-semibold transition-colors hover:border-foreground"
+              >
+                Read the source on GitHub ↗
+              </a>
+            </div>
           </Reveal>
           <ol className="space-y-4">
             {buildLog.steps.map((s, i) => (

@@ -99,9 +99,12 @@ export const experience: Job[] = [
     startDate: "2018-01",
     endDate: "2020-04",
     highlights: [
-      "Client-facing architecture adviser to financial services clients including HSBC, MUFG and Broadridge.",
-      "Architected GDPR, KYC and finance-screening solutions built on data governance and master data management.",
-      "Directed POCs, RFP/RFI responses and solution sizing; led architecture for smart-cities and IoT propositions.",
+      "Led the EY partnership for a KYC solution on Pitney Bowes Spectrum — from RFI/RFP and an on-site proof of concept through implementation and training EY professionals.",
+      "Led a five-person team delivering GDPR compliance for McDonald's: data standardisation, iterative data cleansing and an analytical single view of employees.",
+      "Led RFI/RFP responses, estimation and go/no-go decisions, and ran data governance due-diligence workshops for clients.",
+      "Presented operational MDM with Spectrum and GraphQL at the Pitney Bowes conference in Dallas and a Neo4j conference in London.",
+      "Led RFI/RFP, workshops, proofs of concept and Spectrum ETL integration for HSBC and Broadridge — through to post-implementation.",
+      "Client-facing architecture adviser to financial services clients including HSBC, MUFG and Broadridge; led architecture for smart-cities and IoT propositions.",
     ],
   },
   {

@@ -159,13 +159,102 @@ export const stories: Record<string, Story> = {
 
   "pitney-bowes": {
     summary:
-      "Client-facing architecture adviser to financial services clients including HSBC, MUFG and Broadridge, as well as retail and public-sector-adjacent markets, combining technology advisory, solution design and pre-sales leadership.",
-    scope: [
-      { label: "Clients", value: "HSBC, MUFG, Broadridge; retail and public-sector-adjacent markets" },
-      { label: "Focus", value: "GDPR, KYC and finance screening; smart cities and IoT" },
-      { label: "Data", value: "Data governance and master data management as the foundation for regulatory solutions; digital, integration and master-data roadmaps" },
+      "Pre-sales lead and solution architect for Pitney Bowes' Spectrum data platform. I took clients and partners from first workshop to working solution — data governance, master data management and regulatory compliance — for financial services, professional services and retail organisations.",
+    context: [
+      "Clients were under growing regulatory pressure, with GDPR and KYC chief among the drivers. They needed to turn fragmented data into something governed, trusted and compliant.",
+      "My role spanned the whole journey: shaping the opportunity, proving the solution, winning the work — and then delivering it and enabling the client's own people to run it.",
     ],
-    tech: ["Data governance", "Master data management", "IoT"],
+    scope: [
+      { label: "Role", value: "Pre-sales lead and solution architect" },
+      { label: "Clients", value: "HSBC, MUFG, Broadridge, McDonald's; retail and public-sector-adjacent markets" },
+      { label: "Partners", value: "EY — joint KYC solution built on Pitney Bowes Spectrum" },
+      { label: "Pre-sales", value: "RFI/RFP responses, estimation, proofs of concept and go/no-go decisions" },
+      { label: "Data", value: "Data governance, data quality, ETL and operational master data management" },
+      { label: "Platforms", value: "Pitney Bowes Spectrum, Neo4j and GraphQL" },
+    ],
+    outcomes: [
+      { value: "RFI → live", label: "EY KYC partnership, end to end" },
+      { value: "5", label: "Person team delivering GDPR compliance" },
+      { value: "2", label: "Industry conferences presented at" },
+      { value: "3", label: "Global financial services clients advised" },
+    ],
+    milestones: [
+      {
+        date: "May – Oct 2018",
+        title: "KYC solution partnership with EY",
+        body: "Took EY from RFI/RFP through a proof of concept at their workplace to implementation, then trained EY's professionals to deliver the solution themselves.",
+      },
+      {
+        date: "2018",
+        title: "Pitney Bowes conference, Dallas",
+        body: "Presented how Spectrum and GraphQL power operational master data management.",
+      },
+      {
+        date: "Nov 2018 – Jan 2019",
+        title: "GDPR compliance for McDonald's",
+        body: "Led a five-person team through data standardisation, iterative cleansing and an analytical single view of employees.",
+      },
+    ],
+    achievements: [
+      {
+        title: "KYC solution partnership with EY",
+        challenge: "EY wanted to add a Know Your Customer capability to its own service offering.",
+        approach: "Led the full lifecycle on Pitney Bowes Spectrum: the RFI and RFP, a proof of concept at EY's workplace, presentations to stakeholders, implementation, and training EY's professionals.",
+        outcome: "EY gained a KYC capability built on Spectrum, with its own people trained to deliver it.",
+      },
+      {
+        title: "Spectrum data integration for HSBC and Broadridge",
+        challenge: "HSBC and Broadridge were evaluating Spectrum for their data integration needs.",
+        approach: "Led the RFI/RFP process, ran discovery workshops and proofs of concept, and designed the ETL integration using Spectrum.",
+        outcome: "Carried both through to implementation, and led the post-implementation work.",
+      },
+      {
+        title: "GDPR compliance for McDonald's",
+        challenge: "Employee data had to be brought into line with GDPR.",
+        approach: "Led a five-person team to standardise the data, run multiple iterations of data cleansing, and build an analytical single view of employees on Spectrum.",
+        outcome: "A GDPR-compliant system with a trusted, analytical single view of employee data.",
+      },
+      {
+        title: "Data governance by design",
+        challenge: "Clients needed a practical strategy for data quality and governance, not just a product.",
+        approach: "Led due-diligence workshops to shape each client's data governance strategy — data quality and ETL transformations — and trained client teams on Spectrum and Neo4j.",
+      },
+      {
+        title: "Winning the right work",
+        challenge: "Every RFI and RFP needed a credible solution, a realistic estimate and a clear bid decision.",
+        approach: "Led RFI/RFP responses and estimation, and took part in go/no-go decisions so effort went into the opportunities worth winning.",
+      },
+    ],
+    tech: [
+      "Pitney Bowes Spectrum",
+      "Operational MDM",
+      "Neo4j",
+      "GraphQL",
+      "Data quality",
+      "ETL",
+      "Data governance",
+      "GDPR",
+      "KYC",
+      "IoT",
+    ],
+    leadershipStory: {
+      title: "Leaving clients self-sufficient",
+      situation:
+        "A data solution only delivers value if the client's own people can run it once the project team has gone.",
+      action:
+        "Alongside every implementation, I trained client teams — and EY's professionals — hands-on in Spectrum and Neo4j, until they could own the solution themselves.",
+      result: "Client teams became self-sufficient, running and extending the solutions without us.",
+    },
+    leadership: [
+      "Bid on the right work: pursue opportunities aligned to our target market, our product capability and our professional services strength — with an honest assessment of the competition.",
+      "Prove it before you sell it: proofs of concept on the client's own ground.",
+      "Shape the strategy first: due-diligence workshops before solution design.",
+      "Enable, don't create dependency: train client teams until they're self-sufficient.",
+    ],
+    lessons: [
+      "The best bids are often the ones you choose not to chase. Qualify hard on fit, capability and competition — then go all in.",
+      "A sale isn't finished until the client can run it without you.",
+    ],
     quotes: [
       "I was particularly impressed by Srini's ability to handle even the toughest clients.",
       "a great person to help clients understand and surface their requirements and support them in developing their architecture and strategy",

@@ -63,12 +63,12 @@ export const roleValues: RoleValue[] = [
       "Data strategy and governance aligned to regulation and business value",
       "Metadata curation, master data management and domain-driven data models",
       "Modern data platforms: data-at-rest strategy, OLTP/OLAP integration, data lake ingestion",
-      "Regulatory data solutions for GDPR, KYC and finance screening",
+      "Regulatory data solutions: GDPR compliance for McDonald's, a KYC solution with EY",
     ],
     evidence: [
       { value: "200M", label: "Transactions a day on the platforms whose data strategy I led" },
       { value: "3", label: "Organisations where I've led data strategy or MDM" },
-      { value: "GDPR · KYC", label: "Data solutions for HSBC, MUFG and Broadridge" },
+      { value: "GDPR · KYC", label: "Data solutions for McDonald's, EY, HSBC and Broadridge" },
     ],
     quote:
       "He had a rare ability to translate complicated architectural decisions into practical discussions, making him an outstanding partner to Product Management.",
@@ -117,12 +117,13 @@ export const roleValues: RoleValue[] = [
       "Solution shaping, sizing and RFP/RFI responses",
       "Proof-of-concept leadership that de-risks the buying decision",
       "Executive presentations and trusted-adviser relationships",
+      "Partnerships that extend a client's own offering — like a KYC solution built with EY",
       "Honest sizing from someone who's been the client",
     ],
     evidence: [
       { value: "$50M", label: "In wins I contributed to at TCS" },
-      { value: "$2–25M", label: "Opportunities shaped across TCS and InterGlobe" },
-      { value: "$25M", label: "Saudia programme delivered after the win" },
+      { value: "RFI → live", label: "KYC partnership with EY, through to training EY's team" },
+      { value: "2", label: "Financial services clients (HSBC, Broadridge) taken from RFP to post-implementation" },
     ],
     quote:
       "I was particularly impressed by Srini's ability to handle even the toughest clients. That skill often takes years to develop among Professional Services people, but it seemed to come perfectly naturally to him.",

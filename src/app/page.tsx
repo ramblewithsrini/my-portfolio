@@ -10,6 +10,7 @@ import {
   chapters,
   consulting,
   glance,
+  impact,
   intro,
   now,
   philosophy,
@@ -151,6 +152,31 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
+        </Reveal>
+
+        {/* Impact at a glance */}
+        <Reveal className="mt-6">
+          <h2 className="sr-only">Impact at a glance</h2>
+          <ul className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border bg-border lg:grid-cols-4">
+            {impact.map((m) => (
+              <li key={m.label} className="bg-background">
+                <Link
+                  href={m.href}
+                  className="group flex h-full flex-col justify-between gap-3 p-5 transition-colors hover:bg-surface sm:p-6"
+                >
+                  <span className="text-gradient font-display text-3xl font-bold tracking-tight sm:text-4xl">
+                    {m.value}
+                  </span>
+                  <span className="flex items-end justify-between gap-2 text-sm leading-snug text-muted group-hover:text-foreground">
+                    {m.label}
+                    <span className="shrink-0 text-accent opacity-0 transition-opacity group-hover:opacity-100" aria-hidden>
+                      →
+                    </span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </Reveal>
       </section>
 

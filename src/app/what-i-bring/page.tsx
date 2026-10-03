@@ -56,13 +56,19 @@ export default function WhatIBringPage() {
                 <a
                   key={r.id}
                   href={`#${r.id}`}
-                  className="group rounded-2xl border border-border bg-surface/70 p-5 backdrop-blur transition-colors hover:border-accent"
+                  className="group flex flex-col rounded-2xl border border-border bg-surface/70 p-5 backdrop-blur transition-colors hover:border-accent"
                 >
                   <span className="font-display text-sm text-accent-2">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="mt-1 block font-display text-lg leading-tight font-bold group-hover:text-accent">
+                  <span className="mt-1 block flex-1 font-display text-lg leading-tight font-bold group-hover:text-accent">
                     {r.label}
+                  </span>
+                  <span className="mt-5 border-t border-border pt-4">
+                    <span className="text-gradient block font-display text-2xl font-bold tracking-tight">
+                      {r.stat.value}
+                    </span>
+                    <span className="mt-0.5 block text-xs text-muted">{r.stat.label}</span>
                   </span>
                 </a>
               ))}

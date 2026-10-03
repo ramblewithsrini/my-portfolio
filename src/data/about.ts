@@ -29,7 +29,7 @@ export const uniqueness = {
       eyebrow: "How I lead",
       title: "People-centric leader",
       body: "People first, clarity next, delivery always. I recognise the effort behind the outcome, own the mistakes and keep blame out of the room — so teams collaborate instead of protecting themselves.",
-      proof: "“A true servant leader” — in my team's own words",
+      proof: "“A true servant leader” — in my team's own words; credited by an Allianz steering committee",
     },
     {
       eyebrow: "Where I come from",
@@ -41,7 +41,7 @@ export const uniqueness = {
       eyebrow: "Where I've worked",
       title: "Both sides of the table",
       body: "15+ years in consulting and pre-sales, plus in-house leadership at Allianz, Ricoh and Discover. I know how suppliers win and deliver — and how clients buy, fund and own change.",
-      proof: "$50M in pre-sales wins · £40M programme directed in-house",
+      proof: "Consultant to EY, HSBC and Broadridge · leader at Allianz, Ricoh and Discover",
     },
   ],
   result: {
@@ -88,14 +88,14 @@ export const progression = {
       role: "Technology leader",
       altitude: "30,000 feet",
       era: "InterGlobe to Discover",
-      body: "I now lead the people who do that work. Most recently, a 30-person organisation of architects and engineers, led through Architecture and Engineering Managers, for platforms processing 200M transactions a day.",
+      body: "I now lead the people who do that work. Most recently, a 30-person organisation of architects and engineers, led through Architecture and Engineering Managers, for platforms processing 200M transactions a day — cutting partner onboarding from 73 days to 5–7.",
       strength: "Executives get strategy grounded in engineering reality.",
     },
     {
       role: "Architect",
       altitude: "The systems view",
       era: "TCS to Ricoh Europe",
-      body: "I moved from components to whole estates — integrating 112 systems for Saudia, designing data and regulatory platforms for global banks, and shaping a $500M cloud transformation.",
+      body: "I moved from components to whole estates — integrating 112 systems for Saudia, building a household view of the customer at Allianz UK, designing data and regulatory solutions for EY, HSBC and Broadridge, and shaping a $500M cloud transformation.",
       strength: "I see how every decision ripples across platforms, data and teams.",
     },
     {
@@ -134,11 +134,11 @@ export const altitude = {
 
 export const consulting = {
   title: "Consulting and pre-sales, built in",
-  body: "Before leading in-house, I spent 15+ years in client-facing consulting at TCS, InterGlobe and Pitney Bowes. I learned to listen first, shape a proposition, size a solution honestly — and then deliver what was sold.",
+  body: "Before leading in-house, I spent 15+ years in client-facing consulting at TCS, InterGlobe and Pitney Bowes — from RFI to go-live, and on stage at industry conferences in Dallas and London. I learned to listen first, shape a proposition, size a solution honestly — and then deliver what was sold.",
   stats: [
     { value: "$50M", label: "In wins I contributed to at TCS" },
-    { value: "$2–25M", label: "Opportunities shaped across TCS and InterGlobe" },
-    { value: "$25M", label: "Saudia programme delivered across 112 systems" },
+    { value: "RFI → live", label: "KYC solution partnership with EY, end to end" },
+    { value: "2", label: "Industry conference talks, in Dallas and London" },
   ],
   capabilities: [
     "Proposals & RFP/RFI responses",
@@ -147,7 +147,7 @@ export const consulting = {
     "Executive presentations",
     "Trusted-adviser relationships",
   ],
-  clients: ["HSBC", "MUFG", "Broadridge", "Travelport", "SITA", "Saudia", "Qwest"],
+  clients: ["EY", "HSBC", "MUFG", "Broadridge", "McDonald's", "Travelport", "SITA", "Saudia", "Qwest"],
 };
 
 export const philosophy = {
@@ -159,19 +159,19 @@ export const philosophy = {
       word: "People",
       qualifier: "first",
       body: "Great platforms are built by teams who feel trusted. I invest in people — coaching managers, giving real ownership, and creating the safety to raise problems early.",
-      evidence: "Led and coached a 30-person organisation through its managers",
+      evidence: "Turned stressed, siloed teams into one team at Discover",
     },
     {
       word: "Clarity",
       qualifier: "next",
       body: "Ambiguity is the enemy of delivery. I turn complex estates into a clear target architecture, explicit decision rights and a roadmap everyone can explain.",
-      evidence: "Target architecture for platforms processing 200M transactions a day",
+      evidence: "A North Star that cut partner onboarding from 73 days to 5–7",
     },
     {
       word: "Delivery",
       qualifier: "always",
       body: "Care and clarity only matter when they ship. I hold a high bar for outcomes and resilience, and I own the hard days as well as the good ones.",
-      evidence: "£40M, 144-platform convergence · 99.999% availability",
+      evidence: "A 3,200% post-merger surge absorbed by the same team",
     },
   ],
 };
@@ -215,27 +215,27 @@ export const why = [
 export const principles = [
   {
     title: "Start with the investment case",
-    body: "Architecture earns its place when it changes a business decision. The £40M convergence programme at Discover began as an evidence base for an Investment Council — not a diagram.",
+    body: "Architecture earns its place when it changes a business decision. The £40M convergence at Discover began as an evidence base for an Investment Council — not a diagram.",
   },
   {
-    title: "Lead through leaders",
-    body: "At scale, my job is to grow the people who grow the teams: clear decision rights, real service ownership, and coaching managers to lead with accountability.",
+    title: "Silos are a trust problem",
+    body: "At Discover, stressed teams had stopped collaborating. Recognising the effort, owning the mistakes and removing blame turned them back into one team.",
   },
   {
-    title: "Design for the bad day",
-    body: "When platforms carry 200M transactions a day, resilience is a culture, not a feature — multi-region design, automated quality gates and honest root-cause analysis.",
+    title: "Earn adoption — don't mandate it",
+    body: "At Allianz UK, architecture workshops showed each project what was in it for them. Six adopted the shared platform, and the steering committee credited the approach.",
   },
   {
-    title: "Advise before you architect",
-    body: "Fifteen years in client-facing roles taught me that the best solution is the one a client can fund, deliver and own. Listening comes before drawing.",
+    title: "Lead without authority",
+    body: "At Ricoh I had no direct reports — just partners and internal experts. Clarity about what's needed, and clearing their blockers, kept six parallel workstreams moving.",
   },
   {
-    title: "Keep the engineering foundation",
-    body: "I began as a developer. Staying close to the craft keeps my credibility with engineers and my judgement sharp on trade-offs — this site is part of that.",
+    title: "Leave clients self-sufficient",
+    body: "From EY to McDonald's, I trained client teams until they could run the solution without us. A sale isn't finished until the client owns it.",
   },
   {
     title: "Adopt AI with governance",
-    body: "Agentic AI is a capability, not a strategy. With clear guardrails — as we applied to vulnerability identification and audit monitoring — it makes good teams faster.",
+    body: "A chatbot at Ricoh cut support-desk emails and calls by 27%; Agentic AI at Discover absorbed a 3,200% surge with the same team. Clear guardrails make good teams faster.",
   },
 ];
 
@@ -290,20 +290,35 @@ export const summary = {
       href: "#different",
     },
     {
-      text: "Led payments platforms at 200M transactions a day; cut partner onboarding from 73 days to 5–7.",
+      text: "Led payments platforms at 200M transactions a day, and absorbed a 3,200% post-merger surge with Agentic AI — same team.",
       href: "/experience/discover",
     },
     {
-      text: "15+ years in consulting and pre-sales, plus in-house leadership — I bring the view from both sides.",
-      href: "#different",
+      text: "Built a household view of the customer at Allianz UK; six projects adopted the shared platform.",
+      href: "/experience/allianz",
     },
-    { text: "People first. Clarity next. Delivery always.", href: "#philosophy" },
+    {
+      text: "15+ years in consulting and pre-sales — from EY's KYC partnership to HSBC and Broadridge.",
+      href: "/experience/pitney-bowes",
+    },
     {
       text: "Available immediately · London · SC-eligible · in-house or consulting roles.",
       href: "#situation",
     },
   ],
 };
+
+// Headline results across the career, shown as a grid under the summary.
+export const impact = [
+  { value: "200M", label: "Transactions a day", href: "/experience/discover" },
+  { value: "73 → 5–7", label: "Days to onboard a partner", href: "/experience/discover" },
+  { value: "3,200%", label: "Surge absorbed with Agentic AI, same team", href: "/experience/discover" },
+  { value: "27%", label: "Fewer support calls via an AI chatbot", href: "/experience/ricoh" },
+  { value: "21%", label: "Better MDM matching rates", href: "/experience/allianz" },
+  { value: "$500M", label: "Oracle Cloud transformation", href: "/experience/ricoh" },
+  { value: "£40M", label: "Convergence across 144 platforms", href: "/experience/discover" },
+  { value: "$50M", label: "Pre-sales wins contributed to", href: "/experience/tcs" },
+];
 
 export const buildLog = {
   title: "How this site was built",

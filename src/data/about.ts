@@ -189,7 +189,7 @@ export const now = {
     tracks: [
       {
         label: "In-house",
-        roles: ["Engineering leadership", "Architecture leadership", "Data leadership"],
+        roles: ["Engineering leadership", "Architecture leadership", "Data & AI leadership"],
       },
       {
         label: "Consulting",

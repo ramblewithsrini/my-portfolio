@@ -16,6 +16,13 @@ export type RoleValue = {
   quote: string;
   caseStudies: string[];
   first90: { step: string; body: string }[];
+  // Optional feature panel, e.g. "How I make architecture decisions".
+  panel?: {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    items: { title: string; body: string; example: string }[];
+  };
 };
 
 export const valueIntro = {
@@ -49,6 +56,38 @@ export const roleValues: RoleValue[] = [
     quote:
       "Srini has a remarkable ability to design complex architectures and, equally importantly, articulate them in a way that makes them easy for everyone on the team to understand.",
     caseStudies: ["discover", "ricoh", "tcs"],
+    panel: {
+      eyebrow: "How I work",
+      title: "How I make architecture decisions",
+      lead: "Good architecture is a series of well-made, well-explained decisions. This is the loop I run — and where I've run it.",
+      items: [
+        {
+          title: "Start from the outcome",
+          body: "Anchor every decision in the business result and its constraints — cost, risk, regulation and time — before any technology.",
+          example: "The £40M Discover convergence began as an investment case for an Investment Council.",
+        },
+        {
+          title: "Frame options, not answers",
+          body: "Put two or three real options on the table, including build, buy and partner, with the trade-offs made explicit.",
+          example: "Build-buy-partner decisions with ServiceNow, Salesforce and MongoDB at Discover.",
+        },
+        {
+          title: "Decide in the open",
+          body: "Record the decision and the reasoning, and ratify it in the right forum so it survives contact with delivery.",
+          example: "Message patterns for BA's Travel Programme, ratified by its technical working group.",
+        },
+        {
+          title: "Guardrails, not gatekeeping",
+          body: "Turn decisions into principles, patterns and standards that let teams move fast without asking permission.",
+          example: "Integration patterns and data quality guardrails across Ricoh's parallel workstreams.",
+        },
+        {
+          title: "Revisit with evidence",
+          body: "Measure what the decision was meant to change, and adjust when the evidence says so.",
+          example: "Partner onboarding at Discover, from 73 days to 5–7.",
+        },
+      ],
+    },
     first90: [
       { step: "Listen", body: "Map the estate, the pain points and the decisions waiting to be made." },
       { step: "Frame", body: "Set a North Star and target architecture tied to business outcomes." },
@@ -57,31 +96,32 @@ export const roleValues: RoleValue[] = [
   },
   {
     id: "data",
-    label: "Head of Data",
-    title: "Head of Data",
+    label: "Head of Data & AI",
+    title: "Head of Data & AI",
     stat: { value: "21%", label: "better MDM matching rates" },
-    headline: "Data strategy grounded in how platforms really work.",
+    headline: "Data and AI that earn their keep — trusted, governed and in production.",
     intro:
-      "I've led data from the architecture side — so strategy, governance and platforms are designed together, not bolted on. From a household view of the customer at Allianz UK to the data strategy behind 200M daily payments at Discover.",
+      "I've led data from the architecture side — so strategy, governance and platforms are designed together, not bolted on. And I've put AI to work on top of it: from a household view of the customer at Allianz UK, to Agentic AI absorbing a 3,200% surge at Discover, to a conversational AI that cut support-desk load by 27% at Ricoh.",
     value: [
+      "AI-ready data: trusted, governed data that analytics and AI can safely build on",
+      "Governed AI in production — Agentic AI at Discover, conversational AI at Ricoh — with guardrails a regulator would recognise",
       "Single and household customer views on MDM that feed marketing and analytics",
       "Data strategy and governance: metadata curation, reference data, data quality and survivorship",
       "Modern data platforms: data at rest, OLTP/OLAP integration, data lakes and warehouses",
       "Regulatory data solutions: GDPR compliance for McDonald's, a KYC solution with EY",
-      "Domain-driven data models that keep data close to the business it serves",
     ],
     evidence: [
       { value: "21%", label: "Better MDM matching rates at Allianz UK" },
-      { value: "6", label: "Projects reusing the Allianz customer data platform" },
-      { value: "200M", label: "Transactions a day on the platforms whose data strategy I led" },
+      { value: "3,200%", label: "Surge absorbed with Agentic AI at Discover — same team" },
+      { value: "27%", label: "Fewer support-desk emails and calls via conversational AI at Ricoh" },
     ],
     quote:
       "He had a rare ability to translate complicated architectural decisions into practical discussions, making him an outstanding partner to Product Management.",
-    caseStudies: ["allianz", "discover", "pitney-bowes"],
+    caseStudies: ["allianz", "discover", "ricoh", "pitney-bowes"],
     first90: [
-      { step: "Assess", body: "Understand the data landscape, quality, lineage and regulatory exposure." },
-      { step: "Govern", body: "Establish ownership, metadata and standards people will actually use." },
-      { step: "Deliver", body: "Link data platforms to the business decisions they enable, in a funded roadmap." },
+      { step: "Assess", body: "Map the data landscape, quality, lineage and regulatory exposure — and where AI could add value." },
+      { step: "Govern", body: "Establish ownership, metadata, standards and AI guardrails people will actually use." },
+      { step: "Deliver", body: "A funded roadmap linking data platforms and AI use cases to the business decisions they enable." },
     ],
   },
   {
@@ -101,7 +141,7 @@ export const roleValues: RoleValue[] = [
     ],
     evidence: [
       { value: "30", label: "People led through Architecture and Engineering Managers" },
-      { value: "3,200%", label: "Post-merger surge absorbed with Agentic AI — no extra headcount" },
+      { value: "3,200%", label: "Post-merger surge absorbed with Agentic AI — same team, within SLA" },
       { value: "73 → 5–7", label: "Days to onboard a partner" },
     ],
     quote:
@@ -120,7 +160,7 @@ export const roleValues: RoleValue[] = [
     stat: { value: "$50M", label: "in pre-sales wins" },
     headline: "Propositions that win — and engagements that deliver what was sold.",
     intro:
-      "15+ years client-facing at TCS, InterGlobe and Pitney Bowes — from RFI to go-live, and on stage at industry conferences in Dallas and London — plus the client-side view from leading in-house at Allianz, Ricoh and Discover.",
+      "15+ years client-facing at TCS, InterGlobe and Pitney Bowes — from RFI to go-live, and on stage at industry conferences in Dallas and London. Then nine years as the buyer, at Allianz, Ricoh and Discover. I've sat on both sides of the table, so I know what makes a client say yes — and what makes them walk away.",
     value: [
       "Bid qualification that chases the right work: fit, capability and an honest view of the competition",
       "Discovery workshops and proofs of concept on the client's own ground",
@@ -136,6 +176,33 @@ export const roleValues: RoleValue[] = [
     quote:
       "I was particularly impressed by Srini's ability to handle even the toughest clients. That skill often takes years to develop among Professional Services people, but it seemed to come perfectly naturally to him.",
     caseStudies: ["pitney-bowes", "tcs", "interglobe"],
+    panel: {
+      eyebrow: "The buyer's view",
+      title: "I've been the client — recently",
+      lead: "My in-house years were spent choosing, contracting and managing suppliers. That's the perspective I bring to every pursuit: proposals written for how buyers actually decide.",
+      items: [
+        {
+          title: "Build, buy or partner",
+          body: "I ran the decision from the client side — so I know how buyers weigh fit, risk and total cost.",
+          example: "ServiceNow, Salesforce and MongoDB at Discover.",
+        },
+        {
+          title: "Contracts and risk",
+          body: "I've negotiated contracts and assessed supplier risk, so I size and scope honestly.",
+          example: "MongoDB contract management and risk analysis at Discover.",
+        },
+        {
+          title: "Statements of work",
+          body: "I've written and managed SOWs, so I know what makes them clear — and where they go wrong.",
+          example: "An enterprise API management gateway at Ricoh; IBM SOWs and a pilot POC at Allianz.",
+        },
+        {
+          title: "Managing partners",
+          body: "I've led supplier teams day to day, so I know what clients value in a delivery partner.",
+          example: "A 15-person TCS team at Allianz; Amelia professional services at Ricoh.",
+        },
+      ],
+    },
     first90: [
       { step: "Learn the portfolio", body: "Offerings, recent wins and losses — and why they went that way." },
       { step: "Join live pursuits", body: "Shape, size and present alongside the sales team." },

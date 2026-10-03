@@ -2,14 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { hasPublishedArticles } from "@/data/insights";
 import { profile } from "@/data/portfolio";
 
 // `short` is the label shown on phones, where space is tight.
-const links: { href: string; label: string; short?: string }[] = [
+const links: { href: string; label: string; short?: string; wideOnly?: boolean }[] = [
   { href: "/", label: "About" },
   { href: "/what-i-bring", label: "What I bring", short: "Value" },
   { href: "/experience", label: "Experience", short: "Career" },
   { href: "/testimonials", label: "Testimonials" },
+  // Shown once an article is published; wider screens only (the phone nav is full).
+  ...(hasPublishedArticles ? [{ href: "/insights", label: "Insights", wideOnly: true }] : []),
 ];
 
 export default function Nav() {
@@ -35,7 +38,7 @@ export default function Nav() {
                 key={l.href}
                 href={l.href}
                 aria-current={active ? "page" : undefined}
-                className={`rounded-full px-2 py-2 text-sm transition-colors sm:px-3 lg:px-4 ${active ? "text-foreground" : "text-muted hover:text-foreground"}`}
+                className={`rounded-full px-2 py-2 text-sm transition-colors sm:px-3 lg:px-4 ${l.wideOnly ? "hidden md:inline-block" : ""} ${active ? "text-foreground" : "text-muted hover:text-foreground"}`}
               >
                 {l.short ? (
                   <>

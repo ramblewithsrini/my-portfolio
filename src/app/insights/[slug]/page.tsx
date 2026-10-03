@@ -1,0 +1,131 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import Contact from "@/components/Contact";
+import Reveal from "@/components/Reveal";
+import { formatDate, readingTime, visibleArticles, type Block } from "@/data/insights";
+import { experience, profile } from "@/data/portfolio";
+
+// Only visible articles exist (drafts are local-only); anything else is a 404.
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return visibleArticles.map((a) => ({ slug: a.slug }));
+}
+
+export async function generateMetadata(props: PageProps<"/insights/[slug]">): Promise<Metadata> {
+  const { slug } = await props.params;
+  const article = visibleArticles.find((a) => a.slug === slug);
+  if (!article) return {};
+  return {
+    title: article.title,
+    description: article.dek,
+    authors: [{ name: profile.name }],
+    openGraph: { type: "article", title: article.title, description: article.dek },
+    robots: article.status === "draft" ? { index: false } : undefined,
+  };
+}
+
+function renderBlock(block: Block, i: number) {
+  switch (block.type) {
+    case "h2":
+      return (
+        <h2 key={i} className="mt-14 font-display text-3xl font-bold tracking-tight">
+          {block.text}
+        </h2>
+      );
+    case "p":
+      return (
+        <p key={i} className="mt-6 text-lg leading-relaxed text-foreground/85">
+          {block.text}
+        </p>
+      );
+    case "list":
+      return (
+        <ul key={i} className="mt-6 space-y-4">
+          {block.items.map((item) => (
+            <li key={item} className="flex gap-3 text-lg leading-relaxed text-foreground/85">
+              <span className="mt-3 h-1 w-3 shrink-0 bg-accent" aria-hidden />
+              {item}
+            </li>
+          ))}
+        </ul>
+      );
+    case "quote":
+      return (
+        <blockquote
+          key={i}
+          className="mt-12 border-l-2 border-accent pl-6 font-display text-2xl leading-snug font-medium"
+        >
+          {block.text}
+        </blockquote>
+      );
+    case "note":
+      return (
+        <aside
+          key={i}
+          className="mt-6 rounded-2xl border border-dashed border-yellow-400/60 bg-yellow-400/[0.06] p-5 text-sm leading-relaxed text-yellow-100"
+        >
+          <span className="mb-1 block text-xs font-semibold uppercase tracking-widest text-yellow-300">
+            Editor&apos;s note — needs your input
+          </span>
+          {block.text}
+        </aside>
+      );
+  }
+}
+
+export default async function ArticlePage(props: PageProps<"/insights/[slug]">) {
+  const { slug } = await props.params;
+  const article = visibleArticles.find((a) => a.slug === slug);
+  if (!article) notFound();
+  const study = experience.find((j) => j.slug === article.caseStudy);
+
+  return (
+    <main id="top" className="overflow-x-clip">
+      <article className="mx-auto max-w-3xl px-5 pb-24 pt-32 sm:px-8 sm:pt-40">
+        <Reveal intro>
+          <Link href="/insights" className="text-sm text-muted hover:text-foreground">
+            ← All insights
+          </Link>
+          {article.status === "draft" && (
+            <p className="mt-6 rounded-xl border border-yellow-400/50 bg-yellow-400/[0.06] px-4 py-3 text-sm text-yellow-200">
+              Draft — visible only on your local preview, never on the live site.
+            </p>
+          )}
+        </Reveal>
+        <Reveal intro delay={100}>
+          <p className="mt-8 flex flex-wrap gap-3 text-sm text-muted">
+            <span>{formatDate(article.date)}</span>
+            <span aria-hidden>·</span>
+            <span>{readingTime(article)} min read</span>
+          </p>
+          <h1 className="mt-4 font-display text-[clamp(2.25rem,6vw,4rem)] leading-[1.05] font-bold tracking-tighter">
+            {article.title}
+          </h1>
+          <p className="mt-5 text-xl leading-relaxed text-muted">{article.dek}</p>
+          <p className="mt-6 text-sm text-foreground/80">
+            By {profile.name} · {profile.headline}
+          </p>
+        </Reveal>
+
+        <div className="mt-10 border-t border-border pt-4">{article.blocks.map(renderBlock)}</div>
+
+        {study && (
+          <Link
+            href={`/experience/${study.slug}`}
+            className="mt-14 block rounded-3xl border border-border bg-surface p-7 transition-colors hover:border-accent/50"
+          >
+            <span className="text-xs font-medium uppercase tracking-widest text-accent">
+              The case study behind this article
+            </span>
+            <span className="mt-2 block font-display text-2xl font-bold">{study.role}</span>
+            <span className="text-muted">{study.company} →</span>
+          </Link>
+        )}
+      </article>
+
+      <Contact />
+    </main>
+  );
+}

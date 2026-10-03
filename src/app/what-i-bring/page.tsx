@@ -9,7 +9,7 @@ import { attributeQuote } from "@/lib/career";
 export const metadata: Metadata = {
   title: "What I bring",
   description:
-    "The value I bring as an architect, Head of Data, Head of Engineering & Architecture, and in pre-sales and client engagement.",
+    "The value I bring as an architect, Head of Data & AI, Head of Engineering & Architecture, and in pre-sales and client engagement.",
 };
 
 const roles = roleValues.map((r) => ({
@@ -130,6 +130,42 @@ export default function WhatIBringPage() {
               </dl>
             </Reveal>
           </div>
+
+          {r.panel && (
+            <Reveal className="mt-6">
+              <div className="rounded-3xl border border-accent-2/40 bg-gradient-to-br from-accent-2/[0.08] via-surface to-surface p-8 sm:p-10">
+                <p className="text-xs font-medium uppercase tracking-widest text-[#c5b8ff]">
+                  {r.panel.eyebrow}
+                </p>
+                <h3 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+                  {r.panel.title}
+                </h3>
+                <p className="mt-3 max-w-3xl text-lg leading-relaxed text-muted">{r.panel.lead}</p>
+                <ol
+                  className={`mt-8 grid gap-4 sm:grid-cols-2 ${
+                    r.panel.items.length === 5 ? "lg:grid-cols-5" : "lg:grid-cols-4"
+                  }`}
+                >
+                  {r.panel.items.map((it, j) => (
+                    <li
+                      key={it.title}
+                      className="flex flex-col rounded-2xl border border-border bg-background/60 p-5"
+                    >
+                      <span className="font-display text-sm text-accent-2">
+                        {String(j + 1).padStart(2, "0")}
+                      </span>
+                      <h4 className="mt-1 font-display text-lg leading-tight font-bold">{it.title}</h4>
+                      <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{it.body}</p>
+                      <p className="mt-4 border-t border-border pt-3 text-xs leading-relaxed text-foreground/80">
+                        <span className="mr-1 text-accent">▸</span>
+                        {it.example}
+                      </p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </Reveal>
+          )}
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[2fr_3fr]">
             <Reveal className="h-full">

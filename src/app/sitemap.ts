@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { articles } from "@/data/insights";
 import { experience } from "@/data/portfolio";
 import { siteUrl } from "@/lib/site";
 
@@ -13,5 +14,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
-  return [...pages, ...roles];
+  const published = articles.filter((a) => a.status === "published");
+  const insights = published.length
+    ? [
+        { url: `${siteUrl}/insights`, changeFrequency: "monthly" as const, priority: 0.7 },
+        ...published.map((a) => ({
+          url: `${siteUrl}/insights/${a.slug}`,
+          lastModified: a.date,
+          changeFrequency: "yearly" as const,
+          priority: 0.6,
+        })),
+      ]
+    : [];
+  return [...pages, ...roles, ...insights];
 }

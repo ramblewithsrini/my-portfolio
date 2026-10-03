@@ -81,9 +81,9 @@ export const stories: Record<string, Story> = {
       },
       {
         title: "Absorbing a 3,200% surge with Agentic AI",
-        challenge: "The Capital One merger drove a 3,200% surge in Referral Management volume.",
-        approach: "Introduced Agentic AI into the Referral Management Service.",
-        outcome: "Handled the surge with the same customer service centre team — no increase in headcount.",
+        challenge: "The Capital One merger drove a 3,200% surge in referrals — the cases merchants raise when a transaction doesn't go through.",
+        approach: "Introduced an AI agent into the Referral Management Service that triages, classifies and prioritises every referral, and resolves the simple cases itself. Live in four months.",
+        outcome: "The same customer service centre team absorbed the surge within SLA, with less reliance on temporary contractors.",
       },
       {
         title: "Merger-ready resilience",

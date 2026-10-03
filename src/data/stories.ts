@@ -149,12 +149,90 @@ export const stories: Record<string, Story> = {
   },
 
   ricoh: {
-    scope: [
-      { label: "Programme", value: "Multiyear $500M Oracle Cloud transformation" },
-      { label: "Platforms", value: "SaaS, workflow, HR and shared business platforms" },
+    summary:
+      "Senior member of Ricoh Europe's architecture team, leading the technology evaluation and integration architecture for a multiyear $500M Oracle Cloud transformation — and Lead Architect across HR, finance and customer-facing modernisation running alongside it.",
+    context: [
+      "Ricoh Europe was moving core business platforms to Oracle Cloud as part of a multiyear, $500M transformation. Around it, HR, finance and customer-facing systems all needed modernising — largely in parallel.",
+      "My brief was to drive the technology evaluation for Oracle Cloud adoption and to be a trusted adviser to the business on data and integration: showing how the right platforms and patterns would solve their challenges.",
     ],
-    outcomes: [{ value: "$500M", label: "Transformation programme" }],
-    tech: ["Oracle Cloud", "SAP SuccessFactors", "ServiceNow", "Axon Ivy", "TalentLink", "iPeople"],
+    scope: [
+      { label: "Role", value: "Lead Solution Architect, senior member of the architecture team" },
+      { label: "Reporting to", value: "Head of Enterprise Architecture" },
+      { label: "Programme", value: "Multiyear $500M Oracle Cloud transformation: technology evaluation, migration and integration" },
+      { label: "Partners", value: "Amelia professional services, for the customer-portal chatbot" },
+      { label: "Workstreams", value: "HR modernisation, Concur and invoice management, an AI chatbot for customer portals, and enterprise API management — in parallel" },
+      { label: "Platforms", value: "SaaS, workflow, HR and shared business platforms" },
+      { label: "Data & integration", value: "Integration patterns for downstream systems; data quality management process" },
+      { label: "Commercial", value: "Statement-of-work process for an enterprise-wide API management gateway" },
+    ],
+    outcomes: [
+      { value: "$500M", label: "Oracle Cloud transformation" },
+      { value: "27%", label: "Fewer support-desk emails and calls, via an AI chatbot" },
+      { value: "6", label: "Workstreams led in parallel" },
+      { value: "5", label: "HR platforms modernised" },
+    ],
+    achievements: [
+      {
+        title: "Oracle Cloud evaluation and integration",
+        challenge: "The business needed confidence in Oracle Cloud before committing to a multiyear migration.",
+        approach: "Drove the technology evaluation for Oracle Cloud adoption, and owned the overall cloud migration and integration architecture.",
+        outcome: "A target architecture and implementation roadmap across SaaS, workflow, HR and shared business platforms.",
+      },
+      {
+        title: "HR platform modernisation",
+        challenge: "HR ran across a mix of platforms: iPeople, SAP SuccessFactors, Axon Ivy, TalentLink and ServiceNow.",
+        approach: "Led the architecture for modernising the HR estate across all five platforms.",
+        outcome: "More consistent HR platforms with greater operational maturity.",
+      },
+      {
+        title: "Conversational AI for customer portals",
+        challenge: "The support desk was carrying a heavy load of routine customer queries by email and phone.",
+        approach: "Lead Architect for implementing the Amelia AI chatbot on the customer-facing portals, in partnership with Amelia's professional services team — integrated through APIs so it understood each customer: their recent orders and their status.",
+        outcome: "27% fewer emails and calls to the support desk.",
+      },
+      {
+        title: "Expense and invoice management",
+        challenge: "Expenses and invoices flowed through separate systems.",
+        approach: "Lead Architect for Concur and invoice management, integrating Concur, DocuWare and TrustWeaver.",
+      },
+      {
+        title: "Enterprise API management and data quality",
+        challenge: "Integration across the enterprise needed consistency, control and trusted data.",
+        approach: "Managed the statement-of-work process for an enterprise-wide API management gateway; defined integration patterns for downstream systems and designed the data quality management process.",
+        outcome: "Integration and data quality guardrails that improved reliability and supportability.",
+      },
+    ],
+    tech: [
+      "Oracle Cloud",
+      "SAP SuccessFactors",
+      "ServiceNow",
+      "Axon Ivy",
+      "TalentLink",
+      "iPeople",
+      "Amelia (conversational AI)",
+      "SAP Concur",
+      "DocuWare",
+      "TrustWeaver",
+      "API management",
+      "Data quality management",
+    ],
+    leadershipStory: {
+      title: "Leading without authority",
+      situation:
+        "With no direct line management, delivery depended on external partners — and on internal teams with their own priorities. Partners regularly hit deadlocks they couldn't resolve on their own.",
+      action:
+        "I gave partners clarity on what was needed and why, then cleared the path: working with Ricoh's infrastructure team and the subject-matter experts for the HR systems and an in-house application in Ricoh's data centre to resolve each blocker.",
+      result: "Deadlocks were removed and delivery kept moving — without needing formal authority to make it happen.",
+    },
+    leadership: [
+      "Lead through clarity, not authority: make what's needed — and why — unmistakable.",
+      "Be the bridge: connect partners with the internal experts who can unblock them.",
+      "Treat partners as part of the team, not as suppliers to be managed.",
+    ],
+    lessons: [
+      "Influence is earned by removing other people's blockers. Make their work easier, and authority stops mattering.",
+      "Most deadlocks between partners and internal teams come from missing context, not missing will.",
+    ],
   },
 
   "pitney-bowes": {

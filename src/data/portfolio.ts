@@ -83,9 +83,12 @@ export const experience: Job[] = [
     startDate: "2020-09",
     endDate: "2023-05",
     highlights: [
-      "Shaped the Oracle Cloud migration and integration strategy for a multiyear $500M transformation.",
-      "Modernised HR and corporate platforms including SAP SuccessFactors and ServiceNow.",
-      "Defined integration patterns, data-quality processes and delivery guardrails.",
+      "Drove the Oracle Cloud technology evaluation and owned cloud migration and integration for a multiyear $500M transformation.",
+      "Lead Architect for an Amelia AI chatbot on customer portals, integrated via APIs with customers' orders and their status — cutting support-desk emails and calls by 27%.",
+      "Lead Architect for HR modernisation across iPeople, SAP SuccessFactors, Axon Ivy, TalentLink and ServiceNow.",
+      "Lead Architect for Concur and invoice management, integrating Concur, DocuWare and TrustWeaver.",
+      "Managed the statement-of-work process for an enterprise-wide API management gateway.",
+      "Defined integration patterns, data-quality processes and delivery guardrails to improve reliability and supportability.",
     ],
   },
   {

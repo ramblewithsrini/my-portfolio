@@ -11,6 +11,7 @@ export type RoleValue = {
   stat: { value: string; label: string }; // headline number on the role card
   headline: string;
   intro: string;
+  valueTitle: string; // heading above the value points, written as a sentence
   value: string[];
   evidence: { value: string; label: string }[];
   quote: string;
@@ -35,6 +36,7 @@ export const valueIntro = {
 export const roleValues: RoleValue[] = [
   {
     id: "architect",
+    valueTitle: "Where I'll make the difference to your architecture",
     label: "Architect",
     title: "Enterprise & Solution Architect",
     stat: { value: "73 → 5–7", label: "days to onboard a partner" },
@@ -96,6 +98,7 @@ export const roleValues: RoleValue[] = [
   },
   {
     id: "data",
+    valueTitle: "Where I'll make the difference to your data and AI",
     label: "Head of Data & AI",
     title: "Head of Data & AI",
     stat: { value: "21%", label: "better MDM matching rates" },
@@ -126,6 +129,7 @@ export const roleValues: RoleValue[] = [
   },
   {
     id: "engineering",
+    valueTitle: "Where I'll make the difference to your teams",
     label: "Head of Engineering & Architecture",
     title: "Head of Engineering & Architecture",
     stat: { value: "3,200%", label: "surge absorbed, same team" },
@@ -156,6 +160,7 @@ export const roleValues: RoleValue[] = [
   },
   {
     id: "presales",
+    valueTitle: "Where I'll make the difference to your pipeline",
     label: "Pre-sales & Client Engagement",
     title: "Pre-sales & Client Engagement",
     stat: { value: "$50M", label: "in pre-sales wins" },

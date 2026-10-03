@@ -103,9 +103,9 @@ export default function WhatIBringPage() {
           <div className="mt-12 grid gap-6 lg:grid-cols-[3fr_2fr]">
             <Reveal className="h-full">
               <div className="h-full rounded-3xl border border-border bg-surface p-8">
-                <p className="text-xs font-medium uppercase tracking-widest text-accent">
-                  What you get
-                </p>
+                <h3 className="font-display text-2xl leading-tight font-bold tracking-tight">
+                  {r.valueTitle}
+                </h3>
                 <ul className="mt-5 space-y-4">
                   {r.value.map((v) => (
                     <li key={v} className="flex gap-3 text-lg leading-snug">

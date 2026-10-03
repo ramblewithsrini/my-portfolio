@@ -362,7 +362,7 @@ export const beyondWork = {
     },
     {
       eyebrow: "On the pitch",
-      title: "Cricket & badminton",
+      title: "Cricket & Badminton",
       body: "Cricket taught me early that the team's total matters more than any one innings. Badminton keeps the reflexes sharp.",
     },
     {

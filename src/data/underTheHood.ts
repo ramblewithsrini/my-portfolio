@@ -9,7 +9,7 @@ export const hoodIntro = {
   eyebrow: "Under the hood",
   title: "How this site is built —",
   titleAccent: "and why.",
-  lead: "I built this site with Claude Code as my pair programmer. I set the architecture, made the calls and reviewed every change; Claude Code wrote the code. These are the decisions behind it — the same way I'd document a production system.",
+  lead: "I built this site with Claude Code as my pair programmer: I set the architecture and made the calls. These are the decisions behind it — the same way I'd document a production system.",
 };
 
 export const hoodStats = [
@@ -106,7 +106,7 @@ export const decisions: Decision[] = [
     title: "Two languages, one answer",
     context: "The MDM playground runs in TypeScript in the browser; data teams work in Python. Two implementations of the same logic can quietly drift apart.",
     decision: "Both engines read one shared data file. The Python results are committed, and the site build re-runs the TypeScript engine and compares every pair score, golden record and household.",
-    consequence: "If the two engines ever disagree, the build fails — so the live demo and the Python notebook always tell the same story.",
+    consequence: "The live demo and the Python notebook can never tell different stories: a disagreement stops the release.",
     code: {
       file: "src/app/lab/mdm/two-ways/page.tsx",
       snippet: [

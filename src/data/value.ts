@@ -67,7 +67,7 @@ export const roleValues: RoleValue[] = [
         {
           title: "Start from the outcome",
           body: "Anchor every decision in the business result and its constraints — cost, risk, regulation and time — before any technology.",
-          example: "The Discover convergence began as an investment case for an Investment Council.",
+          example: "At Ricoh, the Oracle Cloud evaluation started from the business's challenges, not the product.",
         },
         {
           title: "Frame options, not answers",
@@ -116,7 +116,7 @@ export const roleValues: RoleValue[] = [
     ],
     evidence: [
       { value: "21%", label: "Better MDM matching rates at Allianz UK" },
-      { value: "360%", label: "Surge absorbed with Agentic AI at Discover — same team" },
+      { value: "4 months", label: "From decision to live: governed Agentic AI at Discover" },
       { value: "27%", label: "Fewer support-desk emails and calls via conversational AI at Ricoh" },
     ],
     quote:
@@ -140,14 +140,14 @@ export const roleValues: RoleValue[] = [
       "I've led a 30-person architecture and engineering organisation through its managers, for payment platforms processing 200M transactions a day — through a merger, a platform convergence and a post-merger surge.",
     value: [
       "Leaders who grow leaders: clear decision rights, service ownership and coaching",
-      "Functions built from the ground up — a 15-member Architecture & Design practice at IGT",
+      "Functions built from the ground up, across the UK, US and India",
       "Teams that collaborate instead of protecting their silos — no blame, shared credit",
       "Resilience as a culture: multi-region design, CI/CD and automated quality gates",
       "Delivery at scale through mergers, platform convergence and volume surges",
       "Governed AI adoption that makes good teams faster",
     ],
     evidence: [
-      { value: "30", label: "People led through Architecture and Engineering Managers" },
+      { value: "8 of 8", label: "People who chose to stay after I turned their team around" },
       { value: "360%", label: "Post-merger surge absorbed with Agentic AI — same team, within SLA" },
       { value: "15", label: "Members in the Architecture & Design practice I built at IGT" },
     ],
@@ -171,7 +171,7 @@ export const roleValues: RoleValue[] = [
     intro:
       "15+ years client-facing at TCS, InterGlobe and Pitney Bowes — from RFI to go-live, building and running an architecture function, and on stage at industry conferences in Dallas and London. Then nine years as the buyer, at Allianz, Ricoh and Discover. I've sat on both sides of the table, so I know what makes a client say yes — and what makes them walk away.",
     value: [
-      "Account growth: grew IGT's SITA business from passenger systems into its Government Service Line, where iBorders was bought by Oman and Saudi Arabia — IGT's Game Changer Award, 2014",
+      "Account growth that starts with delivery: earn the next business line through the current one",
       "Bid qualification that chases the right work: fit, capability and an honest view of the competition",
       "Discovery workshops and proofs of concept on the client's own ground",
       "Partnerships that extend a client's offering — like a KYC solution built with EY",

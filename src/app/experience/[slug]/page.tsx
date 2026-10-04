@@ -95,12 +95,11 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
             <Reveal intro delay={320}>
               <dl className="mt-12 grid grid-cols-2 gap-6 border-t border-border pt-8 sm:grid-cols-4">
                 {story.outcomes.map((o) => (
-                  <div key={o.label}>
-                    <dt className="sr-only">{o.label}</dt>
+                  <div key={o.label} className="flex flex-col-reverse">
+                    <dt className="mt-1 text-sm text-muted">{o.label}</dt>
                     <dd className="text-gradient font-display text-3xl font-bold sm:text-4xl">
                       {o.value}
                     </dd>
-                    <dd className="mt-1 text-sm text-muted">{o.label}</dd>
                   </div>
                 ))}
               </dl>

@@ -85,12 +85,11 @@ export default function ExperiencePage() {
           <Reveal intro delay={500}>
             <dl className="mt-16 grid max-w-xl grid-cols-3 gap-6 border-t border-border pt-8">
               {stats.map((s) => (
-                <div key={s.label}>
-                  <dt className="sr-only">{s.label}</dt>
+                <div key={s.label} className="flex flex-col-reverse">
+                  <dt className="mt-1 text-sm text-muted">{s.label}</dt>
                   <dd className="font-display text-3xl font-bold sm:text-4xl">
                     {s.value}
                   </dd>
-                  <dd className="mt-1 text-sm text-muted">{s.label}</dd>
                 </div>
               ))}
             </dl>

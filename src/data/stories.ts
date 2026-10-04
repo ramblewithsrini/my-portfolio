@@ -41,7 +41,7 @@ export const stories: Record<string, Story> = {
       { label: "Remit", value: "Partner Enablement and Experience, plus platform convergence after the Capital One merger" },
       { label: "Team", value: "30-person architecture & engineering organisation, led through Architecture and Engineering Managers" },
       { label: "Platforms", value: "Discover and Diners partner-experience and payment platforms, integrated with settlement, fraud and disputes" },
-      { label: "Data", value: "Data strategy and governance: metadata curation, data at rest, OLTP/OLAP integration and data lake ingestion" },
+      { label: "Data", value: "Data strategy and governance for the domain" },
       { label: "Stakeholders", value: "Product, business and executive leadership; the post-merger Integration Management Office" },
       { label: "Scale", value: "200M transactions a day at 10K+ TPS, against 99.999% availability expectations" },
     ],
@@ -65,7 +65,7 @@ export const stories: Record<string, Story> = {
       {
         date: "Jan – May 2024",
         title: "Made the platforms merger-ready",
-        body: "Assessed the impact of the post-merger volume surge on availability, SLAs and SLOs. Worked with the Integration Management Office to prioritise scalability work, brought in third-party contractors to scale capacity fast, and supported successful testing of the Capital One network transition.",
+        body: "Prepared the platforms for the Capital One network transition, working with the Integration Management Office.",
       },
       {
         date: "May 2024 onwards",
@@ -94,13 +94,8 @@ export const stories: Record<string, Story> = {
       },
       {
         title: "Data strategy & governance",
-        challenge: "Data spread across in-house, SaaS and legacy applications, with legacy and modern Profile data out of sync.",
+        challenge: "Data was spread across in-house, SaaS and legacy applications, with no shared view of what it meant or where it lived.",
         approach: "Led metadata curation and the strategy for data at rest; integrated OLTP and OLAP workloads; drove ingestion into the data lake; and anchored it all in domain-driven data models and data governance.",
-      },
-      {
-        title: "Resilient, modern foundations",
-        challenge: "Slow applications, legacy and modern Profile data out of sync, and a poorly performing Party Hierarchy.",
-        approach: "Moved Profile data to multi-region, multi-cluster OpenShift on AWS; standardised on event-driven architecture with DDD, CQRS and hexagonal architecture; proved GraphQL on MongoDB Atlas for Party Hierarchy.",
       },
     ],
     tech: [
@@ -157,14 +152,10 @@ export const stories: Record<string, Story> = {
       "My brief was to drive the technology evaluation for Oracle Cloud adoption and to be a trusted adviser to the business on data and integration: showing how the right platforms and patterns would solve their challenges.",
     ],
     scope: [
-      { label: "Role", value: "Lead Solution Architect, senior member of the architecture team" },
       { label: "Reporting to", value: "Head of Enterprise Architecture" },
-      { label: "Programme", value: "Multiyear Oracle Cloud transformation: technology evaluation, migration and integration" },
       { label: "Partners", value: "Amelia professional services, for the customer-portal chatbot" },
       { label: "Workstreams", value: "HR modernisation, Concur and invoice management, an AI chatbot for customer portals, and enterprise API management — in parallel" },
       { label: "Platforms", value: "SaaS, workflow, HR and shared business platforms" },
-      { label: "Data & integration", value: "Integration patterns for downstream systems; data quality management process" },
-      { label: "Commercial", value: "Statement-of-work process for an enterprise-wide API management gateway" },
     ],
     outcomes: [
       { value: "$500M", label: "Oracle Cloud transformation" },
@@ -247,7 +238,6 @@ export const stories: Record<string, Story> = {
       { label: "Role", value: "Pre-sales lead and solution architect" },
       { label: "Clients", value: "HSBC, MUFG, Broadridge, McDonald's; retail and public-sector-adjacent markets" },
       { label: "Partners", value: "EY — joint KYC solution built on Pitney Bowes Spectrum" },
-      { label: "Pre-sales", value: "RFI/RFP responses, estimation, proofs of concept and go/no-go decisions" },
       { label: "Data", value: "Data governance, data quality, ETL and operational master data management" },
       { label: "Platforms", value: "Pitney Bowes Spectrum, Neo4j and GraphQL" },
     ],
@@ -261,7 +251,7 @@ export const stories: Record<string, Story> = {
       {
         date: "May – Oct 2018",
         title: "KYC solution partnership with EY",
-        body: "Took EY from RFI/RFP through a proof of concept at their workplace to implementation, then trained EY's professionals to deliver the solution themselves.",
+        body: "From first RFI to an EY team trained to deliver the solution themselves.",
       },
       {
         date: "2018",
@@ -271,7 +261,6 @@ export const stories: Record<string, Story> = {
       {
         date: "Nov 2018 – Jan 2019",
         title: "GDPR compliance for McDonald's",
-        body: "Led a five-person team through data standardisation, iterative cleansing and an analytical single view of employees.",
       },
     ],
     achievements: [
@@ -301,7 +290,7 @@ export const stories: Record<string, Story> = {
       {
         title: "Data governance by design",
         challenge: "Clients needed a practical strategy for data quality and governance, not just a product.",
-        approach: "Led due-diligence workshops to shape each client's data governance strategy — data quality and ETL transformations — and trained client teams on Spectrum and Neo4j.",
+        approach: "Led due-diligence workshops to shape each client's data governance strategy — data quality and ETL transformations.",
       },
       {
         title: "Winning the right work",
@@ -361,13 +350,8 @@ export const stories: Record<string, Story> = {
     ],
     scope: [
       { label: "Role", value: "Senior Digital Architect & Product Manager" },
-      { label: "Platform", value: "Shared digital services and the Customer Hub, reused by projects across Allianz UK" },
       { label: "Customer data", value: "MDM on IBM MDM Server: probabilistic matching, survivorship rules, reference data and a household view of the customer" },
-      { label: "Integrations", value: "Adobe marketing suite, data lakehouse and data warehouse; federated ESB patterns" },
       { label: "Team", value: "Led and managed a 15-person third-party TCS team, onsite and offshore; built teams around customer data and MDM" },
-      { label: "Adoption", value: "Six projects across Allianz UK consuming the shared platform" },
-      { label: "Engineering", value: "Directed release management, configuration management and test automation for corporate IT developments" },
-      { label: "Vendors", value: "IBM (products, licensing, consulting, SOWs, pilot POC) with procurement; TCS as implementation partner" },
     ],
     outcomes: [
       { value: "21%", label: "Better MDM matching rates" },
@@ -377,7 +361,7 @@ export const stories: Record<string, Story> = {
     achievements: [
       {
         title: "A single, trusted view of the customer",
-        challenge: "Customer records were spread across many systems — duplicated, inconsistent and hard to trust.",
+        challenge: "Without a trusted golden record, every system held its own version of the customer.",
         approach: "Built the customer data and MDM capability on IBM MDM Server: standardised addresses against Royal Mail PAF; made the highest-quality source, the policy system, the trusted source for the golden record; tuned automatic-merge and review thresholds against known duplicates, with periodic sampling by data stewards who also worked the review queue; cleansed the data and managed reference data — then built a household view of each customer.",
         outcome: "Matching rates improved by 21%, and the business gained a trusted, household-level view of its customers.",
       },
@@ -385,19 +369,13 @@ export const stories: Record<string, Story> = {
         title: "Customer data that powers marketing and analytics",
         challenge: "Trusted customer data only creates value when marketing and analytics can use it.",
         approach: "Integrated the Customer Hub with the Adobe marketing suite and with the data lakehouse and data warehouse, using defined integration patterns and data governance.",
-        outcome: "Householded, trusted customer data available for marketing and analytics.",
+        outcome: "Marketing and analytics working from the same householded customer data.",
       },
       {
         title: "A shared digital platform for Allianz UK",
         challenge: "Separate solutions for every project meant duplicated build, higher running costs and more delivery risk.",
         approach: "Formulated and implemented the vision and strategy for the next generation of digital services, designed the Customer Hub and generic services, and defined the target operating model.",
         outcome: "Faster delivery and a lower cost of ownership than building and maintaining separate solutions — and a robust platform that de-risked future projects.",
-      },
-      {
-        title: "Winning six projects to the platform",
-        challenge: "A shared platform only pays back if projects choose to use it — and each was used to building its own.",
-        approach: "Led architecture workshops with the consuming applications to share the platform's scope, and helped them see how it would shorten their time to build and remove duplicated functionality. Prepared programme mandates and a reuse roadmap.",
-        outcome: "Six projects adopted the shared platform instead of building their own.",
       },
       {
         title: "Modern, reliable engineering",
@@ -407,7 +385,7 @@ export const stories: Record<string, Story> = {
       {
         title: "A productive partnership with IBM and TCS",
         challenge: "The platform depended on IBM products and on a third-party implementation partner.",
-        approach: "Worked with procurement to shape the IBM relationship — products, licence management, consulting, statements of work and a pilot POC — and led and managed a 15-person TCS implementation team, onsite and offshore.",
+        approach: "Worked with procurement to shape the IBM relationship — products, licence management, consulting, statements of work and a pilot POC — and kept the TCS implementation team, onsite and offshore, working as one team with ours.",
       },
     ],
     leadershipStory: {
@@ -415,7 +393,7 @@ export const stories: Record<string, Story> = {
       situation:
         "The shared platform would only succeed if other projects chose to build on it — and every one of them was used to building its own solutions.",
       action:
-        "I invited the consuming applications into architecture workshops, shared the scope of our work openly, and helped their teams think through how the platform would shorten their time to build and remove duplicated functionality.",
+        "I invited the consuming applications into architecture workshops, shared the scope of our work openly, and helped their teams think through how the platform would shorten their time to build and remove duplicated functionality. Programme mandates and a reuse roadmap made each commitment concrete.",
       result:
         "Six projects adopted the platform, and the steering committee highlighted my work as one of the key reasons for the programme's success.",
     },
@@ -456,16 +434,12 @@ export const stories: Record<string, Story> = {
       "Head of Enterprise Architecture for InterGlobe Technologies (IGT) in Europe. I built a 15-member Architecture & Design function from the ground up — delivering £1.5M+ in annual revenue — while architecting SITA's passenger and border management platforms and growing IGT's SITA business into a second business line. Recognised with IGT's Game Changer Award in 2014.",
     context: [
       "SITA, the air transport industry's technology provider, was modernising its passenger service systems and building out a government line of business around border management.",
-      "As Head of Enterprise Architecture for IGT in Europe, I led the architecture on both fronts — and turned our delivery credibility in one SITA business line into new work in another.",
+      "As Head of Enterprise Architecture for IGT in Europe, I led the architecture on both fronts.",
     ],
     scope: [
       { label: "Role", value: "Head of Enterprise Architecture, Europe" },
-      { label: "Function", value: "Built a 15-member Architecture & Design function from the ground up, across the UK, US and India" },
-      { label: "Revenue", value: "£1.5M+ a year from architectural strategy, solution design and enterprise technology direction" },
-      { label: "Clients", value: "SITA (Passenger Service Systems and Government Service Line); Travelport" },
-      { label: "Account growth", value: "Grew IGT's SITA business from passenger systems into the Government Service Line" },
+      { label: "Clients", value: "SITA; Travelport" },
       { label: "Pre-sales", value: "Led RFI/RFP proposals across clients, for opportunities worth $2M to $20M" },
-      { label: "Recognition", value: "IGT Game Changer Award, 2014" },
     ],
     outcomes: [
       { value: "£1.5M+", label: "Annual revenue from the function I built" },
@@ -491,12 +465,6 @@ export const stories: Record<string, Story> = {
         approach: "Lead Architect for SITA iBorders in Oman — an integrated border management solution that combines risk assessment of traveller data with the tools to manage, monitor and operate border controls, focusing resources on higher-risk travellers.",
         outcome: "iBorders was purchased by Oman and Saudi Arabia.",
       },
-      {
-        title: "An Architecture & Design function, built from the ground up",
-        challenge: "IGT had no dedicated Architecture & Design function — it had to be built alongside live client delivery.",
-        approach: "Built and led a 15-member function across the UK, US and India; led RFI/RFP proposals across clients for $2M–$20M opportunities; and established reusable architecture standards and delivery methods adopted across client engagements.",
-        outcome: "£1.5M+ in annual revenue through architectural strategy, solution design and enterprise-wide technology direction.",
-      },
     ],
     leadershipStory: {
       title: "Building an architecture business from zero",
@@ -505,7 +473,7 @@ export const stories: Record<string, Story> = {
       action:
         "I built and grew a 15-member function across the UK, US and India, set shared standards and delivery methods, and led RFI/RFP proposals across clients — while staying hands-on as SITA's architect.",
       result:
-        "A function delivering £1.5M+ in annual revenue, and a SITA account that grew into a second business line — recognised with IGT's Game Changer Award in 2014.",
+        "A self-sustaining function whose standards were adopted across client engagements — built without pausing client delivery.",
     },
     leadership: [
       "Earn the next piece of work through the current one: delivery is the best business development.",
@@ -540,8 +508,6 @@ export const stories: Record<string, Story> = {
     scope: [
       { label: "Progression", value: "Lead Developer → Technical Lead → Lead Integration Designer → Solution Architect → Lead Solution Architect → Architect, British Airways" },
       { label: "Clients", value: "Qwest, British Airways, SITA, Singapore Airlines, Hawaiian Airlines, Saudi Arabian Airlines" },
-      { label: "Innovation", value: "Led the TCS airline innovation lab; demonstrations used by British Airways, KLM and SITA" },
-      { label: "Pre-sales", value: "Pre-sales and RFP responses for $3M–$25M opportunities, contributing to $50M in wins" },
       { label: "Integration", value: "IBM integration suite (Saudia), Progress (BA Travel Programme), WSO2 (BA SOA governance); airline schedule messaging; Amadeus and Sabre" },
       { label: "Delivery", value: "Coordinated client, onsite and offshore teams; liaised with product vendors" },
     ],
@@ -555,7 +521,7 @@ export const stories: Record<string, Story> = {
       {
         date: "Mar 2001 – Nov 2004",
         title: "Lead Developer — Qwest (US telecoms)",
-        body: "Built the Instant Activation module and web services for a Customer Request Management platform, migrated ColdFusion pages to J2EE on WebLogic with Struts, and coordinated client, onsite and offshore teams.",
+        body: "Customer Request Management for a US telecoms provider; coordinated client, onsite and offshore teams.",
       },
       {
         date: "May 2004 – May 2005",
@@ -577,12 +543,11 @@ export const stories: Record<string, Story> = {
       {
         date: "Dec 2007 – Apr 2009",
         title: "Lead Solution Architect — Saudi Arabian Airlines",
-        body: "Architected the ESB platform on the IBM integration suite, integrating all of Saudia's applications: 112 systems, including Amadeus and Sabre, in a $25M programme.",
+        body: "Architect of the airline-wide integration platform on the IBM integration suite.",
       },
       {
         date: "Late 2008",
         title: "Led the TCS airline innovation lab",
-        body: "Built demonstrations of airline capabilities, used by British Airways, KLM and SITA.",
       },
       {
         date: "May 2010 – Feb 2011",

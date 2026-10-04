@@ -117,12 +117,11 @@ export default function WhatIBringPage() {
             <Reveal delay={120} className="h-full">
               <dl className="grid h-full gap-4 rounded-3xl border border-accent-2/40 bg-accent-2/[0.07] p-8">
                 {r.evidence.map((e) => (
-                  <div key={e.label}>
-                    <dt className="sr-only">{e.label}</dt>
+                  <div key={e.label} className="flex flex-col-reverse">
+                    <dt className="mt-1 text-sm text-muted">{e.label}</dt>
                     <dd className="text-gradient font-display text-3xl font-bold sm:text-4xl">
                       {e.value}
                     </dd>
-                    <dd className="mt-1 text-sm text-muted">{e.label}</dd>
                   </div>
                 ))}
               </dl>

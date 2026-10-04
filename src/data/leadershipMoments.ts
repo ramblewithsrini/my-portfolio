@@ -45,7 +45,7 @@ export const leadershipMoments: LeadershipMoment[] = [
     id: "trusted",
     theme: "Turning a team around",
     title: "From blamed to trusted",
-    teaser: "I inherited a demoralised team that was blamed for every missed delivery. In my first year, it delivered more than in the previous two combined.",
+    teaser: "I inherited a demoralised team that was blamed for every missed delivery. I started by listening — to both sides.",
     situation:
       "I inherited an eight-person team carrying heavy technical debt, with low morale. They worked hard, but nobody recognised it. Instead they were blamed for missed deliveries by a demanding business team that had lost confidence in them.",
     theirSide:
@@ -70,7 +70,7 @@ export const leadershipMoments: LeadershipMoment[] = [
     theirSide:
       "The goal made sense. Consolidation was about cutting duplicate platforms and cost, and the renewal date created real pressure to act. Nobody wanted to pay for a platform they planned to retire.",
     whatIDid: [
-      "With no requirements to work from, I asked my team to reverse-engineer the application and recover its high-level requirements. Comparing those with the in-house platform showed more than 15 functional gaps, and a compliance risk if the rebuild wasn't finished in 120 days.",
+      "With no requirements to work from, I asked my team to reverse-engineer the application and recover its high-level requirements. Comparing those with the in-house platform showed more than 15 functional gaps, and a compliance risk if the rebuild wasn't finished in time.",
       "That meant asking the Investment Council for budget to keep an extra ServiceNow instance: the opposite of the saving they expected. It took several presentations before the evidence won the argument.",
     ],
     whatChanged: [
@@ -91,7 +91,7 @@ export const leadershipMoments: LeadershipMoment[] = [
     theirSide:
       "It looked like the responsible call. Promising work we couldn't deliver would have put the client and our reputation at risk, and saying no protected both. Winning the rest seemed to prove it.",
     whatIDid: [
-      "Looking back, I treated a gap in our capability as a reason to walk away rather than a problem to solve. We could have bid the full scope with a partner who had the BPM expertise. We'd have competed for the whole $10M and built BPM skills inside our organisation along the way, an edge over competitors in every future bid. I missed it because I was looking at what we could do then, not at what we needed to become.",
+      "Looking back, I treated a gap in our capability as a reason to walk away rather than a problem to solve. We could have bid the full scope with a partner who had the BPM expertise. We'd have competed for the whole contract and built BPM skills inside our organisation along the way, an edge over competitors in every future bid. I missed it because I was looking at what we could do then, not at what we needed to become.",
       "When I saw it, I put my hand up and said plainly that it was the wrong decision: a lack of vision on my part at that stage.",
     ],
     whatChanged: [

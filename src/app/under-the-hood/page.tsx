@@ -64,10 +64,9 @@ export default function UnderTheHoodPage() {
           <Reveal intro delay={400}>
             <dl className="mt-14 grid grid-cols-2 gap-6 border-t border-border pt-8 lg:grid-cols-4">
               {hoodStats.map((s) => (
-                <div key={s.label}>
-                  <dt className="sr-only">{s.label}</dt>
+                <div key={s.label} className="flex flex-col-reverse">
+                  <dt className="mt-1 text-sm text-muted">{s.label}</dt>
                   <dd className="text-gradient font-display text-4xl font-bold">{s.value}</dd>
-                  <dd className="mt-1 text-sm text-muted">{s.label}</dd>
                 </div>
               ))}
             </dl>

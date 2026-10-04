@@ -241,7 +241,7 @@ export const articles: Article[] = [
       { type: "h2", text: "Tools: what Gartner's 2026 Magic Quadrant says" },
       {
         type: "p",
-        text: "In January 2026, Gartner published its Magic Quadrant for Data and Analytics Governance Platforms, evaluating 15 vendors. As publicly reported, they were placed as follows.",
+        text: "In January 2026, Gartner published its latest assessment of governance platforms, rating 15 vendors. As publicly reported, they were placed as follows.",
       },
       {
         type: "table",
@@ -395,15 +395,11 @@ export const articles: Article[] = [
       { type: "h2", text: "Why listening first works" },
       {
         type: "p",
-        text: "I once inherited an eight-person team carrying heavy technical debt, blamed for every missed delivery. I didn't start with a new process. I listened — to the business and to the team — then helped them prioritise, and took on the difficult conversations myself. Within six months both sides trusted us. In my first year, the team delivered more than in the previous two years combined, and all eight chose to stay.",
+        text: "When I inherited a team that was blamed for every missed delivery, I didn't start with a new process. I started by listening, to the business and to the team. A year later they had delivered more than in the two years before it combined, and nobody had left. The full story is one of my leadership moments.",
       },
       {
         type: "quote",
         text: "Listen first. Shape together. Then go.",
-      },
-      {
-        type: "p",
-        text: "The full story is one of my leadership moments, on the Leadership page.",
       },
     ],
   },

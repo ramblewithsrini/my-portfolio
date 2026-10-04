@@ -40,7 +40,7 @@ export const uniqueness = {
       eyebrow: "Where I come from",
       title: "Grown from the code up",
       body: "Developer, then architect, then technology leader. I can challenge a design with an engineer at sea level and make the investment case to an executive board at 30,000 feet.",
-      proof: "25 years, from writing code to leading a 30-person organisation",
+      proof: "From writing code to leading a 30-person organisation",
     },
     {
       eyebrow: "Where I've worked",
@@ -244,7 +244,7 @@ export const impact = [
 // Compact "how I built this site" card on About; the detail is on /under-the-hood.
 export const builtCard = {
   title: "Built with Claude Code",
-  body: "I built this site with Claude Code to stay hands-on with AI — and to show what a CV can't. I set the architecture, made the calls and reviewed every change.",
+  body: "I built this site with Claude Code to stay hands-on with AI — and to show what a CV can't. Every decision behind it is open to inspect.",
 };
 
 // Books that shaped my leadership — each tied to where it shows up in my work.

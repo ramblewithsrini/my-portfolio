@@ -42,3 +42,9 @@ next-env.d.ts
 
 # LinkedIn export (contains recommenders' names; never commit)
 Recommendations_Received.csv
+
+# Python
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/

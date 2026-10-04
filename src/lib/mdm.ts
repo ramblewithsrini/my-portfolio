@@ -66,6 +66,7 @@ export function householdKey(address: string) {
 
 // ---------------------------------------------------------------- similarity
 
+// #region similarity
 /** Jaro–Winkler similarity, 0–1. Good at typos and short name variants. */
 export function jaroWinkler(a: string, b: string) {
   if (!a || !b) return 0;
@@ -95,6 +96,7 @@ export function jaroWinkler(a: string, b: string) {
   while (prefix < 4 && a[prefix] === b[prefix]) prefix++;
   return jaro + prefix * 0.1 * (1 - jaro);
 }
+// #endregion
 
 /** Per-field similarity, 0–1, or null when a field is missing on either side. */
 export function fieldScores(a: SourceRecord, b: SourceRecord): Record<Field, number | null> {
@@ -147,6 +149,7 @@ export type Pair = {
   decision: Decision;
 };
 
+// #region score
 /** Weighted score over the fields both records have, scaled to 0–100. */
 export function scorePair(a: SourceRecord, b: SourceRecord, weights: Weights, t: Thresholds): Pair {
   const scores = fieldScores(a, b);
@@ -162,6 +165,7 @@ export function scorePair(a: SourceRecord, b: SourceRecord, weights: Weights, t:
   const decision: Decision = score >= t.auto ? "match" : score >= t.review ? "review" : "no-match";
   return { a, b, scores, score, decision };
 }
+// #endregion
 
 export function scoreAll(records: SourceRecord[], weights: Weights, t: Thresholds) {
   const pairs: Pair[] = [];
@@ -170,6 +174,7 @@ export function scoreAll(records: SourceRecord[], weights: Weights, t: Threshold
   return pairs.sort((x, y) => y.score - x.score);
 }
 
+// #region cluster
 /** Group records into customers by following automatic matches (union–find). */
 export function cluster(records: SourceRecord[], pairs: Pair[]) {
   const parent = new Map(records.map((r) => [r.id, r.id]));
@@ -179,6 +184,7 @@ export function cluster(records: SourceRecord[], pairs: Pair[]) {
   for (const r of records) groups.set(find(r.id), [...(groups.get(find(r.id)) ?? []), r]);
   return [...groups.values()];
 }
+// #endregion
 
 // ---------------------------------------------------------------- survivorship
 
@@ -203,6 +209,7 @@ export function standardiseAddress(address: string) {
   return [street, pc].filter(Boolean).join(", ");
 }
 
+// #region survive
 export function survive(group: SourceRecord[], rules: Survivorship): GoldenRecord {
   const pick = (field: Field, order: (a: SourceRecord, b: SourceRecord) => number) => {
     const winner = [...group].filter((r) => r[field]).sort(order)[0];
@@ -222,7 +229,9 @@ export function survive(group: SourceRecord[], rules: Survivorship): GoldenRecor
     },
   };
 }
+// #endregion
 
+// #region households
 /** Group golden records that share an address into households. */
 export function households(golden: GoldenRecord[]) {
   const map = new Map<string, GoldenRecord[]>();
@@ -231,4 +240,32 @@ export function households(golden: GoldenRecord[]) {
     map.set(key, [...(map.get(key) ?? []), g]);
   }
   return [...map.entries()].map(([key, members]) => ({ key, members }));
+}
+// #endregion
+
+// ---------------------------------------------------------------- end to end
+
+/** The full pipeline, summarised in the same shape as run() in python/mdm.py,
+ *  so the two implementations can be compared exactly. */
+export function run(records: SourceRecord[], weights: Weights, t: Thresholds, rules: Survivorship) {
+  const pairs = scoreAll(records, weights, t);
+  const golden = cluster(records, pairs).map((g) => survive(g, rules));
+  const homes = households(golden);
+  return {
+    summary: {
+      records: records.length,
+      customers: golden.length,
+      households: homes.length,
+      review: pairs.filter((p) => p.decision === "review").length,
+    },
+    pairs: pairs.map((p) => ({ a: p.a.id, b: p.b.id, score: p.score, decision: p.decision })),
+    golden: golden.map((g) => ({
+      id: g.id,
+      name: g.values.name.value,
+      dob: g.values.dob.value,
+      address: g.values.address.value,
+      email: g.values.email.value,
+    })),
+    households: homes.map((h) => h.members.map((m) => m.id)),
+  };
 }

@@ -2,26 +2,17 @@
 // Every person and address here is fictional.
 
 import type { SourceRecord, Survivorship, Thresholds, Weights } from "@/lib/mdm";
+import sample from "./mdm-sample.json";
 
 // Drafts are visible only in local development; set to true to put the page live.
 export const mdmLabPublished = false;
 
-export const sampleRecords: SourceRecord[] = [
-  { id: "P1", source: "Policy", name: "Jonathan Smith", dob: "1980-03-12", address: "14 Oak Lane, Leeds, LS1 4AB", email: "jon.smith@example.com", updated: "2016-01-10" },
-  { id: "C1", source: "Claims", name: "Jon Smith", dob: "12/03/1980", address: "14 Oak Ln, Leeds LS1 4AB", email: "", updated: "2017-06-02" },
-  { id: "W1", source: "Web", name: "J. Smyth", dob: "12-03-1980", address: "14 Oak Lane LS14AB", email: "jon.smith@example.com", updated: "2017-09-15" },
-  { id: "P2", source: "Policy", name: "Sarah Smith", dob: "1982-09-05", address: "14 Oak Lane, Leeds, LS1 4AB", email: "sarah.smith@example.com", updated: "2016-01-10" },
-  { id: "W2", source: "Web", name: "Sarah Smith", dob: "05/09/1982", address: "22 Elm Road, Leeds, LS2 7QT", email: "sarah.smith@example.com", updated: "2017-11-20" },
-  { id: "P3", source: "Policy", name: "Priya Patel", dob: "1975-07-21", address: "3 Mill Street, York, YO1 6AA", email: "priya.patel@example.com", updated: "2015-04-18" },
-  { id: "C2", source: "Claims", name: "Priya Patell", dob: "21/07/1975", address: "3 Mill St, York YO1 6AA", email: "", updated: "2016-08-30" },
-  { id: "P4", source: "Policy", name: "Ravi Patel", dob: "1974-02-14", address: "3 Mill Street, York, YO1 6AA", email: "ravi.patel@example.com", updated: "2015-04-18" },
-  { id: "W3", source: "Web", name: "Daniel Evans", dob: "30/11/1990", address: "8 Station Road, Bath, BA1 1AA", email: "dan.evans@example.com", updated: "2017-02-11" },
-  { id: "C3", source: "Claims", name: "Danielle Evans", dob: "1991-11-30", address: "8 Station Rd, Bath BA1 1AA", email: "", updated: "2017-05-07" },
-];
-
-export const defaultWeights: Weights = { name: 35, dob: 30, address: 20, email: 15 };
-export const defaultThresholds: Thresholds = { review: 70, auto: 85 };
-export const defaultSurvivorship: Survivorship = { name: "most-complete", address: "most-recent" };
+// The sample records and default settings live in a JSON file shared with the
+// Python engine (python/mdm.py), so both implementations read the same data.
+export const sampleRecords = sample.records as SourceRecord[];
+export const defaultWeights: Weights = sample.defaults.weights;
+export const defaultThresholds: Thresholds = sample.defaults.thresholds;
+export const defaultSurvivorship = sample.defaults.survivorship as Survivorship;
 
 export const labIntro = {
   eyebrow: "Lab · Master data management",

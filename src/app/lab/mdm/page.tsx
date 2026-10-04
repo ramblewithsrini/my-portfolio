@@ -18,7 +18,10 @@ import {
 const isDraft = !mdmLabPublished;
 const hidden = isDraft && process.env.NODE_ENV === "production";
 
-export const metadata: Metadata = {
+// While hidden, expose nothing — not even the title.
+export const metadata: Metadata = hidden
+  ? { robots: { index: false } }
+  : {
   title: "MDM playground",
   description:
     "An interactive illustration of master data management: probabilistic matching, survivorship and householding, running in your browser.",
@@ -54,6 +57,12 @@ export default function MdmLabPage() {
           </Reveal>
           <Reveal intro delay={100}>
             <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted sm:text-xl">{labIntro.lead}</p>
+            <Link
+              href="/lab/mdm/two-ways"
+              className="mt-6 inline-block rounded-full border border-accent/50 px-5 py-2.5 text-sm font-semibold text-accent transition-colors hover:border-accent"
+            >
+              See the same engine in Python →
+            </Link>
           </Reveal>
           <Reveal intro delay={200}>
             <ol className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

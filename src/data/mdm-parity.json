@@ -1,0 +1,348 @@
+{
+  "summary": {
+    "records": 10,
+    "customers": 7,
+    "households": 4,
+    "review": 2
+  },
+  "pairs": [
+    {
+      "a": "P3",
+      "b": "C2",
+      "score": 99,
+      "decision": "match"
+    },
+    {
+      "a": "P1",
+      "b": "C1",
+      "score": 98,
+      "decision": "match"
+    },
+    {
+      "a": "P1",
+      "b": "W1",
+      "score": 96,
+      "decision": "match"
+    },
+    {
+      "a": "C1",
+      "b": "W1",
+      "score": 95,
+      "decision": "match"
+    },
+    {
+      "a": "P2",
+      "b": "W2",
+      "score": 83,
+      "decision": "review"
+    },
+    {
+      "a": "W3",
+      "b": "C3",
+      "score": 82,
+      "decision": "review"
+    },
+    {
+      "a": "C2",
+      "b": "P4",
+      "score": 58,
+      "decision": "no-match"
+    },
+    {
+      "a": "P3",
+      "b": "P4",
+      "score": 50,
+      "decision": "no-match"
+    },
+    {
+      "a": "P1",
+      "b": "P2",
+      "score": 49,
+      "decision": "no-match"
+    },
+    {
+      "a": "C1",
+      "b": "P2",
+      "score": 48,
+      "decision": "no-match"
+    },
+    {
+      "a": "W1",
+      "b": "P2",
+      "score": 39,
+      "decision": "no-match"
+    },
+    {
+      "a": "P1",
+      "b": "W2",
+      "score": 32,
+      "decision": "no-match"
+    },
+    {
+      "a": "C1",
+      "b": "W2",
+      "score": 28,
+      "decision": "no-match"
+    },
+    {
+      "a": "P2",
+      "b": "C2",
+      "score": 21,
+      "decision": "no-match"
+    },
+    {
+      "a": "W2",
+      "b": "C2",
+      "score": 21,
+      "decision": "no-match"
+    },
+    {
+      "a": "P4",
+      "b": "C3",
+      "score": 21,
+      "decision": "no-match"
+    },
+    {
+      "a": "P1",
+      "b": "C2",
+      "score": 19,
+      "decision": "no-match"
+    },
+    {
+      "a": "W1",
+      "b": "W2",
+      "score": 19,
+      "decision": "no-match"
+    },
+    {
+      "a": "C2",
+      "b": "W3",
+      "score": 19,
+      "decision": "no-match"
+    },
+    {
+      "a": "P2",
+      "b": "P3",
+      "score": 18,
+      "decision": "no-match"
+    },
+    {
+      "a": "W2",
+      "b": "P3",
+      "score": 18,
+      "decision": "no-match"
+    },
+    {
+      "a": "P3",
+      "b": "C3",
+      "score": 18,
+      "decision": "no-match"
+    },
+    {
+      "a": "C2",
+      "b": "C3",
+      "score": 18,
+      "decision": "no-match"
+    },
+    {
+      "a": "P4",
+      "b": "W3",
+      "score": 18,
+      "decision": "no-match"
+    },
+    {
+      "a": "P2",
+      "b": "P4",
+      "score": 17,
+      "decision": "no-match"
+    },
+    {
+      "a": "W2",
+      "b": "P4",
+      "score": 17,
+      "decision": "no-match"
+    },
+    {
+      "a": "P1",
+      "b": "P3",
+      "score": 16,
+      "decision": "no-match"
+    },
+    {
+      "a": "P1",
+      "b": "P4",
+      "score": 16,
+      "decision": "no-match"
+    },
+    {
+      "a": "P3",
+      "b": "W3",
+      "score": 16,
+      "decision": "no-match"
+    },
+    {
+      "a": "C1",
+      "b": "P3",
+      "score": 12,
+      "decision": "no-match"
+    },
+    {
+      "a": "C1",
+      "b": "P4",
+      "score": 12,
+      "decision": "no-match"
+    },
+    {
+      "a": "C1",
+      "b": "C2",
+      "score": 11,
+      "decision": "no-match"
+    },
+    {
+      "a": "W1",
+      "b": "C2",
+      "score": 11,
+      "decision": "no-match"
+    },
+    {
+      "a": "W2",
+      "b": "C3",
+      "score": 11,
+      "decision": "no-match"
+    },
+    {
+      "a": "W1",
+      "b": "P3",
+      "score": 10,
+      "decision": "no-match"
+    },
+    {
+      "a": "W1",
+      "b": "P4",
+      "score": 10,
+      "decision": "no-match"
+    },
+    {
+      "a": "W2",
+      "b": "W3",
+      "score": 9,
+      "decision": "no-match"
+    },
+    {
+      "a": "C1",
+      "b": "W3",
+      "score": 8,
+      "decision": "no-match"
+    },
+    {
+      "a": "C1",
+      "b": "C3",
+      "score": 8,
+      "decision": "no-match"
+    },
+    {
+      "a": "P2",
+      "b": "C3",
+      "score": 7,
+      "decision": "no-match"
+    },
+    {
+      "a": "P2",
+      "b": "W3",
+      "score": 6,
+      "decision": "no-match"
+    },
+    {
+      "a": "P1",
+      "b": "W3",
+      "score": 5,
+      "decision": "no-match"
+    },
+    {
+      "a": "P1",
+      "b": "C3",
+      "score": 5,
+      "decision": "no-match"
+    },
+    {
+      "a": "W1",
+      "b": "W3",
+      "score": 0,
+      "decision": "no-match"
+    },
+    {
+      "a": "W1",
+      "b": "C3",
+      "score": 0,
+      "decision": "no-match"
+    }
+  ],
+  "golden": [
+    {
+      "id": "P1+C1+W1",
+      "name": "Jonathan Smith",
+      "dob": "1980-03-12",
+      "address": "14 Oak Lane LS14AB",
+      "email": "jon.smith@example.com"
+    },
+    {
+      "id": "P2",
+      "name": "Sarah Smith",
+      "dob": "1982-09-05",
+      "address": "14 Oak Lane, Leeds, LS1 4AB",
+      "email": "sarah.smith@example.com"
+    },
+    {
+      "id": "W2",
+      "name": "Sarah Smith",
+      "dob": "05/09/1982",
+      "address": "22 Elm Road, Leeds, LS2 7QT",
+      "email": "sarah.smith@example.com"
+    },
+    {
+      "id": "P3+C2",
+      "name": "Priya Patel",
+      "dob": "1975-07-21",
+      "address": "3 Mill St, York YO1 6AA",
+      "email": "priya.patel@example.com"
+    },
+    {
+      "id": "P4",
+      "name": "Ravi Patel",
+      "dob": "1974-02-14",
+      "address": "3 Mill Street, York, YO1 6AA",
+      "email": "ravi.patel@example.com"
+    },
+    {
+      "id": "W3",
+      "name": "Daniel Evans",
+      "dob": "30/11/1990",
+      "address": "8 Station Road, Bath, BA1 1AA",
+      "email": "dan.evans@example.com"
+    },
+    {
+      "id": "C3",
+      "name": "Danielle Evans",
+      "dob": "1991-11-30",
+      "address": "8 Station Rd, Bath BA1 1AA",
+      "email": ""
+    }
+  ],
+  "households": [
+    [
+      "P1+C1+W1",
+      "P2"
+    ],
+    [
+      "W2"
+    ],
+    [
+      "P3+C2",
+      "P4"
+    ],
+    [
+      "W3",
+      "C3"
+    ]
+  ]
+}

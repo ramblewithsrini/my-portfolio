@@ -42,7 +42,7 @@ export default function LeadershipPage() {
           <Reveal intro delay={200}>
             <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted sm:text-xl">
               My philosophy is simple:{" "}
-              <span className="font-semibold text-foreground">{philosophy.mantra}</span> Below are three
+              <span className="font-semibold text-foreground">{philosophy.mantra}</span> Below are four
               moments that tested it, the principles 25 years have taught me, and the books that shaped
               them.
             </p>
@@ -86,9 +86,9 @@ export default function LeadershipPage() {
                     <dl className="grid gap-8 px-7 pb-9 pt-2 sm:px-9 md:grid-cols-2">
                       {(
                         [
-                          ["The situation", [m.situation]],
-                          ["Their side", [m.theirSide]],
-                          ["What I did", m.whatIDid],
+                          ["The situation", [m.situation].flat()],
+                          [m.labels?.theirSide ?? "Their side", [m.theirSide].flat()],
+                          [m.labels?.whatIDid ?? "What I did", m.whatIDid],
                           ["What changed", m.whatChanged],
                         ] as const
                       ).map(([label, paras]) => (

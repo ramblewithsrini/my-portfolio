@@ -7,16 +7,18 @@ export type LeadershipMoment = {
   theme: string; // what the story shows, e.g. "Judgement under pressure"
   title: string;
   teaser: string; // one sentence, shown before the story is opened
-  situation: string;
-  theirSide: string;
+  situation: string | string[];
+  theirSide: string | string[];
   whatIDid: string[];
   whatChanged: string[];
   lesson: string;
+  // Headings for the middle two parts, when "Their side" and "What I did" don't fit the story.
+  labels?: { theirSide?: string; whatIDid?: string };
 };
 
 export const momentsIntro = {
   title: "Leadership moments",
-  lead: "Three real situations: what was at stake, how it looked from the other side, what I did and what changed. Names are left out on purpose.",
+  lead: "Four real situations: what was at stake, how it looked from the other side, what I did and what changed. Names are left out on purpose.",
 };
 
 export const leadershipMoments: LeadershipMoment[] = [
@@ -76,5 +78,26 @@ export const leadershipMoments: LeadershipMoment[] = [
       "The business avoided a compliance risk, and more than 15 gaps that would otherwise have surfaced only after the switch.",
     ],
     lesson: "A saving that creates a compliance risk isn't a saving. When a decision has been made without evidence, the answer is evidence, not opinion.",
+  },
+  {
+    id: "said-no",
+    theme: "Owning a mistake",
+    title: "Saying no too quickly",
+    teaser: "We won $6.5M of a $10M airline bid. The $3.5M I chose not to bid for taught me more.",
+    situation: [
+      "We were responding to a $10M RFP from an airline. About $3.5M of it was business process management (BPM) across the entire airline, an area where we had neither the capacity nor the skills.",
+      "I argued strongly for a no-go on that part. I pushed the sales team to agree with the customer that we would respond to the rest of the RFP and leave the BPM work out. The customer agreed, and we won the remaining $6.5M.",
+    ],
+    theirSide:
+      "It looked like the responsible call. Promising work we couldn't deliver would have put the client and our reputation at risk, and saying no protected both. Winning the rest seemed to prove it.",
+    whatIDid: [
+      "Looking back, I treated a gap in our capability as a reason to walk away rather than a problem to solve. We could have bid the full scope with a partner who had the BPM expertise. We'd have competed for the whole $10M and built BPM skills inside our organisation along the way, an edge over competitors in every future bid. I missed it because I was looking at what we could do then, not at what we needed to become.",
+      "When I saw it, I put my hand up and said plainly that it was the wrong decision: a lack of vision on my part at that stage.",
+    ],
+    whatChanged: [
+      "Now, before I say no, I ask myself why, and whether we could do it differently: with a partner, in phases, or by building the capability as we go.",
+    ],
+    lesson: "A capability gap is a reason to look for a partner, not a reason to walk away.",
+    labels: { theirSide: "Why it seemed right", whatIDid: "Why it was a mistake" },
   },
 ];

@@ -114,7 +114,7 @@ export const philosophy = {
 export const now = {
   title: "My situation",
   paragraphs: [
-    "In June 2026, my role as Head of Technology for Partner Experience and Payments at Discover was made redundant as part of Capital One's restructuring following the acquisition.",
+    "In June 2026, my role at Discover became redundant as part of Capital One's restructuring following the acquisition.",
     "Restructuring is something I understand from the inside — I directed the £40M, 144-platform convergence programme after the merger. Being on the other side of it hasn't changed my view: well-run integration is how organisations get stronger.",
     "It has also given me something rare in a 25-year career: time to step back, sharpen my tools and choose my next chapter deliberately.",
   ],

@@ -16,6 +16,7 @@ export type RoleValue = {
   evidence: { value: string; label: string }[];
   quote: string;
   caseStudies: string[];
+  moreLink?: { href: string; label: string }; // extra link next to the case studies
   first90: { step: string; body: string }[];
   // Optional feature panel, e.g. "How I make architecture decisions".
   panel?: {
@@ -152,6 +153,7 @@ export const roleValues: RoleValue[] = [
     quote:
       "Srini is a true servant leader. He puts his people first, consistently and without needing recognition for it, and the team's performance reflects that.",
     caseStudies: ["discover", "allianz", "interglobe"],
+    moreLink: { href: "/leadership", label: "My leadership principles →" },
     first90: [
       { step: "Meet the people", body: "One-to-ones, team health, and what's getting in their way." },
       { step: "Clarify", body: "Ownership, decision rights and priorities everyone can explain." },

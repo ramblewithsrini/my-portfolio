@@ -4,7 +4,7 @@ import { experience } from "@/data/portfolio";
 import { siteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = ["", "/what-i-bring", "/experience", "/testimonials", "/under-the-hood"].map((path, i) => ({
+  const pages = ["", "/what-i-bring", "/experience", "/testimonials", "/leadership", "/under-the-hood"].map((path, i) => ({
     url: `${siteUrl}${path}`,
     changeFrequency: "monthly" as const,
     priority: i === 0 ? 1 : 0.8,

@@ -5,23 +5,18 @@ import Contact from "@/components/Contact";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import {
-  altitude,
   beyondWork,
-  bookshelf,
-  buildLog,
+  builtCard,
   chapters,
-  consulting,
   glance,
   impact,
   intro,
   now,
   philosophy,
   portrait,
-  principles,
   progression,
   summary,
   uniqueness,
-  why,
 } from "@/data/about";
 import { relationshipLabels, testimonials } from "@/data/testimonials";
 import { sourceUrl } from "@/data/underTheHood";
@@ -31,12 +26,12 @@ const testimonialCount = testimonials.filter((t) => !t.hidden).length;
 
 function ChapterHeader({ chapter }: { chapter: (typeof chapters)[number] }) {
   return (
-    <header className="mx-auto max-w-6xl px-5 pt-24 sm:px-8">
+    <header className="mx-auto max-w-6xl px-5 pt-16 sm:px-8">
       <Reveal className="border-t border-border pt-10">
         <p className="font-display text-sm font-medium uppercase tracking-widest text-accent">
           Chapter {chapter.number}
         </p>
-        <h2 className="mt-3 font-display text-[clamp(2.75rem,7vw,5rem)] leading-none font-bold tracking-tighter">
+        <h2 className="mt-3 font-display text-[clamp(2.25rem,5.5vw,4rem)] leading-none font-bold tracking-tighter">
           {chapter.title}
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-muted">{chapter.teaser}</p>
@@ -272,56 +267,6 @@ export default function AboutPage() {
             </div>
           </Reveal>
         </div>
-
-        {/* Both worlds */}
-        <Reveal className="mt-24">
-          <h3 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-            {uniqueness.bothWorlds.title}
-          </h3>
-          <p className="mt-3 max-w-2xl text-lg text-muted">{uniqueness.bothWorlds.lead}</p>
-        </Reveal>
-        <div className="relative mt-10 grid gap-6 md:grid-cols-2">
-          <span
-            className="absolute left-1/2 top-1/2 z-10 hidden h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background font-display text-xl text-accent md:flex"
-            aria-hidden
-          >
-            ⇄
-          </span>
-          {uniqueness.bothWorlds.sides.map((side, i) => (
-            <Reveal key={side.label} delay={i * 120} className="h-full">
-              <div
-                className={`h-full rounded-3xl border p-8 sm:p-10 ${
-                  i === 0
-                    ? "border-accent-2/40 bg-accent-2/[0.07]"
-                    : "border-accent/40 bg-accent/[0.06]"
-                }`}
-              >
-                <p
-                  className={`text-xs font-medium uppercase tracking-widest ${
-                    i === 0 ? "text-[#c5b8ff]" : "text-accent"
-                  }`}
-                >
-                  {side.label}
-                </p>
-                <h4 className="mt-3 font-display text-2xl font-bold tracking-tight sm:text-3xl">
-                  {side.title}
-                </h4>
-                <p className="mt-3 leading-relaxed text-foreground/85">{side.body}</p>
-                <ul className="mt-6 space-y-3">
-                  {side.points.map((pt) => (
-                    <li key={pt} className="flex gap-3 leading-snug">
-                      <span
-                        className={`mt-2 h-1 w-3 shrink-0 ${i === 0 ? "bg-accent-2" : "bg-accent"}`}
-                        aria-hidden
-                      />
-                      {pt}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
-          ))}
-        </div>
       </section>
 
       {/* Progression */}
@@ -369,94 +314,6 @@ export default function AboutPage() {
             );
           })}
         </ol>
-
-        {/* Sea level vs 30,000 feet */}
-        <Reveal className="mt-24">
-          <h3 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-            {altitude.title}
-          </h3>
-        </Reveal>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {[altitude.seaLevel, altitude.highLevel].map((side, i) => (
-            <Reveal key={side.label} delay={i * 120}>
-              <div
-                className={`h-full rounded-3xl border p-8 ${
-                  i === 0
-                    ? "border-[#5fe3c0]/30 bg-[#5fe3c0]/[0.04]"
-                    : "border-accent-2/40 bg-accent-2/[0.07]"
-                }`}
-              >
-                <p
-                  className={`font-display text-sm font-medium uppercase tracking-widest ${
-                    i === 0 ? "text-[#5fe3c0]" : "text-[#b3a3ff]"
-                  }`}
-                >
-                  {i === 0 ? "▼" : "▲"} {side.label}
-                </p>
-                <ul className="mt-6 space-y-4">
-                  {side.items.map((it) => (
-                    <li key={it} className="flex gap-3 text-lg leading-snug">
-                      <span
-                        className={`mt-2.5 h-1 w-3 shrink-0 ${i === 0 ? "bg-[#5fe3c0]" : "bg-accent-2"}`}
-                        aria-hidden
-                      />
-                      {it}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal className="mt-6">
-          <p className="rounded-3xl border border-accent/40 bg-accent/[0.06] p-8 font-display text-xl leading-snug font-medium sm:text-2xl">
-            {altitude.bridge}
-          </p>
-        </Reveal>
-
-        {/* Consulting & pre-sales */}
-        <Reveal className="mt-24">
-          <div className="relative overflow-hidden rounded-[2rem] border border-border bg-surface p-8 sm:p-12">
-            <div className="grid-bg absolute inset-0 opacity-60" aria-hidden />
-            <div className="relative grid gap-10 lg:grid-cols-[3fr_2fr]">
-              <div>
-                <h3 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                  {consulting.title}
-                </h3>
-                <p className="mt-5 text-lg leading-relaxed text-foreground/85">
-                  {consulting.body}
-                </p>
-                <ul className="mt-6 flex flex-wrap gap-2">
-                  {consulting.capabilities.map((c) => (
-                    <li
-                      key={c}
-                      className="rounded-full border border-border bg-background/60 px-3 py-1 text-sm text-foreground/85"
-                    >
-                      {c}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <dl className="grid gap-6 self-start sm:grid-cols-3 lg:grid-cols-1">
-                {consulting.stats.map((st) => (
-                  <div key={st.label} className="lg:border-l-2 lg:border-accent lg:pl-5">
-                    <dt className="sr-only">{st.label}</dt>
-                    <dd className="text-gradient font-display text-3xl font-bold sm:text-4xl">
-                      {st.value}
-                    </dd>
-                    <dd className="mt-1 text-sm text-muted">{st.label}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-            <p className="relative mt-10 border-t border-border pt-6 text-sm text-muted">
-              <span className="mr-3 font-medium uppercase tracking-widest text-foreground/70">
-                Clients advised
-              </span>
-              {consulting.clients.join("  ·  ")}
-            </p>
-          </div>
-        </Reveal>
       </section>
       </div>
 
@@ -535,92 +392,25 @@ export default function AboutPage() {
         )}
       </section>
 
-      {/* Principles */}
-      <section id="principles" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
-        <SectionHeading title="What 25 years taught me" />
-        <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {principles.map((p, i) => (
-            <Reveal key={p.title} delay={(i % 3) * 80} className="bg-background">
-              <div className="h-full p-8 transition-colors hover:bg-surface">
-                <span className="font-display text-sm text-accent">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-3 font-display text-2xl font-bold tracking-tight">
-                  {p.title}
-                </h3>
-                <p className="mt-3 leading-relaxed text-muted">{p.body}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* What shapes how I lead */}
-      <section id="bookshelf" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
-        <SectionHeading title={bookshelf.title} />
+      {/* Leadership deep-dive: principles and bookshelf live on /leadership */}
+      <section className="mx-auto max-w-6xl px-5 pb-20 sm:px-8">
         <Reveal>
-          <p className="-mt-6 mb-10 max-w-3xl text-lg text-muted">{bookshelf.lead}</p>
-        </Reveal>
-        <ul className="grid gap-6 md:grid-cols-2">
-          {bookshelf.books.map((b, i) => (
-            <li key={b.title}>
-              <Reveal delay={(i % 2) * 100} className="h-full">
-                <article className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface p-8">
-                  <span
-                    className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-accent to-accent-2"
-                    aria-hidden
-                  />
-                  <h3 className="font-display text-2xl leading-tight font-bold tracking-tight">
-                    {b.title}
-                  </h3>
-                  <p className="mt-1 text-sm text-muted">{b.author}</p>
-                  <p className="mt-5 font-display text-lg leading-snug font-medium text-foreground/90">
-                    {b.idea}
-                  </p>
-                  <p className="mt-4 flex-1 border-t border-border pt-4 leading-relaxed text-muted">
-                    <span className="mb-1 block text-xs font-medium uppercase tracking-widest text-accent">
-                      In my work
-                    </span>
-                    {b.inPractice}
-                  </p>
-                  <Link
-                    href={b.href}
-                    className="mt-5 text-sm font-semibold text-accent hover:underline"
-                  >
-                    {b.linkLabel} →
-                  </Link>
-                </article>
-              </Reveal>
-            </li>
-          ))}
-        </ul>
-        <Reveal className="mt-6">
-          <div className="grid items-stretch gap-6 overflow-hidden rounded-3xl border border-border bg-surface sm:grid-cols-[minmax(0,16rem)_1fr]">
-            <div className="relative aspect-[3/4] sm:aspect-auto">
-              <Image
-                src={bookshelf.currentlyReading.image}
-                alt={bookshelf.currentlyReading.alt}
-                fill
-                sizes="(min-width: 640px) 16rem, 100vw"
-                className="object-cover object-[50%_35%]"
-              />
-            </div>
-            <div className="flex flex-col justify-center gap-5 p-7 sm:py-10 sm:pl-0 sm:pr-10">
-              <p className="text-xs font-medium uppercase tracking-widest text-accent">Currently reading</p>
-              <p className="font-display text-3xl leading-tight font-bold tracking-tight">
-                {bookshelf.currentlyReading.title}
-                <span className="mt-1 block text-base font-normal text-muted">
-                  {bookshelf.currentlyReading.author}
-                </span>
-              </p>
-              <p className="border-t border-border pt-5 text-foreground/85">
-                <span className="mr-2" aria-hidden>
-                  🎧
-                </span>
-                {bookshelf.podcast}
-              </p>
-            </div>
-          </div>
+          <Link
+            href="/leadership"
+            className="group flex flex-col gap-4 rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/[0.07] via-surface to-accent-2/[0.07] p-8 transition-colors hover:border-accent sm:flex-row sm:items-center sm:justify-between sm:p-10"
+          >
+            <span>
+              <span className="block text-xs font-medium uppercase tracking-widest text-accent">
+                Go deeper
+              </span>
+              <span className="mt-2 block font-display text-2xl font-bold tracking-tight sm:text-3xl">
+                The principles 25 years have taught me — and the books that shaped them
+              </span>
+            </span>
+            <span className="shrink-0 font-semibold text-accent group-hover:underline">
+              Read more →
+            </span>
+          </Link>
         </Reveal>
       </section>
       </div>
@@ -681,46 +471,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why and how I built this site */}
-      <section id="built" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
-        <SectionHeading title="Why — and how — I built this site" />
-        <div className="grid gap-6 md:grid-cols-2">
-          {why.map((w, i) => (
-            <Reveal key={w.title} delay={i * 100}>
-              <article className="h-full rounded-3xl border border-border bg-surface p-8 sm:p-10">
-                <span className="font-display text-5xl font-bold text-accent-2">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-4 font-display text-3xl font-bold tracking-tight">
-                  {w.title}
-                </h3>
-                <p className="mt-4 leading-relaxed text-muted">{w.body}</p>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal className="mt-20 mb-10">
-          <h3 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-            {buildLog.title}
-          </h3>
-        </Reveal>
-        <div className="grid gap-12 lg:grid-cols-[2fr_3fr]">
-          <Reveal>
-            <p className="text-xl leading-relaxed text-foreground/85">{buildLog.lead}</p>
-            <ul className="mt-8 flex flex-wrap gap-2">
-              {buildLog.stack.map((t) => (
-                <li
-                  key={t}
-                  className="rounded-full border border-border px-3 py-1 text-sm text-muted"
-                >
-                  {t}
-                </li>
-              ))}
-            </ul>
-            <blockquote className="mt-10 border-l-2 border-accent pl-6 font-display text-xl leading-snug font-medium">
-              {buildLog.takeaway}
-            </blockquote>
-            <div className="mt-8 flex flex-wrap gap-3">
+      {/* Built with Claude Code: the detail lives on /under-the-hood */}
+      <section id="built" className="mx-auto max-w-6xl scroll-mt-32 px-5 pb-20 sm:px-8">
+        <Reveal>
+          <div className="flex flex-col gap-6 rounded-3xl border border-border bg-surface p-8 sm:p-10 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-2xl">
+              <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
+                {builtCard.title}
+              </h2>
+              <p className="mt-3 text-lg leading-relaxed text-foreground/85">{builtCard.body}</p>
+            </div>
+            <div className="flex shrink-0 flex-wrap gap-3">
               <Link
                 href="/under-the-hood"
                 className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-background transition-transform hover:scale-105"
@@ -733,29 +494,11 @@ export default function AboutPage() {
                 rel="noreferrer"
                 className="rounded-full border border-border px-5 py-2.5 text-sm font-semibold transition-colors hover:border-foreground"
               >
-                Read the source on GitHub ↗
+                Source on GitHub ↗
               </a>
             </div>
-          </Reveal>
-          <ol className="space-y-4">
-            {buildLog.steps.map((s, i) => (
-              <li key={s.step}>
-                <Reveal
-                  delay={i * 80}
-                  className="flex gap-5 rounded-2xl border border-border bg-surface p-6"
-                >
-                  <span className="font-display text-sm font-medium text-muted">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <h3 className="font-display text-lg font-bold">{s.step}</h3>
-                    <p className="mt-1 text-muted">{s.body}</p>
-                  </div>
-                </Reveal>
-              </li>
-            ))}
-          </ol>
-        </div>
+          </div>
+        </Reveal>
       </section>
       </div>
 

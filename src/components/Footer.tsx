@@ -16,6 +16,9 @@ export default function Footer() {
             Insights
           </Link>
         )}
+        <Link href="/leadership" className="hover:text-foreground">
+          Leadership
+        </Link>
         <Link href="/under-the-hood" className="hover:text-foreground">
           Under the hood
         </Link>

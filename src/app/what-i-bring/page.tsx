@@ -214,6 +214,16 @@ export default function WhatIBringPage() {
                     </Link>
                   </li>
                 ))}
+                {r.moreLink && (
+                  <li>
+                    <Link
+                      href={r.moreLink.href}
+                      className="inline-block rounded-full border border-accent/50 px-4 py-2 text-sm font-medium text-accent transition-colors hover:border-accent"
+                    >
+                      {r.moreLink.label}
+                    </Link>
+                  </li>
+                )}
               </ul>
             </div>
           </Reveal>

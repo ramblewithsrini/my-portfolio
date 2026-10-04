@@ -54,34 +54,6 @@ export const uniqueness = {
     body: "The combination is rare: someone engineers trust, executives back, clients believe and suppliers respect — because I've stood where each of them stands.",
     rooms: ["Engineers", "Architects", "Executives", "Clients", "Vendors"],
   },
-  bothWorlds: {
-    title: "Two worlds, one perspective",
-    lead: "Whichever side of the table you're on, I bring the view from the other side.",
-    sides: [
-      {
-        label: "For consulting firms",
-        title: "I bring the client's view",
-        body: "I've been the client. I know how buyers evaluate proposals, fund programmes and judge delivery — which makes for propositions that land and engagements clients renew.",
-        points: [
-          "Proposals written from the buyer's side of the table",
-          "Credibility with client CTOs and architecture leaders",
-          "Honest solution sizing — I've lived with the consequences",
-          "Deep domain knowledge in payments, banking, insurance and travel",
-        ],
-      },
-      {
-        label: "For in-house teams",
-        title: "I bring the consultant's edge",
-        body: "I know how suppliers scope, price and staff their work. That makes me a sharper buyer, a better partner, and a leader who brings pace and structure to change.",
-        points: [
-          "Stronger vendor selection, contracts and statements of work",
-          "Build-buy-partner decisions grounded in how vendors really operate",
-          "Business cases and executive storytelling sharpened in pre-sales",
-          "Delivery discipline from fixed-scope client programmes",
-        ],
-      },
-    ],
-  },
 };
 
 export const progression = {
@@ -111,48 +83,6 @@ export const progression = {
       strength: "Engineers trust my judgement because I've done their job.",
     },
   ],
-};
-
-export const altitude = {
-  title: "The advantage of both altitudes",
-  seaLevel: {
-    label: "At sea level",
-    items: [
-      "Reviewing designs in detail with engineers",
-      "Triaging high-severity incidents through to root cause",
-      "Turning PCI DSS 4.0 requirements into real controls",
-      "Rolling up my sleeves to unblock a stubborn problem",
-    ],
-  },
-  highLevel: {
-    label: "At 30,000 feet",
-    items: [
-      "Building investment cases that win Investment Council approval",
-      "Owning target architecture and multi-year roadmaps",
-      "Leading build-buy-partner decisions with strategic vendors",
-      "Directing a £40M, 144-platform convergence programme",
-    ],
-  },
-  bridge:
-    "Most leaders are comfortable at one altitude. My value is moving between them in the same day — so strategy stays honest, and engineering stays aligned to what the business needs.",
-};
-
-export const consulting = {
-  title: "Consulting and pre-sales, built in",
-  body: "Before leading in-house, I spent 15+ years in client-facing consulting at TCS, InterGlobe and Pitney Bowes — from RFI to go-live, and on stage at industry conferences in Dallas and London. I learned to listen first, shape a proposition, size a solution honestly — and then deliver what was sold.",
-  stats: [
-    { value: "£1.5M+", label: "Annual revenue from the architecture function I built at IGT" },
-    { value: "PSS → GSL", label: "SITA account grown into a second line — IGT Game Changer Award, 2014" },
-    { value: "$50M", label: "In wins I contributed to at TCS" },
-  ],
-  capabilities: [
-    "Proposals & RFP/RFI responses",
-    "Solution sizing",
-    "Proof-of-concept leadership",
-    "Executive presentations",
-    "Trusted-adviser relationships",
-  ],
-  clients: ["EY", "HSBC", "MUFG", "Broadridge", "McDonald's", "Travelport", "SITA", "Saudia", "Qwest"],
 };
 
 export const philosophy = {
@@ -206,17 +136,6 @@ export const now = {
   },
 };
 
-export const why = [
-  {
-    title: "To stay hands-on with AI",
-    body: "I've spent recent years helping a regulated organisation adopt Agentic AI responsibly. I wanted first-hand experience of building with it. This site was built with Claude Code — from an empty folder to a version-controlled Next.js application — with me setting direction, making the design and privacy calls, and reviewing every change. Leaders who direct AI-enabled teams should know what the work actually feels like.",
-  },
-  {
-    title: "To show what a CV can't",
-    body: "A CV is a list of outcomes. It doesn't show how I think, how I lead, or the lessons behind the numbers. This page is where I share them — the principles that 25 years across consulting, insurance and payments have taught me.",
-  },
-];
-
 export const principles = [
   {
     title: "Start with the investment case",
@@ -261,12 +180,8 @@ export const chapters = [
     id: "lead",
     number: "02",
     title: "How I lead",
-    teaser: "My leadership philosophy, the principles 25 years have taught me, and the books that shaped them.",
-    sections: [
-      { id: "philosophy", title: "Leadership philosophy" },
-      { id: "principles", title: "What 25 years taught me" },
-      { id: "bookshelf", title: "What shapes how I lead" },
-    ],
+    teaser: "My leadership philosophy — with the principles and books behind it one click away.",
+    sections: [{ id: "philosophy", title: "Leadership philosophy" }],
   },
   {
     id: "now",
@@ -275,7 +190,7 @@ export const chapters = [
     teaser: "My situation, the roles I'm looking for, and why I built this site.",
     sections: [
       { id: "situation", title: "My situation" },
-      { id: "built", title: "Why — and how — I built this site" },
+      { id: "built", title: "Built with Claude Code" },
     ],
   },
   {
@@ -326,6 +241,12 @@ export const impact = [
   { value: "£1.5M+", label: "Annual revenue from a function I built", href: "/experience/interglobe" },
 ];
 
+// Compact "how I built this site" card on About; the detail is on /under-the-hood.
+export const builtCard = {
+  title: "Built with Claude Code",
+  body: "I built this site with Claude Code to stay hands-on with AI — and to show what a CV can't. I set the architecture, made the calls and reviewed every change.",
+};
+
 // Books that shaped my leadership — each tied to where it shows up in my work.
 export const bookshelf = {
   title: "What shapes how I lead",
@@ -371,36 +292,6 @@ export const bookshelf = {
     image: "/images/reading-the-infinite-game.jpg",
     alt: "Srini reading The Infinite Game by Simon Sinek at home",
   },
-};
-
-export const buildLog = {
-  title: "How this site was built",
-  lead: "Built in conversation with Claude Code. I acted as product owner and architect; the AI did the typing.",
-  steps: [
-    {
-      step: "Brief",
-      body: "Set the purpose, audience and style — a portfolio, bold and modern, on Next.js.",
-    },
-    {
-      step: "Scaffold",
-      body: "Next.js 16, TypeScript and Tailwind CSS, with all content separated into data files so it can change without touching layout.",
-    },
-    {
-      step: "Content",
-      body: "Imported my CV straight from Word, then made deliberate calls about what to publish — no phone number on a public site.",
-    },
-    {
-      step: "Review",
-      body: "Checked every page on desktop and mobile, and fixed issues such as hero content waiting on JavaScript before it appeared.",
-    },
-    {
-      step: "Ship",
-      body: "Version-controlled in GitHub with clear commit history, ready for continuous deployment.",
-    },
-  ],
-  stack: ["Claude Code", "Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "GitHub"],
-  takeaway:
-    "The lesson for leaders: AI doesn't remove the need for judgement — it moves it. The valuable work became framing the problem, making trade-offs and reviewing the output.",
 };
 
 export const beyondWork = {

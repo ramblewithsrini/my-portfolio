@@ -89,7 +89,7 @@ function CodePane({ language, file, code }: { language: string; file: string; co
           {file} ↗
         </a>
       </figcaption>
-      <pre className="max-h-[28rem] flex-1 overflow-auto p-4 text-[12.5px] leading-relaxed">
+      <pre className="max-h-[28rem] flex-1 overflow-auto p-4 text-[13px] leading-relaxed">
         <code className="font-mono text-foreground/90">{code}</code>
       </pre>
     </figure>
@@ -117,10 +117,10 @@ export default function TwoWaysPage() {
             <Link href="/lab/mdm" className="text-sm text-muted hover:text-foreground">
               ← Back to the playground
             </Link>
-            <p className="mb-6 mt-8 font-display text-sm font-medium uppercase tracking-widest text-accent">
+            <p className="type-eyebrow mb-6 mt-8 text-accent">
               Lab · Master data management
             </p>
-            <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.98] font-bold tracking-tighter">
+            <h1 className="type-display">
               One engine,
               <br />
               <span className="text-gradient">two languages.</span>
@@ -140,7 +140,7 @@ export default function TwoWaysPage() {
         <div className="grid gap-6 md:grid-cols-2">
           <Reveal className="h-full">
             <div className="h-full rounded-3xl border border-border bg-surface p-8">
-              <p className="text-xs font-medium uppercase tracking-widest text-accent">TypeScript</p>
+              <p className="type-eyebrow text-accent">TypeScript</p>
               <h2 className="mt-2 font-display text-2xl font-bold">For the live experience</h2>
               <p className="mt-3 leading-relaxed text-muted">
                 Runs instantly in the visitor&apos;s browser — every slider recalculates on the spot, with no
@@ -150,7 +150,7 @@ export default function TwoWaysPage() {
           </Reveal>
           <Reveal delay={100} className="h-full">
             <div className="h-full rounded-3xl border border-border bg-surface p-8">
-              <p className="text-xs font-medium uppercase tracking-widest text-accent">Python</p>
+              <p className="type-eyebrow text-accent">Python</p>
               <h2 className="mt-2 font-display text-2xl font-bold">For data teams</h2>
               <p className="mt-3 leading-relaxed text-muted">
                 The language of analysis and data engineering — with pandas, tests and a notebook walkthrough, ready
@@ -171,7 +171,7 @@ export default function TwoWaysPage() {
             </div>
             <div className="mt-6 overflow-x-auto">
               <table className="w-full min-w-[28rem] text-left">
-                <thead className="text-xs uppercase tracking-widest text-muted">
+                <thead className="type-eyebrow text-muted">
                   <tr className="border-b border-border">
                     <th scope="col" className="py-2 pr-4 font-medium">Result</th>
                     <th scope="col" className="py-2 pr-4 font-medium">TypeScript</th>
@@ -199,7 +199,7 @@ export default function TwoWaysPage() {
         </Reveal>
 
         {/* Side by side */}
-        <h2 className="mt-20 font-display text-4xl font-bold tracking-tight sm:text-5xl">Side by side</h2>
+        <h2 className="mt-20 type-title">Side by side</h2>
         <p className="mt-3 max-w-3xl text-lg text-muted">
           The same logic, step by step. These excerpts are read from the real source files when the site is
           built, so they are always the code that runs.
@@ -246,7 +246,7 @@ export default function TwoWaysPage() {
                   rel="noreferrer"
                   className="rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-accent"
                 >
-                  <span className="text-xs font-medium uppercase tracking-widest text-accent">{l.eyebrow}</span>
+                  <span className="type-eyebrow text-accent">{l.eyebrow}</span>
                   <span className="mt-2 block font-display text-xl font-bold">{l.title} ↗</span>
                 </a>
               ) : (
@@ -255,7 +255,7 @@ export default function TwoWaysPage() {
                   href={l.href}
                   className="rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-accent"
                 >
-                  <span className="text-xs font-medium uppercase tracking-widest text-accent">{l.eyebrow}</span>
+                  <span className="type-eyebrow text-accent">{l.eyebrow}</span>
                   <span className="mt-2 block font-display text-xl font-bold">{l.title} →</span>
                 </Link>
               ),

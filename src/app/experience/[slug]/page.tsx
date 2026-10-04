@@ -27,7 +27,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   return (
     <section className="border-t border-border py-14">
       <Reveal className="grid gap-8 lg:grid-cols-[14rem_1fr]">
-        <h2 className="font-display text-sm font-medium uppercase tracking-widest text-accent">
+        <h2 className="type-eyebrow text-accent">
           {title}
         </h2>
         <div>{children}</div>
@@ -77,7 +77,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
             </div>
           </Reveal>
           <Reveal intro delay={160}>
-            <h1 className="mt-5 max-w-4xl font-display text-[clamp(2.25rem,6vw,4.5rem)] leading-[1.02] font-bold tracking-tighter">
+            <h1 className="mt-5 max-w-4xl type-title">
               {job.role}
             </h1>
             <p className="mt-3 font-display text-xl font-medium text-accent sm:text-2xl">
@@ -125,7 +125,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
             <dl className="grid gap-4 sm:grid-cols-2">
               {story.scope.map((s) => (
                 <div key={s.label} className="rounded-2xl border border-border bg-surface p-5">
-                  <dt className="text-xs font-medium uppercase tracking-widest text-muted">
+                  <dt className="type-eyebrow text-muted">
                     {s.label}
                   </dt>
                   <dd className="mt-2 leading-relaxed">{s.value}</dd>
@@ -158,7 +158,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
                 className="group flex flex-col gap-4 rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/[0.07] via-surface to-accent-2/[0.07] p-8 transition-colors hover:border-accent sm:flex-row sm:items-center sm:justify-between"
               >
                 <span>
-                  <span className="block text-xs font-medium uppercase tracking-widest text-accent">Try it</span>
+                  <span className="type-eyebrow block text-accent">Try it</span>
                   <span className="mt-2 block font-display text-2xl font-bold tracking-tight">{story.labLink.title}</span>
                   <span className="mt-2 block max-w-2xl text-muted">{story.labLink.body}</span>
                 </span>
@@ -185,7 +185,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
                       .filter(([, v]) => v)
                       .map(([k, v]) => (
                         <div key={k}>
-                          <dt className="text-xs font-medium uppercase tracking-widest text-accent">
+                          <dt className="type-eyebrow text-accent">
                             {k}
                           </dt>
                           <dd className="mt-2 leading-relaxed text-foreground/85">{v}</dd>
@@ -198,16 +198,19 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
           </Section>
         )}
 
-        <Section title={story.achievements ? "Highlights" : "What I delivered"}>
-          <ul className="space-y-3 text-lg leading-relaxed text-foreground/85">
-            {job.highlights.map((h) => (
-              <li key={h} className="flex gap-3">
-                <span className="mt-3 h-1 w-3 shrink-0 bg-accent-2" aria-hidden />
-                {h}
-              </li>
-            ))}
-          </ul>
-        </Section>
+        {/* With full achievements, the CV highlights would only repeat them (they're on /experience). */}
+        {!story.achievements && (
+          <Section title="What I delivered">
+            <ul className="space-y-3 text-lg leading-relaxed text-foreground/85">
+              {job.highlights.map((h) => (
+                <li key={h} className="flex gap-3">
+                  <span className="mt-3 h-1 w-3 shrink-0 bg-accent-2" aria-hidden />
+                  {h}
+                </li>
+              ))}
+            </ul>
+          </Section>
+        )}
 
         {(story.leadershipStory || story.leadership) && (
           <Section title="How I led">
@@ -225,7 +228,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
                     ] as const
                   ).map(([k, v]) => (
                     <div key={k}>
-                      <dt className="text-xs font-medium uppercase tracking-widest text-accent">{k}</dt>
+                      <dt className="type-eyebrow text-accent">{k}</dt>
                       <dd className="mt-2 leading-relaxed text-foreground/85">{v}</dd>
                     </div>
                   ))}
@@ -302,7 +305,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
               href={`/experience/${older.slug}`}
               className="rounded-2xl border border-border p-5 transition-colors hover:border-foreground"
             >
-              <span className="text-xs uppercase tracking-widest text-muted">← Earlier</span>
+              <span className="type-eyebrow text-muted">← Earlier</span>
               <span className="mt-1 block font-display text-lg font-bold">{older.role}</span>
               <span className="text-sm text-accent">{older.short}</span>
             </Link>
@@ -314,7 +317,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
               href={`/experience/${newer.slug}`}
               className="rounded-2xl border border-border p-5 text-right transition-colors hover:border-foreground"
             >
-              <span className="text-xs uppercase tracking-widest text-muted">Later →</span>
+              <span className="type-eyebrow text-muted">Later →</span>
               <span className="mt-1 block font-display text-lg font-bold">{newer.role}</span>
               <span className="text-sm text-accent">{newer.short}</span>
             </Link>

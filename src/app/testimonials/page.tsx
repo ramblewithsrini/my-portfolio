@@ -37,12 +37,12 @@ export default function TestimonialsPage() {
         />
         <div className="mx-auto max-w-6xl px-5 pb-16 pt-24 sm:px-8 sm:pt-32">
           <Reveal intro>
-            <p className="mb-6 font-display text-sm font-medium uppercase tracking-widest text-accent">
+            <p className="type-eyebrow mb-6 text-accent">
               Testimonials
             </p>
           </Reveal>
           <Reveal intro delay={100}>
-            <h1 className="font-display text-[clamp(2.75rem,8vw,6.5rem)] leading-[0.95] font-bold tracking-tighter">
+            <h1 className="type-display">
               In their <span className="text-gradient">words.</span>
             </h1>
           </Reveal>
@@ -75,7 +75,7 @@ export default function TestimonialsPage() {
           {featured.map((t, i) => (
             <Reveal key={t.featured!.pillar} delay={i * 120}>
               <figure className="flex h-full flex-col rounded-3xl border border-border bg-gradient-to-b from-surface to-background p-8">
-                <p className="font-display text-sm font-medium uppercase tracking-widest text-accent">
+                <p className="type-eyebrow text-accent">
                   {t.featured!.pillar}
                 </p>
                 <blockquote className="mt-5 flex-1 font-display text-2xl leading-snug font-medium">

@@ -30,7 +30,7 @@ function renderBlock(block: Block, i: number) {
   switch (block.type) {
     case "h2":
       return (
-        <h2 key={i} className="mt-14 font-display text-3xl font-bold tracking-tight">
+        <h2 key={i} className="mt-14 type-heading">
           {block.text}
         </h2>
       );
@@ -66,7 +66,7 @@ function renderBlock(block: Block, i: number) {
           key={i}
           className="mt-6 rounded-2xl border border-dashed border-yellow-400/60 bg-yellow-400/[0.06] p-5 text-sm leading-relaxed text-yellow-100"
         >
-          <span className="mb-1 block text-xs font-semibold uppercase tracking-widest text-yellow-300">
+          <span className="type-eyebrow mb-1 block text-yellow-300">
             Editor&apos;s note — needs your input
           </span>
           {block.text}
@@ -100,7 +100,7 @@ export default async function ArticlePage(props: PageProps<"/insights/[slug]">) 
             <span aria-hidden>·</span>
             <span>{readingTime(article)} min read</span>
           </p>
-          <h1 className="mt-4 font-display text-[clamp(2.25rem,6vw,4rem)] leading-[1.05] font-bold tracking-tighter">
+          <h1 className="mt-4 type-title">
             {article.title}
           </h1>
           <p className="mt-5 text-xl leading-relaxed text-muted">{article.dek}</p>
@@ -116,7 +116,7 @@ export default async function ArticlePage(props: PageProps<"/insights/[slug]">) 
             href={`/experience/${study.slug}`}
             className="mt-14 block rounded-3xl border border-border bg-surface p-7 transition-colors hover:border-accent/50"
           >
-            <span className="text-xs font-medium uppercase tracking-widest text-accent">
+            <span className="type-eyebrow text-accent">
               The case study behind this article
             </span>
             <span className="mt-2 block font-display text-2xl font-bold">{study.role}</span>

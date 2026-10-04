@@ -44,6 +44,42 @@ body {
   color: transparent;
 }
 
+/* Type scale: one style per role, used on every page.
+   display: page titles · title: section headings and statements
+   heading: sub-section headings · eyebrow: every small uppercase label */
+@utility type-display {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  line-height: 0.98;
+  font-weight: 700;
+  letter-spacing: var(--tracking-tighter);
+}
+@utility type-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  line-height: 1.04;
+  font-weight: 700;
+  letter-spacing: var(--tracking-tighter);
+}
+@utility type-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  @media (width >= 40rem) {
+    font-size: var(--text-4xl);
+  }
+}
+@utility type-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+}
+
 .grid-bg {
   background-image:
     linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),

@@ -47,7 +47,7 @@ export const stories: Record<string, Story> = {
     ],
     outcomes: [
       { value: "73 → 5–7", label: "Days to onboard a partner" },
-      { value: "3,200%", label: "Volume surge absorbed by the same service team" },
+      { value: "360%", label: "Volume surge absorbed by the same service team" },
       { value: "200M", label: "Transactions a day" },
       { value: "£40M", label: "Convergence across 144 platforms" },
     ],
@@ -70,19 +70,19 @@ export const stories: Record<string, Story> = {
       {
         date: "May 2024 onwards",
         title: "Converged platforms, unified the experience",
-        body: "Led platform convergence and the new P3 solution to eliminate duplicate functionality and unify the customer experience, cutting partner onboarding from 73 days to 5–7. Introduced Agentic AI to the Referral Management Service to absorb the post-merger surge.",
+        body: "Led platform convergence and the new P3 solution to eliminate duplicate functionality and unify the customer experience. Introduced Agentic AI to the Referral Management Service to absorb the post-merger surge.",
       },
     ],
     achievements: [
       {
         title: "Partner onboarding: 73 days to 5–7",
-        challenge: "Onboarding a partner took 73 days, slowed by functionality duplicated across systems and manual steps, including testing.",
+        challenge: "Functionality was duplicated across systems, and manual steps — including testing — slowed every onboarding.",
         approach: "Consolidated platforms and built the modern P3 solution to remove duplication, unify the experience and streamline the onboarding journey.",
         outcome: "Onboarding cut to 5–7 days, depending on the merchant, with a unified customer experience.",
       },
       {
-        title: "Absorbing a 3,200% surge with Agentic AI",
-        challenge: "The Capital One merger drove a 3,200% surge in referrals — the cases merchants raise when a transaction doesn't go through.",
+        title: "Absorbing a 360% surge with Agentic AI",
+        challenge: "The Capital One merger drove a surge in referrals — the cases merchants raise when a transaction doesn't go through.",
         approach: "Introduced an AI agent into the Referral Management Service that triages, classifies and prioritises every referral, and resolves the simple cases itself. Live in four months.",
         outcome: "The same customer service centre team absorbed the surge within SLA, with less reliance on temporary contractors.",
       },
@@ -153,13 +153,13 @@ export const stories: Record<string, Story> = {
     summary:
       "Senior member of Ricoh Europe's architecture team, leading the technology evaluation and integration architecture for a multiyear $500M Oracle Cloud transformation — and Lead Architect across HR, finance and customer-facing modernisation running alongside it.",
     context: [
-      "Ricoh Europe was moving core business platforms to Oracle Cloud as part of a multiyear, $500M transformation. Around it, HR, finance and customer-facing systems all needed modernising — largely in parallel.",
+      "Ricoh Europe was moving core business platforms to Oracle Cloud as part of a multiyear transformation. Around it, HR, finance and customer-facing systems all needed modernising — largely in parallel.",
       "My brief was to drive the technology evaluation for Oracle Cloud adoption and to be a trusted adviser to the business on data and integration: showing how the right platforms and patterns would solve their challenges.",
     ],
     scope: [
       { label: "Role", value: "Lead Solution Architect, senior member of the architecture team" },
       { label: "Reporting to", value: "Head of Enterprise Architecture" },
-      { label: "Programme", value: "Multiyear $500M Oracle Cloud transformation: technology evaluation, migration and integration" },
+      { label: "Programme", value: "Multiyear Oracle Cloud transformation: technology evaluation, migration and integration" },
       { label: "Partners", value: "Amelia professional services, for the customer-portal chatbot" },
       { label: "Workstreams", value: "HR modernisation, Concur and invoice management, an AI chatbot for customer portals, and enterprise API management — in parallel" },
       { label: "Platforms", value: "SaaS, workflow, HR and shared business platforms" },

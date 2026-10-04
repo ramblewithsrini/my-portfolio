@@ -34,12 +34,12 @@ export default function WhatIBringPage() {
         />
         <div className="mx-auto max-w-6xl px-5 pb-16 pt-24 sm:px-8 sm:pt-32">
           <Reveal intro>
-            <p className="mb-6 font-display text-sm font-medium uppercase tracking-widest text-accent">
+            <p className="type-eyebrow mb-6 text-accent">
               {valueIntro.eyebrow}
             </p>
           </Reveal>
           <Reveal intro delay={100}>
-            <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.98] font-bold tracking-tighter">
+            <h1 className="type-display">
               {valueIntro.title}
               <br />
               <span className="text-gradient">{valueIntro.titleAccent}</span>
@@ -64,11 +64,9 @@ export default function WhatIBringPage() {
                   <span className="mt-1 block flex-1 font-display text-lg leading-tight font-bold group-hover:text-accent">
                     {r.label}
                   </span>
-                  <span className="mt-5 border-t border-border pt-4">
-                    <span className="text-gradient block font-display text-2xl font-bold tracking-tight">
-                      {r.stat.value}
-                    </span>
-                    <span className="mt-0.5 block text-xs text-muted">{r.stat.label}</span>
+                  {/* A focus line, not a number: the results are in each section below. */}
+                  <span className="mt-5 block border-t border-border pt-4 text-sm leading-snug text-muted group-hover:text-foreground">
+                    {r.focus}
                   </span>
                 </a>
               ))}
@@ -88,11 +86,11 @@ export default function WhatIBringPage() {
               <span className="font-display text-sm font-medium text-accent">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <p className="font-display text-sm font-medium uppercase tracking-widest text-muted">
+              <p className="type-eyebrow text-muted">
                 For {r.title} roles
               </p>
             </div>
-            <h2 className="mt-4 max-w-4xl font-display text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] font-bold tracking-tighter">
+            <h2 className="mt-4 max-w-4xl type-title">
               {r.headline}
             </h2>
             <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/85 sm:text-xl">
@@ -134,10 +132,10 @@ export default function WhatIBringPage() {
           {r.panel && (
             <Reveal className="mt-6">
               <div className="rounded-3xl border border-accent-2/40 bg-gradient-to-br from-accent-2/[0.08] via-surface to-surface p-8 sm:p-10">
-                <p className="text-xs font-medium uppercase tracking-widest text-[#c5b8ff]">
+                <p className="type-eyebrow text-[#c5b8ff]">
                   {r.panel.eyebrow}
                 </p>
-                <h3 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+                <h3 className="mt-3 type-heading">
                   {r.panel.title}
                 </h3>
                 <p className="mt-3 max-w-3xl text-lg leading-relaxed text-muted">{r.panel.lead}</p>
@@ -180,7 +178,7 @@ export default function WhatIBringPage() {
             </Reveal>
             <Reveal delay={120} className="h-full">
               <div className="h-full rounded-3xl border border-accent/40 bg-accent/[0.05] p-8">
-                <p className="text-xs font-medium uppercase tracking-widest text-accent">
+                <p className="type-eyebrow text-accent">
                   My first 90 days
                 </p>
                 <ol className="mt-5 grid gap-5 sm:grid-cols-3">
@@ -200,7 +198,7 @@ export default function WhatIBringPage() {
 
           <Reveal className="mt-6">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
-              <p className="text-xs font-medium uppercase tracking-widest text-muted">
+              <p className="type-eyebrow text-muted">
                 See it in practice
               </p>
               <ul className="flex flex-wrap gap-2">

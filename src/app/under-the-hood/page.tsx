@@ -29,12 +29,12 @@ export default function UnderTheHoodPage() {
         />
         <div className="mx-auto max-w-6xl px-5 pb-16 pt-24 sm:px-8 sm:pt-32">
           <Reveal intro>
-            <p className="mb-6 font-display text-sm font-medium uppercase tracking-widest text-accent">
+            <p className="type-eyebrow mb-6 text-accent">
               {hoodIntro.eyebrow}
             </p>
           </Reveal>
           <Reveal intro delay={100}>
-            <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.98] font-bold tracking-tighter">
+            <h1 className="type-display">
               {hoodIntro.title}
               <br />
               <span className="text-gradient">{hoodIntro.titleAccent}</span>
@@ -79,7 +79,7 @@ export default function UnderTheHoodPage() {
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <Reveal>
           <div className="rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/[0.07] via-surface to-accent-2/[0.07] p-8 sm:p-10">
-            <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="type-heading">
               {workingMethod.title}
             </h2>
             <ul className="mt-6 grid gap-4 md:grid-cols-2">
@@ -117,7 +117,7 @@ export default function UnderTheHoodPage() {
                       ] as const
                     ).map(([k, v]) => (
                       <div key={k}>
-                        <dt className="text-xs font-medium uppercase tracking-widest text-accent">{k}</dt>
+                        <dt className="type-eyebrow text-accent">{k}</dt>
                         <dd className="mt-2 leading-relaxed text-foreground/85">{v}</dd>
                       </div>
                     ))}

@@ -45,12 +45,12 @@ export default function ExperiencePage() {
             </p>
           </Reveal>
           <Reveal intro delay={100}>
-            <h1 className="font-display text-[clamp(3rem,11vw,9rem)] leading-[0.9] font-bold tracking-tighter">
+            <h1 className="type-display">
               {profile.name}
             </h1>
           </Reveal>
           <Reveal intro delay={200}>
-            <p className="text-gradient mt-4 font-display text-[clamp(1.75rem,5vw,3.75rem)] leading-tight font-bold tracking-tight">
+            <p className="text-gradient mt-4 type-title">
               {profile.headline}
             </p>
           </Reveal>

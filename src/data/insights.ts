@@ -25,8 +25,8 @@ export type Article = {
 
 export const articles: Article[] = [
   {
-    slug: "absorbing-a-3200-percent-surge",
-    title: "Absorbing a 3,200% surge with the same team",
+    slug: "absorbing-a-360-percent-surge",
+    title: "Absorbing a 360% surge with the same team",
     dek: "What a post-merger volume spike taught me about putting Agentic AI to work — safely — in a regulated payments business.",
     date: "2026-10-03",
     status: "published",
@@ -35,7 +35,7 @@ export const articles: Article[] = [
     blocks: [
       {
         type: "p",
-        text: "When Discover joined Capital One, the referrals flowing into our Referral Management Service went up by 3,200%. A referral is what a merchant raises when a particular transaction doesn't go through — and every one of them needs looking at. Not 32% more of them: thirty-two times as many.",
+        text: "When Discover joined Capital One, the referrals flowing into our Referral Management Service went up by 360%. A referral is what a merchant raises when a particular transaction doesn't go through — and every one of them needs looking at. Not 36% more of them: four and a half times as many.",
       },
       {
         type: "p",
@@ -64,7 +64,7 @@ export const articles: Article[] = [
       {
         type: "list",
         items: [
-          "The same customer service centre team absorbed a 3,200% increase in referrals.",
+          "The same customer service centre team absorbed a 360% increase in referrals.",
           "Work stayed within SLA through the surge.",
           "We needed fewer temporary contractors than the surge would otherwise have demanded.",
         ],

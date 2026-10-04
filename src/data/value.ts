@@ -8,7 +8,7 @@ export type RoleValue = {
   id: string;
   label: string; // short label for the role switcher
   title: string;
-  stat: { value: string; label: string }; // headline number on the role card
+  focus: string; // short line on the role card
   headline: string;
   intro: string;
   valueTitle: string; // heading above the value points, written as a sentence
@@ -40,7 +40,7 @@ export const roleValues: RoleValue[] = [
     valueTitle: "Where I'll make the difference to your architecture",
     label: "Architect",
     title: "Enterprise & Solution Architect",
-    stat: { value: "73 → 5–7", label: "days to onboard a partner" },
+    focus: "Target states, integration and decisions",
     headline: "Architecture that earns its place in business decisions.",
     intro:
       "Twenty-five years from developer to TOGAF-certified enterprise architect. I design target states that are fundable, deliverable and owned by the teams who run them — and I stay with them until they land.",
@@ -48,7 +48,7 @@ export const roleValues: RoleValue[] = [
       "North Stars and target architectures tied to investment cases — like the £40M, 144-platform convergence at Discover",
       "Modern patterns applied pragmatically: event-driven, DDD, CQRS, hexagonal, multi-region cloud",
       "Integration at scale — from 112 airline systems to Oracle Cloud and enterprise API management",
-      "AI designed in, not bolted on — an API-integrated chatbot that cut support-desk load by 27%",
+      "AI designed in, not bolted on — like an API-integrated chatbot on Ricoh's customer portals",
       "Regulation built in from the start: PCI DSS 4.0, GDPR, KYC",
     ],
     evidence: [
@@ -67,7 +67,7 @@ export const roleValues: RoleValue[] = [
         {
           title: "Start from the outcome",
           body: "Anchor every decision in the business result and its constraints — cost, risk, regulation and time — before any technology.",
-          example: "The £40M Discover convergence began as an investment case for an Investment Council.",
+          example: "The Discover convergence began as an investment case for an Investment Council.",
         },
         {
           title: "Frame options, not answers",
@@ -87,7 +87,7 @@ export const roleValues: RoleValue[] = [
         {
           title: "Revisit with evidence",
           body: "Measure what the decision was meant to change, and adjust when the evidence says so.",
-          example: "Partner onboarding at Discover, from 73 days to 5–7.",
+          example: "Partner onboarding time at Discover, tracked through the convergence.",
         },
       ],
     },
@@ -102,10 +102,10 @@ export const roleValues: RoleValue[] = [
     valueTitle: "Where I'll make the difference to your data and AI",
     label: "Head of Data & AI",
     title: "Head of Data & AI",
-    stat: { value: "21%", label: "better MDM matching rates" },
+    focus: "Trusted data, MDM and governed AI",
     headline: "Data and AI that earn their keep — trusted, governed and in production.",
     intro:
-      "BCS-certified in data management, I've led data from the architecture side — so strategy, governance and platforms are designed together, not bolted on. And I've put AI to work on top of it: from a household view of the customer at Allianz UK, to Agentic AI absorbing a 3,200% surge at Discover, to a conversational AI that cut support-desk load by 27% at Ricoh.",
+      "BCS-certified in data management, I've led data from the architecture side — so strategy, governance and platforms are designed together, not bolted on. And I've put AI to work on top of that data, in production and with guardrails.",
     value: [
       "AI-ready data: trusted, governed data that analytics and AI can safely build on",
       "Governed AI in production — Agentic AI at Discover, conversational AI at Ricoh — with guardrails a regulator would recognise",
@@ -116,7 +116,7 @@ export const roleValues: RoleValue[] = [
     ],
     evidence: [
       { value: "21%", label: "Better MDM matching rates at Allianz UK" },
-      { value: "3,200%", label: "Surge absorbed with Agentic AI at Discover — same team" },
+      { value: "360%", label: "Surge absorbed with Agentic AI at Discover — same team" },
       { value: "27%", label: "Fewer support-desk emails and calls via conversational AI at Ricoh" },
     ],
     quote:
@@ -134,13 +134,13 @@ export const roleValues: RoleValue[] = [
     valueTitle: "Where I'll make the difference to your teams",
     label: "Head of Engineering & Architecture",
     title: "Head of Engineering & Architecture",
-    stat: { value: "3,200%", label: "surge absorbed, same team" },
+    focus: "Teams, delivery and resilience",
     headline: "Engineering organisations that deliver — with people who want to stay.",
     intro:
-      "I've led a 30-person architecture and engineering organisation through its managers, for payment platforms processing 200M transactions a day — through a merger, a platform convergence and a 3,200% volume surge.",
+      "I've led a 30-person architecture and engineering organisation through its managers, for payment platforms processing 200M transactions a day — through a merger, a platform convergence and a post-merger surge.",
     value: [
       "Leaders who grow leaders: clear decision rights, service ownership and coaching",
-      "Functions built from the ground up — a 15-member Architecture & Design practice delivering £1.5M+ a year at IGT",
+      "Functions built from the ground up — a 15-member Architecture & Design practice at IGT",
       "Teams that collaborate instead of protecting their silos — no blame, shared credit",
       "Resilience as a culture: multi-region design, CI/CD and automated quality gates",
       "Delivery at scale through mergers, platform convergence and volume surges",
@@ -148,8 +148,8 @@ export const roleValues: RoleValue[] = [
     ],
     evidence: [
       { value: "30", label: "People led through Architecture and Engineering Managers" },
-      { value: "3,200%", label: "Post-merger surge absorbed with Agentic AI — same team, within SLA" },
-      { value: "73 → 5–7", label: "Days to onboard a partner" },
+      { value: "360%", label: "Post-merger surge absorbed with Agentic AI — same team, within SLA" },
+      { value: "15", label: "Members in the Architecture & Design practice I built at IGT" },
     ],
     quote:
       "Srini is a true servant leader. He puts his people first, consistently and without needing recognition for it, and the team's performance reflects that.",
@@ -166,10 +166,10 @@ export const roleValues: RoleValue[] = [
     valueTitle: "Where I'll make the difference to your pipeline",
     label: "Pre-sales & Client Engagement",
     title: "Pre-sales & Client Engagement",
-    stat: { value: "$50M", label: "in pre-sales wins" },
+    focus: "Bids, workshops and client delivery",
     headline: "Propositions that win — and engagements that deliver what was sold.",
     intro:
-      "15+ years client-facing at TCS, InterGlobe and Pitney Bowes — from RFI to go-live, building and running a £1.5M-a-year architecture function, and on stage at industry conferences in Dallas and London. Then nine years as the buyer, at Allianz, Ricoh and Discover. I've sat on both sides of the table, so I know what makes a client say yes — and what makes them walk away.",
+      "15+ years client-facing at TCS, InterGlobe and Pitney Bowes — from RFI to go-live, building and running an architecture function, and on stage at industry conferences in Dallas and London. Then nine years as the buyer, at Allianz, Ricoh and Discover. I've sat on both sides of the table, so I know what makes a client say yes — and what makes them walk away.",
     value: [
       "Account growth: grew IGT's SITA business from passenger systems into its Government Service Line, where iBorders was bought by Oman and Saudi Arabia — IGT's Game Changer Award, 2014",
       "Bid qualification that chases the right work: fit, capability and an honest view of the competition",

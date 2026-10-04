@@ -10,7 +10,7 @@ export default function SectionHeading({
   return (
     <Reveal className="mb-12 flex items-baseline gap-4">
       {index && <span className="font-display text-sm font-medium text-accent">{index}</span>}
-      <h2 className="font-display text-4xl font-bold tracking-tight sm:text-6xl">
+      <h2 className="type-title">
         {title}
       </h2>
     </Reveal>

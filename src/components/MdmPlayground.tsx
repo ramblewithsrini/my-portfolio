@@ -124,7 +124,7 @@ function StepHeading({ n, title, body }: { n: string; title: string; body: strin
   return (
     <div className="mb-6 mt-16">
       <p className="font-display text-sm text-accent-2">Step {n}</p>
-      <h2 className="mt-1 font-display text-3xl font-bold tracking-tight">{title}</h2>
+      <h2 className="mt-1 type-heading">{title}</h2>
       <p className="mt-2 max-w-3xl text-muted">{body}</p>
     </div>
   );
@@ -179,7 +179,7 @@ export default function MdmPlayground(props: {
       {/* Controls */}
       <div className="mt-6 grid gap-8 rounded-3xl border border-accent/40 bg-surface p-7 sm:p-9 lg:grid-cols-3">
         <div className="space-y-4">
-          <p className="text-xs font-medium uppercase tracking-widest text-accent">How much each field counts</p>
+          <p className="type-eyebrow text-accent">How much each field counts</p>
           {(Object.keys(fieldLabels) as Field[]).map((f) => (
             <Slider
               key={f}
@@ -193,7 +193,7 @@ export default function MdmPlayground(props: {
           ))}
         </div>
         <div className="space-y-4">
-          <p className="text-xs font-medium uppercase tracking-widest text-accent">Decision thresholds</p>
+          <p className="type-eyebrow text-accent">Decision thresholds</p>
           <Slider
             id="t-auto"
             label="Merge automatically at"
@@ -217,7 +217,7 @@ export default function MdmPlayground(props: {
           </p>
         </div>
         <div className="space-y-5">
-          <p className="text-xs font-medium uppercase tracking-widest text-accent">Survivorship rules</p>
+          <p className="type-eyebrow text-accent">Survivorship rules</p>
           <Choice
             legend="Name comes from"
             name="rule-name"
@@ -253,7 +253,7 @@ export default function MdmPlayground(props: {
       <StepHeading n="01" title="Messy source data" body="Ten records from three systems. Spot the spelling variants, date formats and abbreviations." />
       <div className="overflow-x-auto rounded-3xl border border-border bg-surface">
         <table className="w-full min-w-[46rem] text-left text-sm">
-          <thead className="text-xs uppercase tracking-widest text-muted">
+          <thead className="type-eyebrow text-muted">
             <tr className="border-b border-border">
               {["Record", "Name", "Date of birth", "Address", "Email", "Updated"].map((h) => (
                 <th key={h} scope="col" className="px-4 py-3 font-medium">
@@ -367,7 +367,7 @@ export default function MdmPlayground(props: {
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {result.households.map((h) => (
           <li key={h.key} className="rounded-2xl border border-accent-2/40 bg-accent-2/[0.07] p-5">
-            <p className="text-xs font-medium uppercase tracking-widest text-[#c5b8ff]">
+            <p className="type-eyebrow text-[#c5b8ff]">
               {h.members.length > 1 ? `Household of ${h.members.length}` : "Single household"}
             </p>
             <p className="mt-2 text-sm text-muted">{standardiseAddress(h.members[0].values.address.value)}</p>

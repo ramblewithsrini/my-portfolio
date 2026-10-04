@@ -21,12 +21,12 @@ export default function InsightsPage() {
         />
         <div className="mx-auto max-w-6xl px-5 pb-16 pt-24 sm:px-8 sm:pt-32">
           <Reveal intro>
-            <p className="mb-6 font-display text-sm font-medium uppercase tracking-widest text-accent">
+            <p className="type-eyebrow mb-6 text-accent">
               Insights
             </p>
           </Reveal>
           <Reveal intro delay={100}>
-            <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.98] font-bold tracking-tighter">
+            <h1 className="type-display">
               Lessons from
               <br />
               <span className="text-gradient">the work itself.</span>
@@ -87,11 +87,11 @@ export default function InsightsPage() {
       {/* From the lab: interactive, hands-on demos */}
       {mdmLabPublished && (
         <section className="mx-auto max-w-6xl px-5 pb-24 sm:px-8">
-          <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">From the lab</h2>
+          <h2 className="type-heading">From the lab</h2>
           <p className="mt-2 max-w-2xl text-muted">Hands-on, interactive demos — try them in your browser.</p>
           <Reveal className="mt-8">
             <div className="rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/[0.07] via-surface to-accent-2/[0.07] p-8 sm:p-10">
-              <p className="text-xs font-medium uppercase tracking-widest text-accent">{labIntro.eyebrow}</p>
+              <p className="type-eyebrow text-accent">{labIntro.eyebrow}</p>
               <h3 className="mt-3 font-display text-3xl font-bold tracking-tight">
                 {labIntro.title} <span className="text-gradient">{labIntro.titleAccent}</span>
               </h3>

@@ -65,14 +65,14 @@ export const progression = {
       role: "Technology leader",
       altitude: "30,000 feet",
       era: "InterGlobe to Discover",
-      body: "I now lead the people who do that work. Most recently, a 30-person organisation of architects and engineers, led through Architecture and Engineering Managers, for platforms processing 200M transactions a day — cutting partner onboarding from 73 days to 5–7.",
+      body: "I now lead the people who do that work: most recently an organisation of architects and engineers at Discover, led through their managers, running payment platforms through a merger and a platform convergence.",
       strength: "Executives get strategy grounded in engineering reality.",
     },
     {
       role: "Architect",
       altitude: "The systems view",
       era: "TCS to Ricoh Europe",
-      body: "I moved from components to whole estates — integrating 112 systems for Saudia, building a household view of the customer at Allianz UK, designing data and regulatory solutions for EY, HSBC and Broadridge, and shaping a $500M cloud transformation.",
+      body: "I moved from components to whole estates — integrating 112 systems for Saudia, building a household view of the customer at Allianz UK, designing data and regulatory solutions for EY, HSBC and Broadridge, and shaping Ricoh Europe's move to Oracle Cloud.",
       strength: "I see how every decision ripples across platforms, data and teams.",
     },
     {
@@ -100,13 +100,13 @@ export const philosophy = {
       word: "Clarity",
       qualifier: "next",
       body: "Ambiguity is the enemy of delivery. I turn complex estates into a clear target architecture, explicit decision rights and a roadmap everyone can explain.",
-      evidence: "A North Star that cut partner onboarding from 73 days to 5–7",
+      evidence: "A shared-platform vision that six projects adopted at Allianz UK",
     },
     {
       word: "Delivery",
       qualifier: "always",
       body: "Care and clarity only matter when they ship. I hold a high bar for outcomes and resilience, and I own the hard days as well as the good ones.",
-      evidence: "A 3,200% post-merger surge absorbed by the same team",
+      evidence: "Multi-region resilience built for 99.999% availability at Discover",
     },
   ],
 };
@@ -159,7 +159,7 @@ export const principles = [
   },
   {
     title: "Adopt AI with governance",
-    body: "A chatbot at Ricoh cut support-desk emails and calls by 27%; Agentic AI at Discover absorbed a 3,200% surge with the same team. Clear guardrails make good teams faster.",
+    body: "A chatbot at Ricoh cut support-desk emails and calls by 27%; Agentic AI at Discover absorbed a 360% surge with the same team. Clear guardrails make good teams faster.",
   },
 ];
 
@@ -211,7 +211,7 @@ export const summary = {
       href: "#different",
     },
     {
-      text: "Led payments platforms at 200M transactions a day, and absorbed a 3,200% post-merger surge with Agentic AI — same team.",
+      text: "Head of Technology at Discover: led payment platforms through a merger and a platform convergence, with Agentic AI absorbing the surge.",
       href: "/experience/discover",
     },
     {
@@ -219,7 +219,7 @@ export const summary = {
       href: "/experience/allianz",
     },
     {
-      text: "15+ years in consulting and pre-sales — built a £1.5M-a-year architecture function at IGT, and grew SITA into a second business line.",
+      text: "15+ years in consulting and pre-sales — built an architecture function at IGT from the ground up, and grew SITA into a second business line.",
       href: "/experience/interglobe",
     },
     {
@@ -233,7 +233,7 @@ export const summary = {
 export const impact = [
   { value: "200M", label: "Transactions a day", href: "/experience/discover" },
   { value: "73 → 5–7", label: "Days to onboard a partner", href: "/experience/discover" },
-  { value: "3,200%", label: "Surge absorbed with Agentic AI, same team", href: "/experience/discover" },
+  { value: "360%", label: "Surge absorbed with Agentic AI, same team", href: "/experience/discover" },
   { value: "27%", label: "Fewer support calls via an AI chatbot", href: "/experience/ricoh" },
   { value: "21%", label: "Better MDM matching rates", href: "/experience/allianz" },
   { value: "$500M", label: "Oracle Cloud transformation", href: "/experience/ricoh" },

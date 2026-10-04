@@ -46,10 +46,10 @@ export default function MdmLabPage() {
             </p>
           )}
           <Reveal intro>
-            <p className="mb-6 font-display text-sm font-medium uppercase tracking-widest text-accent">
+            <p className="type-eyebrow mb-6 text-accent">
               {labIntro.eyebrow}
             </p>
-            <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.98] font-bold tracking-tighter">
+            <h1 className="type-display">
               {labIntro.title}
               <br />
               <span className="text-gradient">{labIntro.titleAccent}</span>
@@ -86,7 +86,7 @@ export default function MdmLabPage() {
 
         <div className="mt-16 flex flex-col gap-6 rounded-3xl border border-border bg-surface p-8 sm:p-10 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
-            <p className="text-xs font-medium uppercase tracking-widest text-accent">From the real world</p>
+            <p className="type-eyebrow text-accent">From the real world</p>
             <p className="mt-3 text-lg leading-relaxed text-foreground/85">
               At Allianz UK I led customer data and MDM on IBM MDM Server. Addresses were standardised against
               Royal Mail&apos;s PAF, the policy system was the trusted source for the golden record, and the

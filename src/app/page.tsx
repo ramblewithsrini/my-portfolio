@@ -28,10 +28,10 @@ function ChapterHeader({ chapter }: { chapter: (typeof chapters)[number] }) {
   return (
     <header className="mx-auto max-w-6xl px-5 pt-16 sm:px-8">
       <Reveal className="border-t border-border pt-10">
-        <p className="font-display text-sm font-medium uppercase tracking-widest text-accent">
+        <p className="type-eyebrow text-accent">
           Chapter {chapter.number}
         </p>
-        <h2 className="mt-3 font-display text-[clamp(2.25rem,5.5vw,4rem)] leading-none font-bold tracking-tighter">
+        <h2 className="mt-3 type-title">
           {chapter.title}
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-muted">{chapter.teaser}</p>
@@ -72,12 +72,12 @@ export default function AboutPage() {
         <div className="mx-auto grid w-full max-w-6xl items-end gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_20rem]">
           <div>
             <Reveal intro>
-              <p className="mb-6 font-display text-sm font-medium uppercase tracking-widest text-accent">
+              <p className="type-eyebrow mb-6 text-accent">
                 {intro.eyebrow}
               </p>
             </Reveal>
             <Reveal intro delay={100}>
-              <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.98] font-bold tracking-tighter">
+              <h1 className="type-display">
                 {intro.title}
                 <br />
                 <span className="text-gradient">{intro.titleAccent}</span>
@@ -117,7 +117,7 @@ export default function AboutPage() {
                   className="object-cover object-[50%_30%]"
                 />
               </div>
-              <p className="mb-5 font-display text-sm font-medium uppercase tracking-widest text-muted">
+              <p className="type-eyebrow mb-5 text-muted">
                 At a glance
               </p>
               <dl>
@@ -142,7 +142,7 @@ export default function AboutPage() {
           <div className="rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/[0.07] via-surface to-accent-2/[0.07] p-7 sm:p-10">
             <h2
               id="summary-title"
-              className="font-display text-sm font-medium uppercase tracking-widest text-accent"
+              className="type-eyebrow text-accent"
             >
               {summary.title}
             </h2>
@@ -174,7 +174,7 @@ export default function AboutPage() {
                   href={m.href}
                   className="group flex h-full flex-col justify-between gap-3 p-5 transition-colors hover:bg-surface sm:p-6"
                 >
-                  <span className="text-gradient font-display text-3xl font-bold tracking-tight sm:text-4xl">
+                  <span className="text-gradient type-heading">
                     {m.value}
                   </span>
                   <span className="flex items-end justify-between gap-2 text-sm leading-snug text-muted group-hover:text-foreground">
@@ -199,7 +199,7 @@ export default function AboutPage() {
       <section id="different" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
         <SectionHeading title={uniqueness.title} />
         <Reveal>
-          <p className="max-w-5xl font-display text-[clamp(2rem,5vw,3.75rem)] leading-[1.05] font-bold tracking-tighter">
+          <p className="max-w-5xl type-title">
             {uniqueness.headline}{" "}
             <span className="text-gradient">{uniqueness.headlineAccent}</span>
           </p>
@@ -210,7 +210,7 @@ export default function AboutPage() {
           {uniqueness.pillars.flatMap((p, i) => [
             <Reveal key={p.title} delay={i * 120} className="h-full">
               <article className="flex h-full flex-col rounded-3xl border border-border bg-surface p-7">
-                <p className="text-xs font-medium uppercase tracking-widest text-accent">
+                <p className="type-eyebrow text-accent">
                   {p.eyebrow}
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-bold tracking-tight sm:text-3xl">
@@ -246,7 +246,7 @@ export default function AboutPage() {
               <div className="grid-bg absolute inset-0" aria-hidden />
               <div className="relative grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
                 <div>
-                  <h3 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+                  <h3 className="type-heading">
                     {uniqueness.result.title}
                   </h3>
                   <p className="mt-3 max-w-2xl text-lg leading-relaxed text-white/80">
@@ -294,17 +294,17 @@ export default function AboutPage() {
                   style={{ opacity: 0.35 + level * 0.3 }}
                   aria-hidden
                 />
-                <div className="flex items-center justify-between gap-3 text-xs font-medium uppercase tracking-widest">
+                <div className="type-eyebrow flex items-center justify-between gap-3">
                   <span className="text-accent">{st.altitude}</span>
                   <span className="text-muted">{st.era}</span>
                 </div>
-                <h3 className="mt-5 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+                <h3 className="mt-5 type-heading">
                   <span className="mr-3 text-accent-2">{String(level + 1).padStart(2, "0")}</span>
                   {st.role}
                 </h3>
                 <p className="mt-4 flex-1 leading-relaxed text-muted">{st.body}</p>
                 <p className="mt-6 border-t border-border pt-4 font-medium">
-                  <span className="mb-1 block text-xs font-medium uppercase tracking-widest text-muted">
+                  <span className="type-eyebrow mb-1 block text-muted">
                     Strength carried forward
                   </span>
                   {st.strength}
@@ -324,7 +324,7 @@ export default function AboutPage() {
       <section id="philosophy" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
         <SectionHeading title={philosophy.title} />
         <Reveal>
-          <p className="font-display text-[clamp(2.25rem,6vw,4.75rem)] leading-[1.02] font-bold tracking-tighter">
+          <p className="type-title">
             {philosophy.headline[0]}
             <br />
             <span className="text-gradient">{philosophy.headline[1]}</span>
@@ -400,7 +400,7 @@ export default function AboutPage() {
             className="group flex flex-col gap-4 rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/[0.07] via-surface to-accent-2/[0.07] p-8 transition-colors hover:border-accent sm:flex-row sm:items-center sm:justify-between sm:p-10"
           >
             <span>
-              <span className="block text-xs font-medium uppercase tracking-widest text-accent">
+              <span className="type-eyebrow block text-accent">
                 Go deeper
               </span>
               <span className="mt-2 block font-display text-2xl font-bold tracking-tight sm:text-3xl">
@@ -429,14 +429,14 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={150}>
             <div className="h-full rounded-3xl border border-accent/40 bg-accent/[0.06] p-8">
-              <p className="font-display text-sm font-medium uppercase tracking-widest text-accent">
+              <p className="type-eyebrow text-accent">
                 What I&apos;m looking for
               </p>
               <p className="mt-4 text-lg leading-relaxed">{now.lookingFor.summary}</p>
               <div className="mt-6 space-y-5">
                 {now.lookingFor.tracks.map((t) => (
                   <div key={t.label}>
-                    <p className="text-xs font-medium uppercase tracking-widest text-muted">
+                    <p className="type-eyebrow text-muted">
                       {t.label}
                     </p>
                     <ul className="mt-2 flex flex-wrap gap-2">
@@ -539,7 +539,7 @@ export default function AboutPage() {
                   </div>
                 )}
                 <div className={`flex flex-1 flex-col p-8 ${it.featured ? "justify-end" : ""}`}>
-                  <p className="text-xs font-medium uppercase tracking-widest text-accent">
+                  <p className="type-eyebrow text-accent">
                     {it.eyebrow}
                   </p>
                   <h3

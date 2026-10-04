@@ -7,7 +7,7 @@ export const profile = {
   headline: "Architecture, Engineering & Data Leader",
   tagline:
     "25 years turning complex financial-services estates into investment cases, target architectures and executable roadmaps.",
-  bio: "Most recently Head of Technology for Partner Experience and Payments at Discover Financial Services, leading a 30-person architecture and engineering organisation — and the data strategy — for platforms processing 200M transactions a day.",
+  bio: "Most recently Head of Technology for Partner Experience and Payments at Discover Financial Services, leading a 30-person architecture and engineering organisation — and the data strategy — for its payment platforms.",
   location: "London, UK",
   availability: "Available immediately · Eligible for SC Clearance",
   email: "srini.vankee@gmail.com",

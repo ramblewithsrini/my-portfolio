@@ -29,10 +29,10 @@ export default function LeadershipPage() {
             </Link>
           </Reveal>
           <Reveal intro delay={100}>
-            <p className="mb-6 mt-8 font-display text-sm font-medium uppercase tracking-widest text-accent">
+            <p className="type-eyebrow mb-6 mt-8 text-accent">
               Leadership
             </p>
-            <h1 className="font-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.98] font-bold tracking-tighter">
+            <h1 className="type-display">
               How I lead —
               <br />
               <span className="text-gradient">in practice.</span>
@@ -92,7 +92,7 @@ export default function LeadershipPage() {
                     {b.idea}
                   </p>
                   <p className="mt-4 flex-1 border-t border-border pt-4 leading-relaxed text-muted">
-                    <span className="mb-1 block text-xs font-medium uppercase tracking-widest text-accent">
+                    <span className="type-eyebrow mb-1 block text-accent">
                       In my work
                     </span>
                     {b.inPractice}
@@ -120,7 +120,7 @@ export default function LeadershipPage() {
               />
             </div>
             <div className="flex flex-col justify-center gap-5 p-7 sm:py-10 sm:pl-0 sm:pr-10">
-              <p className="text-xs font-medium uppercase tracking-widest text-accent">Currently reading</p>
+              <p className="type-eyebrow text-accent">Currently reading</p>
               <p className="font-display text-3xl leading-tight font-bold tracking-tight">
                 {bookshelf.currentlyReading.title}
                 <span className="mt-1 block text-base font-normal text-muted">

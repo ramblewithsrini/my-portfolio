@@ -404,7 +404,7 @@ export default function AboutPage() {
                 Go deeper
               </span>
               <span className="mt-2 block font-display text-2xl font-bold tracking-tight sm:text-3xl">
-                The principles 25 years have taught me — and the books that shaped them
+                Leadership moments, the principles behind them, and the books that shaped them
               </span>
             </span>
             <span className="shrink-0 font-semibold text-accent group-hover:underline">

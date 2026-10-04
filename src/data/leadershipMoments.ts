@@ -1,0 +1,80 @@
+// "Leadership moments" on /leadership: real situations, told the same way each time
+// (situation, their side, what I did, what changed, lesson). People and, where
+// noted, companies are kept anonymous on purpose.
+
+export type LeadershipMoment = {
+  id: string;
+  theme: string; // what the story shows, e.g. "Judgement under pressure"
+  title: string;
+  teaser: string; // one sentence, shown before the story is opened
+  situation: string;
+  theirSide: string;
+  whatIDid: string[];
+  whatChanged: string[];
+  lesson: string;
+};
+
+export const momentsIntro = {
+  title: "Leadership moments",
+  lead: "Three real situations: what was at stake, how it looked from the other side, what I did and what changed. Names are left out on purpose.",
+};
+
+export const leadershipMoments: LeadershipMoment[] = [
+  {
+    id: "visible",
+    theme: "Standing up for my people",
+    title: "Making good work visible",
+    teaser: "A VP pushed back on promoting one of my architects. Instead of arguing harder, I changed what they could see.",
+    situation:
+      "One of my architects consistently did the work that held major initiatives together. When I put him forward for promotion from Senior to Principal Architect, the VP of the organisation pushed back: they hadn't seen enough of his work.",
+    theirSide:
+      "The VP's concern was fair. Leadership operated at a very high level, and a promotion has to rest on evidence, not on one manager's word. His best work happened in design sessions and delivery teams, far from the rooms where the decision was being made.",
+    whatIDid: [
+      "Rather than argue harder, I built the evidence. I gathered feedback from his peers and collaborators across teams, so the case came from the people who worked with him, not just from me.",
+      "Then I invited him to present the initiative he was leading to its steering committee, so senior leaders could see his skills for themselves.",
+    ],
+    whatChanged: [
+      "The steering committee valued his thinking, he was promoted to Principal Architect, and he stayed with the company.",
+      "It changed how I lead, too: I now see it as my job to give my team a platform to be seen, not to wait for a promotion case to make it happen.",
+    ],
+    lesson: "Visibility isn't only the employee's job. It's their manager's job too.",
+  },
+  {
+    id: "trusted",
+    theme: "Turning a team around",
+    title: "From blamed to trusted",
+    teaser: "I inherited a demoralised team that was blamed for every missed delivery. In my first year, it delivered more than in the previous two combined.",
+    situation:
+      "I inherited an eight-person team carrying heavy technical debt, with low morale. They worked hard, but nobody recognised it. Instead they were blamed for missed deliveries by a demanding business team that had lost confidence in them.",
+    theirSide:
+      "Both sides had reason to be frustrated. The business had watched deliveries slip and needed new capabilities to compete. The team was working against technical debt they hadn't created, and felt nobody was listening to them either.",
+    whatIDid: [
+      "With the business, I listened first. I treated every concern as real and came back with a solution, not an explanation. I set up a regular meeting with their VP and shared a weekly action log, so progress was visible.",
+      "With the team, I worked alongside them. I helped them prioritise, and I took on the job of delivering bad or difficult news to the business myself, so they didn't have to.",
+    ],
+    whatChanged: [
+      "Within six months, both sides trusted us. That let me streamline the engineering process and agree a roadmap to deliver the capabilities the business wanted, at scale.",
+      "In my first year, the team delivered more than in the previous two years combined. Nobody left or asked to move: all eight chose to stay. The business director thanked me personally for my part.",
+    ],
+    lesson: "A team can't fix its delivery while it's busy defending itself. Win trust on both sides first, and delivery follows.",
+  },
+  {
+    id: "premature-move",
+    theme: "Judgement under pressure",
+    title: "Stopping a premature move",
+    teaser: "A platform move was 120 days from going ahead with no requirements behind it. I stopped it with evidence.",
+    situation:
+      "As part of a platform consolidation, a ServiceNow application was due to move to an in-house platform within 120 days, before its licence came up for renewal. The decision had been made before I looked at it closely. When I did, I found no requirements documents and no clear description of what the application actually did.",
+    theirSide:
+      "The goal made sense. Consolidation was about cutting duplicate platforms and cost, and the renewal date created real pressure to act. Nobody wanted to pay for a platform they planned to retire.",
+    whatIDid: [
+      "With no requirements to work from, I asked my team to reverse-engineer the application and recover its high-level requirements. Comparing those with the in-house platform showed more than 15 functional gaps, and a compliance risk if the rebuild wasn't finished in 120 days.",
+      "That meant asking the Investment Council for budget to keep an extra ServiceNow instance: the opposite of the saving they expected. It took several presentations before the evidence won the argument.",
+    ],
+    whatChanged: [
+      "The premature move was stopped, and the application stayed on ServiceNow.",
+      "The business avoided a compliance risk, and more than 15 gaps that would otherwise have surfaced only after the switch.",
+    ],
+    lesson: "A saving that creates a compliance risk isn't a saving. When a decision has been made without evidence, the answer is evidence, not opinion.",
+  },
+];

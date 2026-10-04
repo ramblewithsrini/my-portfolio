@@ -5,11 +5,12 @@ import Contact from "@/components/Contact";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { bookshelf, philosophy, principles } from "@/data/about";
+import { leadershipMoments, momentsIntro } from "@/data/leadershipMoments";
 
 export const metadata: Metadata = {
   title: "Leadership",
   description:
-    "The leadership principles 25 years have taught me — each proven in a real programme — and the books that shaped them.",
+    "Real leadership moments, the principles 25 years have taught me, and the books that shaped them.",
 };
 
 export default function LeadershipPage() {
@@ -41,12 +42,72 @@ export default function LeadershipPage() {
           <Reveal intro delay={200}>
             <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted sm:text-xl">
               My philosophy is simple:{" "}
-              <span className="font-semibold text-foreground">{philosophy.mantra}</span> Below are the
-              principles 25 years have taught me — each one proven in a real programme — and the books
-              that shaped them.
+              <span className="font-semibold text-foreground">{philosophy.mantra}</span> Below are three
+              moments that tested it, the principles 25 years have taught me, and the books that shaped
+              them.
             </p>
           </Reveal>
         </div>
+      </section>
+
+      {/* Leadership moments: the lesson shows up front; the full story opens on demand to keep the page short. */}
+      <section id="moments" className="mx-auto max-w-6xl scroll-mt-32 px-5 pt-12 pb-8 sm:px-8">
+        <SectionHeading title={momentsIntro.title} />
+        <Reveal>
+          <p className="-mt-6 mb-10 max-w-3xl text-lg text-muted">{momentsIntro.lead}</p>
+        </Reveal>
+        <ol className="space-y-6">
+          {leadershipMoments.map((m, i) => (
+            <li key={m.id} id={m.id} className="scroll-mt-28">
+              <Reveal>
+                <article className="overflow-hidden rounded-3xl border border-border bg-surface">
+                  <div className="grid gap-6 p-7 sm:p-9 lg:grid-cols-[3fr_2fr] lg:gap-10">
+                    <div>
+                      <p className="type-eyebrow text-accent">
+                        <span className="mr-3 text-accent-2">{String(i + 1).padStart(2, "0")}</span>
+                        {m.theme}
+                      </p>
+                      <h3 className="mt-3 font-display text-2xl font-bold tracking-tight sm:text-3xl">
+                        {m.title}
+                      </h3>
+                      <p className="mt-3 text-lg leading-relaxed text-foreground/85">{m.teaser}</p>
+                    </div>
+                    <p className="self-center border-l-2 border-accent pl-5 font-display text-xl leading-snug font-medium">
+                      <span className="type-eyebrow mb-2 block text-muted">The lesson</span>
+                      {m.lesson}
+                    </p>
+                  </div>
+                  <details className="group border-t border-border">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-7 py-4 font-semibold text-accent hover:bg-background/40 sm:px-9 [&::-webkit-details-marker]:hidden">
+                      <span className="group-open:hidden">Read the full story</span>
+                      <span className="hidden group-open:inline">Close the story</span>
+                      <span aria-hidden className="transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <dl className="grid gap-8 px-7 pb-9 pt-2 sm:px-9 md:grid-cols-2">
+                      {(
+                        [
+                          ["The situation", [m.situation]],
+                          ["Their side", [m.theirSide]],
+                          ["What I did", m.whatIDid],
+                          ["What changed", m.whatChanged],
+                        ] as const
+                      ).map(([label, paras]) => (
+                        <div key={label}>
+                          <dt className="type-eyebrow text-accent">{label}</dt>
+                          <dd className="mt-2 space-y-3 leading-relaxed text-foreground/85">
+                            {paras.map((p) => (
+                              <p key={p}>{p}</p>
+                            ))}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                  </details>
+                </article>
+              </Reveal>
+            </li>
+          ))}
+        </ol>
       </section>
 
       {/* Principles */}

@@ -378,7 +378,7 @@ export const stories: Record<string, Story> = {
       {
         title: "A single, trusted view of the customer",
         challenge: "Customer records were spread across many systems — duplicated, inconsistent and hard to trust.",
-        approach: "Built the customer data and MDM capability on IBM MDM Server: tuned probabilistic matching scores, cleansed the data, clarified survivorship rules and managed reference data — then built a household view of each customer.",
+        approach: "Built the customer data and MDM capability on IBM MDM Server: standardised addresses against Royal Mail PAF; made the highest-quality source, the policy system, the trusted source for the golden record; tuned automatic-merge and review thresholds against known duplicates, with periodic sampling by data stewards who also worked the review queue; cleansed the data and managed reference data — then built a household view of each customer.",
         outcome: "Matching rates improved by 21%, and the business gained a trusted, household-level view of its customers.",
       },
       {

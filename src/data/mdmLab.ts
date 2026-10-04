@@ -23,8 +23,8 @@ export const labIntro = {
 };
 
 export const steps = [
-  { n: "01", title: "Messy source data", body: "Ten records from three systems: policy, claims and web sign-ups." },
-  { n: "02", title: "Matching", body: "Every pair is scored field by field. High scores merge, the grey zone goes to a person, low scores stay apart." },
-  { n: "03", title: "Survivorship", body: "Matched records become one golden record, with rules deciding which source wins each field." },
+  { n: "01", title: "Messy source data", body: "Ten records from three systems: policy, claims and marketing." },
+  { n: "02", title: "Matching", body: "Every pair is scored field by field. High scores merge, the grey zone goes to a data steward, low scores stay apart." },
+  { n: "03", title: "Survivorship", body: "Matched records become one golden record. By default the policy system — the highest-quality source — wins every field it holds." },
   { n: "04", title: "Households", body: "Golden records at the same address are grouped into households." },
 ];

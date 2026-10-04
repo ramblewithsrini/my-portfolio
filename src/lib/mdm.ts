@@ -2,7 +2,7 @@
 // playground at /lab/mdm. It illustrates the concepts — probabilistic
 // matching, survivorship and householding — not any employer's algorithm.
 
-export type SourceSystem = "Policy" | "Claims" | "Web";
+export type SourceSystem = "Policy" | "Claims" | "Marketing";
 
 export type SourceRecord = {
   id: string;
@@ -23,7 +23,7 @@ export type Survivorship = {
 };
 
 /** Source trust order, most trusted first. */
-export const trustOrder: SourceSystem[] = ["Policy", "Claims", "Web"];
+export const trustOrder: SourceSystem[] = ["Policy", "Claims", "Marketing"];
 
 // ---------------------------------------------------------------- normalising
 
@@ -225,7 +225,7 @@ export function survive(group: SourceRecord[], rules: Survivorship): GoldenRecor
           : pick("name", byTrust),
       dob: pick("dob", byTrust), // date of birth: always the most trusted source
       address: rules.address === "most-recent" ? pick("address", byRecency) : pick("address", byTrust),
-      email: pick("email", byRecency), // email: the most recently captured
+      email: pick("email", byTrust), // email: from the most trusted source
     },
   };
 }

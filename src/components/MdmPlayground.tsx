@@ -27,12 +27,12 @@ const fieldLabels: Record<Field, string> = {
 const sourceStyles: Record<SourceSystem, string> = {
   Policy: "border-accent-2/60 text-[#c5b8ff]",
   Claims: "border-[#5fe3c0]/60 text-[#5fe3c0]",
-  Web: "border-accent/60 text-accent",
+  Marketing: "border-accent/60 text-accent",
 };
 
 const decisionStyles: Record<Decision, { label: string; className: string }> = {
   match: { label: "Match", className: "bg-accent text-background" },
-  review: { label: "Review", className: "bg-amber-300 text-background" },
+  review: { label: "Steward review", className: "bg-amber-300 text-background" },
   "no-match": { label: "No match", className: "border border-border text-muted" },
 };
 
@@ -167,7 +167,7 @@ export default function MdmPlayground(props: {
           { value: props.records.length, label: "Source records" },
           { value: result.golden.length, label: "Customers" },
           { value: result.households.length, label: "Households" },
-          { value: result.review, label: "Pairs for review" },
+          { value: result.review, label: "Pairs for steward review" },
         ].map((s) => (
           <div key={s.label} className="bg-background p-5 sm:p-6">
             <p className="text-gradient font-display text-4xl font-bold">{s.value}</p>
@@ -205,7 +205,7 @@ export default function MdmPlayground(props: {
           />
           <Slider
             id="t-review"
-            label="Send for review from"
+            label="Send to data stewards from"
             value={thresholds.review}
             min={40}
             max={100}
@@ -238,7 +238,7 @@ export default function MdmPlayground(props: {
             ]}
             onChange={(v) => setRules((r) => ({ ...r, address: v }))}
           />
-          <p className="text-sm text-muted">Trust order: Policy, then Claims, then Web.</p>
+          <p className="text-sm text-muted">Trust order: Policy, then Claims, then Marketing. Date of birth and email always come from the most trusted source.</p>
           <button
             type="button"
             onClick={reset}

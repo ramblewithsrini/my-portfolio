@@ -88,9 +88,11 @@ export default function MdmLabPage() {
           <div className="max-w-2xl">
             <p className="text-xs font-medium uppercase tracking-widest text-accent">From the real world</p>
             <p className="mt-3 text-lg leading-relaxed text-foreground/85">
-              At Allianz UK I led customer data and MDM on IBM MDM Server — tuning probabilistic matching,
-              cleansing data and clarifying survivorship rules improved matching rates by 21%, and a
-              household view of the customer fed marketing and analytics.
+              At Allianz UK I led customer data and MDM on IBM MDM Server. Addresses were standardised against
+              Royal Mail&apos;s PAF, the policy system was the trusted source for the golden record, and the
+              merge and review thresholds were tuned against known duplicates and checked by sampling with data
+              stewards — who also worked the review queue. Together with data cleansing, that improved matching
+              rates by 21%.
             </p>
             <p className="mt-4 text-sm text-muted">{labIntro.disclaimer}</p>
           </div>

@@ -20,24 +20,24 @@
     },
     {
       "a": "P1",
-      "b": "W1",
+      "b": "M1",
       "score": 96,
       "decision": "match"
     },
     {
       "a": "C1",
-      "b": "W1",
+      "b": "M1",
       "score": 95,
       "decision": "match"
     },
     {
       "a": "P2",
-      "b": "W2",
+      "b": "M2",
       "score": 83,
       "decision": "review"
     },
     {
-      "a": "W3",
+      "a": "M3",
       "b": "C3",
       "score": 82,
       "decision": "review"
@@ -67,20 +67,20 @@
       "decision": "no-match"
     },
     {
-      "a": "W1",
+      "a": "M1",
       "b": "P2",
       "score": 39,
       "decision": "no-match"
     },
     {
       "a": "P1",
-      "b": "W2",
+      "b": "M2",
       "score": 32,
       "decision": "no-match"
     },
     {
       "a": "C1",
-      "b": "W2",
+      "b": "M2",
       "score": 28,
       "decision": "no-match"
     },
@@ -91,7 +91,7 @@
       "decision": "no-match"
     },
     {
-      "a": "W2",
+      "a": "M2",
       "b": "C2",
       "score": 21,
       "decision": "no-match"
@@ -109,14 +109,14 @@
       "decision": "no-match"
     },
     {
-      "a": "W1",
-      "b": "W2",
+      "a": "M1",
+      "b": "M2",
       "score": 19,
       "decision": "no-match"
     },
     {
       "a": "C2",
-      "b": "W3",
+      "b": "M3",
       "score": 19,
       "decision": "no-match"
     },
@@ -127,7 +127,7 @@
       "decision": "no-match"
     },
     {
-      "a": "W2",
+      "a": "M2",
       "b": "P3",
       "score": 18,
       "decision": "no-match"
@@ -146,7 +146,7 @@
     },
     {
       "a": "P4",
-      "b": "W3",
+      "b": "M3",
       "score": 18,
       "decision": "no-match"
     },
@@ -157,7 +157,7 @@
       "decision": "no-match"
     },
     {
-      "a": "W2",
+      "a": "M2",
       "b": "P4",
       "score": 17,
       "decision": "no-match"
@@ -176,7 +176,7 @@
     },
     {
       "a": "P3",
-      "b": "W3",
+      "b": "M3",
       "score": 16,
       "decision": "no-match"
     },
@@ -199,38 +199,38 @@
       "decision": "no-match"
     },
     {
-      "a": "W1",
+      "a": "M1",
       "b": "C2",
       "score": 11,
       "decision": "no-match"
     },
     {
-      "a": "W2",
+      "a": "M2",
       "b": "C3",
       "score": 11,
       "decision": "no-match"
     },
     {
-      "a": "W1",
+      "a": "M1",
       "b": "P3",
       "score": 10,
       "decision": "no-match"
     },
     {
-      "a": "W1",
+      "a": "M1",
       "b": "P4",
       "score": 10,
       "decision": "no-match"
     },
     {
-      "a": "W2",
-      "b": "W3",
+      "a": "M2",
+      "b": "M3",
       "score": 9,
       "decision": "no-match"
     },
     {
       "a": "C1",
-      "b": "W3",
+      "b": "M3",
       "score": 8,
       "decision": "no-match"
     },
@@ -248,13 +248,13 @@
     },
     {
       "a": "P2",
-      "b": "W3",
+      "b": "M3",
       "score": 6,
       "decision": "no-match"
     },
     {
       "a": "P1",
-      "b": "W3",
+      "b": "M3",
       "score": 5,
       "decision": "no-match"
     },
@@ -265,13 +265,13 @@
       "decision": "no-match"
     },
     {
-      "a": "W1",
-      "b": "W3",
+      "a": "M1",
+      "b": "M3",
       "score": 0,
       "decision": "no-match"
     },
     {
-      "a": "W1",
+      "a": "M1",
       "b": "C3",
       "score": 0,
       "decision": "no-match"
@@ -279,10 +279,10 @@
   ],
   "golden": [
     {
-      "id": "P1+C1+W1",
+      "id": "P1+C1+M1",
       "name": "Jonathan Smith",
       "dob": "1980-03-12",
-      "address": "14 Oak Lane LS14AB",
+      "address": "14 Oak Lane, Leeds, LS1 4AB",
       "email": "jon.smith@example.com"
     },
     {
@@ -293,7 +293,7 @@
       "email": "sarah.smith@example.com"
     },
     {
-      "id": "W2",
+      "id": "M2",
       "name": "Sarah Smith",
       "dob": "05/09/1982",
       "address": "22 Elm Road, Leeds, LS2 7QT",
@@ -303,7 +303,7 @@
       "id": "P3+C2",
       "name": "Priya Patel",
       "dob": "1975-07-21",
-      "address": "3 Mill St, York YO1 6AA",
+      "address": "3 Mill Street, York, YO1 6AA",
       "email": "priya.patel@example.com"
     },
     {
@@ -314,7 +314,7 @@
       "email": "ravi.patel@example.com"
     },
     {
-      "id": "W3",
+      "id": "M3",
       "name": "Daniel Evans",
       "dob": "30/11/1990",
       "address": "8 Station Road, Bath, BA1 1AA",
@@ -330,18 +330,18 @@
   ],
   "households": [
     [
-      "P1+C1+W1",
+      "P1+C1+M1",
       "P2"
     ],
     [
-      "W2"
+      "M2"
     ],
     [
       "P3+C2",
       "P4"
     ],
     [
-      "W3",
+      "M3",
       "C3"
     ]
   ]

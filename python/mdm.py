@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SAMPLE_FILE = ROOT / "src" / "data" / "mdm-sample.json"
 
 FIELDS = ("name", "dob", "address", "email")
-TRUST_ORDER = ["Policy", "Claims", "Web"]  # most trusted first
+TRUST_ORDER = ["Policy", "Claims", "Marketing"]  # most trusted first
 ABBREVIATIONS = {"ln": "lane", "st": "street", "rd": "road", "ave": "avenue"}
 POSTCODE = re.compile(r"\b([a-z]{1,2}\d[a-z\d]?)\s*(\d[a-z]{2})\b", re.IGNORECASE)
 
@@ -237,7 +237,7 @@ def survive(group: list, rules: dict) -> dict:
             "name": pick("name", most_complete if rules["name"] == "most-complete" else _by_trust),
             "dob": pick("dob", _by_trust),  # date of birth: always the most trusted source
             "address": pick("address", _by_recency if rules["address"] == "most-recent" else _by_trust),
-            "email": pick("email", _by_recency),  # email: the most recently captured
+            "email": pick("email", _by_trust),  # email: from the most trusted source
         },
     }
 # endregion

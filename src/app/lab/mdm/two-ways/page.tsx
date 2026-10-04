@@ -49,7 +49,7 @@ const steps = [
   {
     region: "survive",
     title: "Building the golden record",
-    body: "Survivorship rules decide which source wins each field — the most complete name, the most recent address, the most trusted date of birth.",
+    body: "Survivorship rules decide which source wins each field. By default the policy system — the highest-quality source — wins every field it holds.",
   },
   {
     region: "households",

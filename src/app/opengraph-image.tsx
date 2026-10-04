@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { ogFonts } from "@/lib/og-fonts";
 import { profile } from "@/data/portfolio";
@@ -9,6 +11,10 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
+  // The headshot is embedded as a data URL so the card is fully self-contained.
+  const headshot = await readFile(join(process.cwd(), "public/images/headshot.jpg"));
+  const headshotSrc = `data:image/jpeg;base64,${headshot.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -48,14 +54,16 @@ export default async function Image() {
           </div>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 96, fontWeight: 700, letterSpacing: -3, lineHeight: 1 }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 48 }}>
+        <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
+          <div style={{ fontSize: 80, fontWeight: 700, letterSpacing: -3, lineHeight: 1 }}>
             {profile.name}
           </div>
           <div
             style={{
               marginTop: 24,
-              fontSize: 48,
+              fontSize: 44,
+              lineHeight: 1.15,
               fontWeight: 700,
               backgroundImage: "linear-gradient(100deg, #c6ff3d 10%, #5fe3c0 50%, #7c5cff 90%)",
               backgroundClip: "text",
@@ -64,6 +72,21 @@ export default async function Image() {
           >
             {profile.headline}
           </div>
+        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element -- next/og renders plain <img> */}
+        <img
+          src={headshotSrc}
+          alt=""
+          width={270}
+          height={270}
+          style={{
+            width: 270,
+            height: 270,
+            borderRadius: 999,
+            objectFit: "cover",
+            border: "6px solid #c6ff3d",
+          }}
+        />
         </div>
 
         <div style={{ display: "flex", gap: 22, fontSize: 28, color: "#9a9aab" }}>

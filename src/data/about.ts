@@ -8,6 +8,11 @@ export const intro = {
   lead: "I'm Srini. I started as a developer in 2001, grew into an architect, and went on to lead the architects and engineers who build payment platforms at scale — and the data strategy behind them. That path means I can go deep into the code with an engineer in the morning, make the investment case to an executive board in the afternoon — and translate faithfully between the two.",
 };
 
+export const portrait = {
+  src: "/images/headshot.jpg",
+  alt: "Srini Vankeepuram, smiling, in a dark jacket",
+};
+
 export const glance = [
   { label: "Path", value: "Developer → Architect → Technology leader" },
   { label: "Based in", value: "London, UK" },
@@ -360,6 +365,12 @@ export const bookshelf = {
     },
   ],
   podcast: "And I keep learning: Simon Sinek's podcast, A Bit of Optimism, is a regular listen.",
+  currentlyReading: {
+    title: "The Infinite Game",
+    author: "Simon Sinek",
+    image: "/images/reading-the-infinite-game.jpg",
+    alt: "Srini reading The Infinite Game by Simon Sinek at home",
+  },
 };
 
 export const buildLog = {
@@ -399,6 +410,7 @@ export const beyondWork = {
     {
       eyebrow: "Family",
       title: "Dad, husband, son",
+      image: { src: "/images/casual.jpg", alt: "Srini smiling at home in a relaxed orange T-shirt" },
       body: "The roles I'm proudest of. They keep me grounded, teach me patience daily, and remind me what really matters when work gets loud.",
       featured: true,
     },

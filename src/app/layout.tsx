@@ -48,6 +48,7 @@ const personJsonLd = {
   jobTitle: profile.headline,
   description: profile.tagline,
   url: siteUrl,
+  image: `${siteUrl}/images/headshot.jpg`,
   email: `mailto:${profile.email}`,
   address: { "@type": "PostalAddress", addressLocality: "London", addressCountry: "GB" },
   sameAs: profile.socials.map((s) => s.href),

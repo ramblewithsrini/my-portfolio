@@ -401,14 +401,14 @@ export default function AboutPage() {
           >
             <span>
               <span className="type-eyebrow block text-accent">
-                Go deeper
+                Leadership
               </span>
               <span className="mt-2 block font-display text-2xl font-bold tracking-tight sm:text-3xl">
                 Leadership moments, the principles behind them, and the books that shaped them
               </span>
             </span>
             <span className="shrink-0 font-semibold text-accent group-hover:underline">
-              Read more →
+              Read my leadership stories →
             </span>
           </Link>
         </Reveal>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Contact from "@/components/Contact";
 import Reveal from "@/components/Reveal";
 import { formatDate, readingTime, visibleArticles } from "@/data/insights";
+import { leadershipMoments } from "@/data/leadershipMoments";
 import { labIntro, mdmLabPublished } from "@/data/mdmLab";
 
 export const metadata: Metadata = {
@@ -117,6 +118,30 @@ export default function InsightsPage() {
           </Reveal>
         </section>
       )}
+
+      {/* Leadership stories live on their own page; point here too, since people look for them under Insights. */}
+      <section className="mx-auto max-w-6xl px-5 pb-24 sm:px-8">
+        <h2 className="type-heading">Leadership moments</h2>
+        <p className="mt-2 max-w-2xl text-muted">Real situations, told from both sides — and what each one taught me.</p>
+        <Reveal className="mt-8">
+          <Link
+            href="/leadership#moments"
+            className="group flex flex-col gap-6 rounded-3xl border border-border bg-surface p-8 transition-colors hover:border-accent sm:p-10 lg:flex-row lg:items-center lg:justify-between"
+          >
+            <ul className="grid gap-x-10 gap-y-3 sm:grid-cols-2">
+              {leadershipMoments.map((m) => (
+                <li key={m.id}>
+                  <span className="type-eyebrow block text-accent">{m.theme}</span>
+                  <span className="font-display text-xl font-bold tracking-tight">{m.title}</span>
+                </li>
+              ))}
+            </ul>
+            <span className="shrink-0 font-semibold text-accent group-hover:underline">
+              Read my leadership stories →
+            </span>
+          </Link>
+        </Reveal>
+      </section>
 
       <Contact />
     </main>

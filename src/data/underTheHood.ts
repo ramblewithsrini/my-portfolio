@@ -103,6 +103,25 @@ export const decisions: Decision[] = [
     },
   },
   {
+    title: "Two languages, one answer",
+    context: "The MDM playground runs in TypeScript in the browser; data teams work in Python. Two implementations of the same logic can quietly drift apart.",
+    decision: "Both engines read one shared data file. The Python results are committed, and the site build re-runs the TypeScript engine and compares every pair score, golden record and household.",
+    consequence: "If the two engines ever disagree, the build fails — so the live demo and the Python notebook always tell the same story.",
+    code: {
+      file: "src/app/lab/mdm/two-ways/page.tsx",
+      snippet: [
+        "// Parity check, at build time: the TypeScript engine must reproduce the",
+        "// committed Python results exactly, or the site does not build.",
+        "const typescript = run(sampleRecords, defaultWeights, defaultThresholds, defaultSurvivorship);",
+        "if (JSON.stringify(typescript) !== JSON.stringify(parity)) {",
+        "  throw new Error(",
+        "    \"The TypeScript and Python MDM engines disagree. Run `python python/export_parity.py`, then fix whichever engine changed.\",",
+        "  );",
+        "}",
+      ].join("\n"),
+    },
+  },
+  {
     title: "Accessibility as an acceptance criterion",
     context: "A site about leadership should work for everyone — including people using screen readers or keyboards.",
     decision: "Every page was audited with Google Lighthouse, and the build was not considered done until the findings were fixed: list semantics, accessible names, colour contrast and link styling.",

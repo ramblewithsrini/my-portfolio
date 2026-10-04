@@ -5,7 +5,7 @@ import type { SourceRecord, Survivorship, Thresholds, Weights } from "@/lib/mdm"
 import sample from "./mdm-sample.json";
 
 // Drafts are visible only in local development; set to true to put the page live.
-export const mdmLabPublished = false;
+export const mdmLabPublished = true;
 
 // The sample records and default settings live in a JSON file shared with the
 // Python engine (python/mdm.py), so both implementations read the same data.

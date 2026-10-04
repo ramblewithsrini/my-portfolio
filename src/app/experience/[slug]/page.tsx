@@ -150,6 +150,24 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
           </Section>
         )}
 
+        {story.labLink && (
+          <section className="border-t border-border py-14">
+            <Reveal>
+              <Link
+                href={story.labLink.href}
+                className="group flex flex-col gap-4 rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/[0.07] via-surface to-accent-2/[0.07] p-8 transition-colors hover:border-accent sm:flex-row sm:items-center sm:justify-between"
+              >
+                <span>
+                  <span className="block text-xs font-medium uppercase tracking-widest text-accent">Try it</span>
+                  <span className="mt-2 block font-display text-2xl font-bold tracking-tight">{story.labLink.title}</span>
+                  <span className="mt-2 block max-w-2xl text-muted">{story.labLink.body}</span>
+                </span>
+                <span className="shrink-0 font-semibold text-accent group-hover:underline">Open the playground →</span>
+              </Link>
+            </Reveal>
+          </section>
+        )}
+
         {story.achievements && (
           <Section title="Key achievements">
             <div className="space-y-6">

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { articles } from "@/data/insights";
+import { mdmLabPublished } from "@/data/mdmLab";
 import { experience } from "@/data/portfolio";
 import { siteUrl } from "@/lib/site";
 
@@ -26,5 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         })),
       ]
     : [];
-  return [...pages, ...roles, ...insights];
+  const lab = mdmLabPublished
+    ? ["/lab/mdm", "/lab/mdm/two-ways"].map((path) => ({
+        url: `${siteUrl}${path}`,
+        changeFrequency: "monthly" as const,
+        priority: 0.6,
+      }))
+    : [];
+  return [...pages, ...roles, ...insights, ...lab];
 }

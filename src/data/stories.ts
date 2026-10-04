@@ -24,6 +24,7 @@ export type Story = {
   lessons?: string[];
   tech?: string[];
   quotes?: string[];
+  labLink?: { href: string; title: string; body: string }; // an interactive demo of this work
 };
 
 export const stories: Record<string, Story> = {
@@ -347,6 +348,11 @@ export const stories: Record<string, Story> = {
   },
 
   allianz: {
+    labLink: {
+      href: "/lab/mdm",
+      title: "See matching, survivorship and households in action",
+      body: "An interactive MDM playground with fictional data — move the sliders and watch customers merge, golden records form and households appear.",
+    },
     summary:
       "Senior digital architect and product manager for Allianz UK's shared digital platform, with customer data and master data management at its heart. I built a single, household-level view of the customer that fed marketing and analytics, and a platform six projects reused instead of building their own — recognised by the steering committee as one of the key reasons for the programme's success.",
     context: [

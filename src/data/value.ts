@@ -122,6 +122,7 @@ export const roleValues: RoleValue[] = [
     quote:
       "He had a rare ability to translate complicated architectural decisions into practical discussions, making him an outstanding partner to Product Management.",
     caseStudies: ["allianz", "discover", "ricoh", "pitney-bowes"],
+    moreLink: { href: "/lab/mdm", label: "Try the MDM playground →" },
     first90: [
       { step: "Assess", body: "Map the data landscape, quality, lineage and regulatory exposure — and where AI could add value." },
       { step: "Govern", body: "Establish ownership, metadata, standards and AI guardrails people will actually use." },

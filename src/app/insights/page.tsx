@@ -3,6 +3,7 @@ import Link from "next/link";
 import Contact from "@/components/Contact";
 import Reveal from "@/components/Reveal";
 import { formatDate, readingTime, visibleArticles } from "@/data/insights";
+import { labIntro, mdmLabPublished } from "@/data/mdmLab";
 
 export const metadata: Metadata = {
   title: "Insights",
@@ -82,6 +83,40 @@ export default function InsightsPage() {
           </ul>
         )}
       </section>
+
+      {/* From the lab: interactive, hands-on demos */}
+      {mdmLabPublished && (
+        <section className="mx-auto max-w-6xl px-5 pb-24 sm:px-8">
+          <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">From the lab</h2>
+          <p className="mt-2 max-w-2xl text-muted">Hands-on, interactive demos — try them in your browser.</p>
+          <Reveal className="mt-8">
+            <div className="rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/[0.07] via-surface to-accent-2/[0.07] p-8 sm:p-10">
+              <p className="text-xs font-medium uppercase tracking-widest text-accent">{labIntro.eyebrow}</p>
+              <h3 className="mt-3 font-display text-3xl font-bold tracking-tight">
+                {labIntro.title} <span className="text-gradient">{labIntro.titleAccent}</span>
+              </h3>
+              <p className="mt-4 max-w-3xl leading-relaxed text-muted">
+                Ten messy customer records, three source systems. Watch probabilistic matching, survivorship and
+                householding work live — and move the sliders to see every decision change.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link
+                  href="/lab/mdm"
+                  className="rounded-full bg-accent px-6 py-3 font-semibold text-background transition-transform hover:scale-105"
+                >
+                  Try the MDM playground →
+                </Link>
+                <Link
+                  href="/lab/mdm/two-ways"
+                  className="rounded-full border border-border px-6 py-3 font-semibold transition-colors hover:border-foreground"
+                >
+                  The same engine in Python →
+                </Link>
+              </div>
+            </div>
+          </Reveal>
+        </section>
+      )}
 
       <Contact />
     </main>

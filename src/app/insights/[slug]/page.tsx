@@ -60,6 +60,118 @@ function renderBlock(block: Block, i: number) {
           {block.text}
         </blockquote>
       );
+    // A roadmap: numbered stages joined by a line (down the page on phones, across on wide screens).
+    case "stages":
+      return (
+        <figure key={i} className="mt-10 lg:-mx-32">
+          <ol className="grid gap-3 lg:grid-cols-5">
+            {block.items.map((s, n) => (
+              <li key={s.name} className="relative flex flex-col rounded-2xl border border-border bg-surface p-5">
+                <span
+                  className="absolute -top-px left-5 right-5 h-0.5 bg-gradient-to-r from-accent to-accent-2"
+                  style={{ opacity: 0.4 + n * 0.15 }}
+                  aria-hidden
+                />
+                <span className="type-eyebrow text-accent-2">
+                  {String(n + 1).padStart(2, "0")} · {s.when}
+                </span>
+                <span className="mt-2 font-display text-xl font-bold">{s.name}</span>
+                <span className="mt-1 text-sm leading-snug text-foreground/85">{s.goal}</span>
+                <ul className="mt-4 space-y-1.5 border-t border-border pt-3 text-sm text-muted">
+                  {s.outputs.map((o) => (
+                    <li key={o} className="flex gap-2">
+                      <span className="text-accent" aria-hidden>✓</span>
+                      {o}
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+          <figcaption className="mt-3 text-sm text-muted">{block.caption}</figcaption>
+        </figure>
+      );
+    // An operating model: one band per tier, top to bottom.
+    case "roles":
+      return (
+        <figure key={i} className="mt-10 lg:-mx-32">
+          <div className="space-y-3">
+            {block.tiers.map((t, n) => (
+              <section
+                key={t.tier}
+                className="grid gap-4 rounded-2xl border p-5 lg:grid-cols-[12rem_1fr]"
+                style={{ borderColor: `color-mix(in srgb, var(--accent-2) ${60 - n * 18}%, var(--border))` }}
+              >
+                <div>
+                  <p className="type-eyebrow text-accent">{t.tier}</p>
+                  <p className="mt-1 text-sm leading-snug text-muted">{t.purpose}</p>
+                </div>
+                <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                  {t.roles.map((r) => (
+                    <li key={r.name} className="rounded-xl bg-surface p-4">
+                      <span className="block font-display font-bold">{r.name}</span>
+                      <span className="mt-1 block text-sm leading-snug text-muted">{r.does}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+          <figcaption className="mt-3 text-sm text-muted">{block.caption}</figcaption>
+        </figure>
+      );
+    case "table":
+      return (
+        <figure key={i} className="mt-8">
+          <div className="overflow-x-auto rounded-2xl border border-border">
+            <table className="w-full text-left text-sm">
+              <thead className="bg-surface">
+                <tr>
+                  {block.head.map((h) => (
+                    <th key={h} scope="col" className="type-eyebrow px-4 py-3 text-accent">
+                      {h}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {block.rows.map((row) => (
+                  <tr key={row[0]} className="border-t border-border">
+                    {row.map((cell, c) =>
+                      c === 0 ? (
+                        <th key={c} scope="row" className="whitespace-nowrap px-4 py-3 font-semibold">
+                          {cell}
+                        </th>
+                      ) : (
+                        <td key={c} className="px-4 py-3 text-foreground/85">
+                          {cell}
+                        </td>
+                      ),
+                    )}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <figcaption className="mt-3 text-sm text-muted">
+            {block.caption}
+            {block.sources && (
+              <>
+                . Sources:{" "}
+                {block.sources.map((s, n) => (
+                  <span key={s.href}>
+                    {n > 0 && "; "}
+                    <a href={s.href} target="_blank" rel="noreferrer" className="underline hover:text-foreground">
+                      {s.label}
+                    </a>
+                  </span>
+                ))}
+                .
+              </>
+            )}
+          </figcaption>
+        </figure>
+      );
     case "note":
       return (
         <aside

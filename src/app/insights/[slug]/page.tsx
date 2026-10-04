@@ -26,6 +26,9 @@ export async function generateMetadata(props: PageProps<"/insights/[slug]">): Pr
   };
 }
 
+// Roadmap columns on wide screens, by number of stages.
+const stageCols: Record<number, string> = { 3: "lg:grid-cols-3", 4: "lg:grid-cols-4", 5: "lg:grid-cols-5" };
+
 function renderBlock(block: Block, i: number) {
   switch (block.type) {
     case "h2":
@@ -33,6 +36,12 @@ function renderBlock(block: Block, i: number) {
         <h2 key={i} className="mt-14 type-heading">
           {block.text}
         </h2>
+      );
+    case "h3":
+      return (
+        <h3 key={i} className="mt-10 font-display text-xl font-bold tracking-tight">
+          {block.text}
+        </h3>
       );
     case "p":
       return (
@@ -64,7 +73,7 @@ function renderBlock(block: Block, i: number) {
     case "stages":
       return (
         <figure key={i} className="mt-10 lg:-mx-32">
-          <ol className="grid gap-3 lg:grid-cols-5">
+          <ol className={`grid gap-3 ${stageCols[block.items.length] ?? "lg:grid-cols-5"}`}>
             {block.items.map((s, n) => (
               <li key={s.name} className="relative flex flex-col rounded-2xl border border-border bg-surface p-5">
                 <span

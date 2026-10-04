@@ -8,6 +8,7 @@
 export type Block =
   | { type: "p"; text: string }
   | { type: "h2"; text: string }
+  | { type: "h3"; text: string }
   | { type: "list"; items: string[] }
   | { type: "quote"; text: string }
   | { type: "note"; text: string } // editor's note for drafts — shown locally only
@@ -288,6 +289,121 @@ export const articles: Article[] = [
       {
         type: "quote",
         text: "Start with the decision that's going wrong, not the platform you'd like to buy.",
+      },
+    ],
+  },
+  {
+    slug: "first-90-days-director-of-engineering",
+    title: "My first 90 days as a Director of Engineering: listen first, shape together, then go",
+    dek: "Why I don't change anything in my first month — and the questions about people, systems and process I ask instead.",
+    date: "2026-10-04",
+    status: "published",
+    tags: ["Engineering leadership", "First 90 days", "Leadership"],
+    caseStudy: "discover",
+    blocks: [
+      {
+        type: "p",
+        text: "A new engineering leader is under pressure to make a mark quickly. But the fastest way I know to lose a team is to change things before understanding them. So my first 90 days follow one rule: listen first, shape together, then go.",
+      },
+      {
+        type: "stages",
+        caption: "The first 90 days at a glance",
+        items: [
+          {
+            name: "Listen & learn",
+            when: "Days 1–30",
+            goal: "Understand the people, the systems and how work flows — before changing anything.",
+            outputs: ["People: who we are, and what we've been promised", "Systems: what we run, and how well", "Process: how work gets from idea to production"],
+          },
+          {
+            name: "Immerse & shape",
+            when: "Days 31–60",
+            goal: "Get hands-on, find the gaps and build a vision with the team.",
+            outputs: ["Hands-on in the current state", "Gaps identified, with peers", "Ideas socialised and tested", "A vision the team recognises"],
+          },
+          {
+            name: "Get set, go",
+            when: "Day 61 on",
+            goal: "On a mission: deliver the vision together.",
+            outputs: ["Clear priorities everyone can explain", "Measures we hold ourselves to", "Early wins that build trust"],
+          },
+        ],
+      },
+      { type: "h2", text: "Days 1–30: listen and learn" },
+      {
+        type: "p",
+        text: "The first month is about three questions. I write down what I learn, but I don't act on it yet — the first answer is rarely the whole answer.",
+      },
+      { type: "h3", text: "People — who are we, and what have we been promised?" },
+      {
+        type: "list",
+        items: [
+          "One-to-ones with every member of the team, to understand them, not to assess them.",
+          "A regular cadence with my direct reports, so we build a rhythm from week one.",
+          "Skip-level meetings, so I hear what's really getting in the way — unfiltered.",
+          "The promises already made to people: a role change, a training plan, a pay review. Inheriting a team means inheriting its promises, and breaking one by accident costs more trust than any quick win earns.",
+          "Who is in line for promotion — and whether the people deciding can see their work.",
+          "Our vendors, and the role each one plays.",
+        ],
+      },
+      { type: "h3", text: "Systems — what do we run, and how well?" },
+      {
+        type: "list",
+        items: [
+          "Every application in my remit, and its purpose.",
+          "The subject-matter expert for each one.",
+          "What each system integrates with, and why.",
+          "Its SLAs and SLOs — and how we're actually doing against them.",
+          "Current challenges and backlogs.",
+          "Risk and controls: open audit and regulatory findings, and the change-control rules we work within. In a regulated business, these shape every plan that follows.",
+        ],
+      },
+      { type: "h3", text: "Process — how does work get from idea to production?" },
+      {
+        type: "list",
+        items: [
+          "How work comes in: the intake process.",
+          "How we deploy to production.",
+          "How prioritisation works, and who is involved.",
+          "How much of it is automated — and what still depends on people and goodwill.",
+        ],
+      },
+      {
+        type: "p",
+        text: "By day 30, I want to know the people, the estate and how work flows — and I want the team to know me.",
+      },
+      { type: "h2", text: "Days 31–60: immerse and shape" },
+      {
+        type: "list",
+        items: [
+          "Get my hands dirty in the current state — the real work, not the slides about it.",
+          "Collaborate with peers across the business and technology, because most engineering problems start or end outside engineering.",
+          "Identify the gaps, as I see them.",
+          "Start socialising my ideas, and test them with the people who'll live with the consequences.",
+          "Build the vision with the team, not for it.",
+        ],
+      },
+      {
+        type: "p",
+        text: "By day 60, I want a clear view of the gaps, and a vision the team recognises as theirs. If they can't explain it without me in the room, it isn't ready.",
+      },
+      { type: "h2", text: "Day 61 on: get set, go" },
+      {
+        type: "p",
+        text: "Now we're on a mission: clear priorities everyone can explain, measures we hold ourselves to, and early wins that build trust — with the business and within the team.",
+      },
+      { type: "h2", text: "Why listening first works" },
+      {
+        type: "p",
+        text: "I once inherited an eight-person team carrying heavy technical debt, blamed for every missed delivery. I didn't start with a new process. I listened — to the business and to the team — then helped them prioritise, and took on the difficult conversations myself. Within six months both sides trusted us. In my first year, the team delivered more than in the previous two years combined, and all eight chose to stay.",
+      },
+      {
+        type: "quote",
+        text: "Listen first. Shape together. Then go.",
+      },
+      {
+        type: "p",
+        text: "The full story is one of my leadership moments, on the Leadership page.",
       },
     ],
   },

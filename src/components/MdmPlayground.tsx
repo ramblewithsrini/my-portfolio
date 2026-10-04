@@ -45,7 +45,7 @@ const formatDob = (dob: string) => {
 function SourceChip({ source }: { source: SourceSystem | null }) {
   if (!source) return null;
   return (
-    <span className={`rounded-full border px-2 py-0.5 text-[11px] font-medium ${sourceStyles[source]}`}>
+    <span className={`shrink-0 rounded-full border px-2 py-0.5 text-[11px] font-medium ${sourceStyles[source]}`}>
       {source}
     </span>
   );
@@ -344,10 +344,13 @@ export default function MdmPlayground(props: {
                   ["Email", g.values.email.value || "—", g.values.email.from],
                 ] as const
               ).map(([k, v, from]) => (
-                <div key={k} className="flex items-start justify-between gap-3">
+                <div key={k} className="flex items-start gap-3">
                   <dt className="w-16 shrink-0 text-muted">{k}</dt>
-                  <dd className="flex-1 text-foreground/90">{v}</dd>
-                  <SourceChip source={from} />
+                  {/* The source chip lives inside the <dd>: a <dl> row may only hold <dt> and <dd>. */}
+                  <dd className="flex min-w-0 flex-1 items-start justify-between gap-3 text-foreground/90">
+                    <span className="min-w-0 [overflow-wrap:anywhere]">{v}</span>
+                    <SourceChip source={from} />
+                  </dd>
                 </div>
               ))}
             </dl>

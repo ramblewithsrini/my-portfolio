@@ -777,36 +777,39 @@ export default function AboutPage() {
               className={it.featured ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""}
             >
               <article
-                className={`flex h-full flex-col rounded-3xl border p-8 ${
+                className={`flex h-full overflow-hidden rounded-3xl border ${
                   it.featured
-                    ? "border-accent/40 bg-gradient-to-br from-accent/[0.12] via-surface to-accent-2/[0.12] lg:justify-end"
-                    : "border-border bg-surface"
+                    ? // Portrait photo: stacked on phones, side by side on tablets, stacked again in the tall desktop card.
+                      "flex-col border-accent/40 bg-gradient-to-br from-accent/[0.12] via-surface to-accent-2/[0.12] md:flex-row lg:flex-col"
+                    : "flex-col border-border bg-surface"
                 }`}
               >
                 {it.image && (
-                  <div className="relative -mx-8 -mt-8 mb-6 aspect-[4/3] overflow-hidden rounded-t-3xl lg:aspect-auto lg:flex-1">
+                  <div className="relative aspect-[4/5] w-full shrink-0 md:aspect-auto md:min-h-[24rem] md:w-[42%] lg:h-[19rem] lg:min-h-0 lg:w-full">
                     <Image
                       src={it.image.src}
                       alt={it.image.alt}
                       fill
-                      sizes="(min-width: 1024px) 24rem, (min-width: 768px) 46rem, 100vw"
-                      className="object-cover object-[50%_25%]"
+                      sizes="(min-width: 1024px) 22rem, (min-width: 768px) 20rem, 100vw"
+                      className="object-cover object-[45%_30%]"
                     />
                   </div>
                 )}
-                <p className="text-xs font-medium uppercase tracking-widest text-accent">
-                  {it.eyebrow}
-                </p>
-                <h3
-                  className={`mt-3 font-display font-bold tracking-tight ${
-                    it.featured ? "text-4xl sm:text-5xl" : "text-2xl"
-                  }`}
-                >
-                  {it.title}
-                </h3>
-                <p className={`mt-3 leading-relaxed text-muted ${it.featured ? "text-lg" : ""}`}>
-                  {it.body}
-                </p>
+                <div className={`flex flex-1 flex-col p-8 ${it.featured ? "justify-end" : ""}`}>
+                  <p className="text-xs font-medium uppercase tracking-widest text-accent">
+                    {it.eyebrow}
+                  </p>
+                  <h3
+                    className={`mt-3 font-display font-bold tracking-tight ${
+                      it.featured ? "text-4xl sm:text-5xl lg:text-4xl" : "text-2xl"
+                    }`}
+                  >
+                    {it.title}
+                  </h3>
+                  <p className={`mt-3 leading-relaxed text-muted ${it.featured ? "text-lg lg:text-base" : ""}`}>
+                    {it.body}
+                  </p>
+                </div>
               </article>
             </Reveal>
           ))}

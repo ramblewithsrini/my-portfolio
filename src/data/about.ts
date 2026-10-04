@@ -215,7 +215,7 @@ export const summary = {
       href: "/experience/discover",
     },
     {
-      text: "Built a household view of the customer at Allianz UK; six projects adopted the shared platform.",
+      text: "At Allianz UK, built a single customer view (SCV) and household view, enhanced data quality rules and established data governance.",
       href: "/experience/allianz",
     },
     {

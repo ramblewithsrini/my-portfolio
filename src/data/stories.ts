@@ -101,7 +101,7 @@ export const stories: Record<string, Story> = {
       {
         title: "Merger-ready resilience",
         challenge: "The post-merger volume surge put availability, SLAs and SLOs at risk.",
-        approach: "Assessed the impact, prioritised scalability work with the Integration Management Office, and scaled capacity rapidly with third-party contractors.",
+        approach: "Assessed the impact, prioritised scalability work with the Integration Management Office, and scaled capacity rapidly with third-party contractors. Made service health visible in Datadog: dashboards for SLOs, availability and performance, alerting for incident response, and service-health reporting to leadership and the business.",
         outcome: "The platforms held their 99.999% availability target through a smooth transition of the Capital One network; secured Investment Council approval and directed the £40M, 144-platform convergence programme.",
       },
       {
@@ -131,6 +131,7 @@ export const stories: Record<string, Story> = {
       "C4 modelling",
       "PCI DSS 4.0",
       "CI/CD",
+      "Datadog",
       "ServiceNow",
       "Salesforce",
     ],

@@ -318,7 +318,7 @@ export const beyondWork = {
     {
       eyebrow: "Giving back",
       title: "Governor, fundraiser, mentor",
-      body: "I serve as a Parent Governor at my son's school and help raise funds for his cricket club. At Discover, I co-led APAD, a 400-member employee resource group, and mentored more than 15 colleagues.",
+      body: "I serve as a Parent Governor at my son's school and help raise funds for his cricket club. At Discover, I co-led our Asian Pacific employee resource group, mentoring colleagues along the way.",
     },
     {
       eyebrow: "Downtime",

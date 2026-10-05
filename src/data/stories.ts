@@ -41,7 +41,7 @@ export const stories: Record<string, Story> = {
       { label: "Remit", value: "Partner Enablement and Experience, plus platform convergence after the Capital One merger" },
       { label: "Team", value: "30-person architecture & engineering organisation, led through Architecture and Engineering Managers" },
       { label: "Platforms", value: "Discover and Diners partner-experience and payment platforms, integrated with settlement, fraud and disputes" },
-      { label: "Data", value: "Data strategy and governance across 140+ data models and 120+ databases" },
+      { label: "Data", value: "Data strategy and governance for the domain" },
       { label: "Stakeholders", value: "Product, business and executive leadership; the post-merger Integration Management Office" },
       { label: "Scale", value: "200M transactions a day at 10K+ TPS, against 99.999% availability expectations" },
     ],

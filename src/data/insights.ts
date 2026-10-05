@@ -182,7 +182,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "I saw this work at Discover. With Enterprise Data Management, my team agreed the governance process and naming standards first, and ran workshops to roll them out across the payments network. Only then did we centralise metadata curation in Hackolade, publish it to Alation, and use AI to reconcile every data model with production. The result: 95% of more than 140 data models, across 120+ databases, in sync with production and compliant with the standards.",
+        text: "Discover showed me the order matters. My team settled the process and naming standards with the business first; the tooling — Hackolade for curation, Alation as the catalogue, AI to check models against production — came after. Because the rules already existed, the tools had something to enforce, and almost every data model came into line: 95% of more than 140.",
       },
       { type: "h2", text: "The roles you need" },
       {

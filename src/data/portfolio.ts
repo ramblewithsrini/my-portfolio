@@ -192,7 +192,7 @@ export const projects: Project[] = [
     title: "High-throughput payment platforms",
     caseStudy: "discover",
     client: "Discover & Diners Club",
-    impact: "200M txns/day · 10K+ TPS",
+    impact: "10K+ TPS · 99.999% availability",
     description:
       "Target architecture for partner-experience and payment platforms integrated with settlement, fraud and disputes, run against 99.999% availability expectations.",
     tech: ["AWS multi-region", "Microservices", "PCI DSS 4.0"],

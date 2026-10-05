@@ -147,6 +147,7 @@ export const stories: Record<string, Story> = {
       "Absorb pressure from above so teams can focus on what matters.",
       "Use AI to speed up delivery, within governance: my team used AI tools for design analysis, documentation, refactoring and test-case generation, under compliance controls.",
       "Grow skills in the open: we ran an architecture community of practice on standards, reusable patterns and C4 modelling, and coached team members to AWS certification.",
+      "Lead beyond the role: from 2024, I was hand-picked to co-lead APAD (Asian Pacific Associate Development), a 400-member employee resource group — making a modest annual budget stretch to three events a year for 50–60 people each, and mentoring more than 15 colleagues.",
     ],
     lessons: [
       "Silos are rarely a structure problem — they're a trust problem. Remove the fear of blame and collaboration follows.",

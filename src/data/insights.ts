@@ -180,6 +180,10 @@ export const articles: Article[] = [
         type: "p",
         text: "Notice where the tool appears: stage four. By then you know your owners, your definitions and your rules — so the tool automates a working process instead of becoming a very expensive spreadsheet.",
       },
+      {
+        type: "p",
+        text: "I saw this work at Discover. With Enterprise Data Management, my team agreed the governance process and naming standards first, and ran workshops to roll them out across the payments network. Only then did we centralise metadata curation in Hackolade, publish it to Alation, and use AI to reconcile every data model with production. The result: 95% of more than 140 data models, across 120+ databases, in sync with production and compliant with the standards.",
+      },
       { type: "h2", text: "The roles you need" },
       {
         type: "p",

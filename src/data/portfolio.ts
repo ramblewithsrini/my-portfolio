@@ -83,7 +83,7 @@ export const experience: Job[] = [
     startDate: "2020-09",
     endDate: "2023-05",
     highlights: [
-      "Drove the Oracle Cloud technology evaluation and owned cloud migration and integration for a multiyear $500M transformation.",
+      "Contributed to the Oracle Cloud technology evaluation and the migration and integration architecture of a multiyear $500M transformation.",
       "Lead Architect for an Amelia AI chatbot on customer portals, integrated via APIs with customers' orders and their status — cutting support-desk emails and calls by 27%.",
       "Lead Architect for HR modernisation across iPeople, SAP SuccessFactors, Axon Ivy, TalentLink and ServiceNow.",
       "Lead Architect for Concur and invoice management, integrating Concur, DocuWare and TrustWeaver.",
@@ -201,9 +201,9 @@ export const projects: Project[] = [
     title: "Oracle Cloud transformation",
     caseStudy: "ricoh",
     client: "Ricoh Europe",
-    impact: "$500M programme",
+    impact: "Contributor · $500M programme",
     description:
-      "Migration and integration strategy, target architecture and implementation roadmap across SaaS, workflow, HR and shared business platforms.",
+      "Contributed to the migration and integration strategy, target architecture and implementation roadmap across SaaS, workflow, HR and shared business platforms.",
     tech: ["Oracle Cloud", "SAP SuccessFactors", "ServiceNow"],
   },
   {

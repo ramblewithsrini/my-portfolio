@@ -166,10 +166,10 @@ export const stories: Record<string, Story> = {
 
   ricoh: {
     summary:
-      "Senior member of Ricoh Europe's architecture team, leading the technology evaluation and integration architecture for a multiyear $500M Oracle Cloud transformation — and Lead Architect across HR, finance and customer-facing modernisation running alongside it.",
+      "Senior member of Ricoh Europe's architecture team, contributing to the technology evaluation and integration architecture of a multiyear $500M Oracle Cloud transformation — and Lead Architect for the HR, finance and customer-facing modernisation running alongside it.",
     context: [
       "Ricoh Europe was moving core business platforms to Oracle Cloud as part of a multiyear transformation. Around it, HR, finance and customer-facing systems all needed modernising — largely in parallel.",
-      "My brief was to drive the technology evaluation for Oracle Cloud adoption and to be a trusted adviser to the business on data and integration: showing how the right platforms and patterns would solve their challenges.",
+      "My brief was to contribute to the technology evaluation for Oracle Cloud adoption, lead the modernisation workstreams around it, and be a trusted adviser to the business on data and integration: showing how the right platforms and patterns would solve their challenges.",
     ],
     scope: [
       { label: "Reporting to", value: "Head of Enterprise Architecture" },
@@ -178,7 +178,7 @@ export const stories: Record<string, Story> = {
       { label: "Platforms", value: "SaaS, workflow, HR and shared business platforms" },
     ],
     outcomes: [
-      { value: "$500M", label: "Oracle Cloud transformation" },
+      { value: "$500M", label: "Oracle Cloud programme I contributed to" },
       { value: "27%", label: "Fewer support-desk emails and calls, via an AI chatbot" },
       { value: "6", label: "Workstreams led in parallel" },
       { value: "5", label: "HR platforms modernised" },
@@ -187,8 +187,8 @@ export const stories: Record<string, Story> = {
       {
         title: "Oracle Cloud evaluation and integration",
         challenge: "The business needed confidence in Oracle Cloud before committing to a multiyear migration.",
-        approach: "Drove the technology evaluation for Oracle Cloud adoption, and owned the overall cloud migration and integration architecture.",
-        outcome: "A target architecture and implementation roadmap across SaaS, workflow, HR and shared business platforms.",
+        approach: "As part of the architecture team, contributed to the technology evaluation for Oracle Cloud adoption and to the cloud migration and integration architecture.",
+        outcome: "Helped shape the target architecture and implementation roadmap across SaaS, workflow, HR and shared business platforms.",
       },
       {
         title: "HR platform modernisation",

@@ -72,7 +72,7 @@ export const progression = {
       role: "Architect",
       altitude: "The systems view",
       era: "TCS to Ricoh Europe",
-      body: "I moved from components to whole estates — integrating 112 systems for Saudia, building a household view of the customer at Allianz UK, designing data and regulatory solutions for EY, HSBC and Broadridge, and shaping Ricoh Europe's move to Oracle Cloud.",
+      body: "I moved from components to whole estates — integrating 112 systems for Saudia, building a household view of the customer at Allianz UK, designing data and regulatory solutions for EY, HSBC and Broadridge, and contributing to Ricoh Europe's move to Oracle Cloud.",
       strength: "I see how every decision ripples across platforms, data and teams.",
     },
     {
@@ -236,7 +236,7 @@ export const impact = [
   { value: "360%", label: "Surge absorbed with Agentic AI, same team", href: "/experience/discover" },
   { value: "27%", label: "Fewer support calls via an AI chatbot", href: "/experience/ricoh" },
   { value: "21%", label: "Better MDM matching rates", href: "/experience/allianz" },
-  { value: "$500M", label: "Oracle Cloud transformation", href: "/experience/ricoh" },
+  { value: "6", label: "Workstreams led in parallel at Ricoh", href: "/experience/ricoh" },
   { value: "£40M", label: "Convergence across 144 platforms", href: "/experience/discover" },
   { value: "£1.5M+", label: "Annual revenue from a function I built", href: "/experience/interglobe" },
 ];

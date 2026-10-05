@@ -53,7 +53,7 @@ export const roleValues: RoleValue[] = [
     ],
     evidence: [
       { value: "73 → 5–7", label: "Days to onboard a partner, after platform convergence" },
-      { value: "$500M", label: "Oracle Cloud transformation — evaluation and integration architecture" },
+      { value: "6", label: "Parallel workstreams led at Ricoh, alongside its $500M Oracle Cloud programme" },
       { value: "112", label: "Systems integrated for Saudia" },
     ],
     quote:

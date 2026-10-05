@@ -149,7 +149,7 @@ export const roleValues: RoleValue[] = [
     evidence: [
       { value: "8 of 8", label: "People who chose to stay after I turned their team around" },
       { value: "360%", label: "Post-merger surge absorbed with Agentic AI — same team, within SLA" },
-      { value: "15", label: "Members in the Architecture & Design practice I built at IGT" },
+      { value: "80–90%", label: "Shorter deployment lead time after my team's move to OpenShift" },
     ],
     quote:
       "Srini is a true servant leader. He puts his people first, consistently and without needing recognition for it, and the team's performance reflects that.",

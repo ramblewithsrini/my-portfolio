@@ -1,14 +1,33 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Chapter = { id: string; number: string; title: string };
 
 // Sticky chapter navigator: highlights the chapter in view and shows reading
 // progress through the chapters.
-export default function ChapterNav({ chapters }: { chapters: Chapter[] }) {
+export default function ChapterNav({
+  chapters,
+  label = "About page chapters",
+}: {
+  chapters: Chapter[];
+  label?: string; // what the links are, for screen readers
+}) {
   const [active, setActive] = useState<string | null>(null);
   const [progress, setProgress] = useState(0);
+  const listRef = useRef<HTMLOListElement>(null);
+
+  // On narrow screens the links scroll sideways: keep the active one in view.
+  useEffect(() => {
+    const link = active ? listRef.current?.querySelector(`a[href="#${active}"]`) : null;
+    const box = listRef.current?.parentElement;
+    if (!link || !box) return;
+    const l = (link as HTMLElement).offsetLeft;
+    const w = (link as HTMLElement).offsetWidth;
+    if (l < box.scrollLeft || l + w > box.scrollLeft + box.clientWidth) {
+      box.scrollTo({ left: l - box.clientWidth / 2 + w / 2, behavior: "smooth" });
+    }
+  }, [active]);
 
   useEffect(() => {
     const els = chapters
@@ -39,11 +58,11 @@ export default function ChapterNav({ chapters }: { chapters: Chapter[] }) {
 
   return (
     <nav
-      aria-label="About page chapters"
+      aria-label={label}
       className="sticky top-16 z-40 border-y border-border bg-background/85 backdrop-blur-md"
     >
-      <div className="mx-auto max-w-6xl overflow-x-auto px-5 sm:px-8">
-        <ol className="flex w-max min-w-full gap-1 py-2 sm:justify-between">
+      <div className="mx-auto max-w-6xl overflow-x-auto px-5 [scrollbar-width:none] sm:px-8 [&::-webkit-scrollbar]:hidden">
+        <ol ref={listRef} className="flex w-max min-w-full gap-1 py-2 sm:justify-between">
           {chapters.map((c) => {
             const isActive = active === c.id;
             return (

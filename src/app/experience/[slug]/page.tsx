@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ChapterNav from "@/components/ChapterNav";
 import Contact from "@/components/Contact";
 import Reveal from "@/components/Reveal";
 import { experience } from "@/data/portfolio";
@@ -23,9 +24,12 @@ export async function generateMetadata(props: PageProps<"/experience/[slug]">): 
   };
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+// Jump-link targets: the id is derived from the short label.
+const sectionId = (label: string) => label.toLowerCase().replace(/[^a-z]+/g, "-");
+
+function Section({ title, nav, children }: { title: string; nav: string; children: React.ReactNode }) {
   return (
-    <section className="border-t border-border py-14">
+    <section id={sectionId(nav)} className="scroll-mt-32 border-t border-border py-14">
       <Reveal className="grid gap-8 lg:grid-cols-[14rem_1fr]">
         <h2 className="type-eyebrow text-accent">
           {title}
@@ -108,9 +112,28 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
         </div>
       </section>
 
+      <ChapterNav
+        label="Case study sections"
+        chapters={(
+          [
+            [story.context, "Context"],
+            [story.scope, "Scope"],
+            [story.milestones, "Milestones"],
+            [story.achievements, "Achievements"],
+            [!story.achievements, "Delivered"],
+            [story.leadershipStory || story.leadership, "How I led"],
+            [quotes.length > 0, "In their words"],
+            [story.lessons, "Lessons"],
+            [story.tech, "Technology"],
+          ] as const
+        )
+          .filter(([present]) => present)
+          .map(([, nav], i) => ({ id: sectionId(nav), number: String(i + 1).padStart(2, "0"), title: nav }))}
+      />
+
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         {story.context && (
-          <Section title="Context">
+          <Section title="Context" nav="Context">
             <div className="space-y-4 text-lg leading-relaxed text-foreground/85">
               {story.context.map((p) => (
                 <p key={p}>{p}</p>
@@ -120,7 +143,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
         )}
 
         {story.scope && (
-          <Section title="Role & scope">
+          <Section title="Role & scope" nav="Scope">
             <dl className="grid gap-4 sm:grid-cols-2">
               {story.scope.map((s) => (
                 <div key={s.label} className="rounded-2xl border border-border bg-surface p-5">
@@ -135,7 +158,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
         )}
 
         {story.milestones && (
-          <Section title="Milestones">
+          <Section title="Milestones" nav="Milestones">
             <ol className="relative border-l border-border">
               {story.milestones.map((m) => (
                 <li key={m.date + m.title} className="relative mb-8 ml-7 last:mb-0">
@@ -168,7 +191,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
         )}
 
         {story.achievements && (
-          <Section title="Key achievements">
+          <Section title="Key achievements" nav="Achievements">
             <div className="space-y-6">
               {story.achievements.map((a) => (
                 <article key={a.title} className="rounded-3xl border border-border bg-surface p-7">
@@ -199,7 +222,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
 
         {/* With full achievements, the CV highlights would only repeat them (they're on /experience). */}
         {!story.achievements && (
-          <Section title="What I delivered">
+          <Section title="What I delivered" nav="Delivered">
             <ul className="space-y-3 text-lg leading-relaxed text-foreground/85">
               {job.highlights.map((h) => (
                 <li key={h} className="flex gap-3">
@@ -212,7 +235,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
         )}
 
         {(story.leadershipStory || story.leadership) && (
-          <Section title="How I led">
+          <Section title="How I led" nav="How I led">
             {story.leadershipStory && (
               <article className="mb-8 overflow-hidden rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/[0.08] via-surface to-accent-2/[0.08] p-7 sm:p-9">
                 <h3 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
@@ -248,7 +271,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
         )}
 
         {quotes.length > 0 && (
-          <Section title="In their words">
+          <Section title="In their words" nav="In their words">
             <div className="grid gap-5 md:grid-cols-2">
               {quotes.map((q) => (
                 <figure key={q.excerpt} className="rounded-3xl border border-border bg-surface p-7">
@@ -271,7 +294,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
         )}
 
         {story.lessons && (
-          <Section title="Lessons">
+          <Section title="Lessons" nav="Lessons">
             <div className="space-y-4">
               {story.lessons.map((l) => (
                 <p
@@ -286,7 +309,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
         )}
 
         {story.tech && (
-          <Section title="Technology & domain">
+          <Section title="Technology & domain" nav="Technology">
             <ul className="flex flex-wrap gap-2">
               {story.tech.map((t) => (
                 <li key={t} className="rounded-full border border-border px-3 py-1 text-sm text-muted">

@@ -41,7 +41,7 @@ export const stories: Record<string, Story> = {
       { label: "Remit", value: "Partner Enablement and Experience, plus platform convergence after the Capital One merger" },
       { label: "Team", value: "30-person architecture & engineering organisation, led through Architecture and Engineering Managers" },
       { label: "Platforms", value: "Discover and Diners partner-experience and payment platforms, integrated with settlement, fraud and disputes" },
-      { label: "Data", value: "Data strategy and governance for the domain" },
+      { label: "Data", value: "Data strategy and governance across 140+ data models and 120+ databases" },
       { label: "Stakeholders", value: "Product, business and executive leadership; the post-merger Integration Management Office" },
       { label: "Scale", value: "200M transactions a day at 10K+ TPS, against 99.999% availability expectations" },
     ],
@@ -107,7 +107,8 @@ export const stories: Record<string, Story> = {
       {
         title: "Data strategy & governance",
         challenge: "Data was spread across in-house, SaaS and legacy applications, with no shared view of what it meant or where it lived.",
-        approach: "Led metadata curation and the strategy for data at rest; integrated OLTP and OLAP workloads; drove ingestion into the data lake; and anchored it all in domain-driven data models and data governance.",
+        approach: "Led metadata curation and the strategy for data at rest; integrated OLTP and OLAP workloads; drove ingestion into the data lake; and anchored it all in domain-driven data models and data governance. With Enterprise Data Management, my team set the governance process and guidelines and ran workshops to roll them out across the payments network; moved metadata curation to a single 'push' model, managed centrally in Hackolade and published to Alation; and used AI (Copilot and generative AI) to reconcile every data model with production.",
+        outcome: "95% of 140+ data models, across 120+ databases, in sync with production and compliant with governance and naming standards — supporting data design for digital payments, fraud, risk, partner enablement, settlements and disputes.",
       },
     ],
     tech: [
@@ -121,6 +122,8 @@ export const stories: Record<string, Story> = {
       "GraphQL",
       "Data governance",
       "Metadata management",
+      "Hackolade",
+      "Alation",
       "Data lake",
       "OLTP / OLAP",
       "Agentic AI",

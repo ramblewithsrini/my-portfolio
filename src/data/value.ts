@@ -118,6 +118,7 @@ export const roleValues: RoleValue[] = [
       { value: "21%", label: "Better MDM matching rates at Allianz UK" },
       { value: "4 months", label: "From decision to live: governed Agentic AI at Discover" },
       { value: "27%", label: "Fewer support-desk emails and calls via conversational AI at Ricoh" },
+      { value: "95%", label: "Of 140+ data models in sync with production and governed, at Discover" },
     ],
     quote:
       "He had a rare ability to translate complicated architectural decisions into practical discussions, making him an outstanding partner to Product Management.",

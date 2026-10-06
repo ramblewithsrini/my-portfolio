@@ -70,6 +70,7 @@ export const experience: Job[] = [
       "Identified enterprise capacity risks after the Capital One merger, secured Investment Council approval and directed the £40M, 144-platform convergence programme.",
       "Drove AWS East/West multi-region resilience, CI/CD and automated quality controls to support 99.999% availability.",
       "Translated PCI DSS 4.0 and other regulatory requirements into architecture and controls; applied governed Agentic AI to vulnerability identification and audit monitoring.",
+      "Led an agile team that built single sign-on and OAuth with Okta, and a security edge protecting partner-facing services.",
     ],
   },
   {
@@ -83,7 +84,7 @@ export const experience: Job[] = [
     startDate: "2020-09",
     endDate: "2023-05",
     highlights: [
-      "Contributed to the Oracle Cloud technology evaluation and the migration and integration architecture of a multiyear $500M transformation.",
+      "Contributed to the Oracle Cloud technology evaluation and the migration and integration architecture of a multiyear $500M transformation, building Java proofs of concept on Oracle Fusion myself.",
       "Lead Architect for an Amelia AI chatbot on customer portals, integrated via APIs with customers' orders and their status — cutting support-desk emails and calls by 27%.",
       "Lead Architect for HR modernisation across iPeople, SAP SuccessFactors, Axon Ivy, TalentLink and ServiceNow.",
       "Lead Architect for Concur and invoice management, integrating Concur, DocuWare and TrustWeaver.",
@@ -106,7 +107,7 @@ export const experience: Job[] = [
       "Led a five-person team delivering GDPR compliance for McDonald's: data standardisation, iterative data cleansing and an analytical single view of employees.",
       "Led RFI/RFP responses, estimation and go/no-go decisions, and ran data governance due-diligence workshops for clients.",
       "Presented operational MDM with Spectrum and GraphQL at the Pitney Bowes conference in Dallas and a Neo4j conference in London.",
-      "Led RFI/RFP, workshops, proofs of concept and Spectrum ETL integration for HSBC and Broadridge — through to post-implementation.",
+      "Led RFI/RFP, workshops, proofs of concept (often coded myself in Java) and Spectrum ETL integration for HSBC and Broadridge — through to post-implementation.",
       "Lead Architect building IoT-enabled smart city capabilities on Spectrum and AWS for a Saudi Arabian smart city programme.",
       "Client-facing architecture adviser to financial services clients including HSBC, MUFG and Broadridge.",
     ],
@@ -145,6 +146,7 @@ export const experience: Job[] = [
       "Built a 15-member Architecture & Design function from the ground up, delivering £1.5M+ in annual revenue.",
       "Grew IGT's SITA business from passenger systems into SITA's Government Service Line — recognised with IGT's Game Changer Award (2014).",
       "Lead Architect for SITA iBorders border management, purchased by Oman and Saudi Arabia; Architect for the modernisation of SITA's Voyager passenger service system on Oracle SOA Suite.",
+      "IAM Architect for SITA: designed token-based authentication and authorisation across every layer of the Voyager platform.",
       "Led RFI/RFP proposals for clients including SITA and Travelport, for opportunities worth $2M to $20M.",
     ],
   },

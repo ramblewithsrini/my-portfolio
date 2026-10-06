@@ -87,6 +87,11 @@ export const stories: Record<string, Story> = {
         outcome: "The same customer service centre team absorbed the surge within SLA, handling up to 750 referrals a day, with less reliance on temporary contractors.",
       },
       {
+        title: "Secure partner access with Okta",
+        challenge: "Partners needed simple, secure access to Discover and Diners platforms, and partner-facing services needed protecting at the edge.",
+        approach: "One of my agile teams built single sign-on and OAuth with Okta, and a security edge in front of partner-facing services, so every partner request was authenticated and authorised consistently.",
+      },
+      {
         title: "Ready for longer card numbers",
         challenge: "Industry changes to card numbering meant the payment network had to handle variable-length issuer numbers (IINs/BINs) and account numbers of 6 to 19 digits.",
         approach: "My team upgraded the network's validation, routing and processing for every issuer configuration.",
@@ -130,6 +135,8 @@ export const stories: Record<string, Story> = {
       "AI-assisted delivery",
       "C4 modelling",
       "PCI DSS 4.0",
+      "Okta",
+      "SSO / OAuth 2.0",
       "CI/CD",
       "Datadog",
       "ServiceNow",
@@ -188,7 +195,7 @@ export const stories: Record<string, Story> = {
       {
         title: "Oracle Cloud evaluation and integration",
         challenge: "The business needed confidence in Oracle Cloud before committing to a multiyear migration.",
-        approach: "As part of the architecture team, contributed to the technology evaluation for Oracle Cloud adoption and to the cloud migration and integration architecture.",
+        approach: "As part of the architecture team, contributed to the technology evaluation for Oracle Cloud adoption and to the cloud migration and integration architecture — building Java proofs of concept on Oracle Fusion myself.",
         outcome: "Helped shape the target architecture and implementation roadmap across SaaS, workflow, HR and shared business platforms.",
       },
       {
@@ -217,6 +224,8 @@ export const stories: Record<string, Story> = {
     ],
     tech: [
       "Oracle Cloud",
+      "Oracle Fusion",
+      "Java",
       "SAP SuccessFactors",
       "ServiceNow",
       "Axon Ivy",
@@ -321,6 +330,7 @@ export const stories: Record<string, Story> = {
     ],
     tech: [
       "Pitney Bowes Spectrum",
+      "Java",
       "Operational MDM",
       "Neo4j",
       "GraphQL",
@@ -343,7 +353,7 @@ export const stories: Record<string, Story> = {
     },
     leadership: [
       "Bid on the right work: pursue opportunities aligned to our target market, our product capability and our professional services strength — with an honest assessment of the competition.",
-      "Prove it before you sell it: proofs of concept on the client's own ground.",
+      "Prove it before you sell it: proofs of concept on the client's own ground, often coded myself in Java.",
       "Shape the strategy first: due-diligence workshops before solution design.",
       "Enable, don't create dependency: train client teams until they're self-sufficient.",
     ],
@@ -460,6 +470,7 @@ export const stories: Record<string, Story> = {
     scope: [
       { label: "Role", value: "Head of Enterprise Architecture, Europe" },
       { label: "Clients", value: "SITA; Travelport" },
+      { label: "Identity", value: "Identity and access management (IAM) architect for SITA" },
       { label: "Pre-sales", value: "Led RFI/RFP proposals across clients, for opportunities worth $2M to $20M" },
     ],
     outcomes: [
@@ -506,6 +517,7 @@ export const stories: Record<string, Story> = {
     ],
     tech: [
       "Oracle SOA Suite",
+      "Identity & access management (IAM)",
       "Token-based authentication & authorisation",
       "Service & message versioning",
       "Performance & capacity tuning",

@@ -46,6 +46,136 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "ted-lasso-leadership-lessons",
+    title: "Eight Ted Lasso leadership lessons I actually use",
+    dek: "Ted Lasso is fiction. The way he leads isn't. Eight lessons from the show, and the real situations where I've seen them work.",
+    date: "2026-10-07",
+    status: "published",
+    tags: ["Leadership", "Culture", "Teams"],
+    blocks: [
+      {
+        type: "p",
+        text: "I recently watched a short video breaking down the leadership lessons in Ted Lasso, the TV series about an American football coach who ends up managing an English football club. He knows almost nothing about the game, yet he turns a struggling team around. Watching it, I kept thinking: I've done that, and I've seen that work.",
+      },
+      {
+        type: "p",
+        text: "Ted is played for laughs, but the habits behind his leadership are serious ones. Here are the eight lessons from the video, and where each has mattered in my own career leading architecture and engineering teams.",
+      },
+      { type: "h2", text: "1. Make everyone feel like they matter" },
+      {
+        type: "p",
+        text: "Ted learns the kit man's name on day one and treats him like part of the team. The point isn't politeness. People who feel they matter care about the result.",
+      },
+      {
+        type: "p",
+        text: "I once led teams that were stretched and stressed by a heavy delivery agenda. They worked hard, but the effort behind the results often went unnoticed. So I made a point of recognising the hard work behind every result, visibly and specifically: not \"great job, team\", but who did what, and why it mattered. It cost nothing, and it changed how people showed up.",
+      },
+      { type: "h2", text: "2. Align your goals" },
+      {
+        type: "p",
+        text: "Ted doesn't just tell players to win. He gives them a shared purpose that's bigger than any individual's stats.",
+      },
+      {
+        type: "p",
+        text: "When I took on a newly formed domain, the first thing I did was set a North Star: what we were consolidating, what we would modernise, and why. Later, when I needed other projects to build on a shared platform, I didn't start with my goals. I ran workshops to show each project what was in it for them. Six of them chose to join.",
+      },
+      { type: "h2", text: "3. Create lieutenants" },
+      {
+        type: "p",
+        text: "Ted relies on Coach Beard, and he gives real responsibility to people others had overlooked. A leader can't be everywhere; good lieutenants multiply what a team can do.",
+      },
+      {
+        type: "p",
+        text: "I've led 30 people through five managers. My job was to hire them well, give them real authority to make decisions and hold them accountable for outcomes, not to make every call myself. The best moment was helping one of my architects, who quietly held major initiatives together, get promoted to Principal Architect.",
+      },
+      { type: "h2", text: "4. Actively ask for feedback, and act on it" },
+      {
+        type: "p",
+        text: "Ted has a suggestion box, and when he finally reads the notes, he acts on them. Asking for feedback only builds trust if something visibly changes.",
+      },
+      {
+        type: "p",
+        text: "I once inherited an eight-person team that the business blamed for every missed delivery. I started by listening to both sides, and treated every concern from the business as real. I set up a regular meeting with their VP and shared a weekly action log, so they could see their feedback turning into action. Within six months, both sides trusted us.",
+      },
+      { type: "h2", text: "5. Have empathy for the people you lead" },
+      {
+        type: "p",
+        text: "Ted notices when someone is struggling, and he understands why before deciding what to do about it.",
+      },
+      {
+        type: "p",
+        text: "That eight-person team was working against technical debt they hadn't created, and nobody was listening to them either. So I worked alongside them, helped them prioritise, and took on the job of delivering bad or difficult news to the business myself, so they didn't have to. A colleague later described it better than I could:",
+      },
+      {
+        type: "quote",
+        text: "\"High-demand work tends to route through a manager first, and instead of passing that pressure down, he absorbed it himself.\"",
+      },
+      { type: "h2", text: "6. Celebrate other people's wins" },
+      {
+        type: "p",
+        text: "Ted makes sure the credit goes to his players, never to himself.",
+      },
+      {
+        type: "p",
+        text: "When I put my architect forward for promotion, a senior leader pushed back: they hadn't seen enough of his work, because his best work happened far from the rooms where decisions were made. Rather than argue harder, I gathered feedback from the people who worked with him and invited him to present his initiative to its steering committee himself. They saw his thinking first-hand, and he was promoted. I now see it as my job to give my team a platform to be seen.",
+      },
+      { type: "h2", text: "7. Create belief in a motivating vision" },
+      {
+        type: "p",
+        text: "Ted's one-word sign says it all: believe. Belief isn't optimism for its own sake; it's people seeing a future worth working towards, and trusting that they can reach it.",
+      },
+      {
+        type: "p",
+        text: "I've led the vision for a single, consolidated customer portal that unified the customer experience, and seen a team that had been blamed for every delay start believing in itself again. In my first year, that team delivered more than in the previous two years combined. Nobody left or asked to move: all eight chose to stay.",
+      },
+      { type: "h2", text: "8. Don't deny reality" },
+      {
+        type: "p",
+        text: "Ted's positivity never means ignoring problems. When something is wrong, he faces it, including in himself.",
+      },
+      {
+        type: "p",
+        text: "A platform move I inherited was 120 days from going ahead, with no requirements documents behind it. My team reverse-engineered the application and found more than 15 functional gaps and a compliance risk. It took several presentations, and asking for the opposite of the saving everyone expected, but we stopped the move.",
+      },
+      {
+        type: "p",
+        text: "Facing reality applies to my own decisions too. Years ago I argued for not bidding on $3.5M of a $10M contract because we lacked the skills. We won the rest, but I later saw that we could have partnered for that capability and grown it ourselves. I said so plainly. Now, before I say no, I ask how we could say yes differently.",
+      },
+      { type: "h2", text: "The eight lessons at a glance" },
+      {
+        type: "table",
+        caption: "Ted's habits, and what they look like at work.",
+        head: ["Lesson", "What I do"],
+        rows: [
+          ["Make everyone feel they matter", "Recognise the effort behind results, visibly and specifically."],
+          ["Align your goals", "Set a North Star, and show each team what's in it for them."],
+          ["Create lieutenants", "Lead through managers with real authority and accountability."],
+          ["Ask for feedback and act on it", "Listen to both sides; make the response visible."],
+          ["Have empathy", "Absorb pressure from above; take the hard conversations myself."],
+          ["Celebrate others' wins", "Give my team a platform to be seen, and give them the credit."],
+          ["Create belief in a vision", "Paint a future worth working towards, then prove it's reachable."],
+          ["Don't deny reality", "Stop what isn't ready; own my own mistakes."],
+        ],
+        sources: [
+          { label: "Video: Ted Lasso Leadership Lessons That Work (Charisma on Command)", href: "https://www.youtube.com/watch?v=i429ScYzwdI" },
+        ],
+      },
+      { type: "h2", text: "Where kindness meets results" },
+      {
+        type: "p",
+        text: "The easy criticism of Ted is that kindness doesn't win matches. In my experience, it's the other way round. A team that isn't busy defending itself has the energy to deliver. Trust came first, and the results followed.",
+      },
+      {
+        type: "quote",
+        text: "Kindness and high standards aren't opposites. In my experience, the first is how you get the second.",
+      },
+      {
+        type: "p",
+        text: "Ted Lasso is an Apple TV+ series; the lessons above are drawn from the Charisma on Command video linked in the table. The stories are my own.",
+      },
+    ],
+  },
+  {
     slug: "building-and-evaluating-a-rag-assistant",
     title: "Building a RAG assistant on Amazon Bedrock — and measuring whether it works",
     dek: "A finance-policy assistant that cites its sources, refuses rather than guesses, and is scored against a fixed test set before anyone trusts it.",

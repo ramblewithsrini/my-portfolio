@@ -86,7 +86,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "I've led 30 people through five managers. My job was to hire them well, give them real authority to make decisions and hold them accountable for outcomes, not to make every call myself. The best moment was helping one of my architects, who quietly held major initiatives together, get promoted to Principal Architect.",
+        text: "I lead through people. Whether the team is ten or a hundred, the approach is the same: hire well, give leaders real authority to make decisions, and hold them accountable for outcomes, rather than making every call myself. My job is to grow the next layer of leaders, not to be the bottleneck.",
       },
       { type: "h2", text: "4. Actively ask for feedback, and act on it" },
       {
@@ -95,7 +95,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "I once inherited an eight-person team that the business blamed for every missed delivery. I started by listening to both sides, and treated every concern from the business as real. I set up a regular meeting with their VP and shared a weekly action log, so they could see their feedback turning into action. Within six months, both sides trusted us.",
+        text: "I once inherited a team that the business blamed for every missed delivery. I started by listening to both sides, and treated every concern from the business as real. I set up a regular meeting with their VP and shared a weekly action log, so they could see their feedback turning into action. Within six months, both sides trusted us.",
       },
       { type: "h2", text: "5. Have empathy for the people you lead" },
       {
@@ -104,7 +104,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "That eight-person team was working against technical debt they hadn't created, and nobody was listening to them either. So I worked alongside them, helped them prioritise, and took on the job of delivering bad or difficult news to the business myself, so they didn't have to. A colleague later described it better than I could:",
+        text: "That team was working against technical debt they hadn't created, and nobody was listening to them either. So I worked alongside them, helped them prioritise, and took on the job of delivering bad or difficult news to the business myself, so they didn't have to. A colleague later described it better than I could:",
       },
       {
         type: "quote",
@@ -117,7 +117,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "When I put my architect forward for promotion, a senior leader pushed back: they hadn't seen enough of his work, because his best work happened far from the rooms where decisions were made. Rather than argue harder, I gathered feedback from the people who worked with him and invited him to present his initiative to its steering committee himself. They saw his thinking first-hand, and he was promoted. I now see it as my job to give my team a platform to be seen.",
+        text: "When I put someone in my team forward for promotion, a senior leader pushed back: they hadn't seen enough of the work, because the best of it happened far from the rooms where decisions were made. Rather than argue harder, I gathered feedback from the people who worked with them and invited them to present their own initiative to its steering committee. Senior leaders saw their thinking first-hand, and the promotion followed. I now see it as my job to give my team a platform to be seen.",
       },
       { type: "h2", text: "7. Create belief in a motivating vision" },
       {
@@ -126,7 +126,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "I've led the vision for a single, consolidated customer portal that unified the customer experience, and seen a team that had been blamed for every delay start believing in itself again. In my first year, that team delivered more than in the previous two years combined. Nobody left or asked to move: all eight chose to stay.",
+        text: "I've led the vision for a single, consolidated customer portal that unified the customer experience, and seen a team that had been blamed for every delay start believing in itself again. In my first year, that team delivered more than in the previous two years combined. Nobody left or asked to move: everyone chose to stay.",
       },
       { type: "h2", text: "8. Don't deny reality" },
       {

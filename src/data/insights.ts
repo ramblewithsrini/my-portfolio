@@ -46,6 +46,75 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "building-and-evaluating-a-rag-assistant",
+    title: "Building a RAG assistant on Amazon Bedrock — and measuring whether it works",
+    dek: "A finance-policy assistant that cites its sources, refuses rather than guesses, and is scored against a fixed test set before anyone trusts it.",
+    date: "2026-10-07",
+    status: "published",
+    tags: ["Applied AI", "RAG", "Amazon Bedrock", "Evaluation"],
+    blocks: [
+      {
+        type: "p",
+        text: "Everyone can demo a chatbot. The harder question, and the one a CFO or a risk team will ask, is: how do you know it gives the right answer, and what does it do when it doesn't know? So I built a small retrieval-augmented generation (RAG) assistant to answer exactly that, and measured it.",
+      },
+      {
+        type: "p",
+        text: "It answers questions about a fictional company's finance policies: approval limits, expenses, travel, supplier payments, month-end close. Every policy and person in it is made up. The code and results are public on GitHub.",
+      },
+      { type: "h2", text: "How it works" },
+      {
+        type: "list",
+        items: [
+          "Chunk: twelve policies are split by section, so every answer can point to the exact clause.",
+          "Embed and retrieve: each section becomes a vector with Amazon Titan Text Embeddings V2; a question finds the three closest sections by meaning.",
+          "Decide: if even the best match is weak, the assistant refuses with \"I can't find that in our finance policies\" instead of guessing.",
+          "Generate: Claude on Amazon Bedrock answers only from those sections, citing each one, at temperature 0.",
+          "Guard: questions about named people's personal data, or predictions such as share prices, are declined before they reach the model.",
+        ],
+      },
+      { type: "h2", text: "Measure before you trust it" },
+      {
+        type: "p",
+        text: "I wrote a fixed test set first: 20 questions with a known source and a known fact in the answer, and 3 that should be refused. The same set runs in a no-cost practice mode (word matching, no AI model) and on Bedrock, so every change to prompts, models or chunking is judged on evidence, not impressions.",
+      },
+      {
+        type: "table",
+        caption: "Results, 7 October 2026 (Bedrock: Titan Text Embeddings V2 and Claude Haiku 4.5, eu-west-1)",
+        head: ["Measure", "Practice mode", "Amazon Bedrock"],
+        rows: [
+          ["Right policy section retrieved", "20/20", "20/20"],
+          ["Answer contains the expected fact", "18/20", "19/20"],
+          ["Out-of-scope questions refused", "3/3", "3/3"],
+        ],
+        sources: [{ label: "Code, test set and full run output on GitHub", href: "https://github.com/ramblewithsrini/cfo-assistant" }],
+      },
+      { type: "h2", text: "What the misses taught me" },
+      {
+        type: "p",
+        text: "Practice mode missed two questions that need reasoning, not word matching: it couldn't work out that £12,000 is over a £10,000 limit, or that a taxi is an expense. Claude answered both correctly. That is precisely the value an LLM adds on top of retrieval.",
+      },
+      {
+        type: "p",
+        text: "Bedrock's one miss wasn't a wrong answer. Asked whether an order can be split to avoid CFO approval, Claude said \"No, you cannot split an order\" and explained the 30-day rule correctly. But my test looked for the policy's exact words, \"must not be split\". Exact-phrase checks are cheap and strict, and they undercount good answers. The next step is a meaning-based check, an LLM as judge, with a person reviewing a sample of its verdicts.",
+      },
+      { type: "h2", text: "What I'd tell a team starting out" },
+      {
+        type: "list",
+        items: [
+          "Write the test set before the prompt. Otherwise you tune until the demo looks good.",
+          "Make refusing a feature. A confident wrong answer about an approval limit is worse than no answer.",
+          "Cite everything, so the finance team can check the answer against the policy in seconds.",
+          "Start cheap. An in-memory index and a small model cost pennies; scale the infrastructure once the numbers justify it.",
+          "Plan for the boring parts: a new AWS account's request quotas throttled my first run, so the code now retries with back-off and paces itself.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "The question isn't whether the AI can answer. It's whether you can show when it's right, and what it does when it doesn't know.",
+      },
+    ],
+  },
+  {
     slug: "winning-consumers-for-a-shared-platform",
     title: "Adoption is earned, not mandated: winning consumers for a shared platform",
     dek: "Most shared platforms don't fail on technology. They fail because nobody chooses to use them. Seven lessons from Allianz and Discover.",

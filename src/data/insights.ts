@@ -46,6 +46,93 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "winning-consumers-for-a-shared-platform",
+    title: "Adoption is earned, not mandated: winning consumers for a shared platform",
+    dek: "Most shared platforms don't fail on technology. They fail because nobody chooses to use them. Seven lessons from Allianz and Discover.",
+    date: "2026-10-07",
+    status: "published",
+    tags: ["Platform engineering", "Leadership", "Architecture", "Adoption"],
+    caseStudy: "allianz",
+    blocks: [
+      {
+        type: "p",
+        text: "Most shared platforms don't fail on technology. They fail because nobody chooses to use them.",
+      },
+      {
+        type: "p",
+        text: "I've seen it from both sides. At Allianz UK, I had to persuade projects that were used to building their own solutions to build on a shared digital platform instead. Six did, and the steering committee named it one of the key reasons the programme succeeded. At Discover, we consolidated duplicated systems into one partner platform and cut partner onboarding from 73 days to 5–7. Here is what I've learned about winning consumers rather than ordering them in.",
+      },
+      { type: "h2", text: "1. Start with their problem, not your platform" },
+      {
+        type: "p",
+        text: "Nobody wakes up wanting a shared platform. They want to ship their project on time, without rebuilding customer matching, authentication or onboarding for the third time.",
+      },
+      {
+        type: "p",
+        text: "At Allianz, I invited the consuming projects into architecture workshops before asking for any commitment. We shared our scope openly and worked through their roadmap with them: what they would no longer need to build, how much sooner they could deliver, and what risk they could hand to us. The conversation was about their outcome, not our platform.",
+      },
+      {
+        type: "quote",
+        text: "Ask every consumer: what would you stop building, and what would you ship sooner, if this worked for you?",
+      },
+      { type: "h2", text: "2. Win one team, then make them the hero" },
+      {
+        type: "p",
+        text: "The first adopter carries all the risk, so treat them like a partner, not a customer. Give them your best people, fix their blockers first and celebrate their success loudly. A peer saying \"it saved us three months\" persuades more teams than any architecture deck.",
+      },
+      { type: "h2", text: "3. Make the easy path the right path" },
+      {
+        type: "p",
+        text: "If using the platform is harder than building around it, teams will build around it. Self-service onboarding, clear documentation, templates and working examples matter as much as the core services.",
+      },
+      {
+        type: "p",
+        text: "At Discover, onboarding a partner took 73 days, with manual steps, including testing, along the way. Consolidating duplicated platforms with reusable APIs and workflow automation brought it down to 5–7 days and scaled capacity from 100 to 1,000 requests a day. Speed is the best sales pitch a platform has.",
+      },
+      { type: "h2", text: "4. Contracts, not tickets" },
+      {
+        type: "p",
+        text: "A platform that makes every consumer raise a ticket and wait becomes the bottleneck it was meant to remove. Publish versioned APIs and data contracts, keep them backward compatible, and give notice before anything is retired. Consumers should be able to build on you without asking permission.",
+      },
+      { type: "h2", text: "5. Measure their outcomes, not your output" },
+      {
+        type: "p",
+        text: "\"We shipped twelve features\" means nothing to a consumer. Track what matters to them: how long onboarding takes, how much they no longer build, the availability they can rely on. At Discover we made service health visible in Datadog, with SLO dashboards everyone could see. Trust grows when the numbers are open.",
+      },
+      { type: "h2", text: "6. Use mandates as a backstop, not a strategy" },
+      {
+        type: "p",
+        text: "Mandates get compliance; a better path gets adoption. At Allianz, programme mandates and a reuse roadmap did help, but only to make commitments concrete once teams had already seen the value. A mandate without value creates teams that comply on paper and work around you in practice.",
+      },
+      { type: "h2", text: "7. Retire duplicates with evidence, not deadlines" },
+      {
+        type: "p",
+        text: "Consolidation is where platforms win or lose their credibility. When we secured approval for a £40M convergence across 144 applications at Discover, the case rested on evidence about duplication, cost and risk.",
+      },
+      {
+        type: "p",
+        text: "The same discipline cuts the other way. One application was due to move to our in-house platform within 120 days, before its licence renewal. There were no requirements documents. My team reverse-engineered them and found more than 15 functional gaps and a compliance risk, so we stopped the move. Forcing a consumer onto a platform that can't serve them yet costs more trust than it saves money.",
+      },
+      { type: "h2", text: "The short version" },
+      {
+        type: "list",
+        items: [
+          "Sell their outcome, not your platform.",
+          "Make the first adopter a hero.",
+          "Make the right path the easy path.",
+          "Publish contracts, not ticket queues.",
+          "Measure adoption and their results in the open.",
+          "Mandate last, and only after the value is visible.",
+          "Move teams when the platform is ready for them, not when the deadline says so.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "A shared platform is a product. Its customers are your colleagues, and like any customers, they choose. Earn the choice.",
+      },
+    ],
+  },
+  {
     slug: "absorbing-a-360-percent-surge",
     title: "Absorbing a 360% surge with the same team",
     dek: "What a post-merger volume spike taught me about putting Agentic AI to work — safely — in a regulated payments business.",

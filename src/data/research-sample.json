@@ -1,0 +1,2962 @@
+{
+ "about": "Fictional dataset: AI in payments and fraud detection. All people, institutions, papers and IDs are invented.",
+ "seed": 7,
+ "topics": [
+  {
+   "id": "gnn",
+   "label": "Graph neural networks for fraud"
+  },
+  {
+   "id": "realtime",
+   "label": "Real-time transaction scoring"
+  },
+  {
+   "id": "app",
+   "label": "Authorised push payment (APP) scams"
+  },
+  {
+   "id": "xai",
+   "label": "Explainable fraud models"
+  },
+  {
+   "id": "federated",
+   "label": "Federated learning across banks"
+  },
+  {
+   "id": "synthetic",
+   "label": "Synthetic data for fraud"
+  },
+  {
+   "id": "agents",
+   "label": "LLM agents for disputes and investigations"
+  },
+  {
+   "id": "aml",
+   "label": "Anti-money laundering networks"
+  }
+ ],
+ "institutions": [
+  {
+   "id": "northbridge",
+   "name": "Northbridge University",
+   "country": "UK",
+   "aliases": [
+    "NBU"
+   ]
+  },
+  {
+   "id": "thames",
+   "name": "Thames Institute of Technology",
+   "country": "UK",
+   "aliases": []
+  },
+  {
+   "id": "calder",
+   "name": "Calder Bank Research",
+   "country": "UK",
+   "aliases": []
+  },
+  {
+   "id": "lisbon",
+   "name": "Lisbon School of Data Science",
+   "country": "PT",
+   "aliases": [
+    "LSDS"
+   ]
+  },
+  {
+   "id": "rhine",
+   "name": "Rhine Applied AI Lab",
+   "country": "DE",
+   "aliases": []
+  },
+  {
+   "id": "meridian",
+   "name": "Meridian Payments Lab",
+   "country": "NL",
+   "aliases": []
+  },
+  {
+   "id": "aurora",
+   "name": "Aurora Institute of Finance",
+   "country": "IE",
+   "aliases": [
+    "AIF Dublin"
+   ]
+  },
+  {
+   "id": "nordic",
+   "name": "Nordic Centre for Trustworthy AI",
+   "country": "SE",
+   "aliases": [
+    "NCTAI"
+   ]
+  }
+ ],
+ "authors": [
+  {
+   "id": "a01",
+   "name": "Priya Raman",
+   "orcid": "0000-0001-0001-0001"
+  },
+  {
+   "id": "a02",
+   "name": "Jun Chen",
+   "orcid": ""
+  },
+  {
+   "id": "a03",
+   "name": "Jia Chen",
+   "orcid": ""
+  },
+  {
+   "id": "a04",
+   "name": "Maria Santos",
+   "orcid": "0000-0001-0004-0004"
+  },
+  {
+   "id": "a05",
+   "name": "Oliver Brandt",
+   "orcid": "0000-0001-0005-0005"
+  },
+  {
+   "id": "a06",
+   "name": "Aisha Okafor",
+   "orcid": ""
+  },
+  {
+   "id": "a07",
+   "name": "Lars Lindqvist",
+   "orcid": "0000-0001-0007-0007"
+  },
+  {
+   "id": "a08",
+   "name": "Siobhan Murphy",
+   "orcid": ""
+  },
+  {
+   "id": "a09",
+   "name": "Tomás Oliveira",
+   "orcid": ""
+  },
+  {
+   "id": "a10",
+   "name": "Hannah Weber",
+   "orcid": ""
+  },
+  {
+   "id": "a11",
+   "name": "Daniel Okafor",
+   "orcid": ""
+  },
+  {
+   "id": "a12",
+   "name": "Mei Lin",
+   "orcid": "0000-0001-0012-0012"
+  },
+  {
+   "id": "a13",
+   "name": "Ravi Iyer",
+   "orcid": ""
+  },
+  {
+   "id": "a14",
+   "name": "Sofia Romano",
+   "orcid": ""
+  },
+  {
+   "id": "a15",
+   "name": "Erik Johansson",
+   "orcid": ""
+  },
+  {
+   "id": "a16",
+   "name": "Grace Adeyemi",
+   "orcid": "0000-0001-0016-0016"
+  },
+  {
+   "id": "a17",
+   "name": "Lukas Fischer",
+   "orcid": ""
+  },
+  {
+   "id": "a18",
+   "name": "Emma Clarke",
+   "orcid": ""
+  },
+  {
+   "id": "a19",
+   "name": "Kenji Watanabe",
+   "orcid": ""
+  },
+  {
+   "id": "a20",
+   "name": "Nadia Haddad",
+   "orcid": ""
+  },
+  {
+   "id": "a21",
+   "name": "Pieter de Vries",
+   "orcid": "0000-0001-0021-0021"
+  },
+  {
+   "id": "a22",
+   "name": "Fatima Malik",
+   "orcid": ""
+  },
+  {
+   "id": "a23",
+   "name": "Sean O'Brien",
+   "orcid": ""
+  },
+  {
+   "id": "a24",
+   "name": "Ingrid Nilsson",
+   "orcid": ""
+  }
+ ],
+ "papers": [
+  {
+   "id": "p001",
+   "title": "Heterogeneous graphs for merchant fraud detection",
+   "year": 2019,
+   "topic": "gnn",
+   "cites": []
+  },
+  {
+   "id": "p002",
+   "title": "Online learning for card-not-present fraud",
+   "year": 2019,
+   "topic": "realtime",
+   "cites": []
+  },
+  {
+   "id": "p003",
+   "title": "Streaming features for real-time transaction risk",
+   "year": 2019,
+   "topic": "realtime",
+   "cites": []
+  },
+  {
+   "id": "p004",
+   "title": "Explainable fraud decisions for investigators",
+   "year": 2019,
+   "topic": "xai",
+   "cites": []
+  },
+  {
+   "id": "p005",
+   "title": "Evaluating synthetic payment data quality",
+   "year": 2019,
+   "topic": "synthetic",
+   "cites": []
+  },
+  {
+   "id": "p006",
+   "title": "Graph-based alert prioritisation for AML",
+   "year": 2019,
+   "topic": "aml",
+   "cites": []
+  },
+  {
+   "id": "p007",
+   "title": "Typologies of laundering in instant payments",
+   "year": 2019,
+   "topic": "aml",
+   "cites": []
+  },
+  {
+   "id": "p008",
+   "title": "Graph neural networks for card fraud rings",
+   "year": 2020,
+   "topic": "gnn",
+   "cites": [
+    "p001",
+    "p002"
+   ]
+  },
+  {
+   "id": "p009",
+   "title": "Online learning for card-not-present fraud",
+   "year": 2020,
+   "topic": "realtime",
+   "cites": [
+    "p002"
+   ]
+  },
+  {
+   "id": "p010",
+   "title": "Latency-aware model serving for payments",
+   "year": 2020,
+   "topic": "realtime",
+   "cites": [
+    "p003",
+    "p001"
+   ]
+  },
+  {
+   "id": "p011",
+   "title": "Confirmation of payee and scam reduction",
+   "year": 2020,
+   "topic": "app",
+   "cites": [
+    "p006",
+    "p005",
+    "p004"
+   ]
+  },
+  {
+   "id": "p012",
+   "title": "Auditable model explanations in regulated payments",
+   "year": 2020,
+   "topic": "xai",
+   "cites": [
+    "p004"
+   ]
+  },
+  {
+   "id": "p013",
+   "title": "Privacy risks of synthetic financial data",
+   "year": 2020,
+   "topic": "synthetic",
+   "cites": [
+    "p005"
+   ]
+  },
+  {
+   "id": "p014",
+   "title": "Graph-based alert prioritisation for AML",
+   "year": 2020,
+   "topic": "aml",
+   "cites": [
+    "p007",
+    "p002"
+   ]
+  },
+  {
+   "id": "p015",
+   "title": "Community detection for mule networks",
+   "year": 2021,
+   "topic": "gnn",
+   "cites": [
+    "p008",
+    "p001"
+   ]
+  },
+  {
+   "id": "p016",
+   "title": "Streaming features for real-time transaction risk",
+   "year": 2021,
+   "topic": "realtime",
+   "cites": [
+    "p010",
+    "p002"
+   ]
+  },
+  {
+   "id": "p017",
+   "title": "Explainable fraud decisions for investigators",
+   "year": 2021,
+   "topic": "xai",
+   "cites": [
+    "p012"
+   ]
+  },
+  {
+   "id": "p018",
+   "title": "Federated graph learning for mule detection",
+   "year": 2021,
+   "topic": "federated",
+   "cites": [
+    "p005"
+   ]
+  },
+  {
+   "id": "p019",
+   "title": "Synthetic transactions for fraud model testing",
+   "year": 2021,
+   "topic": "synthetic",
+   "cites": [
+    "p013",
+    "p005"
+   ]
+  },
+  {
+   "id": "p020",
+   "title": "Human-in-the-loop agents for scam case handling",
+   "year": 2021,
+   "topic": "agents",
+   "cites": [
+    "p003",
+    "p012"
+   ]
+  },
+  {
+   "id": "p021",
+   "title": "Typologies of laundering in instant payments",
+   "year": 2021,
+   "topic": "aml",
+   "cites": [
+    "p007",
+    "p006",
+    "p014"
+   ]
+  },
+  {
+   "id": "p022",
+   "title": "Graph-based alert prioritisation for AML",
+   "year": 2021,
+   "topic": "aml",
+   "cites": [
+    "p014",
+    "p006",
+    "p007"
+   ]
+  },
+  {
+   "id": "p023",
+   "title": "Heterogeneous graphs for merchant fraud detection",
+   "year": 2022,
+   "topic": "gnn",
+   "cites": [
+    "p015",
+    "p001"
+   ]
+  },
+  {
+   "id": "p024",
+   "title": "Sub-50ms fraud scoring at network scale",
+   "year": 2022,
+   "topic": "realtime",
+   "cites": [
+    "p002",
+    "p003"
+   ]
+  },
+  {
+   "id": "p025",
+   "title": "Latency-aware model serving for payments",
+   "year": 2022,
+   "topic": "realtime",
+   "cites": [
+    "p001",
+    "p003",
+    "p002"
+   ]
+  },
+  {
+   "id": "p026",
+   "title": "Reimbursement-aware APP scam models",
+   "year": 2022,
+   "topic": "app",
+   "cites": [
+    "p011"
+   ]
+  },
+  {
+   "id": "p027",
+   "title": "Shapley values for fraud model governance",
+   "year": 2022,
+   "topic": "xai",
+   "cites": [
+    "p007",
+    "p018",
+    "p003",
+    "p013"
+   ]
+  },
+  {
+   "id": "p028",
+   "title": "Auditable model explanations in regulated payments",
+   "year": 2022,
+   "topic": "xai",
+   "cites": [
+    "p004"
+   ]
+  },
+  {
+   "id": "p029",
+   "title": "Federated fraud detection across banks",
+   "year": 2022,
+   "topic": "federated",
+   "cites": [
+    "p018"
+   ]
+  },
+  {
+   "id": "p030",
+   "title": "Evaluating synthetic payment data quality",
+   "year": 2022,
+   "topic": "synthetic",
+   "cites": [
+    "p005",
+    "p019",
+    "p013"
+   ]
+  },
+  {
+   "id": "p031",
+   "title": "Grounded LLM assistants for fraud investigators",
+   "year": 2022,
+   "topic": "agents",
+   "cites": [
+    "p020"
+   ]
+  },
+  {
+   "id": "p032",
+   "title": "Graph-based alert prioritisation for AML",
+   "year": 2022,
+   "topic": "aml",
+   "cites": [
+    "p020",
+    "p014",
+    "p006"
+   ]
+  },
+  {
+   "id": "p033",
+   "title": "Reducing false positives in transaction monitoring",
+   "year": 2022,
+   "topic": "aml",
+   "cites": [
+    "p022",
+    "p012",
+    "p006"
+   ]
+  },
+  {
+   "id": "p034",
+   "title": "Graph neural networks for card fraud rings",
+   "year": 2023,
+   "topic": "gnn",
+   "cites": [
+    "p001",
+    "p015"
+   ]
+  },
+  {
+   "id": "p035",
+   "title": "Online learning for card-not-present fraud",
+   "year": 2023,
+   "topic": "realtime",
+   "cites": [
+    "p010"
+   ]
+  },
+  {
+   "id": "p036",
+   "title": "Sub-50ms fraud scoring at network scale",
+   "year": 2023,
+   "topic": "realtime",
+   "cites": [
+    "p025"
+   ]
+  },
+  {
+   "id": "p037",
+   "title": "Detecting authorised push payment scams before release",
+   "year": 2023,
+   "topic": "app",
+   "cites": [
+    "p023",
+    "p033"
+   ]
+  },
+  {
+   "id": "p038",
+   "title": "Shapley values for fraud model governance",
+   "year": 2023,
+   "topic": "xai",
+   "cites": [
+    "p012",
+    "p015"
+   ]
+  },
+  {
+   "id": "p039",
+   "title": "Secure aggregation for cross-bank risk models",
+   "year": 2023,
+   "topic": "federated",
+   "cites": [
+    "p018",
+    "p029"
+   ]
+  },
+  {
+   "id": "p040",
+   "title": "Generative models for rare fraud patterns",
+   "year": 2023,
+   "topic": "synthetic",
+   "cites": [
+    "p030"
+   ]
+  },
+  {
+   "id": "p041",
+   "title": "Evaluating agentic workflows in payments operations",
+   "year": 2023,
+   "topic": "agents",
+   "cites": [
+    "p020"
+   ]
+  },
+  {
+   "id": "p042",
+   "title": "Typologies of laundering in instant payments",
+   "year": 2023,
+   "topic": "aml",
+   "cites": [
+    "p014",
+    "p022",
+    "p021"
+   ]
+  },
+  {
+   "id": "p043",
+   "title": "Temporal graph learning for account takeover",
+   "year": 2024,
+   "topic": "gnn",
+   "cites": [
+    "p009",
+    "p034"
+   ]
+  },
+  {
+   "id": "p044",
+   "title": "Streaming features for real-time transaction risk",
+   "year": 2024,
+   "topic": "realtime",
+   "cites": [
+    "p024"
+   ]
+  },
+  {
+   "id": "p045",
+   "title": "Reimbursement-aware APP scam models",
+   "year": 2024,
+   "topic": "app",
+   "cites": [
+    "p026",
+    "p037"
+   ]
+  },
+  {
+   "id": "p046",
+   "title": "Detecting authorised push payment scams before release",
+   "year": 2024,
+   "topic": "app",
+   "cites": [
+    "p026",
+    "p037",
+    "p011"
+   ]
+  },
+  {
+   "id": "p047",
+   "title": "Shapley values for fraud model governance",
+   "year": 2024,
+   "topic": "xai",
+   "cites": [
+    "p012",
+    "p021",
+    "p017"
+   ]
+  },
+  {
+   "id": "p048",
+   "title": "Auditable model explanations in regulated payments",
+   "year": 2024,
+   "topic": "xai",
+   "cites": [
+    "p038",
+    "p011"
+   ]
+  },
+  {
+   "id": "p049",
+   "title": "Federated graph learning for mule detection",
+   "year": 2024,
+   "topic": "federated",
+   "cites": [
+    "p018"
+   ]
+  },
+  {
+   "id": "p050",
+   "title": "Privacy risks of synthetic financial data",
+   "year": 2024,
+   "topic": "synthetic",
+   "cites": [
+    "p020",
+    "p013"
+   ]
+  },
+  {
+   "id": "p051",
+   "title": "LLM agents for chargeback and dispute triage",
+   "year": 2024,
+   "topic": "agents",
+   "cites": [
+    "p020"
+   ]
+  },
+  {
+   "id": "p052",
+   "title": "Reducing false positives in transaction monitoring",
+   "year": 2024,
+   "topic": "aml",
+   "cites": [
+    "p033",
+    "p006"
+   ]
+  },
+  {
+   "id": "p053",
+   "title": "Temporal graph learning for account takeover",
+   "year": 2025,
+   "topic": "gnn",
+   "cites": [
+    "p043",
+    "p001"
+   ]
+  },
+  {
+   "id": "p054",
+   "title": "Sub-50ms fraud scoring at network scale",
+   "year": 2025,
+   "topic": "realtime",
+   "cites": [
+    "p025",
+    "p010"
+   ]
+  },
+  {
+   "id": "p055",
+   "title": "Behavioural signals of scam victims",
+   "year": 2025,
+   "topic": "app",
+   "cites": [
+    "p046",
+    "p045",
+    "p043"
+   ]
+  },
+  {
+   "id": "p056",
+   "title": "Detecting authorised push payment scams before release",
+   "year": 2025,
+   "topic": "app",
+   "cites": [
+    "p044",
+    "p011",
+    "p037"
+   ]
+  },
+  {
+   "id": "p057",
+   "title": "Explainable fraud decisions for investigators",
+   "year": 2025,
+   "topic": "xai",
+   "cites": [
+    "p047",
+    "p017"
+   ]
+  },
+  {
+   "id": "p058",
+   "title": "Secure aggregation for cross-bank risk models",
+   "year": 2025,
+   "topic": "federated",
+   "cites": [
+    "p049",
+    "p029",
+    "p021"
+   ]
+  },
+  {
+   "id": "p059",
+   "title": "Privacy-preserving model sharing for payments",
+   "year": 2025,
+   "topic": "federated",
+   "cites": [
+    "p049"
+   ]
+  },
+  {
+   "id": "p060",
+   "title": "Evaluating synthetic payment data quality",
+   "year": 2025,
+   "topic": "synthetic",
+   "cites": [
+    "p040"
+   ]
+  },
+  {
+   "id": "p061",
+   "title": "LLM agents for chargeback and dispute triage",
+   "year": 2025,
+   "topic": "agents",
+   "cites": [
+    "p031",
+    "p020"
+   ]
+  },
+  {
+   "id": "p062",
+   "title": "Human-in-the-loop agents for scam case handling",
+   "year": 2025,
+   "topic": "agents",
+   "cites": [
+    "p031",
+    "p020",
+    "p041",
+    "p051"
+   ]
+  },
+  {
+   "id": "p063",
+   "title": "Typologies of laundering in instant payments",
+   "year": 2025,
+   "topic": "aml",
+   "cites": [
+    "p014",
+    "p007",
+    "p032"
+   ]
+  },
+  {
+   "id": "p064",
+   "title": "Community detection for mule networks",
+   "year": 2026,
+   "topic": "gnn",
+   "cites": [
+    "p023"
+   ]
+  },
+  {
+   "id": "p065",
+   "title": "Latency-aware model serving for payments",
+   "year": 2026,
+   "topic": "realtime",
+   "cites": [
+    "p003",
+    "p025",
+    "p054"
+   ]
+  },
+  {
+   "id": "p066",
+   "title": "Behavioural signals of scam victims",
+   "year": 2026,
+   "topic": "app",
+   "cites": [
+    "p011",
+    "p055",
+    "p046"
+   ]
+  },
+  {
+   "id": "p067",
+   "title": "Detecting authorised push payment scams before release",
+   "year": 2026,
+   "topic": "app",
+   "cites": [
+    "p062",
+    "p026"
+   ]
+  },
+  {
+   "id": "p068",
+   "title": "Confirmation of payee and scam reduction",
+   "year": 2026,
+   "topic": "app",
+   "cites": [
+    "p056"
+   ]
+  },
+  {
+   "id": "p069",
+   "title": "Auditable model explanations in regulated payments",
+   "year": 2026,
+   "topic": "xai",
+   "cites": [
+    "p057",
+    "p017"
+   ]
+  },
+  {
+   "id": "p070",
+   "title": "Federated graph learning for mule detection",
+   "year": 2026,
+   "topic": "federated",
+   "cites": [
+    "p049",
+    "p039",
+    "p042"
+   ]
+  },
+  {
+   "id": "p071",
+   "title": "Privacy-preserving model sharing for payments",
+   "year": 2026,
+   "topic": "federated",
+   "cites": [
+    "p031",
+    "p029"
+   ]
+  },
+  {
+   "id": "p072",
+   "title": "Federated fraud detection across banks",
+   "year": 2026,
+   "topic": "federated",
+   "cites": [
+    "p059",
+    "p049"
+   ]
+  },
+  {
+   "id": "p073",
+   "title": "Generative models for rare fraud patterns",
+   "year": 2026,
+   "topic": "synthetic",
+   "cites": [
+    "p052"
+   ]
+  },
+  {
+   "id": "p074",
+   "title": "Grounded LLM assistants for fraud investigators",
+   "year": 2026,
+   "topic": "agents",
+   "cites": [
+    "p062",
+    "p051",
+    "p061"
+   ]
+  },
+  {
+   "id": "p075",
+   "title": "Evaluating agentic workflows in payments operations",
+   "year": 2026,
+   "topic": "agents",
+   "cites": [
+    "p041"
+   ]
+  },
+  {
+   "id": "p076",
+   "title": "Human-in-the-loop agents for scam case handling",
+   "year": 2026,
+   "topic": "agents",
+   "cites": [
+    "p055",
+    "p020"
+   ]
+  },
+  {
+   "id": "p077",
+   "title": "Network analytics for anti-money laundering",
+   "year": 2026,
+   "topic": "aml",
+   "cites": [
+    "p051",
+    "p034",
+    "p041",
+    "p006"
+   ]
+  }
+ ],
+ "mentions": [
+  {
+   "id": "p001-1",
+   "paper": "p001",
+   "name": "Jun Chen",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p001-2",
+   "paper": "p001",
+   "name": "Priya Raman",
+   "affiliation": "Northbridge University",
+   "orcid": "0000-0001-0001-0001",
+   "truth": "a01",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p002-1",
+   "paper": "p002",
+   "name": "Jun Chen",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p002-2",
+   "paper": "p002",
+   "name": "S. O'Brien",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p002-3",
+   "paper": "p002",
+   "name": "N. Haddad",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a20",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p003-1",
+   "paper": "p003",
+   "name": "Kenji Watanabe",
+   "affiliation": "Meridian Pay Lab",
+   "orcid": "",
+   "truth": "a19",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p003-2",
+   "paper": "p003",
+   "name": "O. Brandt",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "0000-0001-0005-0005",
+   "truth": "a05",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p003-3",
+   "paper": "p003",
+   "name": "S. Romano",
+   "affiliation": "Meridian Pay Lab",
+   "orcid": "",
+   "truth": "a14",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p004-1",
+   "paper": "p004",
+   "name": "H. Weber",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "",
+   "truth": "a10",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p004-2",
+   "paper": "p004",
+   "name": "Brandt, Oliver",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "",
+   "truth": "a05",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p004-3",
+   "paper": "p004",
+   "name": "Lars Lindqvist",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a07",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p005-1",
+   "paper": "p005",
+   "name": "Haddad, Nadia",
+   "affiliation": "Northbridge Univ.",
+   "orcid": "",
+   "truth": "a20",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p005-2",
+   "paper": "p005",
+   "name": "M. Lin",
+   "affiliation": "Univ. of Northbridge",
+   "orcid": "0000-0001-0012-0012",
+   "truth": "a12",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p005-3",
+   "paper": "p005",
+   "name": "Tomas Oliveira",
+   "affiliation": "Lisbon School of Data Science",
+   "orcid": "",
+   "truth": "a09",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p006-1",
+   "paper": "p006",
+   "name": "Erik Johansson",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a15",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p006-2",
+   "paper": "p006",
+   "name": "Lindqvist, Lars",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "0000-0001-0007-0007",
+   "truth": "a07",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p006-3",
+   "paper": "p006",
+   "name": "P. de Vries",
+   "affiliation": "Meridian Payments Laboratory",
+   "orcid": "0000-0001-0021-0021",
+   "truth": "a21",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p007-1",
+   "paper": "p007",
+   "name": "Priya Raman",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a01",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p007-2",
+   "paper": "p007",
+   "name": "Nadia Haddad",
+   "affiliation": "NBU",
+   "orcid": "",
+   "truth": "a20",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p007-3",
+   "paper": "p007",
+   "name": "J Chen",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p008-1",
+   "paper": "p008",
+   "name": "Jun Chen",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p008-2",
+   "paper": "p008",
+   "name": "N. Haddad",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a20",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p008-3",
+   "paper": "p008",
+   "name": "Lin, M.",
+   "affiliation": "NBU",
+   "orcid": "0000-0001-0012-0012",
+   "truth": "a12",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p009-1",
+   "paper": "p009",
+   "name": "S. O'Brien",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p009-2",
+   "paper": "p009",
+   "name": "Grace Adeyemi",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "0000-0001-0016-0016",
+   "truth": "a16",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p010-1",
+   "paper": "p010",
+   "name": "Oliver Brandt",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "0000-0001-0005-0005",
+   "truth": "a05",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p010-2",
+   "paper": "p010",
+   "name": "Fischer, L.",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "",
+   "truth": "a17",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p010-3",
+   "paper": "p010",
+   "name": "Jun Chen",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p010-4",
+   "paper": "p010",
+   "name": "Hannah Weber",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "",
+   "truth": "a10",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p011-1",
+   "paper": "p011",
+   "name": "Haddad, Nadia",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a20",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p011-2",
+   "paper": "p011",
+   "name": "Johansson, Erik",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a15",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p011-3",
+   "paper": "p011",
+   "name": "Jun Chen",
+   "affiliation": "NBU",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p011-4",
+   "paper": "p011",
+   "name": "Raman, Priya",
+   "affiliation": "NBU",
+   "orcid": "0000-0001-0001-0001",
+   "truth": "a01",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p012-1",
+   "paper": "p012",
+   "name": "Weber, H.",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "",
+   "truth": "a10",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p012-2",
+   "paper": "p012",
+   "name": "Erik Johansson",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a15",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p013-1",
+   "paper": "p013",
+   "name": "Tomás Oliveira",
+   "affiliation": "Lisbon School of Data Science",
+   "orcid": "",
+   "truth": "a09",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p013-2",
+   "paper": "p013",
+   "name": "Nadia Haddad",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a20",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p013-3",
+   "paper": "p013",
+   "name": "Santos, Maria",
+   "affiliation": "Lisbon Sch. of Data Science",
+   "orcid": "0000-0001-0004-0004",
+   "truth": "a04",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p014-1",
+   "paper": "p014",
+   "name": "Erik Johansson",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a15",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p014-2",
+   "paper": "p014",
+   "name": "Lindqvist, L.",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a07",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p015-1",
+   "paper": "p015",
+   "name": "de Vries, Pieter",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a21",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p015-2",
+   "paper": "p015",
+   "name": "Raman, Priya",
+   "affiliation": "Northbridge University",
+   "orcid": "0000-0001-0001-0001",
+   "truth": "a01",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p016-1",
+   "paper": "p016",
+   "name": "S. O'Brien",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p016-2",
+   "paper": "p016",
+   "name": "S. Murphy",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a08",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p016-3",
+   "paper": "p016",
+   "name": "O. Brandt",
+   "affiliation": "Rhine Applied Artificial Intelligence Laboratory",
+   "orcid": "0000-0001-0005-0005",
+   "truth": "a05",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p016-4",
+   "paper": "p016",
+   "name": "P. Raman",
+   "affiliation": "Northbridge University",
+   "orcid": "0000-0001-0001-0001",
+   "truth": "a01",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p017-1",
+   "paper": "p017",
+   "name": "Jia Chen",
+   "affiliation": "Calder Bank Research",
+   "orcid": "",
+   "truth": "a03",
+   "truthInstitution": "calder"
+  },
+  {
+   "id": "p017-2",
+   "paper": "p017",
+   "name": "Daniel Okafor",
+   "affiliation": "Calder Bank Research",
+   "orcid": "",
+   "truth": "a11",
+   "truthInstitution": "calder"
+  },
+  {
+   "id": "p017-3",
+   "paper": "p017",
+   "name": "Hannah Weber",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "",
+   "truth": "a10",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p018-1",
+   "paper": "p018",
+   "name": "Malik, Fatima",
+   "affiliation": "Thames Institute of Tech, London",
+   "orcid": "",
+   "truth": "a22",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p018-2",
+   "paper": "p018",
+   "name": "Kenji Watanabe",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a19",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p019-1",
+   "paper": "p019",
+   "name": "N. Haddad",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a20",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p019-2",
+   "paper": "p019",
+   "name": "M. Santos",
+   "affiliation": "LSDS",
+   "orcid": "0000-0001-0004-0004",
+   "truth": "a04",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p019-3",
+   "paper": "p019",
+   "name": "Jun Chen",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p020-1",
+   "paper": "p020",
+   "name": "Lin, Mei",
+   "affiliation": "NBU",
+   "orcid": "0000-0001-0012-0012",
+   "truth": "a12",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p020-2",
+   "paper": "p020",
+   "name": "E. Clarke",
+   "affiliation": "Calder Bank Research",
+   "orcid": "",
+   "truth": "a18",
+   "truthInstitution": "calder"
+  },
+  {
+   "id": "p021-1",
+   "paper": "p021",
+   "name": "O'Brien, Sean",
+   "affiliation": "AIF Dublin",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p021-2",
+   "paper": "p021",
+   "name": "Pieter de Vries",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a21",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p022-1",
+   "paper": "p022",
+   "name": "Siobhan Murphy",
+   "affiliation": "Aurora Inst. of Finance",
+   "orcid": "",
+   "truth": "a08",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p022-2",
+   "paper": "p022",
+   "name": "Adeyemi, G.",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a16",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p022-3",
+   "paper": "p022",
+   "name": "O'Brien, Sean",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p023-1",
+   "paper": "p023",
+   "name": "Jun Chen",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p023-2",
+   "paper": "p023",
+   "name": "Priya Raman",
+   "affiliation": "Northbridge University",
+   "orcid": "0000-0001-0001-0001",
+   "truth": "a01",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p023-3",
+   "paper": "p023",
+   "name": "Lin, Mei",
+   "affiliation": "Northbridge University",
+   "orcid": "0000-0001-0012-0012",
+   "truth": "a12",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p023-4",
+   "paper": "p023",
+   "name": "N. Haddad",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a20",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p024-1",
+   "paper": "p024",
+   "name": "Hannah Weber",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "",
+   "truth": "a10",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p024-2",
+   "paper": "p024",
+   "name": "Chen, J.",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p024-3",
+   "paper": "p024",
+   "name": "Brandt, Oliver",
+   "affiliation": "Rhine Applied Artificial Intelligence Laboratory",
+   "orcid": "",
+   "truth": "a05",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p025-1",
+   "paper": "p025",
+   "name": "Sean O'Brien",
+   "affiliation": "Aurora Inst. of Finance",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p025-2",
+   "paper": "p025",
+   "name": "Grace Adeyemi",
+   "affiliation": "AIF Dublin",
+   "orcid": "0000-0001-0016-0016",
+   "truth": "a16",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p025-3",
+   "paper": "p025",
+   "name": "J. Chen",
+   "affiliation": "Univ. of Northbridge",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p026-1",
+   "paper": "p026",
+   "name": "N Haddad",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a20",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p026-2",
+   "paper": "p026",
+   "name": "P. Raman",
+   "affiliation": "Northbridge University",
+   "orcid": "0000-0001-0001-0001",
+   "truth": "a01",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p026-3",
+   "paper": "p026",
+   "name": "Jun Chen",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p027-1",
+   "paper": "p027",
+   "name": "Lars Lindqvist",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "0000-0001-0007-0007",
+   "truth": "a07",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p027-2",
+   "paper": "p027",
+   "name": "Ingrid Nilsson",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a24",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p027-3",
+   "paper": "p027",
+   "name": "Erik Johansson",
+   "affiliation": "NCTAI",
+   "orcid": "",
+   "truth": "a15",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p028-1",
+   "paper": "p028",
+   "name": "Clarke, Emma",
+   "affiliation": "Calder Bank Research",
+   "orcid": "",
+   "truth": "a18",
+   "truthInstitution": "calder"
+  },
+  {
+   "id": "p028-2",
+   "paper": "p028",
+   "name": "Lindqvist, L.",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "0000-0001-0007-0007",
+   "truth": "a07",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p028-3",
+   "paper": "p028",
+   "name": "Santos, Maria",
+   "affiliation": "Lisbon Sch. of Data Science",
+   "orcid": "0000-0001-0004-0004",
+   "truth": "a04",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p029-1",
+   "paper": "p029",
+   "name": "Fatima Malik",
+   "affiliation": "Thames Inst. Tech.",
+   "orcid": "",
+   "truth": "a22",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p029-2",
+   "paper": "p029",
+   "name": "Ravi Iyer",
+   "affiliation": "Thames Institute of Technology",
+   "orcid": "",
+   "truth": "a13",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p029-3",
+   "paper": "p029",
+   "name": "Brandt, O.",
+   "affiliation": "Rhine Applied Artificial Intelligence Laboratory",
+   "orcid": "0000-0001-0005-0005",
+   "truth": "a05",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p030-1",
+   "paper": "p030",
+   "name": "S. Romano",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a14",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p030-2",
+   "paper": "p030",
+   "name": "M Santos",
+   "affiliation": "Lisbon School of Data Science",
+   "orcid": "",
+   "truth": "a04",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p030-3",
+   "paper": "p030",
+   "name": "Kenji Watanabe",
+   "affiliation": "Meridian Payments Laboratory",
+   "orcid": "",
+   "truth": "a19",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p031-1",
+   "paper": "p031",
+   "name": "Emma Clarke",
+   "affiliation": "Calder Bank plc, Research",
+   "orcid": "",
+   "truth": "a18",
+   "truthInstitution": "calder"
+  },
+  {
+   "id": "p031-2",
+   "paper": "p031",
+   "name": "Daniel Okafor",
+   "affiliation": "Calder Bank plc, Research",
+   "orcid": "",
+   "truth": "a11",
+   "truthInstitution": "calder"
+  },
+  {
+   "id": "p032-1",
+   "paper": "p032",
+   "name": "O'Brien, Sean",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p032-2",
+   "paper": "p032",
+   "name": "Adeyemi, G.",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a16",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p033-1",
+   "paper": "p033",
+   "name": "O'Brien, Sean",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p033-2",
+   "paper": "p033",
+   "name": "de Vries, Pieter",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a21",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p033-3",
+   "paper": "p033",
+   "name": "Murphy, Siobhan",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a08",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p033-4",
+   "paper": "p033",
+   "name": "Adeyemi, Grace",
+   "affiliation": "Aurora Inst. of Finance",
+   "orcid": "0000-0001-0016-0016",
+   "truth": "a16",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p034-1",
+   "paper": "p034",
+   "name": "P. de Vries",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "0000-0001-0021-0021",
+   "truth": "a21",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p034-2",
+   "paper": "p034",
+   "name": "O. Brandt",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "0000-0001-0005-0005",
+   "truth": "a05",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p034-3",
+   "paper": "p034",
+   "name": "Sofia Romano",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a14",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p035-1",
+   "paper": "p035",
+   "name": "Kenji Watanabe",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a19",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p035-2",
+   "paper": "p035",
+   "name": "Jun Chen",
+   "affiliation": "Univ. of Northbridge",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p036-1",
+   "paper": "p036",
+   "name": "Brandt, Oliver",
+   "affiliation": "Meridian Pay Lab",
+   "orcid": "0000-0001-0005-0005",
+   "truth": "a05",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p036-2",
+   "paper": "p036",
+   "name": "K. Watanabe",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a19",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p037-1",
+   "paper": "p037",
+   "name": "A. Okafor",
+   "affiliation": "Thames Institute of Technology",
+   "orcid": "",
+   "truth": "a06",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p037-2",
+   "paper": "p037",
+   "name": "F Malik",
+   "affiliation": "Thames Institute of Technology",
+   "orcid": "",
+   "truth": "a22",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p037-3",
+   "paper": "p037",
+   "name": "Siobhan Murphy",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a08",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p038-1",
+   "paper": "p038",
+   "name": "Hannah Weber",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "",
+   "truth": "a10",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p038-2",
+   "paper": "p038",
+   "name": "Fischer, Lukas",
+   "affiliation": "Rhine Applied Artificial Intelligence Laboratory",
+   "orcid": "",
+   "truth": "a17",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p038-3",
+   "paper": "p038",
+   "name": "K. Watanabe",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a19",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p039-1",
+   "paper": "p039",
+   "name": "Lars Lindqvist",
+   "affiliation": "NCTAI",
+   "orcid": "",
+   "truth": "a07",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p039-2",
+   "paper": "p039",
+   "name": "Lin, M.",
+   "affiliation": "Northbridge Univ.",
+   "orcid": "0000-0001-0012-0012",
+   "truth": "a12",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p040-1",
+   "paper": "p040",
+   "name": "Nadia Haddad",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a20",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p040-2",
+   "paper": "p040",
+   "name": "Priya Raman",
+   "affiliation": "Northbridge University",
+   "orcid": "0000-0001-0001-0001",
+   "truth": "a01",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p040-3",
+   "paper": "p040",
+   "name": "Sean O'Brien",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p040-4",
+   "paper": "p040",
+   "name": "J Chen",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p041-1",
+   "paper": "p041",
+   "name": "Adeyemi, Grace",
+   "affiliation": "AIF Dublin",
+   "orcid": "",
+   "truth": "a16",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p041-2",
+   "paper": "p041",
+   "name": "Sean O'Brien",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p041-3",
+   "paper": "p041",
+   "name": "S. Murphy",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a08",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p042-1",
+   "paper": "p042",
+   "name": "Johansson, Erik",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a15",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p042-2",
+   "paper": "p042",
+   "name": "Murphy, Siobhan",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a08",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p042-3",
+   "paper": "p042",
+   "name": "O'Brien, Sean",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p043-1",
+   "paper": "p043",
+   "name": "P Raman",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a01",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p043-2",
+   "paper": "p043",
+   "name": "Mei Lin",
+   "affiliation": "Northbridge University",
+   "orcid": "0000-0001-0012-0012",
+   "truth": "a12",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p044-1",
+   "paper": "p044",
+   "name": "Oliver Brandt",
+   "affiliation": "Meridian Pay Lab",
+   "orcid": "0000-0001-0005-0005",
+   "truth": "a05",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p044-2",
+   "paper": "p044",
+   "name": "P. de Vries",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "0000-0001-0021-0021",
+   "truth": "a21",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p044-3",
+   "paper": "p044",
+   "name": "Lukas Fischer",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "",
+   "truth": "a17",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p045-1",
+   "paper": "p045",
+   "name": "Siobhan Murphy",
+   "affiliation": "Aurora Inst. of Finance",
+   "orcid": "",
+   "truth": "a08",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p045-2",
+   "paper": "p045",
+   "name": "Aisha Okafor",
+   "affiliation": "Thames Institute of Technology",
+   "orcid": "",
+   "truth": "a06",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p045-3",
+   "paper": "p045",
+   "name": "Haddad, Nadia",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a20",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p046-1",
+   "paper": "p046",
+   "name": "Sofia Romano",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a14",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p046-2",
+   "paper": "p046",
+   "name": "P. de Vries",
+   "affiliation": "Meridian Payments Laboratory",
+   "orcid": "0000-0001-0021-0021",
+   "truth": "a21",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p046-3",
+   "paper": "p046",
+   "name": "Okafor, A.",
+   "affiliation": "Thames Institute of Tech, London",
+   "orcid": "",
+   "truth": "a06",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p047-1",
+   "paper": "p047",
+   "name": "J Chen",
+   "affiliation": "Calder Bank Research",
+   "orcid": "",
+   "truth": "a03",
+   "truthInstitution": "calder"
+  },
+  {
+   "id": "p047-2",
+   "paper": "p047",
+   "name": "Emma Clarke",
+   "affiliation": "Calder Bank Research",
+   "orcid": "",
+   "truth": "a18",
+   "truthInstitution": "calder"
+  },
+  {
+   "id": "p047-3",
+   "paper": "p047",
+   "name": "L. Fischer",
+   "affiliation": "Rhine AI Lab",
+   "orcid": "",
+   "truth": "a17",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p048-1",
+   "paper": "p048",
+   "name": "Nilsson, Ingrid",
+   "affiliation": "Nordic Ctr. for Trustworthy AI",
+   "orcid": "",
+   "truth": "a24",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p048-2",
+   "paper": "p048",
+   "name": "L. Lindqvist",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "0000-0001-0007-0007",
+   "truth": "a07",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p049-1",
+   "paper": "p049",
+   "name": "Santos, Maria",
+   "affiliation": "Lisbon School of Data Science",
+   "orcid": "0000-0001-0004-0004",
+   "truth": "a04",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p049-2",
+   "paper": "p049",
+   "name": "T. Oliveira",
+   "affiliation": "Lisbon Sch. of Data Science",
+   "orcid": "",
+   "truth": "a09",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p050-1",
+   "paper": "p050",
+   "name": "Romano, Sofia",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a14",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p050-2",
+   "paper": "p050",
+   "name": "O. Brandt",
+   "affiliation": "Meridian Pay Lab",
+   "orcid": "0000-0001-0005-0005",
+   "truth": "a05",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p050-3",
+   "paper": "p050",
+   "name": "Maria Santos",
+   "affiliation": "LSDS",
+   "orcid": "0000-0001-0004-0004",
+   "truth": "a04",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p051-1",
+   "paper": "p051",
+   "name": "Iyer, Ravi",
+   "affiliation": "Thames Inst. Tech.",
+   "orcid": "",
+   "truth": "a13",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p051-2",
+   "paper": "p051",
+   "name": "Grace Adeyemi",
+   "affiliation": "Thames Institute of Tech, London",
+   "orcid": "0000-0001-0016-0016",
+   "truth": "a16",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p051-3",
+   "paper": "p051",
+   "name": "Lin, Mei",
+   "affiliation": "Northbridge University",
+   "orcid": "0000-0001-0012-0012",
+   "truth": "a12",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p051-4",
+   "paper": "p051",
+   "name": "Aisha Okafor",
+   "affiliation": "Thames Inst. Tech.",
+   "orcid": "",
+   "truth": "a06",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p052-1",
+   "paper": "p052",
+   "name": "Sean O'Brien",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p052-2",
+   "paper": "p052",
+   "name": "S. Murphy",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a08",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p052-3",
+   "paper": "p052",
+   "name": "Oliver Brandt",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a05",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p053-1",
+   "paper": "p053",
+   "name": "Tomás Oliveira",
+   "affiliation": "Lisbon School of Data Science",
+   "orcid": "",
+   "truth": "a09",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p053-2",
+   "paper": "p053",
+   "name": "A. Okafor",
+   "affiliation": "Thames Institute of Technology",
+   "orcid": "",
+   "truth": "a06",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p054-1",
+   "paper": "p054",
+   "name": "Sean O'Brien",
+   "affiliation": "AIF Dublin",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p054-2",
+   "paper": "p054",
+   "name": "Hannah Weber",
+   "affiliation": "Rhine Applied Artificial Intelligence Laboratory",
+   "orcid": "",
+   "truth": "a10",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p054-3",
+   "paper": "p054",
+   "name": "Siobhan Murphy",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a08",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p055-1",
+   "paper": "p055",
+   "name": "Nadia Haddad",
+   "affiliation": "Univ. of Northbridge",
+   "orcid": "",
+   "truth": "a20",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p055-2",
+   "paper": "p055",
+   "name": "M. Lin",
+   "affiliation": "Northbridge University",
+   "orcid": "0000-0001-0012-0012",
+   "truth": "a12",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p055-3",
+   "paper": "p055",
+   "name": "J. Chen",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p055-4",
+   "paper": "p055",
+   "name": "Daniel Okafor",
+   "affiliation": "Calder Bank Research",
+   "orcid": "",
+   "truth": "a11",
+   "truthInstitution": "calder"
+  },
+  {
+   "id": "p056-1",
+   "paper": "p056",
+   "name": "Haddad, N.",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a20",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p056-2",
+   "paper": "p056",
+   "name": "M Lin",
+   "affiliation": "Northbridge Univ.",
+   "orcid": "0000-0001-0012-0012",
+   "truth": "a12",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p057-1",
+   "paper": "p057",
+   "name": "Nilsson, Ingrid",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a24",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p057-2",
+   "paper": "p057",
+   "name": "Weber, Hannah",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "",
+   "truth": "a10",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p057-3",
+   "paper": "p057",
+   "name": "Lindqvist, Lars",
+   "affiliation": "Nordic Ctr. for Trustworthy AI",
+   "orcid": "",
+   "truth": "a07",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p058-1",
+   "paper": "p058",
+   "name": "Lindqvist, Lars",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "0000-0001-0007-0007",
+   "truth": "a07",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p058-2",
+   "paper": "p058",
+   "name": "I. Nilsson",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a24",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p058-3",
+   "paper": "p058",
+   "name": "Mei Lin",
+   "affiliation": "Northbridge Univ.",
+   "orcid": "0000-0001-0012-0012",
+   "truth": "a12",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p058-4",
+   "paper": "p058",
+   "name": "L. Fischer",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "",
+   "truth": "a17",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p059-1",
+   "paper": "p059",
+   "name": "L Lindqvist",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a07",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p059-2",
+   "paper": "p059",
+   "name": "M. Santos",
+   "affiliation": "Lisbon Sch. of Data Science",
+   "orcid": "0000-0001-0004-0004",
+   "truth": "a04",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p059-3",
+   "paper": "p059",
+   "name": "Erik Johansson",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a15",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p059-4",
+   "paper": "p059",
+   "name": "Nilsson, Ingrid",
+   "affiliation": "NCTAI",
+   "orcid": "",
+   "truth": "a24",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p060-1",
+   "paper": "p060",
+   "name": "Sofia Romano",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a14",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p060-2",
+   "paper": "p060",
+   "name": "Kenji Watanabe",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a19",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p060-3",
+   "paper": "p060",
+   "name": "P. de Vries",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a21",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p061-1",
+   "paper": "p061",
+   "name": "Ravi Iyer",
+   "affiliation": "Thames Institute of Tech, London",
+   "orcid": "",
+   "truth": "a13",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p061-2",
+   "paper": "p061",
+   "name": "O. Brandt",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "0000-0001-0005-0005",
+   "truth": "a05",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p062-1",
+   "paper": "p062",
+   "name": "Grace Adeyemi",
+   "affiliation": "Thames Institute of Technology",
+   "orcid": "0000-0001-0016-0016",
+   "truth": "a16",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p062-2",
+   "paper": "p062",
+   "name": "Aisha Okafor",
+   "affiliation": "Thames Institute of Technology",
+   "orcid": "",
+   "truth": "a06",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p062-3",
+   "paper": "p062",
+   "name": "Nilsson, Ingrid",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a24",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p063-1",
+   "paper": "p063",
+   "name": "Sean OBrien",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a23",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p063-2",
+   "paper": "p063",
+   "name": "Murphy, Siobhan",
+   "affiliation": "AIF Dublin",
+   "orcid": "",
+   "truth": "a08",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p064-1",
+   "paper": "p064",
+   "name": "Tomás Oliveira",
+   "affiliation": "Lisbon School of Data Science",
+   "orcid": "",
+   "truth": "a09",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p064-2",
+   "paper": "p064",
+   "name": "Jun Chen",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p064-3",
+   "paper": "p064",
+   "name": "Priya Raman",
+   "affiliation": "Northbridge University",
+   "orcid": "0000-0001-0001-0001",
+   "truth": "a01",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p064-4",
+   "paper": "p064",
+   "name": "Maria Santos",
+   "affiliation": "Lisbon School of Data Science",
+   "orcid": "0000-0001-0004-0004",
+   "truth": "a04",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p065-1",
+   "paper": "p065",
+   "name": "J. Chen",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a02",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p065-2",
+   "paper": "p065",
+   "name": "Daniel Okafor",
+   "affiliation": "Calder Bank R&D",
+   "orcid": "",
+   "truth": "a11",
+   "truthInstitution": "calder"
+  },
+  {
+   "id": "p065-3",
+   "paper": "p065",
+   "name": "Priya Raman",
+   "affiliation": "Northbridge University",
+   "orcid": "0000-0001-0001-0001",
+   "truth": "a01",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p066-1",
+   "paper": "p066",
+   "name": "S. Romano",
+   "affiliation": "Meridian Payments Laboratory",
+   "orcid": "",
+   "truth": "a14",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p066-2",
+   "paper": "p066",
+   "name": "O. Brandt",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "0000-0001-0005-0005",
+   "truth": "a05",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p067-1",
+   "paper": "p067",
+   "name": "Sofia Romano",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a14",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p067-2",
+   "paper": "p067",
+   "name": "Watanabe, Kenji",
+   "affiliation": "Meridian Payments Laboratory",
+   "orcid": "",
+   "truth": "a19",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p067-3",
+   "paper": "p067",
+   "name": "Oliver Brandt",
+   "affiliation": "Meridian Payments Laboratory",
+   "orcid": "0000-0001-0005-0005",
+   "truth": "a05",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p068-1",
+   "paper": "p068",
+   "name": "D. Okafor",
+   "affiliation": "Calder Bank Research",
+   "orcid": "",
+   "truth": "a11",
+   "truthInstitution": "calder"
+  },
+  {
+   "id": "p068-2",
+   "paper": "p068",
+   "name": "Emma Clarke",
+   "affiliation": "Calder Bank Research",
+   "orcid": "",
+   "truth": "a18",
+   "truthInstitution": "calder"
+  },
+  {
+   "id": "p068-3",
+   "paper": "p068",
+   "name": "J. Chen",
+   "affiliation": "Calder Bank Research",
+   "orcid": "",
+   "truth": "a03",
+   "truthInstitution": "calder"
+  },
+  {
+   "id": "p069-1",
+   "paper": "p069",
+   "name": "L. Lindqvist",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "0000-0001-0007-0007",
+   "truth": "a07",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p069-2",
+   "paper": "p069",
+   "name": "E. Johansson",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a15",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p070-1",
+   "paper": "p070",
+   "name": "Kenji Watanabe",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a19",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p070-2",
+   "paper": "p070",
+   "name": "P. de Vries",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a21",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p071-1",
+   "paper": "p071",
+   "name": "Kenji Watanabe",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a19",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p071-2",
+   "paper": "p071",
+   "name": "L. Fischer",
+   "affiliation": "Rhine Applied AI Lab",
+   "orcid": "",
+   "truth": "a17",
+   "truthInstitution": "rhine"
+  },
+  {
+   "id": "p071-3",
+   "paper": "p071",
+   "name": "Oliver Brandt",
+   "affiliation": "Meridian Pay Lab",
+   "orcid": "0000-0001-0005-0005",
+   "truth": "a05",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p071-4",
+   "paper": "p071",
+   "name": "Romano, Sofia",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a14",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p072-1",
+   "paper": "p072",
+   "name": "M Santos",
+   "affiliation": "Lisbon School of Data Science",
+   "orcid": "0000-0001-0004-0004",
+   "truth": "a04",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p072-2",
+   "paper": "p072",
+   "name": "Lin, M.",
+   "affiliation": "Northbridge University",
+   "orcid": "",
+   "truth": "a12",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p072-3",
+   "paper": "p072",
+   "name": "T Oliveira",
+   "affiliation": "Lisbon Sch. of Data Science",
+   "orcid": "",
+   "truth": "a09",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p072-4",
+   "paper": "p072",
+   "name": "Ingrid Nilsson",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a24",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p073-1",
+   "paper": "p073",
+   "name": "Tomás Oliveira",
+   "affiliation": "Lisbon Sch. of Data Science",
+   "orcid": "",
+   "truth": "a09",
+   "truthInstitution": "lisbon"
+  },
+  {
+   "id": "p073-2",
+   "paper": "p073",
+   "name": "S. Romano",
+   "affiliation": "Meridian Payments Lab",
+   "orcid": "",
+   "truth": "a14",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p073-3",
+   "paper": "p073",
+   "name": "Grace Adeyemi",
+   "affiliation": "Thames Institute of Technology",
+   "orcid": "0000-0001-0016-0016",
+   "truth": "a16",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p074-1",
+   "paper": "p074",
+   "name": "Malik, Fatima",
+   "affiliation": "Thames Institute of Technology",
+   "orcid": "",
+   "truth": "a22",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p074-2",
+   "paper": "p074",
+   "name": "Mei Lin",
+   "affiliation": "NBU",
+   "orcid": "",
+   "truth": "a12",
+   "truthInstitution": "northbridge"
+  },
+  {
+   "id": "p074-3",
+   "paper": "p074",
+   "name": "R Iyer",
+   "affiliation": "Thames Institute of Technology",
+   "orcid": "",
+   "truth": "a13",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p075-1",
+   "paper": "p075",
+   "name": "Aisha Okafor",
+   "affiliation": "Thames Institute of Tech, London",
+   "orcid": "",
+   "truth": "a06",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p075-2",
+   "paper": "p075",
+   "name": "F. Malik",
+   "affiliation": "Thames Institute of Technology",
+   "orcid": "",
+   "truth": "a22",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p076-1",
+   "paper": "p076",
+   "name": "Aisha Okafor",
+   "affiliation": "Thames Institute of Tech, London",
+   "orcid": "",
+   "truth": "a06",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p076-2",
+   "paper": "p076",
+   "name": "Malik, F.",
+   "affiliation": "Thames Institute of Tech, London",
+   "orcid": "",
+   "truth": "a22",
+   "truthInstitution": "thames"
+  },
+  {
+   "id": "p076-3",
+   "paper": "p076",
+   "name": "Brandt, Oliver",
+   "affiliation": "Meridian Pay Lab",
+   "orcid": "",
+   "truth": "a05",
+   "truthInstitution": "meridian"
+  },
+  {
+   "id": "p077-1",
+   "paper": "p077",
+   "name": "Erik Johansson",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a15",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p077-2",
+   "paper": "p077",
+   "name": "Ingrid Nilsson",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "",
+   "truth": "a24",
+   "truthInstitution": "nordic"
+  },
+  {
+   "id": "p077-3",
+   "paper": "p077",
+   "name": "S. Murphy",
+   "affiliation": "Aurora Institute of Finance",
+   "orcid": "",
+   "truth": "a08",
+   "truthInstitution": "aurora"
+  },
+  {
+   "id": "p077-4",
+   "paper": "p077",
+   "name": "Lars Lindqvist",
+   "affiliation": "Nordic Centre for Trustworthy AI",
+   "orcid": "0000-0001-0007-0007",
+   "truth": "a07",
+   "truthInstitution": "nordic"
+  }
+ ]
+}

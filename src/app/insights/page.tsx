@@ -5,6 +5,7 @@ import Reveal from "@/components/Reveal";
 import { formatDate, readingTime, visibleArticles } from "@/data/insights";
 import { leadershipMoments } from "@/data/leadershipMoments";
 import { labIntro, mdmLabPublished } from "@/data/mdmLab";
+import { researchLabPublished } from "@/data/researchLab";
 
 export const metadata: Metadata = {
   title: "Insights",
@@ -116,6 +117,34 @@ export default function InsightsPage() {
               </div>
             </div>
           </Reveal>
+          {researchLabPublished && (
+            <Reveal className="mt-6">
+              <div className="rounded-3xl border border-accent-2/40 bg-gradient-to-br from-accent-2/[0.08] via-surface to-accent/[0.05] p-8 sm:p-10">
+                <p className="type-eyebrow text-accent">Lab · Knowledge graphs</p>
+                <h3 className="mt-3 font-display text-3xl font-bold tracking-tight">
+                  Who&apos;s who in research? <span className="text-gradient">Ask the graph.</span>
+                </h3>
+                <p className="mt-4 max-w-3xl leading-relaxed text-muted">
+                  Resolve 221 messy author mentions into 24 people, explore the knowledge graph, then see Claude answer
+                  questions from it through GraphRAG — 15/15 on its evaluation, with every query on show.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Link
+                    href="/lab/research-graph"
+                    className="rounded-full bg-accent px-6 py-3 font-semibold text-background transition-transform hover:scale-105"
+                  >
+                    Try the knowledge graph →
+                  </Link>
+                  <Link
+                    href="/insights/knowledge-graph-graphrag-mcp"
+                    className="rounded-full border border-border px-6 py-3 font-semibold transition-colors hover:border-foreground"
+                  >
+                    How I built and tested it →
+                  </Link>
+                </div>
+              </div>
+            </Reveal>
+          )}
           <Reveal className="mt-6">
             <div className="rounded-3xl border border-border bg-surface p-8 sm:p-10">
               <p className="type-eyebrow text-accent">Lab · Applied AI</p>

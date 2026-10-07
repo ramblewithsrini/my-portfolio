@@ -46,6 +46,87 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "knowledge-graph-graphrag-mcp",
+    title: "Who's who? Entity resolution, a knowledge graph and GraphRAG — measured",
+    dek: "Messy research records resolved into people, loaded into Neo4j, questioned by Claude through GraphRAG and exposed to AI assistants over MCP. What worked, what failed first, and what the evaluation caught.",
+    date: "2026-10-07",
+    status: "published",
+    tags: ["Knowledge graphs", "GraphRAG", "MCP", "Entity resolution", "Applied AI"],
+    blocks: [
+      {
+        type: "p",
+        text: "Most questions worth asking about data are questions about relationships. Who leads a field? Which organisations work together? How is this supplier connected to that customer? Before any of them can be answered, you have to know who's who — and real data rarely tells you.",
+      },
+      {
+        type: "p",
+        text: "So I built a lab around that problem, on a fictional dataset of research on AI in payments and fraud detection: 77 papers and 221 author mentions, with the same 24 researchers written 85 different ways. You can try it in your browser — move the matching sliders, explore the graph and see the AI's answers.",
+      },
+      { type: "h2", text: "Step one: who's who" },
+      {
+        type: "p",
+        text: "Entity resolution decides which mentions are the same person. Each pair of similar names is scored on four signals — the name itself, the institution, shared co-authors and the topic — and an ORCID on both sides settles it either way. Institutions get the same treatment: exact names, a small reference-data table for acronyms like \"NBU\", then word similarity.",
+      },
+      {
+        type: "p",
+        text: "At the default settings it finds exactly the 24 real people: 100% precision and 100% recall against the hidden ground truth. The interesting part is what happens when you change the settings. Lower the match threshold and two different J. Chens, at different institutions, become one person. Remove the institution signal and the same mistake happens. Tighten it too far and real people split into duplicates. Every graph question downstream inherits whichever mistake you make here.",
+      },
+      {
+        type: "quote",
+        text: "A knowledge graph is only as trustworthy as its entity resolution. Get who's who wrong, and every answer built on it is confidently wrong.",
+      },
+      { type: "h2", text: "Step two: the graph" },
+      {
+        type: "p",
+        text: "Resolved people become nodes in Neo4j alongside papers, institutions and topics, connected by authorship, citations, affiliation and co-authorship: 117 nodes and 582 relationships. The website runs the same rules in TypeScript, and a test checks that both implementations find identical people — the same discipline as the MDM engine I built in two languages.",
+      },
+      { type: "h2", text: "Step three: GraphRAG" },
+      {
+        type: "p",
+        text: "GraphRAG lets people ask in plain English. Claude on Amazon Bedrock turns the question into one read-only Cypher query, a guard checks it, Neo4j runs it in a read-only transaction, and Claude answers only from the rows that come back. Out-of-scope questions are refused before they reach the database.",
+      },
+      {
+        type: "table",
+        caption: "GraphRAG evaluation, 7 October 2026 — Claude Haiku 4.5 on Amazon Bedrock, Neo4j AuraDB, temperature 0",
+        head: ["Measure", "Result"],
+        rows: [
+          ["Answer contains the expected facts", "15/15"],
+          ["Cypher ran without error (one self-correction allowed)", "15/15"],
+          ["Out-of-scope or write requests refused", "3/3"],
+        ],
+        sources: [{ label: "Code, questions and the full run on GitHub", href: "https://github.com/ramblewithsrini/research-graph" }],
+      },
+      { type: "h2", text: "What failed first — and what the evaluation caught" },
+      {
+        type: "list",
+        items: [
+          "Text-to-Cypher needs examples. The first attempt searched for an author literally named \"Chen\" and misused an aggregate. Three worked examples, a note on how names are stored, and one retry that shows the model the database's own error fixed it.",
+          "Guardrails can be too strict. My first guard blocked any query without a LIMIT, and rejected five correct counting queries. Changing it to add a limit rather than block took the score from 10/15 to 15/15. Evaluation catches over-blocking as well as under-blocking.",
+          "Agree the definition before trusting the number. Asked who is most cited, the model counted distinct citing papers (11); the lab counts total citations (14). Both are reasonable; only one is what the business means.",
+          "Don't let safety depend on the model. Writes are blocked by the guard and by read-only transactions, and tested without any model in the loop.",
+        ],
+      },
+      { type: "h2", text: "Step four: an MCP server" },
+      {
+        type: "p",
+        text: "Finally, the graph is exposed over the Model Context Protocol, so any MCP-capable assistant — Claude Desktop, Claude Code and others — can explore it as a set of tools: describe the schema, find an author, rank researchers on a topic, trace a connection, or run a bounded read-only query. Ask it to delete the papers and it refuses: the server is read-only by design. This is what \"agent-ready data\" means in practice: clear contracts, described meaning and safe access, not just an API.",
+      },
+      { type: "h2", text: "Why it matters beyond research" },
+      {
+        type: "list",
+        items: [
+          "Customer and counterparty data: the same company under ten spellings, before KYC or risk can trust it.",
+          "Patents and IP: one owner across many names and offices.",
+          "Payments and fraud: rings of accounts, devices and merchants that only show up as a graph.",
+          "Enterprise architecture: which systems break if this one is retired.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Resolve who's who first, connect it second, and only then let AI answer — with a guard, an evaluation set and the evidence on show.",
+      },
+    ],
+  },
+  {
     slug: "ted-lasso-leadership-lessons",
     title: "Eight Ted Lasso leadership lessons I actually use",
     dek: "Ted Lasso is fiction. The way he leads isn't. Eight lessons from the show, and the real situations where I've seen them work.",

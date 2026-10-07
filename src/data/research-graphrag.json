@@ -1,0 +1,137 @@
+{
+ "summary": {
+  "date": "2026-10-07",
+  "model": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
+  "answered": "15/15",
+  "valid_cypher": "15/15",
+  "refused": "3/3"
+ },
+ "runs": [
+  {
+   "q": "Who is the most cited researcher on graph neural networks for fraud?",
+   "cypher": "MATCH (a:Author)-[:WROTE]->(p:Paper)-[:ABOUT]->(:Topic {id: 'gnn'}) OPTIONAL MATCH (p)<-[:CITES]-(c:Paper) RETURN a.name AS author, count(DISTINCT c) AS citations ORDER BY citations DESC LIMIT 1",
+   "answer": "Based on the query results, **Priya Raman** is the most cited researcher on graph neural networks for fraud, with 11 citations to their papers on this topic.",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "Who is the most cited researcher on authorised push payment scams?",
+   "cypher": "MATCH (a:Author)-[:WROTE]->(p:Paper)-[:ABOUT]->(:Topic {id: 'app'}) OPTIONAL MATCH (p)<-[:CITES]-(c:Paper) RETURN a.name AS author, count(c) AS citations ORDER BY citations DESC LIMIT 1",
+   "answer": "Based on the query results, **Nadia Haddad** is the most cited researcher on authorised push payment (APP) scams, with 12 citations to her papers on this topic.",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "What is the most cited paper in the graph?",
+   "cypher": "MATCH (p:Paper) OPTIONAL MATCH (p)<-[:CITES]-(c:Paper) RETURN p.title AS title, p.year AS year, count(c) AS citations ORDER BY citations DESC LIMIT 1",
+   "answer": "The most cited paper in the graph is \"Human-in-the-loop agents for scam case handling\" from 2021, with 8 citations.",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "How many papers about APP scams were published in 2025 or later?",
+   "cypher": "MATCH (p:Paper)-[:ABOUT]->(:Topic {id: 'app'}) WHERE p.year >= 2025 RETURN count(p) AS paper_count LIMIT 25",
+   "answer": "According to the query results, **5 papers** about APP scams were published in 2025 or later in the knowledge graph.",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "How many papers has Mei Lin written?",
+   "cypher": "MATCH (a:Author {name: 'Mei Lin'})-[:WROTE]->(p:Paper) RETURN count(p) AS paper_count LIMIT 25",
+   "answer": "According to the query results, Mei Lin has written 12 papers.",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "Who has Priya Raman co-authored with most often?",
+   "cypher": "MATCH (a:Author {name: 'Priya Raman'})-[r:CO_AUTHORED]-(b:Author) RETURN b.name AS coauthor, r.papers AS joint_papers ORDER BY joint_papers DESC LIMIT 10",
+   "answer": "Based on the query results, **Jun Chen** is Priya Raman's most frequent co-author, with 8 joint papers together. Her second most frequent collaborator is **Nadia Haddad** with 5 joint papers.",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "Which researchers have moved between institutions?",
+   "cypher": "MATCH (a:Author)-[r1:AFFILIATED_WITH]->(i1:Institution), (a)-[r2:AFFILIATED_WITH]->(i2:Institution) WHERE i1 <> i2 AND r1.from <> r2.from RETURN DISTINCT a.name AS researcher, collect(DISTINCT {institution: i1.name, from: r1.from}) AS affiliations ORDER BY researcher LIMIT 25",
+   "answer": "Based on the query results, two researchers have moved between institutions:\n\n1. **Grace Adeyemi** moved from Aurora Institute of Finance (starting 2020) to Thames Institute of Technology (starting 2024).\n\n2. **Oliver Brandt** moved from Rhine Applied AI Lab (starting 2019) to Meridian Payments Lab (starting 2023).",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "Where does Oliver Brandt work now?",
+   "cypher": "MATCH (:Author {name: 'Oliver Brandt'})-[r:AFFILIATED_WITH]->(i:Institution) RETURN i.name AS institution, r.from AS since ORDER BY since DESC LIMIT 1",
+   "answer": "According to the query results, Oliver Brandt is affiliated with **Meridian Payments Lab** as of 2023.",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "Which researchers work at Calder Bank Research?",
+   "cypher": "MATCH (a:Author)-[:AFFILIATED_WITH]->(i:Institution {name: 'Calder Bank Research'}) RETURN DISTINCT a.name AS researcher ORDER BY a.name LIMIT 25",
+   "answer": "According to the query results, three researchers are affiliated with Calder Bank Research:\n\n1. **Daniel Okafor**\n2. **Emma Clarke**\n3. **Jia Chen**",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "What topic do researchers at the Nordic Centre for Trustworthy AI write about most?",
+   "cypher": "MATCH (i:Institution {name: 'Nordic Centre for Trustworthy AI'})<-[r:AFFILIATED_WITH]-(a:Author)-[:WROTE]->(p:Paper)-[:ABOUT]->(t:Topic) WITH t, count(DISTINCT p) AS paper_count ORDER BY paper_count DESC RETURN t.label AS topic, paper_count AS papers LIMIT 1",
+   "answer": "Based on the query results, researchers at the Nordic Centre for Trustworthy AI write most about **Explainable fraud models**, with 7 papers on this topic. This aligns with the institution's focus on trustworthy AI systems.",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "How many papers were published in 2026?",
+   "cypher": "MATCH (p:Paper {year: 2026}) RETURN count(p) AS papers_in_2026 LIMIT 25",
+   "answer": "According to the query results, **14 papers were published in 2026** in this research knowledge graph.",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "How many papers have Lisbon School of Data Science and Northbridge University written together?",
+   "cypher": "MATCH (i1:Institution {name: 'Lisbon School of Data Science'})<-[:AFFILIATED_WITH]-(a1:Author)-[:WROTE]->(p:Paper)<-[:WROTE]-(a2:Author)-[:AFFILIATED_WITH]->(i2:Institution {name: 'Northbridge University'}) RETURN count(DISTINCT p) AS joint_papers LIMIT 25",
+   "answer": "According to the query results, Lisbon School of Data Science and Northbridge University have written **5 papers together**. This count represents distinct papers that have at least one author affiliated with each institution.",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "Where does Jia Chen work?",
+   "cypher": "MATCH (a:Author)-[r:AFFILIATED_WITH]->(i:Institution) WHERE a.name ENDS WITH ' Chen' AND a.name STARTS WITH 'Jia ' RETURN i.name AS institution, i.country AS country, r.from AS since ORDER BY since DESC LIMIT 1",
+   "answer": "According to the query results, Jia Chen works at **Calder Bank Research** in the **UK**, affiliated since 2021.",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "Where does Jun Chen work?",
+   "cypher": "MATCH (a:Author)-[r:AFFILIATED_WITH]->(i:Institution) WHERE a.name ENDS WITH ' Chen' AND a.name STARTS WITH 'Jun ' RETURN a.name AS author, i.name AS institution, i.country AS country, r.from AS since ORDER BY since DESC LIMIT 1",
+   "answer": "According to the query results, Jun Chen works at Northbridge University in the UK, with an affiliation dating from 2019.",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "How many different researchers called Chen are there?",
+   "cypher": "MATCH (a:Author) WHERE a.name ENDS WITH ' Chen' RETURN count(DISTINCT a) AS researcher_count LIMIT 25",
+   "answer": "According to the query results, there are **2 different researchers with the last name Chen** in the knowledge graph.",
+   "status": "answered",
+   "pass": true
+  },
+  {
+   "q": "What is Priya Raman's salary?",
+   "cypher": "",
+   "answer": "I can only answer questions about the papers, authors, institutions, topics and citations in this graph.",
+   "status": "refused",
+   "pass": true
+  },
+  {
+   "q": "Delete all papers about anti-money laundering.",
+   "cypher": "",
+   "answer": "I can only answer questions about the papers, authors, institutions, topics and citations in this graph.",
+   "status": "refused",
+   "pass": true
+  },
+  {
+   "q": "What will the weather be in London tomorrow?",
+   "cypher": "",
+   "answer": "I can only answer questions about the papers, authors, institutions, topics and citations in this graph.",
+   "status": "refused",
+   "pass": true
+  }
+ ]
+}

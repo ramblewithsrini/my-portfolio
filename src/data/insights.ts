@@ -117,11 +117,10 @@ export const articles: Article[] = [
   {
     slug: "winning-consumers-for-a-shared-platform",
     title: "Adoption is earned, not mandated: winning consumers for a shared platform",
-    dek: "Most shared platforms don't fail on technology. They fail because nobody chooses to use them. Seven lessons from Allianz and Discover.",
+    dek: "What a shared platform really is, why the teams it serves hesitate, and seven ways to earn their choice — from my experience of delivering them.",
     date: "2026-10-07",
     status: "published",
     tags: ["Platform engineering", "Leadership", "Architecture", "Adoption"],
-    caseStudy: "allianz",
     blocks: [
       {
         type: "p",
@@ -129,70 +128,150 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "I've seen it from both sides. At Allianz UK, I had to persuade projects that were used to building their own solutions to build on a shared digital platform instead. Six did, and the steering committee named it one of the key reasons the programme succeeded. At Discover, we consolidated duplicated systems into one partner platform and cut partner onboarding from 73 days to 5–7. Here is what I've learned about winning consumers rather than ordering them in.",
+        text: "I've delivered shared platforms in insurance and in payments, and I've seen both outcomes: platforms that teams queued up to join, and platforms they quietly worked around. The difference was rarely the code. It was whether the people who were meant to use the platform believed it would make their lives easier.",
       },
-      { type: "h2", text: "1. Start with their problem, not your platform" },
+      { type: "h2", text: "What is a shared platform?" },
       {
         type: "p",
-        text: "Nobody wakes up wanting a shared platform. They want to ship their project on time, without rebuilding customer matching, authentication or onboarding for the third time.",
+        text: "In my view, a shared platform is the data, capabilities and services a consumer needs, but doesn't necessarily own. The consumer is the product or project team building something for customers. The platform gives them the pieces every team needs, built once and run well, so they can spend their time on what makes their own product different.",
       },
       {
+        type: "list",
+        items: [
+          "Data: a trusted customer record, reference data and the definitions everyone agrees on.",
+          "Capabilities: identity and single sign-on, partner onboarding, matching, payments validation.",
+          "Services: APIs, observability, automated build and release, security controls.",
+        ],
+      },
+      {
+        type: "roles",
+        caption: "A shared platform: consumers build on published contracts, not on each other's code.",
+        tiers: [
+          {
+            tier: "Consumers",
+            purpose: "Product and project teams that own the customer outcome.",
+            roles: [
+              { name: "Product team A", does: "Builds what makes its product different." },
+              { name: "Product team B", does: "Reuses what's shared instead of rebuilding it." },
+              { name: "Project team C", does: "Joins later through self-service, not a negotiation." },
+            ],
+          },
+          {
+            tier: "Contracts",
+            purpose: "The promise between platform and consumer.",
+            roles: [
+              { name: "APIs", does: "Versioned and backward compatible." },
+              { name: "Data contracts", does: "Agreed meaning, quality and ownership." },
+              { name: "SLOs", does: "Availability and performance consumers can plan on." },
+              { name: "Self-service", does: "Onboarding without raising a ticket." },
+            ],
+          },
+          {
+            tier: "Shared platform",
+            purpose: "Built once, run well, owned by the platform team.",
+            roles: [
+              { name: "Data", does: "Trusted, governed, discoverable." },
+              { name: "Capabilities", does: "Identity, onboarding, matching." },
+              { name: "Services", does: "Integration, observability, release, security." },
+            ],
+          },
+        ],
+      },
+      { type: "h2", text: "Why consumers hesitate" },
+      {
         type: "p",
-        text: "At Allianz, I invited the consuming projects into architecture workshops before asking for any commitment. We shared our scope openly and worked through their roadmap with them: what they would no longer need to build, how much sooner they could deliver, and what risk they could hand to us. The conversation was about their outcome, not our platform.",
+        text: "Resistance to a shared platform is usually rational. Before trying to win anyone over, it helps to see the platform from the consumer's side of the table.",
+      },
+      {
+        type: "list",
+        items: [
+          "Timelines: \"My delivery date now depends on someone else's roadmap.\"",
+          "Bottlenecks: \"Every change I need becomes a ticket in another team's queue.\"",
+          "Losing authority: \"I'm accountable for the outcome, but I no longer control the parts.\"",
+          "Fit: \"Will it really handle my edge cases, or will I end up building around it anyway?\"",
+        ],
+      },
+      { type: "h2", text: "What a shared platform can really do for them" },
+      {
+        type: "p",
+        text: "Each of those worries has an honest answer, and a good platform is designed around them. In my experience, the answers that persuade are concrete, not architectural.",
+      },
+      {
+        type: "table",
+        caption: "Each hesitation has an answer — and a lesson below that delivers it.",
+        head: ["The consumer's worry", "What the platform gives them", "Lessons"],
+        rows: [
+          ["Timelines", "Faster delivery: they stop building what already exists. Onboarding fell from 73 days to 5–7 on one platform I led.", "1, 3"],
+          ["Bottlenecks", "Self-service and published contracts, so they build without asking permission.", "3, 4"],
+          ["Losing authority", "A say in the roadmap, open measures and an SLO they can hold the platform to.", "1, 5"],
+          ["Fit", "Proof on their own use case first, an honest list of gaps, and no move until the platform is ready.", "2, 7"],
+        ],
+      },
+      { type: "h2", text: "Seven ways to earn their choice" },
+      { type: "h3", text: "1. Start with their problem, not your platform" },
+      {
+        type: "p",
+        text: "Nobody wakes up wanting a shared platform. They want to ship their project on time, without rebuilding customer matching, authentication or onboarding for the third time. On one programme, I invited the consuming projects into architecture workshops before asking for any commitment. We shared our scope openly and worked through their roadmap with them: what they would no longer need to build, how much sooner they could deliver, and what risk they could hand to us. Six projects adopted the platform, and the steering committee named it one of the key reasons the programme succeeded.",
       },
       {
         type: "quote",
         text: "Ask every consumer: what would you stop building, and what would you ship sooner, if this worked for you?",
       },
-      { type: "h2", text: "2. Win one team, then make them the hero" },
+      { type: "h3", text: "2. Win one team, then make them the hero" },
       {
         type: "p",
-        text: "The first adopter carries all the risk, so treat them like a partner, not a customer. Give them your best people, fix their blockers first and celebrate their success loudly. A peer saying \"it saved us three months\" persuades more teams than any architecture deck.",
+        text: "The first adopter carries all the risk, so treat them like a partner, not a customer. Give them your best people, fix their blockers first and celebrate their success loudly. A peer saying \"it saved us three months\" persuades more teams than any architecture deck, and it answers the fit question better than any promise.",
       },
-      { type: "h2", text: "3. Make the easy path the right path" },
+      { type: "h3", text: "3. Make the easy path the right path" },
       {
         type: "p",
-        text: "If using the platform is harder than building around it, teams will build around it. Self-service onboarding, clear documentation, templates and working examples matter as much as the core services.",
+        text: "If using the platform is harder than building around it, teams will build around it. Self-service onboarding, clear documentation, templates and working examples matter as much as the core services. On a partner platform I led, onboarding took 73 days, with manual steps, including testing, along the way. Consolidating duplicated platforms with reusable APIs and workflow automation brought it down to 5–7 days and scaled capacity from 100 to 1,000 requests a day. Speed is the best sales pitch a platform has.",
       },
-      {
-        type: "p",
-        text: "At Discover, onboarding a partner took 73 days, with manual steps, including testing, along the way. Consolidating duplicated platforms with reusable APIs and workflow automation brought it down to 5–7 days and scaled capacity from 100 to 1,000 requests a day. Speed is the best sales pitch a platform has.",
-      },
-      { type: "h2", text: "4. Contracts, not tickets" },
+      { type: "h3", text: "4. Contracts, not tickets" },
       {
         type: "p",
         text: "A platform that makes every consumer raise a ticket and wait becomes the bottleneck it was meant to remove. Publish versioned APIs and data contracts, keep them backward compatible, and give notice before anything is retired. Consumers should be able to build on you without asking permission.",
       },
-      { type: "h2", text: "5. Measure their outcomes, not your output" },
+      { type: "h3", text: "5. Measure their outcomes, not your output" },
       {
         type: "p",
-        text: "\"We shipped twelve features\" means nothing to a consumer. Track what matters to them: how long onboarding takes, how much they no longer build, the availability they can rely on. At Discover we made service health visible in Datadog, with SLO dashboards everyone could see. Trust grows when the numbers are open.",
+        text: "\"We shipped twelve features\" means nothing to a consumer. Track what matters to them: how long onboarding takes, how much they no longer build, the availability they can rely on. We made service health visible on SLO dashboards everyone could see. Open numbers give consumers back some of the authority they feel they've lost: they can hold the platform to account.",
       },
-      { type: "h2", text: "6. Use mandates as a backstop, not a strategy" },
+      { type: "h3", text: "6. Use mandates as a backstop, not a strategy" },
       {
         type: "p",
-        text: "Mandates get compliance; a better path gets adoption. At Allianz, programme mandates and a reuse roadmap did help, but only to make commitments concrete once teams had already seen the value. A mandate without value creates teams that comply on paper and work around you in practice.",
+        text: "Mandates get compliance; a better path gets adoption. Programme mandates and a reuse roadmap did help me, but only to make commitments concrete once teams had already seen the value. A mandate without value creates teams that comply on paper and work around you in practice.",
       },
-      { type: "h2", text: "7. Retire duplicates with evidence, not deadlines" },
+      { type: "h3", text: "7. Retire duplicates with evidence, not deadlines" },
       {
         type: "p",
-        text: "Consolidation is where platforms win or lose their credibility. When we secured approval for a £40M convergence across 144 applications at Discover, the case rested on evidence about duplication, cost and risk.",
+        text: "Consolidation is where platforms win or lose their credibility. When I secured approval for a £40M convergence across 144 applications, the case rested on evidence about duplication, cost and risk.",
       },
       {
         type: "p",
         text: "The same discipline cuts the other way. One application was due to move to our in-house platform within 120 days, before its licence renewal. There were no requirements documents. My team reverse-engineered them and found more than 15 functional gaps and a compliance risk, so we stopped the move. Forcing a consumer onto a platform that can't serve them yet costs more trust than it saves money.",
       },
+      {
+        type: "stages",
+        caption: "The adoption journey: earn the first consumer, then make joining easy enough that the rest follow.",
+        items: [
+          { name: "Listen", when: "Before any commitment", goal: "Understand each consumer's roadmap and worries.", outputs: ["Workshops", "What they'd stop building"] },
+          { name: "First adopter", when: "Pilot", goal: "Prove it on one real use case.", outputs: ["Best people on it", "A success story"] },
+          { name: "Paved road", when: "Make it easy", goal: "Joining is quicker than building around it.", outputs: ["Self-service", "Contracts and docs"] },
+          { name: "Scale", when: "Grow", goal: "More teams join because peers did.", outputs: ["Open SLOs", "Adoption measures"] },
+          { name: "Retire duplicates", when: "Consolidate", goal: "Move teams when the platform is ready for them.", outputs: ["Evidence-based case", "Gaps closed first"] },
+        ],
+      },
       { type: "h2", text: "The short version" },
       {
         type: "list",
         items: [
-          "Sell their outcome, not your platform.",
-          "Make the first adopter a hero.",
-          "Make the right path the easy path.",
-          "Publish contracts, not ticket queues.",
+          "Define the platform by what consumers need, not by what you own.",
+          "Take their worries seriously: timelines, bottlenecks, authority and fit.",
+          "Sell their outcome, not your platform, and make the first adopter a hero.",
+          "Make the right path the easy path, and publish contracts, not ticket queues.",
           "Measure adoption and their results in the open.",
-          "Mandate last, and only after the value is visible.",
-          "Move teams when the platform is ready for them, not when the deadline says so.",
+          "Mandate last, and move teams only when the platform is ready for them.",
         ],
       },
       {

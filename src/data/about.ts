@@ -34,7 +34,7 @@ export const uniqueness = {
       eyebrow: "How I lead",
       title: "People-centric leader",
       body: "People first, clarity next, delivery always. I recognise the effort behind the outcome, own the mistakes and keep blame out of the room — so teams collaborate instead of protecting themselves.",
-      proof: "“A true servant leader” — in my team's own words; credited by an Allianz steering committee",
+      proof: "“A true servant leader” — in my team's own words; credited by a programme steering committee",
     },
     {
       eyebrow: "Where I come from",
@@ -45,8 +45,8 @@ export const uniqueness = {
     {
       eyebrow: "Where I've worked",
       title: "Both sides of the table",
-      body: "15+ years in consulting and pre-sales, plus in-house leadership at Allianz, Ricoh and Discover. I know how suppliers win and deliver — and how clients buy, fund and own change.",
-      proof: "Consultant to EY, HSBC and Broadridge · leader at Allianz, Ricoh and Discover",
+      body: "15+ years in consulting and pre-sales, plus in-house leadership in insurance, technology and payments. I know how suppliers win and deliver — and how clients buy, fund and own change.",
+      proof: "Consultant to a Big Four firm and global banks · leader in insurance, technology and payments",
     },
   ],
   result: {
@@ -64,21 +64,21 @@ export const progression = {
     {
       role: "Technology leader",
       altitude: "30,000 feet",
-      era: "InterGlobe to Discover",
-      body: "I now lead the people who do that work: most recently an organisation of architects and engineers at Discover, led through their managers, running payment platforms through a merger and a platform convergence.",
+      era: "Consulting to payments",
+      body: "I now lead the people who do that work: most recently an organisation of architects and engineers at a global payments network, led through their managers, running payment platforms through a merger and a platform convergence.",
       strength: "Executives get strategy grounded in engineering reality.",
     },
     {
       role: "Architect",
       altitude: "The systems view",
-      era: "TCS to Ricoh Europe",
-      body: "I moved from components to whole estates — integrating 112 systems for Saudia, building a household view of the customer at Allianz UK, designing data and regulatory solutions for EY, HSBC and Broadridge, and contributing to Ricoh Europe's move to Oracle Cloud.",
+      era: "Systems integration to enterprise",
+      body: "I moved from components to whole estates — integrating 112 systems for a national airline, building a household view of the customer at a global insurer, designing data and regulatory solutions for a Big Four firm and global banks, and contributing to a global technology company's move to Oracle Cloud.",
       strength: "I see how every decision ripples across platforms, data and teams.",
     },
     {
       role: "Developer",
       altitude: "Sea level",
-      era: "TCS · from 2001",
+      era: "A global systems integrator · from 2001",
       body: "I started by writing and shipping code for enterprise integration. I learned how systems really behave under load — and exactly how they fail.",
       strength: "Engineers trust my judgement because I've done their job.",
     },
@@ -94,19 +94,19 @@ export const philosophy = {
       word: "People",
       qualifier: "first",
       body: "Great platforms are built by teams who feel trusted. I invest in people — coaching managers, giving real ownership, and creating the safety to raise problems early.",
-      evidence: "Turned stressed, siloed teams into one team at Discover",
+      evidence: "Turned stressed, siloed teams into one team",
     },
     {
       word: "Clarity",
       qualifier: "next",
       body: "Ambiguity is the enemy of delivery. I turn complex estates into a clear target architecture, explicit decision rights and a roadmap everyone can explain.",
-      evidence: "A shared-platform vision that six projects adopted at Allianz UK",
+      evidence: "A shared-platform vision that six projects adopted",
     },
     {
       word: "Delivery",
       qualifier: "always",
       body: "Care and clarity only matter when they ship. I hold a high bar for outcomes and resilience, and I own the hard days as well as the good ones.",
-      evidence: "Multi-region resilience built for 99.999% availability at Discover",
+      evidence: "Multi-region resilience built for 99.999% availability",
     },
   ],
 };
@@ -114,7 +114,7 @@ export const philosophy = {
 export const now = {
   title: "My situation",
   paragraphs: [
-    "In June 2026, my role at Discover became redundant as part of Capital One's restructuring following the acquisition.",
+    "In June 2026, my role became redundant following an acquisition.",
     "Restructuring is something I understand from the inside — I directed the £40M, 144-platform convergence programme after the merger. Being on the other side of it hasn't changed my view: well-run integration is how organisations get stronger.",
     "It has also given me something rare in a 25-year career: time to step back, sharpen my tools and choose my next chapter deliberately.",
   ],
@@ -139,27 +139,27 @@ export const now = {
 export const principles = [
   {
     title: "Start with the investment case",
-    body: "Architecture earns its place when it changes a business decision. The £40M convergence at Discover began as an evidence base for an Investment Council — not a diagram.",
+    body: "Architecture earns its place when it changes a business decision. A £40M platform convergence I led began as an evidence base for an Investment Council — not a diagram.",
   },
   {
     title: "Silos are a trust problem",
-    body: "At Discover, stressed teams had stopped collaborating. Recognising the effort, owning the mistakes and removing blame turned them back into one team.",
+    body: "In one organisation, stressed teams had stopped collaborating. Recognising the effort, owning the mistakes and removing blame turned them back into one team.",
   },
   {
     title: "Earn adoption — don't mandate it",
-    body: "At Allianz UK, architecture workshops showed each project what was in it for them. Six adopted the shared platform, and the steering committee credited the approach.",
+    body: "At a global insurer, architecture workshops showed each project what was in it for them. Six adopted the shared platform, and the steering committee credited the approach.",
   },
   {
     title: "Lead without authority",
-    body: "At Ricoh I had no direct reports — just partners and internal experts. Clarity about what's needed, and clearing their blockers, kept six parallel workstreams moving.",
+    body: "On one transformation I had no direct reports — just partners and internal experts. Clarity about what's needed, and clearing their blockers, kept six parallel workstreams moving.",
   },
   {
     title: "Leave clients self-sufficient",
-    body: "From EY to McDonald's, I trained client teams until they could run the solution without us. A sale isn't finished until the client owns it.",
+    body: "From a Big Four firm to a global consumer brand, I trained client teams until they could run the solution without us. A sale isn't finished until the client owns it.",
   },
   {
     title: "Adopt AI with governance",
-    body: "A chatbot at Ricoh cut support-desk emails and calls by 27%; Agentic AI at Discover absorbed a 360% surge with the same team. Clear guardrails make good teams faster.",
+    body: "A chatbot I architected cut support-desk emails and calls by 27%; Agentic AI absorbed a 360% surge with the same team. Clear guardrails make good teams faster.",
   },
 ];
 
@@ -211,15 +211,15 @@ export const summary = {
       href: "#different",
     },
     {
-      text: "Head of Technology at Discover: led payment platforms through a merger and a platform convergence, with Agentic AI absorbing the surge.",
+      text: "Head of Technology at a global payments network: led payment platforms through a merger and a platform convergence, with Agentic AI absorbing the surge.",
       href: "/experience/discover",
     },
     {
-      text: "At Allianz UK, built a single customer view (SCV) and household view, enhanced data quality rules and established data governance.",
+      text: "At a global insurer, built a single customer view (SCV) and household view, enhanced data quality rules and established data governance.",
       href: "/experience/allianz",
     },
     {
-      text: "15+ years in consulting and pre-sales — built an architecture function at IGT from the ground up, and grew SITA into a second business line.",
+      text: "15+ years in consulting and pre-sales — built an architecture function from the ground up, and grew a key aviation account into a second business line.",
       href: "/experience/interglobe",
     },
     {
@@ -236,7 +236,7 @@ export const impact = [
   { value: "360%", label: "Surge absorbed with Agentic AI, same team", href: "/experience/discover" },
   { value: "27%", label: "Fewer support calls via an AI chatbot", href: "/experience/ricoh" },
   { value: "21%", label: "Better MDM matching rates", href: "/experience/allianz" },
-  { value: "6", label: "Workstreams led in parallel at Ricoh", href: "/experience/ricoh" },
+  { value: "6", label: "Workstreams led in parallel", href: "/experience/ricoh" },
   { value: "£40M", label: "Convergence across 144 platforms", href: "/experience/discover" },
   { value: "£1.5M+", label: "Annual revenue from a function I built", href: "/experience/interglobe" },
 ];
@@ -256,7 +256,7 @@ export const bookshelf = {
       title: "Leaders Eat Last",
       author: "Simon Sinek",
       idea: "Leaders create safety by taking the pressure themselves, so their teams don't have to.",
-      inPractice: "When work surged at Discover, I absorbed the pressure rather than passing it down — one of my architects described exactly that in their recommendation.",
+      inPractice: "When work surged, I absorbed the pressure rather than passing it down — one of my architects described exactly that in their recommendation.",
       href: "/testimonials",
       linkLabel: "Read the recommendations",
     },
@@ -264,25 +264,25 @@ export const bookshelf = {
       title: "Start With Why",
       author: "Simon Sinek",
       idea: "People commit to a purpose long before they commit to a plan.",
-      inPractice: "At Allianz UK I opened with why a shared platform mattered to each team — and six projects chose to adopt it instead of building their own.",
+      inPractice: "At a global insurer, I opened with why a shared platform mattered to each team — and six projects chose to adopt it instead of building their own.",
       href: "/experience/allianz",
-      linkLabel: "The Allianz story",
+      linkLabel: "The insurance case study",
     },
     {
       title: "The 7 Habits of Highly Effective People",
       author: "Stephen R. Covey",
       idea: "Understand before you try to be understood, and start with the end in mind.",
-      inPractice: "Discovery workshops before any solution design, and a North Star before any roadmap — from Pitney Bowes clients to Discover's convergence.",
+      inPractice: "Discovery workshops before any solution design, and a North Star before any roadmap — from consulting clients to a £40M platform convergence.",
       href: "/experience/discover",
-      linkLabel: "The Discover story",
+      linkLabel: "The payments case study",
     },
     {
       title: "The 21 Irrefutable Laws of Leadership",
       author: "John C. Maxwell",
       idea: "Leadership is influence — it isn't a job title.",
-      inPractice: "At Ricoh I had no direct reports. Progress came from influence: giving partners clarity and clearing their blockers.",
+      inPractice: "On one transformation I had no direct reports. Progress came from influence: giving partners clarity and clearing their blockers.",
       href: "/experience/ricoh",
-      linkLabel: "The Ricoh story",
+      linkLabel: "The transformation case study",
     },
   ],
   podcast: "And I keep learning: Simon Sinek's podcast, A Bit of Optimism, is a regular listen.",
@@ -318,7 +318,7 @@ export const beyondWork = {
     {
       eyebrow: "Giving back",
       title: "Governor, fundraiser, mentor",
-      body: "I serve as a Parent Governor at my son's school and help raise funds for his cricket club. At Discover, I co-led our Asian Pacific employee resource group, mentoring colleagues along the way.",
+      body: "I serve as a Parent Governor at my son's school and help raise funds for his cricket club. At my last employer, I co-led our Asian Pacific employee resource group, mentoring colleagues along the way.",
     },
     {
       eyebrow: "Downtime",

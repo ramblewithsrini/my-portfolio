@@ -26,17 +26,17 @@ export const leadershipMoments: LeadershipMoment[] = [
     id: "visible",
     theme: "Standing up for my people",
     title: "Making good work visible",
-    teaser: "A VP pushed back on promoting one of my architects. Instead of arguing harder, I changed what they could see.",
+    teaser: "A VP pushed back on promoting someone in my team. Instead of arguing harder, I changed what they could see.",
     situation:
-      "One of my architects consistently did the work that held major initiatives together. When I put him forward for promotion from Senior to Principal Architect, the VP of the organisation pushed back: they hadn't seen enough of his work.",
+      "Someone in my team consistently did the work that held major initiatives together. When I put them forward for promotion, the VP of the organisation pushed back: they hadn't seen enough of the work.",
     theirSide:
-      "The VP's concern was fair. Leadership operated at a very high level, and a promotion has to rest on evidence, not on one manager's word. His best work happened in design sessions and delivery teams, far from the rooms where the decision was being made.",
+      "The VP's concern was fair. Leadership operated at a very high level, and a promotion has to rest on evidence, not on one manager's word. The best of that work happened in design sessions and delivery teams, far from the rooms where the decision was being made.",
     whatIDid: [
-      "Rather than argue harder, I built the evidence. I gathered feedback from his peers and collaborators across teams, so the case came from the people who worked with him, not just from me.",
-      "Then I invited him to present the initiative he was leading to its steering committee, so senior leaders could see his skills for themselves.",
+      "Rather than argue harder, I built the evidence. I gathered feedback from peers and collaborators across teams, so the case came from the people who worked with them, not just from me.",
+      "Then I invited them to present the initiative they were leading to its steering committee, so senior leaders could see their skills first-hand.",
     ],
     whatChanged: [
-      "The steering committee valued his thinking, he was promoted to Principal Architect, and he stayed with the company.",
+      "The steering committee valued their thinking, the promotion followed, and they stayed with the company.",
       "It changed how I lead, too: I now see it as my job to give my team a platform to be seen, not to wait for a promotion case to make it happen.",
     ],
     lesson: "Visibility isn't only the employee's job. It's their manager's job too.",
@@ -47,7 +47,7 @@ export const leadershipMoments: LeadershipMoment[] = [
     title: "From blamed to trusted",
     teaser: "I inherited a demoralised team that was blamed for every missed delivery. I started by listening — to both sides.",
     situation:
-      "I inherited an eight-person team carrying heavy technical debt, with low morale. They worked hard, but nobody recognised it. Instead they were blamed for missed deliveries by a demanding business team that had lost confidence in them.",
+      "I inherited a team carrying heavy technical debt, with low morale. They worked hard, but nobody recognised it. Instead they were blamed for missed deliveries by a demanding business team that had lost confidence in them.",
     theirSide:
       "Both sides had reason to be frustrated. The business had watched deliveries slip and needed new capabilities to compete. The team was working against technical debt they hadn't created, and felt nobody was listening to them either.",
     whatIDid: [
@@ -56,7 +56,7 @@ export const leadershipMoments: LeadershipMoment[] = [
     ],
     whatChanged: [
       "Within six months, both sides trusted us. That let me streamline the engineering process and agree a roadmap to deliver the capabilities the business wanted, at scale.",
-      "In my first year, the team delivered more than in the previous two years combined. Nobody left or asked to move: all eight chose to stay. The business director thanked me personally for my part.",
+      "In my first year, the team delivered more than in the previous two years combined. Nobody left or asked to move: everyone chose to stay. The business director thanked me personally for my part.",
     ],
     lesson: "A team can't fix its delivery while it's busy defending itself. Win trust on both sides first, and delivery follows.",
   },

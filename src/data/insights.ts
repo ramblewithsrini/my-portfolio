@@ -129,7 +129,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "The split between operational and analytical use matters. A quote or a claim needs current, accurate data in milliseconds; Snowflake needs complete history, shaped for questions. The platform serves the first and feeds the second, from the same governed model, so the number on the dashboard matches what the customer sees.",
+        text: "The split between operational and analytical use matters. A quote or a claim needs current, accurate data in milliseconds; Snowflake needs complete history, shaped for questions. The platform serves the first through API calls and events, and feeds the second through ELT and change data capture (CDC), which copies only what changed, as it changes, rather than reloading whole tables overnight. Both come from the same governed model, so the number on the dashboard matches what the customer sees.",
       },
       { type: "h2", text: "Customer data in a domain-driven world" },
       {
@@ -152,7 +152,7 @@ export const articles: Article[] = [
       { type: "h2", text: "What the platform team is in charge of" },
       {
         type: "p",
-        text: "The platform team owns the platform as a product. That's narrower than many people assume, and the narrowness is what makes it work.",
+        text: "The platform team owns the platform as a product. It's led by a shared platform lead, who owns the roadmap and is the single point of accountability when something needs escalating. That remit is narrower than many people assume, and the narrowness is what makes it work.",
       },
       {
         type: "list",

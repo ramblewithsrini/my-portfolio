@@ -4,7 +4,7 @@
 export const profile = {
   name: "Srini Vankeepuram",
   initials: "SV",
-  headline: "Architecture, Engineering & Data Leader",
+  headline: "Architecture, Engineering, Data & AI Leader",
   tagline:
     "25 years turning complex financial-services estates into investment cases, target architectures and executable roadmaps.",
   bio: "Most recently Head of Technology for Partner Experience and Payments at Discover Financial Services, leading a 30-person architecture and engineering organisation — and the data strategy — for its payment platforms.",

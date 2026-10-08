@@ -40,7 +40,7 @@ export const uniqueness = {
       eyebrow: "Where I come from",
       title: "Grown from the code up",
       body: "Developer, then architect, then technology leader. I can challenge a design with an engineer at sea level and make the investment case to an executive board at 30,000 feet.",
-      proof: "From writing code to leading a 30-person organisation",
+      proof: "From writing code to leading an organisation of architects and engineers",
     },
     {
       eyebrow: "Where I've worked",
@@ -114,7 +114,7 @@ export const philosophy = {
 export const now = {
   title: "My situation",
   paragraphs: [
-    "In June 2026, my role became redundant following an acquisition.",
+    "My role ended in August 2026, made redundant following an acquisition.",
     "Restructuring is something I understand from the inside — I directed the £40M, 144-platform convergence programme after the merger. Being on the other side of it hasn't changed my view: well-run integration is how organisations get stronger.",
     "It has also given me something rare in a 25-year career: time to step back, sharpen my tools and choose my next chapter deliberately.",
   ],
@@ -129,6 +129,10 @@ export const now = {
       {
         label: "Consulting",
         roles: ["Pre-sales", "Client engagement", "Customer-facing leadership"],
+      },
+      {
+        label: "Contract & interim",
+        roles: ["Interim architecture leadership", "Platform & solution architecture", "AI delivery"],
       },
     ],
     focus:
@@ -207,7 +211,7 @@ export const summary = {
   title: "In 30 seconds",
   items: [
     {
-      text: "Architecture, engineering & data leader — 25 years, from developer to Head of Technology.",
+      text: "Architecture, engineering, data & AI leader — 25 years, from developer to Head of Technology.",
       href: "#different",
     },
     {
@@ -223,7 +227,11 @@ export const summary = {
       href: "/experience/interglobe",
     },
     {
-      text: "Available immediately · London · SC-eligible · in-house or consulting roles.",
+      text: "Still hands-on with AI: built a RAG assistant on AWS Bedrock and a knowledge graph with GraphRAG and an MCP server, each tested and published with code.",
+      href: "/lab/research-graph",
+    },
+    {
+      text: "Available immediately · London · SC-eligible · permanent, consulting or contract roles.",
       href: "#situation",
     },
   ],
@@ -236,7 +244,7 @@ export const impact = [
   { value: "360%", label: "Surge absorbed with Agentic AI, same team", href: "/experience/discover" },
   { value: "27%", label: "Fewer support calls via an AI chatbot", href: "/experience/ricoh" },
   { value: "21%", label: "Better MDM matching rates", href: "/experience/allianz" },
-  { value: "6", label: "Workstreams led in parallel", href: "/experience/ricoh" },
+  { value: "15/15", label: "Correct AI answers on my knowledge-graph lab", href: "/lab/research-graph" },
   { value: "£40M", label: "Convergence across 144 platforms", href: "/experience/discover" },
   { value: "£1.5M+", label: "Annual revenue from a function I built", href: "/experience/interglobe" },
 ];

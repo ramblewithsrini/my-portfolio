@@ -169,7 +169,12 @@ export default function ExperiencePage() {
         <SectionHeading index="02" title="Selected Work" />
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((p, i) => (
-            <Reveal key={p.title} delay={(i % 2) * 100}>
+            <Reveal
+              key={p.title}
+              delay={(i % 2) * 100}
+              // An odd last card spans both columns rather than sitting alone.
+              className={projects.length % 2 && i === projects.length - 1 ? "md:col-span-2" : undefined}
+            >
               <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50">
                 <div
                   className="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent-2/0 blur-3xl transition-colors duration-500 group-hover:bg-accent-2/30"

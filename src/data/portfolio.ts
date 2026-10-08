@@ -235,6 +235,14 @@ export const projects: Project[] = [
       "Applied governed Agentic AI to vulnerability identification and audit monitoring within a regulated payments environment.",
     tech: ["Agentic AI", "Security", "Compliance"],
   },
+  {
+    title: "Music and voice on one call",
+    client: "TalkMusically · Co-founder & CTO (part-time) · 2012–2016",
+    impact: "~£1.5M raised · own codec",
+    description:
+      "Alongside my full-time roles, I co-founded a VoIP start-up whose app let people talk and share music live on the same call. As CTO I led the technology, including our own codec to carry music and voice together on one channel, and helped the founding team raise close to £1.5M. The company filed a patent application for the approach; it has since closed.",
+    tech: ["VoIP", "Audio codec", "Start-up", "Fundraising"],
+  },
 ];
 
 export const skills: { group: string; items: string[] }[] = [

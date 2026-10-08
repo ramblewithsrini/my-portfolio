@@ -15,7 +15,9 @@ export type Block =
   // Diagrams and tables, drawn by the article page.
   | { type: "stages"; caption: string; items: { name: string; when: string; goal: string; outputs: string[] }[] }
   | { type: "roles"; caption: string; tiers: { tier: string; purpose: string; roles: { name: string; does: string }[] }[] }
-  | { type: "table"; caption: string; head: string[]; rows: string[][]; sources?: { label: string; href: string }[] };
+  | { type: "table"; caption: string; head: string[]; rows: string[][]; sources?: { label: string; href: string }[] }
+  // A hand-drawn architecture diagram, picked by name from the article page.
+  | { type: "diagram"; name: "shared-data-platform"; caption: string };
 
 /** The readable words in a block, for reading time. */
 function blockWords(b: Block): string[] {
@@ -28,6 +30,8 @@ function blockWords(b: Block): string[] {
       return b.tiers.flatMap((t) => [t.purpose, ...t.roles.flatMap((r) => [r.name, r.does])]);
     case "table":
       return b.rows.flat();
+    case "diagram":
+      return [b.caption];
     default:
       return [b.text];
   }
@@ -45,6 +49,214 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+  {
+    slug: "who-owns-what-in-a-shared-data-platform",
+    title: "Who owns what? Running a shared data platform for consumer applications",
+    dek: "A follow-up to my article on shared platforms: the architecture, using an insurer's customer data, and the split of responsibilities between the platform team, data producers, data governance and executive leadership.",
+    date: "2026-10-08",
+    status: "published",
+    tags: ["Data platforms", "Data governance", "Architecture", "Operating model"],
+    blocks: [
+      {
+        type: "p",
+        text: "After I published my article on winning consumers for a shared platform, a product owner I've worked with called me. They'd read it and had sharp questions. Where does the platform team's job end and mine begin? If my marketing data is wrong, who fixes it? Who decides whose request goes first? And who do I call at 2 a.m.?",
+      },
+      {
+        type: "p",
+        text: "They're the right questions. A shared data platform rarely fails because of its technology. It fails when nobody is clear who owns what, so every problem lands in a queue between teams. This article is my answer, using an insurer's customer data as the example: the architecture first, then who is in charge of each part.",
+      },
+      { type: "h2", text: "The architecture: customer data at an insurer" },
+      {
+        type: "p",
+        text: "Picture a consumer insurer selling car and home cover. Policyholders buy and renew through a self-service portal, adding drivers, vehicles and addresses. The motor and home policy systems hold the cover itself. The marketing team runs promotions and records who responded and through which channel. Third-party providers enrich the picture: Dun & Bradstreet with company data for business and fleet customers, and LexisNexis Risk Solutions with identity, claims and no-claims history. Each of these is a data producer.",
+      },
+      {
+        type: "p",
+        text: "The shared data platform (SDP) sits in the middle. Producers publish into it through agreed data contracts. The platform matches records into one trusted customer and household view, validates the data and serves it to quote, policy, claims and service applications in real time. It also feeds Snowflake, the analytical warehouse, for pricing analysis, reporting and machine learning.",
+      },
+      {
+        type: "diagram",
+        name: "shared-data-platform",
+        caption: "Logical architecture: producers send data by API calls, events and ETL; contracts check it at the door; the platform serves applications through API calls and loads Snowflake through ELT.",
+      },
+      {
+        type: "p",
+        text: "Here is what each layer holds.",
+      },
+      {
+        type: "roles",
+        caption: "A shared data platform for an insurer's customer data: producers publish through contracts; the platform serves operational apps and feeds Snowflake.",
+        tiers: [
+          {
+            tier: "Data producers",
+            purpose: "Create the data and own its accuracy at source.",
+            roles: [
+              { name: "Self-service portal", does: "Policyholder details, drivers, vehicles, consents and preferences." },
+              { name: "Policy systems", does: "Motor and home policies, renewals, cover changes and payments." },
+              { name: "Marketing team", does: "Promotions, campaign responses and channel preferences." },
+              { name: "Third-party providers", does: "Dun & Bradstreet company data; LexisNexis identity, claims and no-claims history." },
+            ],
+          },
+          {
+            tier: "Ingestion through contracts",
+            purpose: "How data enters: on the contract's terms, never around it.",
+            roles: [
+              { name: "Data contracts", does: "Schema, meaning, quality rules, owner and freshness, versioned." },
+              { name: "Pipelines", does: "Batch ETL, streaming events and APIs, built by producers to the contract." },
+              { name: "Validation at the door", does: "Records that break the contract are quarantined, not loaded." },
+            ],
+          },
+          {
+            tier: "Shared data platform",
+            purpose: "Built once, run well, owned by the platform team.",
+            roles: [
+              { name: "Customer and household view", does: "Matching and master data: one trusted policyholder, linked to their household." },
+              { name: "Quality and lineage", does: "Checks, metadata and a trail from source to use." },
+              { name: "Access and privacy", does: "Role-based access, consent and masking of personal data." },
+              { name: "Serving layer", does: "APIs and events for applications, with published SLOs." },
+            ],
+          },
+          {
+            tier: "Consumers",
+            purpose: "Use the data to serve customers and decide better.",
+            roles: [
+              { name: "Customer applications", does: "Quote, buy, renew, claims and service, reading through APIs and events." },
+              { name: "Snowflake (OLAP)", does: "Pricing analysis, reporting and machine learning on full history." },
+              { name: "Analysts and data scientists", does: "Self-service queries on governed, documented data." },
+            ],
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: "The split between operational and analytical use matters. A quote or a claim needs current, accurate data in milliseconds; Snowflake needs complete history, shaped for questions. The platform serves the first and feeds the second, from the same governed model, so the number on the dashboard matches what the customer sees.",
+      },
+      { type: "h2", text: "Customer data in a domain-driven world" },
+      {
+        type: "p",
+        text: "In a domain-driven organisation, each domain owns its own data. Motor owns motor policies, claims owns claims, marketing owns campaigns. That's healthy: the people closest to the data own it. But every one of those domains also holds a copy of the customer, and they rarely agree. The motor system knows Jane Smith at one address; the home system knows J. Smith at another; marketing knows an email address that matches neither.",
+      },
+      {
+        type: "p",
+        text: "So the customer becomes a domain of its own. It owns identity, contact details, consent and the household: who lives with whom, and who is insured for what. Other domains keep the data they need for their own work, but they refer to the customer through one shared identifier and take changes from the customer domain rather than editing their own copy.",
+      },
+      {
+        type: "list",
+        items: [
+          "Domains own their facts: a policy belongs to the policy domain, a claim to claims, a campaign response to marketing.",
+          "The customer domain owns who the customer is: identity, contact details, consent and household links.",
+          "The platform publishes the trusted customer as a data product, with a contract, so every domain uses the same identity.",
+          "Third-party data enriches the customer record; it doesn't overwrite what the customer told you without a rule that says so.",
+        ],
+      },
+      { type: "h2", text: "What the platform team is in charge of" },
+      {
+        type: "p",
+        text: "The platform team owns the platform as a product. That's narrower than many people assume, and the narrowness is what makes it work.",
+      },
+      {
+        type: "list",
+        items: [
+          "Data modelling: the canonical model, and how it changes. Producers and consumers propose; the platform team decides, so the model stays coherent.",
+          "Data contracts: the template, the tooling and the checks. Every contract names an owner, a schema, quality rules and freshness, and every change is versioned and backward compatible.",
+          "Prioritisation: one public backlog for every producer and consumer request, ranked against agreed criteria, not by who shouts loudest.",
+          "SLAs and SLOs: published targets for availability, latency and data freshness, on dashboards everyone can see.",
+          "Support: a single front door, with clear routes for incidents, requests and questions, and an on-call rota for the platform itself.",
+          "Security and privacy controls: access, consent, masking and audit trails, built into the platform rather than bolted on by each consumer.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "The platform team owns the road, the rules of the road and the signage. It doesn't drive everyone's car.",
+      },
+      { type: "h2", text: "What the producers are in charge of" },
+      {
+        type: "p",
+        text: "This is where my friend's first question lands. The producer owns the data, so the producer owns its accuracy. The platform can catch bad data at the door, but it can't know that a campaign code is wrong or that a supplier changed a field's meaning overnight.",
+      },
+      {
+        type: "list",
+        items: [
+          "Ingestion: building and running their pipelines (ETL, events or APIs) to the contract.",
+          "Quality at source: fixing data where it's created, not patching it downstream.",
+          "Meaning: keeping definitions accurate and telling the platform before anything changes.",
+          "Their own incidents: when their feed breaks or their data is wrong, they're first on the call.",
+          "Third parties: a producer team owns each external provider's feed and holds the provider to its contract.",
+        ],
+      },
+      { type: "h2", text: "Who's in charge of what, at a glance" },
+      {
+        type: "table",
+        caption: "Responsibilities in a shared data platform. A = accountable (one owner); C = consulted; I = informed.",
+        head: ["Area", "Platform team", "Producers", "Data governance", "Executive leadership"],
+        rows: [
+          ["Canonical data model", "A", "C", "C", "I"],
+          ["Data contracts", "A (standard and checks)", "A (their contracts)", "C", "I"],
+          ["Ingestion pipelines (ETL, events, APIs)", "C", "A", "I", "I"],
+          ["Data quality at source", "C", "A", "C", "I"],
+          ["Definitions and data ownership", "C", "C", "A", "I"],
+          ["Prioritisation of the backlog", "A", "C", "C", "C"],
+          ["SLAs and SLOs", "A", "C", "I", "I"],
+          ["Support and incidents (platform)", "A", "C", "I", "I"],
+          ["Access, privacy and retention policy", "C", "C", "A", "I"],
+          ["Funding, mandate and conflicts", "C", "C", "C", "A"],
+        ],
+      },
+      { type: "h2", text: "The role of data governance" },
+      {
+        type: "p",
+        text: "Data governance sets the rules the platform enforces. It decides who owns each data domain, agrees business definitions, and sets policy on privacy, retention and access. It also resolves disputes about meaning: when marketing and finance define \"active customer\" differently, governance decides, and the contract records the answer.",
+      },
+      {
+        type: "p",
+        text: "Good governance is light and fast. It names owners and makes decisions; it doesn't become a committee every change must queue for. The platform team turns its policies into automated checks, so most governance happens in the pipeline, not in a meeting.",
+      },
+      { type: "h2", text: "The role of executive leadership" },
+      {
+        type: "p",
+        text: "Executives don't need to understand the data model. They need to do three things that nobody else can.",
+      },
+      {
+        type: "list",
+        items: [
+          "Fund the platform as a product, with a long-lived team, not as a project that ends at go-live.",
+          "Give it a mandate: the platform is the agreed route for shared data, and new duplicates need a reason.",
+          "Break ties: when two senior stakeholders both say their request comes first, the decision goes up, not round in circles.",
+        ],
+      },
+      {
+        type: "p",
+        text: "As I wrote last time, a mandate is a backstop, not a strategy. But a shared data platform without visible executive backing becomes optional, and optional platforms get worked around.",
+      },
+      { type: "h2", text: "Back to the product owner's questions" },
+      {
+        type: "table",
+        caption: "The questions I was asked, and the short answers.",
+        head: ["Question", "Answer"],
+        rows: [
+          ["Where does the platform's job end and mine begin?", "The platform owns the model, contracts, controls and service levels. You own your product's use of the data and the requests you raise."],
+          ["If my marketing data is wrong, who fixes it?", "The producer, at source. The platform should have caught it at the door if it broke the contract, and will help find the cause."],
+          ["Who decides whose request goes first?", "The platform team, in one public backlog, against agreed criteria. Ties go to executive leadership."],
+          ["Who do I call at 2 a.m.?", "The platform's single front door. It routes to the platform on-call, or to the producer whose feed broke."],
+        ],
+      },
+      { type: "h2", text: "The short version" },
+      {
+        type: "list",
+        items: [
+          "Producers own their data and its quality; they publish through contracts.",
+          "The platform team owns the model, contracts, controls, priorities, SLOs and support.",
+          "Data governance owns definitions, ownership and policy, enforced in the pipeline.",
+          "Executive leadership funds the platform as a product, mandates it and breaks ties.",
+          "Serve applications and the warehouse from one governed model, so everyone sees the same number.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Clear ownership is the cheapest performance improvement a data platform will ever get.",
+      },
+    ],
+  },
   {
     slug: "knowledge-graph-graphrag-mcp",
     title: "Who's who? Entity resolution, a knowledge graph and GraphRAG — measured",

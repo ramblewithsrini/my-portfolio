@@ -497,6 +497,11 @@ export const stories: Record<string, Story> = {
         approach: "Lead Architect for SITA iBorders in Oman — an integrated border management solution that combines risk assessment of traveller data with the tools to manage, monitor and operate border controls, focusing resources on higher-risk travellers.",
         outcome: "iBorders was purchased by Oman and Saudi Arabia.",
       },
+      {
+        title: "Bringing the innovation lab to IGT",
+        challenge: "Airlines wanted to see what modernisation could look like before committing to it.",
+        approach: "Drawing on the TCS lab, I helped build a smaller innovation lab at IGT and presented it to Emirates, collaborating with the airline's own innovation team.",
+      },
     ],
     leadershipStory: {
       title: "Building an architecture business from zero",
@@ -533,7 +538,7 @@ export const stories: Record<string, Story> = {
 
   tcs: {
     summary:
-      "Ten years at Tata Consultancy Services, growing from lead developer on a US telecoms platform to Lead Solution Architect for Saudi Arabian Airlines' enterprise-wide integration and architect on British Airways' Travel Programme — and leading TCS's airline innovation lab, whose demonstrations were used by British Airways, KLM and SITA.",
+      "Ten years at Tata Consultancy Services, growing from lead developer on a US telecoms platform to Lead Solution Architect for Saudi Arabian Airlines' enterprise-wide integration and architect on British Airways' Travel Programme — and, as technical architect in its founding team, helping design and build TCS's airline innovation lab, whose demonstrations were used by British Airways, KLM and SITA.",
     context: [
       "I joined TCS in 2001 as a developer and spent ten years growing into an architect — first in US telecoms, then across some of the world's best-known airlines.",
       "Airlines ran on a tangle of custom messaging, middleware and industry protocols. The work was to replace that complexity with standard, service-oriented integration that cut the cost of ownership and let airlines launch new products faster.",
@@ -579,8 +584,9 @@ export const stories: Record<string, Story> = {
         body: "Architect of the airline-wide integration platform on the IBM integration suite.",
       },
       {
-        date: "Late 2008",
-        title: "Led the TCS airline innovation lab",
+        date: "2008",
+        title: "Technical architect — TCS airline innovation lab",
+        body: "Part of the founding team that designed and built the lab; presented its demonstrations to airline CEOs and CTOs.",
       },
       {
         date: "May 2010 – Feb 2011",
@@ -597,9 +603,9 @@ export const stories: Record<string, Story> = {
       },
       {
         title: "An airline innovation lab",
-        challenge: "Airlines and their advisers wanted to see new capabilities working before investing in them.",
-        approach: "Led the TCS airline innovation lab, building demonstrations of airline capabilities.",
-        outcome: "Demonstrations used by British Airways, KLM and SITA.",
+        challenge: "Airline leaders wanted to see new capabilities working on their own kind of operations before investing in them.",
+        approach: "As technical architect in the founding team, I helped design and build TCS's airline innovation lab. Its demonstrations included a modernised self-service agent portal, a route to move agents off green-screen host terminals, and modernised baggage messaging over IATA Type B. I presented them to the CEOs and CTOs of several airlines.",
+        outcome: "Demonstrations used by British Airways, KLM and SITA — and a habit I've kept ever since: build something working, then decide.",
       },
       {
         title: "Messaging architecture for BA's Travel Programme",

@@ -163,7 +163,7 @@ export const experience: Job[] = [
     highlights: [
       "Lead Solution Architect for Saudi Arabian Airlines: an ESB platform on the IBM integration suite, integrating 112 systems including Amadeus and Sabre, in a $25M programme.",
       "Architect for British Airways' Travel Programme (TTP) messaging architecture on Progress, and for SOA governance on WSO2.",
-      "Led the TCS airline innovation lab; its demonstrations were used by British Airways, KLM and SITA.",
+      "Technical architect in the founding team of TCS's airline innovation lab: designed and built demonstrations, presented them to airline CEOs and CTOs, and saw them used by British Airways, KLM and SITA.",
       "Progressed from Lead Developer to Lead Solution Architect over ten years, across Qwest, British Airways, SITA, Singapore Airlines and Hawaiian Airlines.",
       "Supported pre-sales for opportunities worth $3M to $25M, contributing to wins worth $50M.",
     ],

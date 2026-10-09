@@ -500,7 +500,7 @@ export const stories: Record<string, Story> = {
       {
         title: "Bringing the innovation lab to IGT",
         challenge: "Airlines wanted to see what modernisation could look like before committing to it.",
-        approach: "Drawing on the TCS lab, I helped build a smaller innovation lab at IGT and presented it to Emirates, collaborating with the airline's own innovation team.",
+        approach: "In 2013, drawing on the TCS lab, I helped build a smaller innovation lab at IGT and presented it to Emirates, collaborating with the airline's own innovation team.",
       },
     ],
     leadershipStory: {

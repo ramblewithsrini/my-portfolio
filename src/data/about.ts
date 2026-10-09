@@ -227,8 +227,12 @@ export const summary = {
       href: "/experience/interglobe",
     },
     {
-      text: "Still hands-on with AI: built a RAG assistant on AWS Bedrock and a knowledge graph with GraphRAG and an MCP server, each tested and published with code.",
+      text: "Building to learn since 2008: from airline innovation labs I helped build at two global systems integrators, presented to airline CEOs and CTOs, to an MDM matching engine, a RAG assistant on AWS Bedrock and a knowledge graph with GraphRAG and an MCP server, each tested and published with code.",
       href: "/lab/research-graph",
+    },
+    {
+      text: "Founder mindset: co-founded a music-and-voice start-up as CTO, building our own codec and helping raise close to £1.5M.",
+      href: "/experience#projects",
     },
     {
       text: "Available immediately · London · SC-eligible · permanent, consulting or contract roles.",

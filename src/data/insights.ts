@@ -50,6 +50,106 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "leading-distributed-teams-through-agentic-ai",
+    title: "One team, three time zones: leading distributed engineers through the move to Agentic AI",
+    dek: "How I keep a team spread across India, the UK and the US working as one, and how I handle the real concerns people raise when AI agents arrive in their work.",
+    date: "2026-10-09",
+    status: "published",
+    tags: ["Leadership", "Agentic AI", "Distributed teams", "Change"],
+    blocks: [
+      {
+        type: "p",
+        text: "I was recently asked about my experience of leading a team spread across several countries, and how I bring people with me when Agentic AI changes their work. Thinking it through, I realised they are really one question. Both are about trust: trust that you are treated the same wherever you sit, and trust that a new tool is there to help you, not to replace you.",
+      },
+      { type: "h2", text: "Part 1: one team, not three" },
+      {
+        type: "p",
+        text: "My most recent teams were spread across India, the UK and the US. The risk in that set-up is never the technology. It is that the team in the same time zone as the leader becomes the 'real' team, and everyone else becomes a delivery centre that receives decisions made while they were asleep.",
+      },
+      { type: "h3", text: "One bar, wherever you sit" },
+      {
+        type: "p",
+        text: "The same standards, the same career paths and the same visibility apply in every location. Some of my teams owned a domain end to end; others were organised by location. Either way the rule was the same: a team owns an outcome, not a queue of tickets handed over from another office. When someone does great work, the people who make decisions about their career hear about it, whichever office they sit in.",
+      },
+      { type: "h3", text: "Write decisions down" },
+      {
+        type: "p",
+        text: "If a decision only exists in a meeting, half the team missed it. I write decisions down with the reasons and the trade-offs, and when I inherited a team that had lost the business's trust, a weekly action log shared with everyone did more to rebuild it than any meeting.",
+      },
+      { type: "h3", text: "Protect the overlap" },
+      {
+        type: "p",
+        text: "Between India and the US there are only a few working hours that everyone shares, so I protected a daily overlap window and kept it for the things that genuinely need a live conversation: decisions, blockers and debate. Status updates moved into writing, so the overlap was never wasted on them.",
+      },
+      { type: "h3", text: "Meet in person" },
+      {
+        type: "p",
+        text: "Video calls carry the work, but they don't build the relationship. I visited the team in India and brought people together in person, and the difference afterwards was obvious: people who have shared a meal assume good intent when a message lands badly at midnight. Earlier in my career, collaborating with colleagues in Australia on a border-security programme taught me the same lesson from the other side: you don't need to manage people to need their trust.",
+      },
+      { type: "h3", text: "Build communities, not just reporting lines" },
+      {
+        type: "p",
+        text: "An architecture community of practice and shared certification coaching gave people across locations a reason to learn from each other rather than only through me. The strongest signal that a distributed team has become one team is when people go to each other first.",
+      },
+      { type: "h2", text: "Part 2: the concerns people raise about Agentic AI" },
+      {
+        type: "p",
+        text: "When AI agents arrive, the concerns are reasonable and they are almost always the same four. I have learned to name them early rather than wait for them to surface as quiet resistance.",
+      },
+      {
+        type: "table",
+        caption: "The four concerns, and what actually addressed them",
+        head: ["Concern", "What people are really asking", "What helped"],
+        rows: [
+          ["Jobs", "Is this about doing the same work with fewer of us?", "Start with work nobody wants: a surge, a backlog, repetitive triage. Let the agent take volume and keep people on judgement."],
+          ["Trust", "What happens when it gets it wrong?", "Narrow scope, humans in the loop for anything that matters, and an audit trail for every decision the agent makes."],
+          ["Risk and compliance", "Will this pass an audit?", "Bring Risk, Legal and Compliance in at the start, and make AI review part of the existing governance process rather than a separate gate."],
+          ["Skills", "Will I fall behind?", "Hands-on time with the tools for everyone, in every location, and leaders who use them visibly themselves."],
+        ],
+      },
+      { type: "h3", text: "Start with a bottleneck people already feel" },
+      {
+        type: "p",
+        text: "The agent that won people over was not a showcase. It sat at the front of a queue that was overwhelming a service team during a merger surge, triaging and prioritising cases and resolving the simple ones. Because the team had been drowning, they saw the agent as relief, not threat. The same team absorbed the surge within SLA. That story did more for adoption than any presentation.",
+      },
+      { type: "h3", text: "Make 'safe' visible" },
+      {
+        type: "p",
+        text: "People trust what they can inspect. Every action the agent took was logged, the scope was deliberately narrow, and a person stayed accountable for the outcome. When someone asked 'what if it's wrong?', the answer was not a promise. It was the audit trail.",
+      },
+      { type: "h3", text: "Let engineers feel the benefit first" },
+      {
+        type: "p",
+        text: "For engineers, AI-assisted coding was the gentlest introduction. We rolled out GitHub Copilot in waves: the US first, then India, then the UK. Velocity rose roughly three to four times by a former colleague's count. It was not a formal study, but it changed the conversation from 'will this replace me?' to 'what else can it take off my plate?'",
+      },
+      {
+        type: "p",
+        text: "The question I heard most was simple: will I still have a job? I didn't answer it with reassurance. I answered it with what had actually happened: the same team had absorbed a surge with an agent beside them, and nobody's role had disappeared. The work that went away was the work nobody wanted.",
+      },
+      { type: "h3", text: "If you roll out in waves, say so" },
+      {
+        type: "p",
+        text: "This is where the two halves meet. Our staggered rollout taught me something. When AI tools reach one office first, the others notice, and at exactly the moment people feel most uncertain it can look like a two-tier team. Sometimes waves are unavoidable, because of licences, security reviews or pilots. If so, tell every location the order, the reason and their date up front, and share what the first wave learned with everyone.",
+      },
+      { type: "h2", text: "What I'd tell another leader" },
+      {
+        type: "list",
+        items: [
+          "Treat a distributed team as one team with one bar. Teams own outcomes, not tickets.",
+          "Protect a daily overlap window for decisions, and meet in person when you can.",
+          "Write decisions down. It is the cheapest way to include people who were asleep when you made them.",
+          "Name the AI concerns early: jobs, trust, risk and skills. Answer each with evidence, not reassurance.",
+          "Start agents on a bottleneck people already feel, and keep humans accountable for what matters.",
+          "If AI tools must roll out in waves, tell every location the order, the reason and their date up front.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "People don't resist AI. They resist being surprised by it. Bring them in early, show them the audit trail, and let them feel the benefit first.",
+      },
+    ],
+  },
+  {
     slug: "who-owns-what-in-a-shared-data-platform",
     title: "Who owns what? Running a shared data platform for consumer applications",
     dek: "A follow-up to my article on shared platforms: the architecture, using an insurer's customer data, and the split of responsibilities between the platform team, data producers, data governance and executive leadership.",

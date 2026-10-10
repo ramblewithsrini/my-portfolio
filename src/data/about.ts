@@ -34,8 +34,8 @@ export const uniqueness = {
     {
       eyebrow: "How I lead",
       title: "People-centric leader",
-      body: "People first, clarity next, delivery always. I recognise the effort behind the outcome, own the mistakes and keep blame out of the room — so teams collaborate instead of protecting themselves.",
-      proof: "“A true servant leader” — in my team's own words; credited by a programme steering committee",
+      body: "People first, clarity next, delivery always. I recognise the effort behind the outcome, own the mistakes and keep blame out of the room — so teams collaborate instead of protecting themselves. “A true servant leader,” in my team's own words.",
+      proof: "Rated by my team as the company's top manager of a larger team (2025 employee survey) · only one person left in three years, by choice",
     },
     {
       eyebrow: "Where I come from",
@@ -249,7 +249,7 @@ export const impact = [
   { value: "360%", label: "Surge absorbed with Agentic AI, same team", href: "/experience/discover" },
   { value: "27%", label: "Fewer support calls via an AI chatbot", href: "/experience/ricoh" },
   { value: "21%", label: "Better MDM matching rates", href: "/experience/allianz" },
-  { value: "15/15", label: "Correct AI answers on my knowledge-graph lab", href: "/lab/research-graph" },
+  { value: "#1", label: "Top-rated manager of a larger team, company-wide (2025 survey)", href: "/leadership" },
   { value: "£40M", label: "Convergence across 144 platforms", href: "/experience/discover" },
   { value: "£1.5M+", label: "Annual revenue from a function I built", href: "/experience/interglobe" },
 ];

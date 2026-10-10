@@ -25,6 +25,7 @@ export type Story = {
   tech?: string[];
   quotes?: string[];
   labLink?: { href: string; title: string; body: string }; // an interactive demo of this work
+  photo?: { src: string; alt: string; caption: string; width: number; height: number }; // shown after the milestones
 };
 
 export const stories: Record<string, Story> = {
@@ -258,6 +259,13 @@ export const stories: Record<string, Story> = {
   },
 
   "pitney-bowes": {
+    photo: {
+      src: "/images/pitney-bowes-dallas.jpg",
+      alt: "Srini on the main screen at the Pitney Bowes conference in Dallas, smiling and holding up a card",
+      caption: "On the big screen at the Pitney Bowes conference in Dallas, where I presented graph-based identity resolution.",
+      width: 1080,
+      height: 720,
+    },
     summary:
       "Pre-sales lead and solution architect for Pitney Bowes' Spectrum data platform. I took clients and partners from first workshop to working solution — data governance, master data management and regulatory compliance — for financial services, professional services and retail organisations.",
     context: [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ChapterNav from "@/components/ChapterNav";
@@ -170,6 +171,22 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
               ))}
             </ol>
           </Section>
+        )}
+
+        {story.photo && (
+          <figure className="border-t border-border py-14">
+            <Reveal>
+              <Image
+                src={story.photo.src}
+                alt={story.photo.alt}
+                width={story.photo.width}
+                height={story.photo.height}
+                sizes="(min-width: 1152px) 48rem, 100vw"
+                className="w-full max-w-3xl rounded-3xl border border-border"
+              />
+              <figcaption className="mt-4 max-w-3xl text-sm text-muted">{story.photo.caption}</figcaption>
+            </Reveal>
+          </figure>
         )}
 
         {story.labLink && (

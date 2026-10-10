@@ -51,41 +51,45 @@ export type Article = {
 export const articles: Article[] = [
   {
     slug: "converging-144-applications-after-a-merger",
-    title: "Case study: converging 144 applications after a merger",
-    dek: "How we decided, application by application, what to invest in, tolerate, migrate or retire, and how that became a £40M, three-year investment case.",
+    title: "Case study: 144 applications, and what deserved to survive",
+    dek: "A merger, a public promise of savings and an estate built one decision at a time: how we decided what to keep, and how that became a £40M, three-year investment case.",
     date: "2026-10-10",
     status: "published",
     tags: ["Case study", "Architecture", "Mergers", "Financial services"],
     blocks: [
       {
         type: "p",
-        text: "When the global card network I worked for was acquired by a larger bank, the merger came with a public commitment to cost savings. In my domain that meant a hard question: across 144 partner and payment applications, built up over years of in-house, SaaS and legacy decisions, what should survive?",
+        text: "The merger was announced with a promise. When the global card network I worked for was acquired by a larger bank, the deal came with a public commitment to cost savings. Before long, that promise had become a question on my desk: across 144 partner and payment applications, which ones deserved to survive?",
+      },
+      { type: "h2", text: "An estate built one sensible decision at a time" },
+      {
+        type: "p",
+        text: "Nobody had designed the estate we had. It had grown the way most estates grow: one sensible decision at a time. Functionality was duplicated across systems. Some applications carried compliance gaps and open vulnerabilities. And custom functionality had been built on SaaS platforms that were never meant to carry it. Every one of those cost money to run, and every one made the partner experience harder to change.",
+      },
+      { type: "h2", text: "The fast answer, and why I didn't take it" },
+      {
+        type: "p",
+        text: "The fastest answer was to lift everything and shift it onto the target platform on AWS: one big move, simple to explain. But it carried too much risk and investment at once, and it would have moved our problems rather than removed them. Moving everything off SaaS was just as tempting and just as wrong, because licence commitments meant some functionality was better left where it was, for now.",
       },
       {
         type: "p",
-        text: "This is how we answered it, the options we rejected, and the call that went against the grain of the savings everyone expected.",
+        text: "The hardest scoping call was the mainframe. Leaving it out felt like leaving the job unfinished, but its exit could not be completed within three years, and the programme had to deliver inside that window. A plan that promises everything and finishes nothing helps nobody.",
       },
-      { type: "h2", text: "The problem" },
-      {
-        type: "p",
-        text: "The estate had grown the way most estates grow: one sensible decision at a time. The result was duplicated functionality across systems, applications carrying compliance gaps and open vulnerabilities, and custom functionality built on SaaS platforms that were never meant to carry it. Every one of those cost money to run, and every one of them made the partner experience harder to change.",
-      },
-      { type: "h2", text: "The options" },
       {
         type: "table",
-        caption: "What we considered, and why",
-        head: ["Option", "Why it was attractive", "Why we did or didn't choose it"],
+        caption: "The options, side by side",
+        head: ["Option", "Why it was attractive", "What we decided"],
         rows: [
           ["Lift and shift everything to the target platform", "One big move, simple to explain", "Rejected. Too much risk and investment at once, and it would have moved our problems rather than removed them."],
           ["Move everything off SaaS", "One platform, one way of working", "Rejected. Licence commitments meant some functionality was better left on SaaS, for now."],
-          ["Include the mainframe exit", "It would have completed the move off legacy", "Taken out of scope. It could not be completed within three years, and the programme had to deliver inside that window."],
-          ["Decide application by application, using Gartner's TIME model", "Slower to start, but every decision has a reason behind it", "Chosen. It let us invest where it paid back and retire what nobody needed."],
+          ["Include the mainframe exit", "It would have completed the move off legacy", "Taken out of scope. It could not be completed within three years."],
+          ["Decide application by application, using Gartner's TIME model", "Slower to start, but every decision has a reason behind it", "Chosen. Invest where it pays back, and retire what nobody needs."],
         ],
       },
-      { type: "h2", text: "The principles" },
+      { type: "h2", text: "Rules before systems" },
       {
         type: "p",
-        text: "Before classifying a single application, we agreed the principles every decision had to follow:",
+        text: "Before we classified a single application, we agreed the principles every decision had to follow. It turned out to be the most useful thing we did: once the rules were agreed, debates were about the rules, not about whose system it was.",
       },
       {
         type: "list",
@@ -96,38 +100,41 @@ export const articles: Article[] = [
           "Use SaaS for what it is for: custom functionality built on a SaaS platform where it doesn't belong comes back to the target platform.",
         ],
       },
-      { type: "h2", text: "The decision: 144 applications, four answers" },
       {
         type: "p",
-        text: "We ran workshops with subject-matter experts and business owners for each area, and classified every application using TIME: Tolerate, Invest, Migrate or Eliminate. Functionality earmarked for retirement was marked as such, so nobody spent money improving something we planned to switch off.",
+        text: "Then, area by area, we sat down with subject-matter experts and business owners and placed every application in Gartner's TIME model: Tolerate, Invest, Migrate or Eliminate. Functionality earmarked for retirement was marked as such, so nobody spent money improving something we planned to switch off.",
       },
       {
         type: "diagram",
         name: "time-model",
         caption: "The 144 applications on Gartner's TIME grid: business value against technical fitness",
       },
-      { type: "h2", text: "The hardest call" },
+      { type: "h2", text: "The people behind the Eliminate box" },
       {
         type: "p",
-        text: "Consolidation creates pressure to move fast, and the hardest decision I made was to slow one move down. An application on a SaaS platform was due to move to our in-house platform within 120 days, before its licence came up for renewal. There were no requirements documents behind it.",
+        text: "On a diagram, Eliminate is just a box with 15 applications in it. In a meeting room, it is people. Some owners and their teams heard 'eliminate' and feared it meant their jobs, or a smaller role. That fear was understandable, and helping them through it was the biggest ask of the whole programme.",
       },
       {
         type: "p",
-        text: "My team reverse-engineered the application and found more than 15 functional gaps and a compliance risk. That meant asking the Investment Council to keep paying for that SaaS platform: the opposite of the saving they expected. It took several presentations, but the evidence won, and the move was stopped. A saving that creates a compliance risk isn't a saving.",
+        text: "So I didn't lead with the grid. I sat down with them and walked through their path: the part their role would play in the journey, and where their knowledge would be needed next. Sometimes the honest message was simple: this functionality is being retired here, but your role is still needed elsewhere. The system was being retired. The person was not.",
+      },
+      { type: "h2", text: "The move I stopped" },
+      {
+        type: "p",
+        text: "Consolidation builds momentum, and sometimes the momentum is the risk. An application on a SaaS platform was due to move to our in-house platform within 120 days, before its licence came up for renewal. The decision had been made before I looked at it closely. When I did, there were no requirements documents behind it.",
+      },
+      {
+        type: "p",
+        text: "My team reverse-engineered the application and found more than 15 functional gaps and a compliance risk. That left me asking the Investment Council for the opposite of the saving they expected: keep paying for the SaaS platform. It took several presentations. The evidence won, and the move was stopped. A saving that creates a compliance risk isn't a saving.",
       },
       { type: "h2", text: "Making the case" },
       {
         type: "p",
-        text: "I didn't present the convergence as an architecture project. I built the story around the merger's own goal: what we could realistically achieve toward the promised cost savings in the first three years, which duplication and risk we would remove, and in what order.",
+        text: "I didn't present the convergence as an architecture project. I built the story around the merger's own goal: what we could realistically deliver toward the promised savings in the first three years, which duplication and risk we would remove, and in what order. Quick wins and compliance fixes came first, to show progress and reduce risk early; longer strategic roadmaps followed.",
       },
       {
         type: "p",
-        text: "We sequenced the work in two tracks: quick wins and compliance fixes first, to show progress and reduce risk early, then longer strategic roadmaps for the applications that needed more time.",
-      },
-      { type: "h2", text: "What the council funded" },
-      {
-        type: "p",
-        text: "The Investment Council approved £40M for a three-year programme, against four measurable targets:",
+        text: "The final decision sat with the divisional CIO. My job was to give him the facts, the figures and the reasoning behind every recommendation, so the decision was his, backed by our evidence. He agreed the proposal, and the Investment Council approved £40M for a three-year programme against four targets.",
       },
       {
         type: "table",
@@ -140,29 +147,25 @@ export const articles: Article[] = [
           ["SaaS licences", "Cut by 25%", "Consolidated licences, and SaaS products we didn't need retired"],
         ],
       },
-      {
-        type: "p",
-        text: "Along the way, every one of the 144 applications had a clear TIME decision and a reason behind it, and a premature move was stopped before it created a compliance risk and more than 15 functional gaps.",
-      },
       { type: "h2", text: "What I'd do differently" },
       {
         type: "p",
-        text: "Much of the effort went into discovery: finding every system, what it really did and where functionality was duplicated. Next time I would use AI to do the first pass, mapping the systems and flagging likely duplicates from code, configuration and documentation, so the workshops with experts start from a draft map rather than a blank page.",
+        text: "Discovery is the slow part of any convergence: finding every system, what it really does and where functionality is duplicated. Next time I would let AI do the first pass, mapping the systems and flagging likely duplicates from code, configuration and documentation, so the experts start from a draft map rather than a blank page.",
       },
       { type: "h2", text: "What I'd tell another leader" },
       {
         type: "list",
         items: [
           "Agree the principles before you classify anything. They turn arguments about systems into decisions about rules.",
-          "Tie the case to the business goal, not the architecture. The council funded measurable targets for cost and risk, not the diagram.",
+          "Separate the system from the person. Retiring functionality isn't retiring the people who know it, so tell them early where their role goes next.",
           "Scope to what you can finish. Leaving the mainframe out kept the programme credible inside three years.",
-          "Do the quick wins and compliance fixes first. Early progress buys patience for the long roadmap.",
+          "Tie the case to the business goal, not the architecture. The decision-makers funded measurable targets for cost and risk, not the diagram.",
           "Be willing to argue against the saving when the evidence says so.",
         ],
       },
       {
         type: "quote",
-        text: "Convergence isn't about moving everything. It's about deciding, application by application, what deserves to survive.",
+        text: "Convergence isn't about moving everything. It's about deciding, application by application, what deserves to survive, and bringing the people with you.",
       },
     ],
   },

@@ -286,7 +286,7 @@ export const stories: Record<string, Story> = {
       {
         date: "2018",
         title: "Pitney Bowes conference, Dallas",
-        body: "Presented how Spectrum and GraphQL power operational master data management.",
+        body: "Presented how graph databases power identity resolution and operational master data management, with Spectrum, Neo4j and GraphQL.",
       },
       {
         date: "Nov 2018 – Jan 2019",
@@ -537,6 +537,11 @@ export const stories: Record<string, Story> = {
   },
 
   tcs: {
+    labLink: {
+      href: "/lab/research-graph",
+      title: "Still building to learn: a knowledge graph with AI",
+      body: "The innovation-lab habit continues today: a research knowledge graph on Neo4j, with GraphRAG answers from Claude and an MCP server, all with public code.",
+    },
     summary:
       "Ten years at Tata Consultancy Services, growing from lead developer on a US telecoms platform to Lead Solution Architect for Saudi Arabian Airlines' enterprise-wide integration and architect on British Airways' Travel Programme — and, as technical architect in its founding team, helping design and build TCS's airline innovation lab, whose demonstrations were used by British Airways, KLM and SITA.",
     context: [
@@ -564,7 +569,7 @@ export const stories: Record<string, Story> = {
       {
         date: "May 2004 – May 2005",
         title: "Technical Lead — British Airways",
-        body: "Technical lead across multiple British Airways projects.",
+        body: "Technical Lead and Integration Architect on ba.com, including Manage My Booking.",
       },
       {
         date: "Jun 2005 – Apr 2006",
@@ -577,6 +582,11 @@ export const stories: Record<string, Story> = {
       {
         date: "Oct – Dec 2007",
         title: "Enterprise Consultant — Hawaiian Airlines",
+      },
+      {
+        date: "2007",
+        title: "Speaker — TCS architecture conference",
+        body: "Presented an automated logging framework built on MQ and Java RMI.",
       },
       {
         date: "Dec 2007 – Apr 2009",
@@ -606,6 +616,17 @@ export const stories: Record<string, Story> = {
         challenge: "Airline leaders wanted to see new capabilities working on their own kind of operations before investing in them.",
         approach: "As technical architect in the founding team, I helped design and build TCS's airline innovation lab. Its demonstrations included a modernised self-service agent portal, a route to move agents off green-screen host terminals, and modernised baggage messaging over IATA Type B. I presented them to the CEOs and CTOs of several airlines.",
         outcome: "Demonstrations used by British Airways, KLM and SITA — and a habit I've kept ever since: build something working, then decide.",
+      },
+      {
+        title: "eCommerce for an airline and a retailer",
+        challenge: "Customers were moving online, and both an airline and a home-shopping retailer needed digital channels that worked reliably with the systems behind them.",
+        approach: "Technical Lead and Integration Architect on British Airways' ba.com, including Manage My Booking, connecting the website to the airline's booking and operational systems; and delivered a custom-built eCommerce platform for EHSN (Eastern Home Shopping Network), a retailer in Taiwan.",
+      },
+      {
+        title: "Recognised by three clients' accounts",
+        challenge: "Earning trust on demanding, long-running client engagements.",
+        approach: "Delivered across telecoms and airline programmes as a developer, technical lead and architect.",
+        outcome: "Recognised as Employee of the Year on three accounts: Qwest, Saudi Arabian Airlines and British Airways.",
       },
       {
         title: "Messaging architecture for BA's Travel Programme",

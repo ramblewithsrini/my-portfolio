@@ -17,6 +17,7 @@ export const glance = [
   { label: "Path", value: "Developer → Architect → Technology leader" },
   { label: "Based in", value: "London, UK" },
   { label: "Experience", value: "25 years · 15+ in consulting" },
+  { label: "Recognition", value: "Employee of the Year on three client accounts · conference speaker since 2007" },
   {
     label: "Focus",
     value: "Regulated industries — fintech, payments, insurtech, airlines, retail",

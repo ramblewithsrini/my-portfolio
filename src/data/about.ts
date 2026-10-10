@@ -211,32 +211,32 @@ export const summary = {
   title: "In 30 seconds",
   items: [
     {
-      text: "Architecture, engineering, data & AI leader — 25 years, from developer to Head of Technology.",
+      text: "Developer to Head of Technology in 25 years, and still building: fluent with engineers, trusted by executive boards.",
       href: "#different",
     },
     {
-      text: "Head of Technology at a global payments network: led payment platforms through a merger and a platform convergence, with Agentic AI absorbing the surge.",
+      text: "Kept a global payments network running at 200M transactions a day and 99.999% availability straight through a merger, and cut partner onboarding from 73 days to 5–7.",
       href: "/experience/discover",
     },
     {
-      text: "At a global insurer, built a single customer view (SCV) and household view, enhanced data quality rules and established data governance.",
+      text: "Put governed AI live in four months, and it absorbed a 360% surge with the same team.",
+      href: "/insights/absorbing-a-360-percent-surge",
+    },
+    {
+      text: "Gave a global insurer one trusted view of every customer and household, with 21% better matching.",
       href: "/experience/allianz",
     },
     {
-      text: "15+ years in consulting and pre-sales — built an architecture function from the ground up, and grew a key aviation account into a second business line.",
+      text: "Built an architecture practice from zero to £1.5M+ a year, and co-founded a music-and-voice start-up as CTO, helping raise close to £1.5M.",
       href: "/experience/interglobe",
     },
     {
-      text: "Building to learn since 2008: from airline innovation labs I helped build at two global systems integrators, presented to airline CEOs and CTOs, to an MDM matching engine, a RAG assistant on AWS Bedrock and a knowledge graph with GraphRAG and an MCP server, each tested and published with code.",
+      text: "Building to learn since 2008: airline innovation labs shown to airline CEOs then; an MDM engine, RAG on AWS Bedrock and a knowledge graph with an MCP server now, all with public code.",
       href: "/lab/research-graph",
     },
     {
-      text: "Founder mindset: co-founded a music-and-voice start-up as CTO, building our own codec and helping raise close to £1.5M.",
-      href: "/experience#projects",
-    },
-    {
-      text: "Available immediately · London · SC-eligible · permanent, consulting or contract roles.",
-      href: "#situation",
+      text: "Recognised along the way: Employee of the Year on three client accounts, and a conference speaker on single customer view and graph-based identity resolution.",
+      href: "/experience/tcs",
     },
   ],
 };

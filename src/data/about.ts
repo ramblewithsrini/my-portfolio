@@ -215,11 +215,11 @@ export const summary = {
       href: "#different",
     },
     {
-      text: "Kept a global payments network running at 200M transactions a day and 99.999% availability straight through a merger, and cut partner onboarding from 73 days to 5–7.",
+      text: "Steered a global payments network through a merger at 200M transactions a day without dropping below 99.999% availability, and cut partner onboarding from 73 days to 5–7.",
       href: "/experience/discover",
     },
     {
-      text: "Put governed AI live in four months, and it absorbed a 360% surge with the same team.",
+      text: "Launched governed AI in four months, and it absorbed a 360% surge with the same team.",
       href: "/insights/absorbing-a-360-percent-surge",
     },
     {

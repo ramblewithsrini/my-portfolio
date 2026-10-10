@@ -10,15 +10,14 @@ export default function Footer() {
         © {new Date().getFullYear()} {profile.name} · Built with Claude Code
       </p>
       <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-        {/* Insights is reachable from the footer on phones, where the nav has no room for it. */}
+        <Link href="/what-i-bring" className="hover:text-foreground">
+          How I can help
+        </Link>
         {hasPublishedArticles && (
           <Link href="/insights" className="hover:text-foreground">
-            Insights
+            Case studies
           </Link>
         )}
-        <Link href="/leadership" className="hover:text-foreground">
-          Leadership
-        </Link>
         <Link href="/under-the-hood" className="hover:text-foreground">
           Under the hood
         </Link>

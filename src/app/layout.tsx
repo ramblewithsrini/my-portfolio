@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import BackToTop from "@/components/BackToTop";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import { profile } from "@/data/portfolio";
@@ -83,6 +84,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <Footer />
         {/* Private, cookie-free visitor counts; viewable only in the Vercel dashboard. */}
+        <BackToTop />
         <Analytics />
       </body>
     </html>

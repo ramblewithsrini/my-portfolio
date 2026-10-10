@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-type Chapter = { id: string; number: string; title: string };
+type Chapter = { id: string; number: string; title: string; short?: string }; // short: the phone label
 
 // Sticky chapter navigator: highlights the chapter in view and shows reading
 // progress through the chapters.
@@ -16,6 +16,21 @@ export default function ChapterNav({
   const [active, setActive] = useState<string | null>(null);
   const [progress, setProgress] = useState(0);
   const listRef = useRef<HTMLOListElement>(null);
+  const [more, setMore] = useState(false); // links hidden off the right edge
+
+  // Fade the right edge while there are more links to scroll to.
+  useEffect(() => {
+    const box = listRef.current?.parentElement;
+    if (!box) return;
+    const check = () => setMore(box.scrollLeft + box.clientWidth < box.scrollWidth - 4);
+    check();
+    box.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
+    return () => {
+      box.removeEventListener("scroll", check);
+      window.removeEventListener("resize", check);
+    };
+  }, []);
 
   // On narrow screens the links scroll sideways: keep the active one in view.
   useEffect(() => {
@@ -61,8 +76,12 @@ export default function ChapterNav({
       aria-label={label}
       className="sticky top-16 z-40 border-y border-border bg-background/85 backdrop-blur-md"
     >
-      <div className="mx-auto max-w-6xl overflow-x-auto px-5 [scrollbar-width:none] sm:px-8 [&::-webkit-scrollbar]:hidden">
-        <ol ref={listRef} className="flex w-max min-w-full gap-1 py-2 sm:justify-between">
+      <div
+        className={`mx-auto max-w-6xl overflow-x-auto px-5 [scrollbar-width:none] sm:px-8 [&::-webkit-scrollbar]:hidden ${
+          more ? "[mask-image:linear-gradient(to_right,black_80%,transparent)]" : ""
+        }`}
+      >
+        <ol ref={listRef} className="flex w-max min-w-full gap-0.5 py-2 sm:justify-between sm:gap-1">
           {chapters.map((c) => {
             const isActive = active === c.id;
             return (
@@ -70,14 +89,21 @@ export default function ChapterNav({
                 <a
                   href={`#${c.id}`}
                   aria-current={isActive ? "location" : undefined}
-                  className={`flex items-center gap-2 whitespace-nowrap rounded-full px-3 py-1.5 text-sm transition-colors sm:px-4 ${
+                  className={`flex items-center gap-2 whitespace-nowrap rounded-full px-2.5 py-1.5 text-sm transition-colors sm:px-4 ${
                     isActive
                       ? "bg-accent font-semibold text-background"
                       : "text-muted hover:text-foreground"
                   }`}
                 >
-                  <span className={isActive ? "" : "text-accent"}>{c.number}</span>
-                  {c.title}
+                  <span className={`${c.short ? "hidden sm:inline" : ""} ${isActive ? "" : "text-accent"}`}>{c.number}</span>
+                  {c.short ? (
+                    <>
+                      <span className="sm:hidden">{c.short}</span>
+                      <span className="hidden sm:inline">{c.title}</span>
+                    </>
+                  ) : (
+                    c.title
+                  )}
                 </a>
               </li>
             );

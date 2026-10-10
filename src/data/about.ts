@@ -173,6 +173,7 @@ export const chapters = [
     id: "who",
     number: "01",
     title: "Who I am",
+    short: "Who I am",
     teaser: "What makes me different — and how I grew from developer to technology leader.",
     sections: [
       { id: "different", title: "What makes me different" },
@@ -183,6 +184,7 @@ export const chapters = [
     id: "lead",
     number: "02",
     title: "How I lead",
+    short: "How I lead",
     teaser: "My leadership philosophy — with the principles and books behind it one click away.",
     sections: [{ id: "philosophy", title: "Leadership philosophy" }],
   },
@@ -190,6 +192,7 @@ export const chapters = [
     id: "now",
     number: "03",
     title: "Where I am now",
+    short: "Now",
     teaser: "My situation, the roles I'm looking for, and why I built this site.",
     sections: [
       { id: "situation", title: "My situation" },
@@ -200,6 +203,7 @@ export const chapters = [
     id: "beyond",
     number: "04",
     title: "Beyond work",
+    short: "Beyond work",
     teaser: "Family first — and what I love outside work.",
     sections: [{ id: "beyond-work", title: "Beyond work" }],
   },

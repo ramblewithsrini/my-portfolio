@@ -8,15 +8,15 @@ import { profile } from "@/data/portfolio";
 
 // The same labels on every screen size: wide screens show them in the bar,
 // phones in a menu, so nothing is shortened into something that reads differently.
-// `from` is the smallest screen on which a link fits in the bar; the phone menu always lists every link.
-const links: { href: string; label: string; from?: "lg" }[] = [
-  { href: "/", label: "About" },
-  { href: "/leadership", label: "Leadership" },
-  { href: "/what-i-bring", label: "How I can help" },
+// `phone` links appear only in the phone menu (on wide screens the logo goes home).
+const links: { href: string; label: string; from?: "lg"; phone?: boolean }[] = [
+  { href: "/", label: "Home", phone: true },
   { href: "/experience", label: "Experience" },
-  { href: "/testimonials", label: "Testimonials" },
   // Shown once an article is published.
-  ...(hasPublishedArticles ? [{ href: "/insights", label: "Insights", from: "lg" as const }] : []),
+  ...(hasPublishedArticles ? [{ href: "/insights", label: "Case studies" }] : []),
+  { href: "/leadership", label: "Leadership" },
+  { href: "/lab", label: "Lab" },
+  { href: "/testimonials", label: "Testimonials" },
 ];
 const fromClass = { lg: "hidden lg:inline-block" };
 
@@ -50,7 +50,7 @@ export default function Nav() {
 
         {/* Tablets (768px) and up: links in the bar */}
         <div className="hidden items-center gap-2 md:flex">
-          {links.map((l) => (
+          {links.filter((l) => !l.phone).map((l) => (
             <Link
               key={l.href}
               href={l.href}

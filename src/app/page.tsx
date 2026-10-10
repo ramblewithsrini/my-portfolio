@@ -452,9 +452,6 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
-              <p className="mt-6 border-t border-accent/20 pt-4 text-sm text-muted">
-                {now.lookingFor.focus}
-              </p>
               <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
                 <Link
                   href="/what-i-bring"

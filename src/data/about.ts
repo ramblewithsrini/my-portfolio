@@ -34,14 +34,14 @@ export const uniqueness = {
     {
       eyebrow: "How I lead",
       title: "People-centric leader",
-      body: "People first, clarity next, delivery always. I recognise the effort behind the outcome, own the mistakes and keep blame out of the room — so teams collaborate instead of protecting themselves. “A true servant leader,” in my team's own words.",
+      body: "I recognise the effort behind the outcome, own the mistakes and keep blame out of the room — so teams collaborate instead of protecting themselves. “A true servant leader,” in my team's own words.",
       proof: "Rated by my team as the company's top manager of a larger team (2025 employee survey) · only one person left in three years, by choice",
     },
     {
       eyebrow: "Where I come from",
-      title: "Grown from the code up",
-      body: "Developer, then architect, then technology leader. I can challenge a design with an engineer at sea level and make the investment case to an executive board at 30,000 feet.",
-      proof: "From writing code to leading an organisation of architects and engineers",
+      title: "Still building",
+      body: "25 years from developer to Head of Technology, and I still build: an MDM engine, RAG on AWS Bedrock and a knowledge graph, all with public code.",
+      proof: "Hands-on labs with tests and evaluations, open on GitHub",
     },
     {
       eyebrow: "Where I've worked",
@@ -107,7 +107,7 @@ export const philosophy = {
       word: "Delivery",
       qualifier: "always",
       body: "Care and clarity only matter when they ship. I hold a high bar for outcomes and resilience, and I own the hard days as well as the good ones.",
-      evidence: "Multi-region resilience built for 99.999% availability",
+      evidence: "A £40M convergence approved, with measurable three-year targets",
     },
   ],
 };
@@ -136,8 +136,6 @@ export const now = {
         roles: ["Interim architecture leadership", "Platform & solution architecture", "AI delivery"],
       },
     ],
-    focus:
-      "Sectors: Fintech · Payments · Insurtech · Airlines · Retail — or any regulated environment",
   },
 };
 
@@ -216,28 +214,24 @@ export const summary = {
       href: "#different",
     },
     {
-      text: "Steered a global payments network through a merger at 200M transactions a day without dropping below 99.999% availability, and cut partner onboarding from 73 days to 5–7.",
-      href: "/experience/discover",
+      text: "Lead through people: grew engineers and architects into senior roles, and kept the team together through a merger.",
+      href: "/leadership",
     },
     {
-      text: "Launched governed AI in four months, and it absorbed a 360% surge with the same team.",
+      text: "Steered a global payments network through a merger without dropping below 99.999% availability, and won approval for a £40M convergence by deciding, application by application, what deserved to survive.",
+      href: "/insights/converging-144-applications-after-a-merger",
+    },
+    {
+      text: "Put governed AI to work early: live in four months, absorbing a post-merger surge with the same team.",
       href: "/insights/absorbing-a-360-percent-surge",
     },
     {
-      text: "Gave a global insurer one trusted view of every customer and household, with 21% better matching.",
+      text: "Gave a global insurer one trusted view of every customer and household.",
       href: "/experience/allianz",
     },
     {
-      text: "Built an architecture practice from zero to £1.5M+ a year, and co-founded a music-and-voice start-up as CTO, helping raise close to £1.5M.",
-      href: "/experience/interglobe",
-    },
-    {
-      text: "Building to learn since 2008: airline innovation labs shown to airline CEOs then; an MDM engine, RAG on AWS Bedrock and a knowledge graph with an MCP server now, all with public code.",
+      text: "Built an architecture practice from zero, co-founded a start-up as CTO, and keep building to learn: from airline innovation labs in 2008 to an MDM engine and a knowledge graph today, all with public code.",
       href: "/lab/research-graph",
-    },
-    {
-      text: "Recognised along the way: Employee of the Year on three client accounts, a conference speaker on single customer view and graph-based identity resolution, and co-lead of a 400-member employee community, hosting and speaking at its events.",
-      href: "/experience/tcs",
     },
   ],
 };

@@ -235,7 +235,7 @@ export const summary = {
       href: "/lab/research-graph",
     },
     {
-      text: "Recognised along the way: Employee of the Year on three client accounts, and a conference speaker on single customer view and graph-based identity resolution.",
+      text: "Recognised along the way: Employee of the Year on three client accounts, a conference speaker on single customer view and graph-based identity resolution, and co-lead of a 400-member employee community, hosting and speaking at its events.",
       href: "/experience/tcs",
     },
   ],
@@ -329,8 +329,8 @@ export const beyondWork = {
     },
     {
       eyebrow: "Giving back",
-      title: "Governor, fundraiser, mentor",
-      body: "I serve as a Parent Governor at my son's school and help raise funds for his cricket club. At my last employer, I co-led our Asian Pacific employee resource group, mentoring colleagues along the way.",
+      title: "Community host, governor, fundraiser",
+      body: "At my last employer I co-led our 400-member Asian Pacific employee resource group: hosting career panels and leadership talks, speaking at our events, and running a podcast-style show where I interviewed the group's leaders. Outside work, I serve as a Parent Governor at my son's school, helped raise more than £3,000 for it last year, and support fundraising for his cricket club.",
     },
     {
       eyebrow: "Downtime",

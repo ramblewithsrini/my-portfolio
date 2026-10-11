@@ -102,7 +102,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "Then, area by area, we sat down with subject-matter experts and business owners and placed every application in Gartner's TIME model: Tolerate, Invest, Migrate or Eliminate. Functionality earmarked for retirement was marked as such, so nobody spent money improving something we planned to switch off.",
+        text: "First we mapped the estate in LeanIX: every application, what it did and what it depended on. Then, area by area, we sat down with subject-matter experts and business owners and placed every application in Gartner's TIME model: Tolerate, Invest, Migrate or Eliminate. Each decision, and the reason behind it, was recorded in LeanIX, and we drew the target architecture in draw.io. Functionality earmarked for retirement was marked as such, so nobody spent money improving something we planned to switch off.",
       },
       {
         type: "diagram",
@@ -150,7 +150,7 @@ export const articles: Article[] = [
       { type: "h2", text: "What I'd do differently" },
       {
         type: "p",
-        text: "Discovery is the slow part of any convergence: finding every system, what it really does and where functionality is duplicated. Next time I would let AI do the first pass, mapping the systems and flagging likely duplicates from code, configuration and documentation, so the experts start from a draft map rather than a blank page.",
+        text: "Discovery is the slow part of any convergence: finding every system, what it really does and where functionality is duplicated. LeanIX gave us one place to hold the answers, but filling it was still manual work. Next time I would let AI do the first pass, mapping the systems and flagging likely duplicates from code, configuration and documentation, so the experts start from a draft map rather than a blank page.",
       },
       { type: "h2", text: "What I'd tell another leader" },
       {

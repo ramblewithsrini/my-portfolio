@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ChapterNav from "@/components/ChapterNav";
+import MobileMore from "@/components/MobileMore";
 import Contact from "@/components/Contact";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -206,7 +207,9 @@ export default function AboutPage() {
         </Reveal>
 
         {/* The formula: three pillars joined by "+", then "=" the result */}
-        <div className="mt-16 grid items-stretch gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr]">
+        <div className="mt-16">
+        <MobileMore label="Show what makes me different" size="md">
+        <div className="grid items-stretch gap-4 lg:grid-cols-[1fr_auto_1fr_auto_1fr]">
           {uniqueness.pillars.flatMap((p, i) => [
             <Reveal key={p.title} delay={i * 120} className="h-full">
               <article className="flex h-full flex-col rounded-3xl border border-border bg-surface p-7">
@@ -267,6 +270,8 @@ export default function AboutPage() {
             </div>
           </Reveal>
         </div>
+        </MobileMore>
+        </div>
       </section>
 
       {/* Progression */}
@@ -279,7 +284,9 @@ export default function AboutPage() {
         </Reveal>
 
         {/* Three stages, rising in altitude */}
-        <ol className="mt-16 grid gap-6 lg:grid-cols-3 lg:items-end">
+        <div className="mt-16">
+        <MobileMore label="Show the full journey" size="sm">
+        <ol className="grid gap-6 lg:grid-cols-3 lg:items-end">
           {progression.stages.map((st, i) => {
             // Stages are listed most recent first; level 0 = developer (sea level).
             const level = progression.stages.length - 1 - i;
@@ -314,6 +321,8 @@ export default function AboutPage() {
             );
           })}
         </ol>
+        </MobileMore>
+        </div>
       </section>
       </div>
 
@@ -335,7 +344,9 @@ export default function AboutPage() {
             {philosophy.mantra}
           </p>
         </Reveal>
-        <ol className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="mt-16">
+        <MobileMore label="Show how I lead in practice" size="sm">
+        <ol className="grid gap-6 md:grid-cols-3">
           {philosophy.pillars.map((p, i) => (
             <li key={p.word}>
               <Reveal
@@ -361,6 +372,8 @@ export default function AboutPage() {
             </li>
           ))}
         </ol>
+        </MobileMore>
+        </div>
         {teaser && (
           <Reveal className="mt-6">
             <figure className="relative overflow-hidden rounded-3xl border border-border bg-surface p-8 sm:p-12">
@@ -509,7 +522,9 @@ export default function AboutPage() {
             {beyondWork.lead}
           </p>
         </Reveal>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12">
+        <MobileMore label="More about life outside work" size="lg">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {beyondWork.items.map((it, i) => (
             <Reveal
               key={it.title}
@@ -553,6 +568,8 @@ export default function AboutPage() {
               </article>
             </Reveal>
           ))}
+        </div>
+        </MobileMore>
         </div>
         <Reveal className="mt-6">
           <div className="flex flex-col gap-4 rounded-3xl border border-border p-8 sm:flex-row sm:items-center sm:gap-10 sm:p-10">

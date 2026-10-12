@@ -74,7 +74,7 @@ export const articles: Article[] = [
       { type: "h2", text: "Choosing the engine" },
       {
         type: "p",
-        text: "We evaluated Informatica, IBM and open-source MDM options. In the end, the insurer's existing relationship with IBM sealed the deal. That taught me something early: on a programme like this, the tool matters less than people expect. The hard parts are the data and the people.",
+        text: "We evaluated two leading MDM products and an open-source option. In the end, the insurer's existing relationship with one of the vendors sealed the deal. That taught me something early: on a programme like this, the tool matters less than people expect. The hard parts are the data and the people.",
       },
       { type: "h2", text: "Who to trust" },
       {
@@ -84,11 +84,11 @@ export const articles: Article[] = [
       { type: "h2", text: "The decision that shaped everything" },
       {
         type: "p",
-        text: "IBM's MDM server was good at matching and searching, but it wouldn't let us customise it the way the business needed. So we made a choice that shaped the whole architecture: we would never expose MDM to the people who used the data.",
+        text: "The MDM product was good at matching and searching, but it wouldn't let us customise it the way the business needed. So we made a choice that shaped the whole architecture: we would never expose MDM to the people who used the data.",
       },
       {
         type: "p",
-        text: "Instead, we built our own orchestration layer and an Oracle data store on top of it. MDM did the matching, merging and householding behind the scenes; our services wrote the single customer view into Oracle; and every consumer reached it only through APIs and events. Marketing in Adobe, next-best-action decisions, surveys and performance reporting all used our layer, never the engine.",
+        text: "Instead, we built our own orchestration layer and a consumer data store on top of it. MDM did the matching, merging and householding behind the scenes; our services wrote the single customer view into that store; and every consumer reached it only through APIs and events. Marketing in the MarTech platform, next-best-action decisions, surveys and performance reporting all used our layer, never the engine.",
       },
       {
         type: "diagram",
@@ -102,7 +102,7 @@ export const articles: Article[] = [
       { type: "h3", text: "How the data moved" },
       {
         type: "p",
-        text: "Around that core, each source and consumer got the integration pattern that suited it. Dun & Bradstreet enriched the data through a daily batch feed and an on-demand service. Every change to a customer was published as an XML event, so subscribing systems knew straight away instead of polling. Digital channels and next-best-action decisions queried customers in real time through API services built around the Oracle store. Batch ETL loaded the data lake for analytics and the Adobe data store for marketing. And the data stewards worked in MDM's own screens, resurfaced for their review queue.",
+        text: "Around that core, each source and consumer got the integration pattern that suited it. Third-party data providers enriched the data through a daily batch feed and an on-demand service. Every change to a customer was published as an XML event, so subscribing systems knew straight away instead of polling. Digital channels and next-best-action decisions queried customers in real time through API services built around the consumer data store. Batch ETL loaded the data lake for analytics and the MarTech platform for marketing. And the data stewards worked in MDM's own screens, resurfaced for their review queue.",
       },
       {
         type: "diagram",
@@ -127,7 +127,7 @@ export const articles: Article[] = [
         type: "list",
         items: [
           "One trusted view of every customer and their household, with matching rates 21% better after tuning, cleansing and clearer survivorship rules.",
-          "Marketing in Adobe could finally target a car customer with home or pet cover, and next-best-action decisions had a real customer to work from.",
+          "Marketing could finally target a car customer with home or pet cover, and next-best-action decisions had a real customer to work from.",
           "Surveys and performance reporting used the same customer, not three versions of them.",
           "Six projects reused the shared platform instead of building their own, and the steering committee named it one of the key reasons the programme succeeded.",
         ],

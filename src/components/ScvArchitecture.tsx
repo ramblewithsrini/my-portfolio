@@ -41,7 +41,7 @@ const sources = [
 ];
 
 const consumers = [
-  { title: "Adobe marketing", sub: "Campaigns, cross-sell" },
+  { title: "MarTech platform", sub: "Campaigns, cross-sell" },
   { title: "Next best action", sub: "What to offer next" },
   { title: "Surveys", sub: "Customer feedback" },
   { title: "Performance analytics", sub: "How the business is doing" },
@@ -56,7 +56,7 @@ export default function ScvArchitecture() {
         viewBox="0 0 1040 560"
         className="min-w-[760px] w-full"
         role="img"
-        aria-label="Policy systems, other customer systems and address reference data feed IBM MDM, which matches and merges records and builds households. Matches scoring 90 or more merge automatically; the rest go to data stewards. MDM is internal only: an orchestration layer writes the single customer view to Oracle, and consumers reach it only through APIs and events. Consumers are Adobe marketing, next best action, surveys and performance analytics."
+        aria-label="Policy systems, other customer systems and address reference data feed the MDM engine, which matches and merges records and builds households. Matches scoring 90 or more merge automatically; the rest go to data stewards. MDM is internal only: an orchestration layer writes the single customer view to the consumer data store, and consumers reach it only through APIs and events. Consumers are the MarTech platform, next best action, surveys and performance analytics."
         style={{ fontFamily: "var(--font-inter), sans-serif" }}
       >
         <defs>
@@ -88,7 +88,7 @@ export default function ScvArchitecture() {
         {/* MDM: internal only */}
         <rect x={250} y={50} width={210} height={300} rx={14} fill="none" stroke={MUTED} strokeDasharray="5 5" />
         <text x={355} y={70} textAnchor="middle" fill={MUTED} fontSize={11.5}>Internal only, never exposed</text>
-        <Box x={266} y={84} w={178} h={60} title="IBM MDM" sub="Matching, merging" stroke={ACCENT2} />
+        <Box x={266} y={84} w={178} h={60} title="MDM engine" sub="Matching, merging" stroke={ACCENT2} />
         <Box x={266} y={156} w={178} h={56} title="Survivorship" sub="Best field wins" />
         <Box x={266} y={224} w={178} h={56} title="Households" sub="Same home, same family" />
         <line x1={355} y1={280} x2={355} y2={368} stroke={MUTED} strokeWidth={1.6} strokeDasharray="4 4" markerEnd="url(#scv-arrow)" />
@@ -102,7 +102,7 @@ export default function ScvArchitecture() {
         <rect x={520} y={50} width={200} height={300} rx={14} fill="none" stroke={ACCENT} strokeWidth={1.5} />
         <Box x={536} y={84} w={168} h={64} title="Orchestration" sub="Our services, our rules" />
         <line x1={620} y1={148} x2={620} y2={184} stroke={MUTED} strokeWidth={1.6} markerEnd="url(#scv-arrow)" />
-        <Box x={536} y={186} w={168} h={64} title="Single customer view" sub="Oracle tables" stroke={ACCENT} />
+        <Box x={536} y={186} w={168} h={64} title="Single customer view" sub="Consumer data store" stroke={ACCENT} />
         <line x1={620} y1={250} x2={620} y2={284} stroke={MUTED} strokeWidth={1.6} markerEnd="url(#scv-arrow)" />
         <Box x={536} y={286} w={168} h={52} title="APIs and events" sub="The only way in" stroke={ACCENT} />
 

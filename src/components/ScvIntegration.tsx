@@ -43,7 +43,7 @@ export default function ScvIntegration() {
         viewBox="0 0 1100 560"
         className="min-w-[780px] w-full"
         role="img"
-        aria-label="Architecture view. Policy systems, other customer systems and Royal Mail address data feed IBM MDM; Dun and Bradstreet enriches it through a daily batch feed and an on-demand API. Data stewards review matches in the MDM screens, resurfaced for them. Our orchestration services write the single customer view to Oracle. From there, API services answer real-time queries from digital channels and next best action; every change is published as an XML event to subscribing systems; and batch ETL loads the data lake for analytics and the Adobe data store for marketing."
+        aria-label="Architecture view. Policy systems, other customer systems and Royal Mail address data feed the MDM engine; third-party data providers enrich it through a daily batch feed and an on-demand API. Data stewards review matches in the MDM screens, resurfaced for them. Our orchestration services write the single customer view to the consumer data store. From there, API services answer real-time queries from digital channels and next best action; every change is published as an XML event to subscribing systems; and batch ETL loads the data lake for analytics and the MarTech platform for marketing."
         style={{ fontFamily: "var(--font-inter), sans-serif" }}
       >
         <defs>
@@ -70,7 +70,7 @@ export default function ScvIntegration() {
         <Box x={20} y={70} w={190} h={56} title="Policy systems" sub="Trusted source" stroke={ACCENT} />
         <Box x={20} y={140} w={190} h={56} title="Other customer systems" sub="Duplicates, gaps" />
         <Box x={20} y={210} w={190} h={56} title="Address reference" sub="Royal Mail PAF" />
-        <Box x={20} y={330} w={190} h={70} title="Dun & Bradstreet" sub="Enrichment: daily feed, on demand" />
+        <Box x={20} y={330} w={190} h={70} title="Third-party enrichment" sub="Daily feed, on demand" />
         {[98, 168, 238].map((y) => (
           <line key={y} x1={210} y1={y} x2={283} y2={y} {...SERVICE} markerEnd="url(#scvi-muted)" />
         ))}
@@ -81,7 +81,7 @@ export default function ScvIntegration() {
         <rect x={265} y={50} width={210} height={410} rx={14} fill="none" stroke={MUTED} strokeDasharray="5 5" />
         <text x={370} y={66} textAnchor="middle" fill={MUTED} fontSize={11}>Internal only, never exposed</text>
         <rect x={285} y={76} width={170} height={224} rx={10} fill={SURFACE} stroke={ACCENT2} />
-        <text x={370} y={170} textAnchor="middle" fill={FG} fontSize={15} fontWeight={700}>IBM MDM</text>
+        <text x={370} y={170} textAnchor="middle" fill={FG} fontSize={15} fontWeight={700}>MDM engine</text>
         <text x={370} y={190} textAnchor="middle" fill={MUTED} fontSize={11}>Match, merge, survivorship,</text>
         <text x={370} y={205} textAnchor="middle" fill={MUTED} fontSize={11}>households</text>
         <line x1={370} y1={300} x2={370} y2={368} stroke={MUTED} strokeWidth={1.6} strokeDasharray="4 4" markerEnd="url(#scvi-muted)" />
@@ -96,7 +96,7 @@ export default function ScvIntegration() {
         <rect x={530} y={50} width={210} height={480} rx={14} fill="none" stroke={ACCENT} strokeWidth={1.5} />
         <Box x={550} y={120} w={170} h={60} title="Orchestration" sub="Our services, our rules" />
         <line x1={635} y1={180} x2={635} y2={206} {...SERVICE} markerEnd="url(#scvi-muted)" />
-        <Box x={550} y={208} w={170} h={60} title="Single customer view" sub="Oracle tables" stroke={ACCENT} />
+        <Box x={550} y={208} w={170} h={60} title="Single customer view" sub="Consumer data store" stroke={ACCENT} />
         {/* Spine from the store to the three outlets */}
         <path d="M635 268 V276 H545 V476" fill="none" {...SERVICE} />
         {[310, 393, 476].map((y) => (
@@ -122,7 +122,7 @@ export default function ScvIntegration() {
         <Box x={880} y={300} w={200} h={52} title="Next best action" stroke={ACCENT} />
         <Box x={880} y={367} w={200} h={52} title="Subscribing systems" sub="Notified of every change" stroke={ACCENT2} />
         <Box x={880} y={431} w={200} h={52} title="Data lake" sub="Analytics, performance" />
-        <Box x={880} y={495} w={200} h={52} title="Adobe data store" sub="Marketing campaigns" />
+        <Box x={880} y={495} w={200} h={52} title="MarTech platform" sub="Marketing campaigns" />
 
         {/* Legend */}
         <rect x={880} y={56} width={200} height={156} rx={12} fill={SURFACE} stroke={BORDER} />

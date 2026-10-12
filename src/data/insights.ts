@@ -17,7 +17,7 @@ export type Block =
   | { type: "roles"; caption: string; tiers: { tier: string; purpose: string; roles: { name: string; does: string }[] }[] }
   | { type: "table"; caption: string; head: string[]; rows: string[][]; sources?: { label: string; href: string }[] }
   // A hand-drawn architecture diagram, picked by name from the article page.
-  | { type: "diagram"; name: "shared-data-platform" | "time-model" | "single-customer-view"; caption: string };
+  | { type: "diagram"; name: "shared-data-platform" | "time-model" | "single-customer-view" | "single-customer-view-integration"; caption: string };
 
 /** The readable words in a block, for reading time. */
 function blockWords(b: Block): string[] {
@@ -93,11 +93,21 @@ export const articles: Article[] = [
       {
         type: "diagram",
         name: "single-customer-view",
-        caption: "The matching engine stays out of sight: consumers only ever see our APIs and events",
+        caption: "Logical view: the matching engine stays out of sight, and consumers only ever see our APIs and events",
       },
       {
         type: "p",
         text: "Hiding the engine gave us two things. We could customise freely, because the logic consumers depended on was ours. And we could upgrade or even replace the MDM engine later without breaking a single consumer.",
+      },
+      { type: "h3", text: "How the data moved" },
+      {
+        type: "p",
+        text: "Around that core, each source and consumer got the integration pattern that suited it. Dun & Bradstreet enriched the data through a daily batch feed and an on-demand service. Every change to a customer was published as an XML event, so subscribing systems knew straight away instead of polling. Digital channels and next-best-action decisions queried customers in real time through API services built around the Oracle store. Batch ETL loaded the data lake for analytics and the Adobe data store for marketing. And the data stewards worked in MDM's own screens, resurfaced for their review queue.",
+      },
+      {
+        type: "diagram",
+        name: "single-customer-view-integration",
+        caption: "Architecture view: the right integration pattern for each source and consumer",
       },
       { type: "h2", text: "The hardest call: when to merge" },
       {

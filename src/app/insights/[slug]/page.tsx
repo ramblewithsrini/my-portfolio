@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Contact from "@/components/Contact";
 import Reveal from "@/components/Reveal";
+import ScvArchitecture from "@/components/ScvArchitecture";
 import SdpArchitecture from "@/components/SdpArchitecture";
 import TimeModel from "@/components/TimeModel";
 import { formatDate, readingTime, visibleArticles, type Block } from "@/data/insights";
@@ -136,6 +137,7 @@ function renderBlock(block: Block, i: number) {
         <figure key={i} className="mt-10 lg:-mx-32">
           {block.name === "shared-data-platform" && <SdpArchitecture />}
           {block.name === "time-model" && <TimeModel />}
+          {block.name === "single-customer-view" && <ScvArchitecture />}
           <figcaption className="mt-3 text-sm text-muted">{block.caption}</figcaption>
         </figure>
       );

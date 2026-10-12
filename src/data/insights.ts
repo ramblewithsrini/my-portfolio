@@ -17,7 +17,7 @@ export type Block =
   | { type: "roles"; caption: string; tiers: { tier: string; purpose: string; roles: { name: string; does: string }[] }[] }
   | { type: "table"; caption: string; head: string[]; rows: string[][]; sources?: { label: string; href: string }[] }
   // A hand-drawn architecture diagram, picked by name from the article page.
-  | { type: "diagram"; name: "shared-data-platform" | "time-model"; caption: string };
+  | { type: "diagram"; name: "shared-data-platform" | "time-model" | "single-customer-view"; caption: string };
 
 /** The readable words in a block, for reading time. */
 function blockWords(b: Block): string[] {
@@ -49,6 +49,100 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+  {
+    slug: "the-customers-we-couldnt-see",
+    title: "Case study: the customers we couldn't see",
+    dek: "How an insurer built a single customer and household view, why we hid the matching engine behind our own layer, and why we went live cautious.",
+    date: "2026-10-12",
+    status: "published",
+    tags: ["Case study", "Master data", "Architecture", "Insurance"],
+    blocks: [
+      {
+        type: "p",
+        text: "The insurer didn't have a customer problem. It had a recognition problem. A customer with car insurance never heard about home cover, let alone pet insurance, because the business couldn't tell it was the same person, or the same family. Its happiest customers were invisible to it.",
+      },
+      { type: "h2", text: "What it was costing" },
+      {
+        type: "p",
+        text: "The insurer held a huge amount of customer data, full of duplicates. Without one trusted view of each customer and their household, it couldn't market the right product to the right person, and it felt it was losing its own customers to competitors. The bigger loss wasn't the revenue walking out of the door. It was the revenue it could have earned from people who were already happy with it.",
+      },
+      { type: "h2", text: "Part of something bigger" },
+      {
+        type: "p",
+        text: "The single customer view wasn't a standalone project. It was a core service of a new shared digital platform, built once so that many parts of the business could reuse it: for marketing, for customer surveys, and for understanding how the business itself was performing.",
+      },
+      { type: "h2", text: "Choosing the engine" },
+      {
+        type: "p",
+        text: "We evaluated Informatica, IBM and open-source MDM options. In the end, the insurer's existing relationship with IBM sealed the deal. That taught me something early: on a programme like this, the tool matters less than people expect. The hard parts are the data and the people.",
+      },
+      { type: "h2", text: "Who to trust" },
+      {
+        type: "p",
+        text: "Before arguing about matching algorithms, we had to agree which system we trusted. That turned out to be one of the easiest decisions of the programme. The policy system kept the best-quality customer data, and the business agreed straight away, so it became the trusted source for the golden record. We standardised addresses against Royal Mail's address file before trying any clever matching.",
+      },
+      { type: "h2", text: "The decision that shaped everything" },
+      {
+        type: "p",
+        text: "IBM's MDM server was good at matching and searching, but it wouldn't let us customise it the way the business needed. So we made a choice that shaped the whole architecture: we would never expose MDM to the people who used the data.",
+      },
+      {
+        type: "p",
+        text: "Instead, we built our own orchestration layer and an Oracle data store on top of it. MDM did the matching, merging and householding behind the scenes; our services wrote the single customer view into Oracle; and every consumer reached it only through APIs and events. Marketing in Adobe, next-best-action decisions, surveys and performance reporting all used our layer, never the engine.",
+      },
+      {
+        type: "diagram",
+        name: "single-customer-view",
+        caption: "The matching engine stays out of sight: consumers only ever see our APIs and events",
+      },
+      {
+        type: "p",
+        text: "Hiding the engine gave us two things. We could customise freely, because the logic consumers depended on was ours. And we could upgrade or even replace the MDM engine later without breaking a single consumer.",
+      },
+      { type: "h2", text: "The hardest call: when to merge" },
+      {
+        type: "p",
+        text: "Most of our arguments were about auto-merging and survivorship. Merge two different people by mistake and you damage both records, and both customers' experience. So the business, not IT, led the decision on where to draw the line, with us advising.",
+      },
+      {
+        type: "p",
+        text: "We went live cautious: only matches scoring about 90 or more merged automatically, and everything below went to a small team of data stewards, who reviewed the queue and sampled what the system merged on its own. The thinking was simple. The more you analyse the data, the more comfortable you become with it, so you relax the threshold as confidence grows, not on day one.",
+      },
+      {
+        type: "p",
+        text: "You can try the same trade-off yourself in my MDM playground: move the threshold and watch customers merge, or fail to.",
+      },
+      { type: "h2", text: "What it made possible" },
+      {
+        type: "list",
+        items: [
+          "One trusted view of every customer and their household, with matching rates 21% better after tuning, cleansing and clearer survivorship rules.",
+          "Marketing in Adobe could finally target a car customer with home or pet cover, and next-best-action decisions had a real customer to work from.",
+          "Surveys and performance reporting used the same customer, not three versions of them.",
+          "Six projects reused the shared platform instead of building their own, and the steering committee named it one of the key reasons the programme succeeded.",
+        ],
+      },
+      { type: "h2", text: "What I'd do differently today" },
+      {
+        type: "p",
+        text: "I'd add graph-based matching alongside the scoring rules. Relationships (a shared address, a shared phone, a shared policy) say a lot about whether two records are the same person or the same household, and a graph makes them easy to see and explain. I've since built that approach in my own labs.",
+      },
+      { type: "h2", text: "What I'd tell another leader" },
+      {
+        type: "list",
+        items: [
+          "Start from the business loss, not the data mess. \"We can't see our own customers\" gets funded; \"we have duplicates\" doesn't.",
+          "Agree which system you trust before you argue about algorithms.",
+          "Keep the product behind your own interface. Consumers should depend on your APIs and events, not on a vendor's engine.",
+          "Let the business own the merge threshold, start high, and relax it as the data earns trust.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "The goal of a single customer view isn't clean data. It's recognising the people who already trust you.",
+      },
+    ],
+  },
   {
     slug: "converging-144-applications-after-a-merger",
     title: "Case study: 144 applications, and what deserved to survive",

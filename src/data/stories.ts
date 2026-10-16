@@ -125,7 +125,7 @@ export const stories: Record<string, Story> = {
       {
         title: "Keeping the mainframe running, safely",
         challenge: "A mainframe merchant profile system had no failover, so it fell short of the acquirer's availability standards. Leadership wanted it replaced within three years rather than invest in a failover for a platform the roadmap already planned to exit.",
-        approach: "The original replacement estimate was 5–12 years, and many consumers queried the mainframe directly, not all of them known. I presented the risks and recommended the failover investment as the safe bet, with the exit pursued in parallel: find every consumer and put each on its own roadmap.",
+        approach: "The original replacement estimate was five and a half years, and many consumers queried the mainframe directly, not all of them known. I presented the risks and recommended the failover investment as the safe bet, with the exit pursued in parallel: find every consumer and put each on its own roadmap.",
         outcome: "The CIO accepted the recommendation: the failover was approved and a roadmap to exit the mainframe was worked out.",
       },
       {

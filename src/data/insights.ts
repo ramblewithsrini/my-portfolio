@@ -156,7 +156,7 @@ export const articles: Article[] = [
   {
     slug: "saying-no-safely",
     title: "Case study: saying no, safely",
-    dek: "Leadership wanted a mainframe replaced in three years. The honest estimate was five to twelve. How I made the case for the safer investment, and kept the exit on track.",
+    dek: "Leadership wanted a mainframe replaced in three years. The honest estimate was five and a half years. How I made the case for the safer investment, and kept the exit on track.",
     date: "2026-10-17",
     status: "published",
     tags: ["Case study", "Architecture", "Mergers", "Risk"],
@@ -178,7 +178,7 @@ export const articles: Article[] = [
       { type: "h2", text: "Why three years wasn't safe" },
       {
         type: "p",
-        text: "I understood the logic, and on paper it looked like the cheaper answer. But the original estimate to replace the mainframe was five to twelve years, not three. It carried too many functions and too many moving parts. Worse, many consumers queried the mainframe directly, and not all of them were even known. Before you can switch off a system like that, you have to find every consumer and put each one on its own roadmap. Nobody could promise to do all of that safely in three years.",
+        text: "I understood the logic, and on paper it looked like the cheaper answer. But the original estimate to replace the mainframe was five and a half years, not three. It carried too many functions and too many moving parts. Worse, many consumers queried the mainframe directly, and not all of them were even known. Before you can switch off a system like that, you have to find every consumer and put each one on its own roadmap. Nobody could promise to do all of that safely in three years.",
       },
       {
         type: "p",
@@ -189,7 +189,7 @@ export const articles: Article[] = [
         caption: "The options, side by side",
         head: ["Option", "Why it was attractive", "The risk"],
         rows: [
-          ["Replace the mainframe within three years", "No spend on a platform we planned to exit", "The honest estimate was five to twelve years, and not every consumer was known. Too much risk to a critical platform."],
+          ["Replace the mainframe within three years", "No spend on a platform we planned to exit", "The honest estimate was five and a half years, and not every consumer was known. Too much risk to a critical platform."],
           ["Add a failover now, and exit in parallel", "Meets the availability standard straight away, and gives the exit the time it needs", "A significant investment in a platform with a planned end. Recommended, and chosen."],
         ],
       },
@@ -210,7 +210,7 @@ export const articles: Article[] = [
       {
         type: "list",
         items: [
-          "Take the estimate seriously. When the honest number is five to twelve years, a three-year plan isn't ambitious, it's a risk.",
+          "Take the estimate seriously. When the honest number is five and a half years, a three-year plan isn't ambitious, it's a risk.",
           "Find the consumers before you set the date. A system is only as easy to retire as its least-known dependency.",
           "Don't just say no. Offer the safer path, and keep the goal alive alongside it.",
           "Give the decision-maker the risks in plain terms, then let them decide.",

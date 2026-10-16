@@ -239,8 +239,12 @@ export const summary = {
       href: "/experience/allianz",
     },
     {
-      text: "Built an architecture practice from zero, co-founded a start-up as CTO, and keep building to learn: from airline innovation labs in 2008 to an MDM engine and a knowledge graph today, all with public code.",
-      href: "/lab/research-graph",
+      text: "Architected an airline innovation lab whose demonstrations were used by British Airways, KLM and SITA, and built an architecture practice from zero.",
+      href: "/experience/tcs",
+    },
+    {
+      text: "Co-founded TalkMusically as CTO, with our own codec to carry music and voice on one call and close to £1.5M raised, and I still build to learn: an MDM engine and a knowledge graph, with public code.",
+      href: "/lab",
     },
   ],
 };

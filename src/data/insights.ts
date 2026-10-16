@@ -154,6 +154,71 @@ export const articles: Article[] = [
     ],
   },
   {
+    slug: "saying-no-safely",
+    title: "Case study: saying no, safely",
+    dek: "Leadership wanted a mainframe replaced in three years. The honest estimate was five to twelve. How I made the case for the safer investment, and kept the exit on track.",
+    date: "2026-10-17",
+    status: "published",
+    tags: ["Case study", "Architecture", "Mergers", "Risk"],
+    caseStudy: "discover",
+    blocks: [
+      {
+        type: "p",
+        text: "Some of the most important architecture decisions I've made were decisions not to do something yet. This is one of them: a mainframe that leadership wanted gone in three years, and why I argued for keeping it running, safely, while we planned a proper way out.",
+      },
+      { type: "h2", text: "A system that couldn't fail, without a failover" },
+      {
+        type: "p",
+        text: "After the global card network I worked for was acquired by a larger bank, every critical platform had to meet the acquirer's availability standards. One of ours didn't. The mainframe that held our merchant profiles had no failover. If it went down, there was nothing to take over.",
+      },
+      {
+        type: "p",
+        text: "There were two ways to close that gap. We could add a failover instance, a significant investment. Or we could replace the mainframe altogether. The roadmap already planned to exit the mainframe, so the divisional CIO was understandably reluctant to spend heavily on a platform we intended to leave. He wanted it replaced within three years.",
+      },
+      { type: "h2", text: "Why three years wasn't safe" },
+      {
+        type: "p",
+        text: "I understood the logic, and on paper it looked like the cheaper answer. But the original estimate to replace the mainframe was five to twelve years, not three. It carried too many functions and too many moving parts. Worse, many consumers queried the mainframe directly, and not all of them were even known. Before you can switch off a system like that, you have to find every consumer and put each one on its own roadmap. Nobody could promise to do all of that safely in three years.",
+      },
+      {
+        type: "p",
+        text: "A rushed replacement would have swapped one risk for a bigger one: a critical platform still without a safety net while we raced a deadline, and consumers we didn't know about breaking on the day we switched it off.",
+      },
+      {
+        type: "table",
+        caption: "The options, side by side",
+        head: ["Option", "Why it was attractive", "The risk"],
+        rows: [
+          ["Replace the mainframe within three years", "No spend on a platform we planned to exit", "The honest estimate was five to twelve years, and not every consumer was known. Too much risk to a critical platform."],
+          ["Add a failover now, and exit in parallel", "Meets the availability standard straight away, and gives the exit the time it needs", "A significant investment in a platform with a planned end. Recommended, and chosen."],
+        ],
+      },
+      { type: "h2", text: "Making the case" },
+      {
+        type: "p",
+        text: "Saying no to a senior leader only works if you give them something better to say yes to. So I didn't argue against the exit. I put the risks in front of the CIO plainly: what could fail, what we didn't yet know, and what a three-year deadline would force us to skip. Then I recommended the failover investment as the safe bet, with the exit pursued in parallel: discover every consumer of the mainframe, and build a roadmap for each one.",
+      },
+      {
+        type: "p",
+        text: "The decision was his, and he accepted the recommendation. The failover was approved, and a roadmap to exit the mainframe was worked out. It was also why, when we later shaped the £40M convergence programme, the mainframe exit sat outside its three-year scope.",
+      },
+      {
+        type: "p",
+        text: "The mainframe was still running, safely, when I left.",
+      },
+      { type: "h2", text: "What I'd tell another leader" },
+      {
+        type: "list",
+        items: [
+          "Take the estimate seriously. When the honest number is five to twelve years, a three-year plan isn't ambitious, it's a risk.",
+          "Find the consumers before you set the date. A system is only as easy to retire as its least-known dependency.",
+          "Don't just say no. Offer the safer path, and keep the goal alive alongside it.",
+          "Give the decision-maker the risks in plain terms, then let them decide.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "converging-144-applications-after-a-merger",
     title: "Case study: 144 applications, and what deserved to survive",
     dek: "A merger, a public promise of savings and an estate built one decision at a time: how we decided what to keep, and how that became a £40M, three-year investment case.",

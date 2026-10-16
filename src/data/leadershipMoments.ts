@@ -18,7 +18,7 @@ export type LeadershipMoment = {
 
 export const momentsIntro = {
   title: "Leadership moments",
-  lead: "Four real situations: what was at stake, how it looked from the other side, what I did and what changed. Names are left out on purpose.",
+  lead: "Five real situations: what was at stake, how it looked from the other side, what I did and what changed. Names are left out on purpose.",
 };
 
 export const leadershipMoments: LeadershipMoment[] = [
@@ -99,5 +99,27 @@ export const leadershipMoments: LeadershipMoment[] = [
     ],
     lesson: "A capability gap is a reason to look for a partner, not a reason to walk away.",
     labels: { theirSide: "Why it seemed right", whatIDid: "Why it was a mistake" },
+  },
+  {
+    id: "estimate",
+    theme: "Owning a mistake",
+    title: "The estimate I got wrong",
+    teaser: "A project slipped six weeks because of my estimate. I said so first, then fixed the plan.",
+    situation: [
+      "We were rebuilding an HR self-service system, integrated with the finance platform. Testing needed realistic data, so part of the scope was anonymising HR records, and the anonymised records had to stay consistent across HR and finance for the tests to mean anything.",
+      "I estimated that work myself, without understanding how complex it was. It turned out to be an enormous task that only a few specialist providers could do, and the project slipped.",
+    ],
+    theirSide:
+      "It looked like a small piece of a larger project: copy the data, mask the names, move on. Nobody on the project had done it at this depth before, and that included me.",
+    whatIDid: [
+      "I owned it openly. The slip came from my estimate, not from the team, and I said so: first to the project manager, then to the executive sponsor.",
+      "Together we revisited the plan and added six weeks, so the new date was one we could keep.",
+    ],
+    whatChanged: [
+      "The project was delivered successfully, and I was recognised with a special award for it.",
+      "It changed how I estimate. Before I put a number on unfamiliar work, I find a specialist or a colleague who has done it. And I assume anything involving personal data is harder than it looks.",
+    ],
+    lesson: "Never estimate work you haven't done before on your own. Find someone who has.",
+    labels: { theirSide: "Why it looked simple", whatIDid: "What I did" },
   },
 ];

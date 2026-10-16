@@ -46,14 +46,16 @@ export const roleValues: RoleValue[] = [
       "Twenty-five years from developer to TOGAF-certified enterprise architect. I design target states that are fundable, deliverable and owned by the teams who run them — and I stay with them until they land.",
     value: [
       "North Stars and target architectures tied to investment cases — like the £40M, 144-platform convergence at Discover",
+      "A post-merger playbook: map the combined estate (LeanIX, capability map, Gartner TIME), test it for the combined load (SLOs, SLAs, capacity), then rationalise",
+      "Governance that speeds teams up: Deputy Chair of an enterprise design governance board reviewing 50–75 designs a year, with ADRs and delegated approvals",
       "Modern patterns applied pragmatically: event-driven, DDD, CQRS, hexagonal, multi-region cloud",
-      "Integration at scale — from 112 airline systems to Oracle Cloud and enterprise API management",
+      "Integration at scale — from 112 airline systems to an integration pattern catalogue for 86 Oracle Cloud integrations",
       "AI designed in, not bolted on — like an API-integrated chatbot on Ricoh's customer portals",
       "Regulation built in from the start: PCI DSS 4.0, GDPR, KYC",
     ],
     evidence: [
       { value: "73 → 5–7", label: "Days to onboard a partner, after platform convergence" },
-      { value: "6", label: "Parallel workstreams led at Ricoh, alongside its $500M Oracle Cloud programme" },
+      { value: "86", label: "Integrations designed for Ricoh's $500M Oracle Cloud programme" },
       { value: "112", label: "Systems integrated for Saudia" },
     ],
     quote:
@@ -77,12 +79,12 @@ export const roleValues: RoleValue[] = [
         {
           title: "Decide in the open",
           body: "Record the decision and the reasoning, and ratify it in the right forum so it survives contact with delivery.",
-          example: "Message patterns for BA's Travel Programme, ratified by its technical working group.",
+          example: "Architecture decision records at Discover, and designs ratified by the enterprise governance board I deputy-chaired.",
         },
         {
           title: "Guardrails, not gatekeeping",
           body: "Turn decisions into principles, patterns and standards that let teams move fast without asking permission.",
-          example: "Integration patterns and data quality guardrails across Ricoh's parallel workstreams.",
+          example: "Delegated approvals at Discover; integration patterns mapped to every requirement at Ricoh.",
         },
         {
           title: "Revisit with evidence",
@@ -108,7 +110,7 @@ export const roleValues: RoleValue[] = [
       "BCS-certified in data management, I've led data from the architecture side — so strategy, governance and platforms are designed together, not bolted on. And I've put AI to work on top of that data, in production and with guardrails.",
     value: [
       "AI-ready data: trusted, governed data that analytics and AI can safely build on",
-      "Governed AI in production — Agentic AI at Discover, conversational AI at Ricoh — with guardrails a regulator would recognise",
+      "Governed AI in production — an AI agent and an AI vulnerability remediation assistant at Discover, conversational AI at Ricoh — with guardrails a regulator would recognise",
       "Single and household customer views on MDM that feed marketing and analytics",
       "Data strategy and governance: metadata curation, reference data, data quality and survivorship",
       "Modern data platforms: data at rest, OLTP/OLAP integration, data lakes and warehouses",
@@ -138,17 +140,18 @@ export const roleValues: RoleValue[] = [
     focus: "Teams, delivery and resilience",
     headline: "Engineering organisations that deliver — with people who want to stay.",
     intro:
-      "I've led a 30-person architecture and engineering organisation through its managers, for payment platforms processing 200M transactions a day — through a merger, a platform convergence and a post-merger surge.",
+      "I've led a 30-person architecture and engineering organisation through its managers, for payment platforms processing 200M transactions a day — through a merger, a platform convergence, PCI DSS 4.0 and a post-merger surge.",
     value: [
       "Leaders who grow leaders: clear decision rights, service ownership and coaching",
       "Functions built from the ground up, across the UK, US and India",
       "Teams that collaborate instead of protecting their silos — no blame, shared credit",
       "Resilience as a culture: multi-region design, CI/CD and automated quality gates",
+      "Regulation delivered, not just designed: PCI DSS 4.0 across the payment platforms — MFA, PAN tokenisation, centralised logging and unsupported software retired",
       "Delivery at scale through mergers, platform convergence and volume surges",
-      "Governed AI adoption that makes good teams faster",
+      "Governed AI adoption that makes good teams faster: velocity baselined first, then tracked sprint by sprint",
     ],
     evidence: [
-      { value: "8 of 8", label: "People who chose to stay after I turned their team around" },
+      { value: "4x", label: "Team velocity in six months of AI-assisted delivery (10–15 → 45–60 story points a sprint)" },
       { value: "360%", label: "Post-merger surge absorbed with Agentic AI — same team, within SLA" },
       { value: "80–90%", label: "Shorter deployment lead time after my team's move to OpenShift" },
     ],

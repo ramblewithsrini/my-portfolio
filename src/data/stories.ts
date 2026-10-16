@@ -82,6 +82,18 @@ export const stories: Record<string, Story> = {
         outcome: "Onboarding cut to 5–7 days, depending on the merchant, with a unified customer experience — and my team scaled onboarding capacity tenfold, from 100 to 1,000 requests a day, with 97% of primary service requests completing in under 500 ms.",
       },
       {
+        title: "P3: 10–12 partner portals into one",
+        challenge: "Successive mergers and years of keep-the-lights-on fixes had left partners with 10–12 overlapping applications and portals, each with its own login, notifications and password.",
+        approach: "Consolidated them into P3 (Partner Product and Portal): one portal rebuilt on React.js, with single sign-on through Okta — one login, one set of notifications, one password. The UI was modernised as part of the PCI DSS 4.0 work.",
+        outcome: "A 23% cost reduction, plus an engineering saving as separate teams came together as one central team.",
+      },
+      {
+        title: "PCI DSS 4.0, delivered",
+        challenge: "PCI DSS 4.0 had a fixed deadline and touched every payment system in the estate.",
+        approach: "My architecture team assessed the impact, worked through the requirements with legal and audit, and built the remediation backlog with the business: must-do and should-do within the deadline. Two of my teams delivered it: authentication changes and MFA; tokenisation of card numbers at rest, in motion and in view; centralised logging; and replacing unsupported libraries and WebSphere versions, standardising on Spring Boot. A ServiceNow dashboard gave executives the impact and status at a glance.",
+        outcome: "PCI DSS 4.0 compliance across the payment platforms, evidenced to auditors.",
+      },
+      {
         title: "Absorbing a 360% surge with Agentic AI",
         challenge: "The Capital One merger drove a surge in referrals — the cases merchants raise when a transaction doesn't go through.",
         approach: "Introduced an AI agent into the Referral Management Service that triages, classifies and prioritises every referral, and resolves the simple cases itself. Live in four months. My team designed the backend for scale: APIs, workflow automation, integration patterns and a referral search bot that cut manual processing.",
@@ -107,8 +119,26 @@ export const stories: Record<string, Story> = {
       {
         title: "Merger-ready resilience",
         challenge: "The post-merger volume surge put availability, SLAs and SLOs at risk.",
-        approach: "Assessed the impact, prioritised scalability work with the Integration Management Office, and scaled capacity rapidly with third-party contractors. Made service health visible in Datadog: dashboards for SLOs, availability and performance, alerting for incident response, and service-health reporting to leadership and the business.",
+        approach: "Mapped the combined estate (LeanIX discovery, a capability map and Gartner TIME for every application) and ran a scalability assessment covering SLOs and SLAs, response times, and capacity and disk sizing, so the merged platforms could carry the combined load. Prioritised the scalability work with the Integration Management Office, and scaled capacity rapidly with third-party contractors. Made service health visible in Datadog: dashboards for SLOs, availability and performance, alerting for incident response, and service-health reporting to leadership and the business.",
         outcome: "The platforms held their 99.999% availability target through a smooth transition of the Capital One network; secured Investment Council approval and directed the £40M, 144-platform convergence programme.",
+      },
+      {
+        title: "Keeping the mainframe running, safely",
+        challenge: "A mainframe merchant profile system had no failover, so it fell short of the acquirer's availability standards. Leadership wanted it replaced within three years rather than invest in a failover for a platform the roadmap already planned to exit.",
+        approach: "The original replacement estimate was 5–12 years, and many consumers queried the mainframe directly, not all of them known. I presented the risks and recommended the failover investment as the safe bet, with the exit pursued in parallel: find every consumer and put each on its own roadmap.",
+        outcome: "The CIO accepted the recommendation: the failover was approved and a roadmap to exit the mainframe was worked out.",
+      },
+      {
+        title: "Design governance at enterprise scale",
+        challenge: "Applications across the company needed to be built to common standards, without governance becoming a bottleneck.",
+        approach: "As Deputy Chair of the enterprise shift-left design governance board, reviewed designs from across the company, not only my area: fortnightly sessions, intake through Jira, run with the PMO. Owned the architecture decision records for my area, and replaced heavy design approvals with standards and delegated approvals.",
+        outcome: "50–75 designs reviewed a year, with clear decision rights.",
+      },
+      {
+        title: "AI that makes good teams faster",
+        challenge: "AI tools promised faster delivery, but in a regulated payments environment they had to be safe, and the gain had to be real.",
+        approach: "Rolled out AI-assisted development in three stages, choosing tools on capability, cost, security and vendor lock-in, with velocity baselined first and tracked sprint by sprint. Designed and owned an AI vulnerability remediation assistant on Anthropic's Claude that scans production libraries, flags vulnerable versions and suggests fixes.",
+        outcome: "Team velocity rose from 10–15 to 45–60 story points a sprint within six months.",
       },
       {
         title: "Data strategy & governance",
@@ -136,6 +166,16 @@ export const stories: Record<string, Story> = {
       "AI-assisted delivery",
       "C4 modelling",
       "PCI DSS 4.0",
+      "Kafka",
+      "RabbitMQ",
+      "React.js",
+      "Spring Boot",
+      "Apigee",
+      "AWS API Gateway",
+      "DynamoDB",
+      "Snowflake",
+      "LeanIX",
+      "Anthropic Claude",
       "Okta",
       "SSO / OAuth 2.0",
       "CI/CD",
@@ -175,35 +215,36 @@ export const stories: Record<string, Story> = {
 
   ricoh: {
     summary:
-      "Senior member of Ricoh Europe's architecture team, contributing to the technology evaluation and integration architecture of a multiyear $500M Oracle Cloud transformation — and Lead Architect for the HR, finance and customer-facing modernisation running alongside it.",
+      "Senior member of Ricoh Europe's architecture team, owning the integration design for a multiyear $500M Oracle Cloud transformation — and Lead Architect for the HR, finance and customer-facing modernisation running alongside it.",
     context: [
       "Ricoh Europe was moving core business platforms to Oracle Cloud as part of a multiyear transformation. Around it, HR, finance and customer-facing systems all needed modernising — largely in parallel.",
       "My brief was to contribute to the technology evaluation for Oracle Cloud adoption, lead the modernisation workstreams around it, and be a trusted adviser to the business on data and integration: showing how the right platforms and patterns would solve their challenges.",
     ],
     scope: [
-      { label: "Reporting to", value: "Head of Enterprise Architecture" },
+      { label: "Reporting to", value: "Head of Architecture" },
       { label: "Partners", value: "Amelia professional services, for the customer-portal chatbot" },
+      { label: "Reach", value: "Ricoh's regional units beyond Europe, including Japan and the Netherlands" },
       { label: "Workstreams", value: "HR modernisation, Concur and invoice management, an AI chatbot for customer portals, and enterprise API management — in parallel" },
       { label: "Platforms", value: "SaaS, workflow, HR and shared business platforms" },
     ],
     outcomes: [
       { value: "$500M", label: "Oracle Cloud programme I contributed to" },
       { value: "27%", label: "Fewer support-desk emails and calls, via an AI chatbot" },
+      { value: "86", label: "Integrations designed for Oracle Cloud" },
       { value: "6", label: "Workstreams led in parallel" },
-      { value: "5", label: "HR platforms modernised" },
     ],
     achievements: [
       {
-        title: "Oracle Cloud evaluation and integration",
-        challenge: "The business needed confidence in Oracle Cloud before committing to a multiyear migration.",
-        approach: "As part of the architecture team, contributed to the technology evaluation for Oracle Cloud adoption and to the cloud migration and integration architecture — building Java proofs of concept on Oracle Fusion myself.",
-        outcome: "Helped shape the target architecture and implementation roadmap across SaaS, workflow, HR and shared business platforms.",
+        title: "Oracle Cloud integration design",
+        challenge: "The business needed confidence in Oracle Cloud before committing to a multiyear migration, and every integration had to be built the same way across the company.",
+        approach: "Contributed to the technology evaluation, building Java proofs of concept on Oracle Fusion myself. Then owned the integration design: formulated the integration design patterns, mapped each requirement to a pattern, and wrote the guidelines for managing integrations — built on Oracle Integration and MQ messaging, with MuleSoft as the API gateway. Worked with Ricoh's regional units beyond Europe, including Japan and the Netherlands.",
+        outcome: "86 integrations designed to one pattern catalogue, readying Ricoh for Oracle Cloud adoption company-wide.",
       },
       {
         title: "HR platform modernisation",
         challenge: "HR ran across a mix of platforms: iPeople, SAP SuccessFactors, Axon Ivy, TalentLink and ServiceNow.",
-        approach: "Led the architecture for modernising the HR estate across all five platforms.",
-        outcome: "More consistent HR platforms with greater operational maturity.",
+        approach: "Led the architecture for modernising the HR estate across all five platforms, including the HR integration with Oracle Cloud and a rebuild of HR self-service on Axon Ivy, integrated with SAP Finance.",
+        outcome: "More consistent HR platforms with greater operational maturity. The Axon Ivy self-service project was delivered successfully, and I was recognised with a special award for it.",
       },
       {
         title: "Conversational AI for customer portals",
@@ -226,6 +267,10 @@ export const stories: Record<string, Story> = {
     tech: [
       "Oracle Cloud",
       "Oracle Fusion",
+      "Oracle Integration (OIC)",
+      "MQ",
+      "MuleSoft",
+      "SAP Finance",
       "Java",
       "SAP SuccessFactors",
       "ServiceNow",

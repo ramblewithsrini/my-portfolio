@@ -18,6 +18,7 @@ export const glance = [
   { label: "Based in", value: "London, UK" },
   { label: "Experience", value: "25 years · 15+ in consulting" },
   { label: "Recognition", value: "Employee of the Year on three client accounts · conference speaker since 2007" },
+  { label: "Governance", value: "Deputy Chair of an enterprise design governance board · 50–75 designs a year" },
   {
     label: "Focus",
     value: "Regulated industries — fintech, payments, insurtech, airlines, retail",
@@ -222,11 +223,15 @@ export const summary = {
       href: "/leadership",
     },
     {
-      text: "Steered a global payments network through a merger without dropping below 99.999% availability, and won approval for a £40M convergence by deciding, application by application, what deserved to survive.",
+      text: "Steered a global payments network through a merger without dropping below 99.999% availability: mapped the combined estate, tested it for the extra load, and won approval for a £40M convergence by deciding, application by application, what deserved to survive.",
       href: "/insights/converging-144-applications-after-a-merger",
     },
     {
-      text: "Put governed AI to work early: live in four months, absorbing a post-merger surge with the same team.",
+      text: "Said no when it was the safe answer: kept a critical mainframe running rather than rush its replacement, and stopped a platform move 120 days before go-live.",
+      href: "/insights/saying-no-safely",
+    },
+    {
+      text: "Put governed AI to work early: an agent live in four months that absorbed a post-merger surge with the same team, and AI-assisted delivery that took team velocity from 10–15 to 45–60 story points a sprint.",
       href: "/insights/absorbing-a-360-percent-surge",
     },
     {
@@ -247,6 +252,10 @@ export const impact = [
   { value: "360%", label: "Surge absorbed with Agentic AI, same team", href: "/experience/discover" },
   { value: "27%", label: "Fewer support calls via an AI chatbot", href: "/experience/ricoh" },
   { value: "21%", label: "Better MDM matching rates", href: "/experience/allianz" },
+  { value: "10–12 → 1", label: "Partner portals consolidated, cutting cost by 23%", href: "/experience/discover" },
+  { value: "4x", label: "Team velocity in six months of AI-assisted delivery (10–15 → 45–60 story points a sprint)", href: "/experience/discover" },
+  { value: "86", label: "Integrations designed for a $500M Oracle Cloud programme", href: "/experience/ricoh" },
+  { value: "PCI DSS 4.0", label: "Delivered across the payment platforms: MFA, tokenisation, logging", href: "/experience/discover" },
   { value: "#1", label: "Top-rated manager of a larger team, company-wide (2025 survey)", href: "/leadership" },
   { value: "£40M", label: "Convergence across 144 platforms", href: "/experience/discover" },
   { value: "£1.5M+", label: "Annual revenue from a function I built", href: "/experience/interglobe" },

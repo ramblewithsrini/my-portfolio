@@ -5,7 +5,7 @@ export const intro = {
   eyebrow: "About me",
   title: "Fluent at sea level.",
   titleAccent: "Trusted at 30,000 feet.", // non-breaking space keeps "30,000 feet" together
-  lead: "I'm Srini. I started as a developer in 2001, grew into an architect, and went on to lead the architects and engineers who build payment platforms at scale — and the data strategy behind them. That path means I can go deep into the code with an engineer in the morning, make the investment case to an executive board in the afternoon — and translate faithfully between the two.",
+  lead: "If you need someone to take a complex, regulated technology estate and turn it into a funded plan that actually ships, that's what I do. Most recently I led architecture, engineering and data for the partner and payment platforms of a global payments network: 200M transactions a day at 99.999%, carried through a merger, a £40M convergence and PCI DSS 4.0. I started as a developer in 2001, and that's still my edge: I can go deep into the code with an engineer in the morning, make the investment case to an executive board in the afternoon, and translate faithfully between the two.",
 };
 
 export const portrait = {
@@ -14,7 +14,7 @@ export const portrait = {
 };
 
 export const glance = [
-  { label: "Path", value: "Developer → Architect → Technology leader" },
+  { label: "Seeking", value: "Director / Head of Engineering, Architecture or Data & AI" },
   { label: "Based in", value: "London, UK" },
   { label: "Experience", value: "25 years · 15+ in consulting" },
   { label: "Recognition", value: "Employee of the Year on three client accounts · conference speaker since 2007" },
@@ -215,7 +215,7 @@ export const summary = {
   title: "In 30 seconds",
   items: [
     {
-      text: "Developer to Head of Technology in 25 years, and still building: fluent with engineers, trusted by executive boards.",
+      text: "25 years in technology, the last decade leading architecture and engineering across payments, insurance, technology and consulting: fluent with engineers, trusted by executive boards.",
       href: "#different",
     },
     {

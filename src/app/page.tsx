@@ -79,7 +79,7 @@ export default function AboutPage() {
           aria-hidden
         />
 
-        <div className="mx-auto grid w-full max-w-6xl items-end gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_20rem]">
+        <div className="mx-auto grid w-full max-w-6xl items-start gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_20rem]">
           <div>
             <Reveal intro>
               <p className="type-eyebrow mb-6 text-accent">
@@ -130,11 +130,14 @@ export default function AboutPage() {
               <p className="type-eyebrow mb-5 text-muted">
                 At a glance
               </p>
-              <dl>
-              {glance.map((g) => (
+              {/* Two columns: short values pair up side by side, long ones span the card */}
+              <dl className="grid grid-flow-row-dense grid-cols-2 gap-x-5">
+              {glance.map((g, i) => (
                 <div
                   key={g.label}
-                  className="border-t border-border py-3 first-of-type:border-t-0 first-of-type:pt-0"
+                  className={`border-t border-border py-3 ${i === 0 ? "border-t-0 pt-0" : ""} ${
+                    fillCounts(g.value).length > 30 ? "col-span-2" : ""
+                  }`}
                 >
                   <dt className="text-xs text-muted">{g.label}</dt>
                   <dd className="mt-0.5 font-medium">{fillCounts(g.value)}</dd>

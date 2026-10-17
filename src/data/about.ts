@@ -16,6 +16,7 @@ export const portrait = {
 export const glance = [
   { label: "Seeking", value: "Director / Head of Engineering, Architecture or Data & AI" },
   { label: "Based in", value: "London, UK" },
+  { label: "Worked in", value: "India · US · UK · Saudi Arabia · UAE" },
   { label: "Experience", value: "25 years · 15+ in consulting" },
   { label: "Recognition", value: "Employee of the Year on three client accounts · conference speaker since 2007" },
   { label: "Governance", value: "Deputy Chair of an enterprise design governance board · 50–75 designs a year" },
@@ -95,7 +96,7 @@ export const philosophy = {
     {
       word: "People",
       qualifier: "first",
-      body: "Great platforms are built by teams who feel trusted. I invest in people — coaching managers, giving real ownership, and creating the safety to raise problems early.",
+      body: "Great platforms are built by teams who feel trusted. I invest in people — coaching managers, giving real ownership, and creating the safety to raise problems early. Having worked onsite in India, the US, the UK, Saudi Arabia and Dubai, I know each centre from the inside, so I lead distributed teams as one team, not onshore and offshore.",
       evidence: "Turned stressed, siloed teams into one team",
     },
     {

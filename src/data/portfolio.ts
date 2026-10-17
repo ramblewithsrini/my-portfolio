@@ -131,7 +131,7 @@ export const experience: Job[] = [
       "Improved MDM matching rates by 21% through probabilistic matching tuning on IBM MDM Server, data cleansing, clearer survivorship rules and reference data management.",
       "Defined the vision, strategy and target operating model for the shared digital platform — adopted by six projects; recognised by the steering committee as a key reason for the programme's success.",
       "Led and managed a 15-person TCS implementation team, onsite and offshore.",
-      "Directed release management, configuration management and test automation for corporate IT developments.",
+      "Contributed to and defined the approach for release, configuration and test automation practices for corporate IT developments.",
       "Shaped the IBM relationship with procurement — licensing, SOWs and a pilot POC — and managed third-party implementation partners.",
       "Developed the containerisation strategy for the Customer Data Solution and designed federated ESB patterns.",
       "Presented Allianz's single customer view at IBM's MDM conference at Hursley (2016).",

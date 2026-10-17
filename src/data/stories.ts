@@ -485,7 +485,7 @@ export const stories: Record<string, Story> = {
       {
         title: "Modern, reliable engineering",
         challenge: "Shared services demand consistent releases and an architecture that can grow with adoption.",
-        approach: "Directed release management, configuration management and test automation; defined non-functional requirements on a tested platform; developed the containerisation strategy for the Customer Data Solution; and led proof-of-technology and design of federated ESB patterns.",
+        approach: "Contributed to and defined the approach for release, configuration and test automation practices; defined non-functional requirements on a tested platform; developed the containerisation strategy for the Customer Data Solution; and led proof-of-technology and design of federated ESB patterns.",
       },
       {
         title: "A productive partnership with IBM and TCS",

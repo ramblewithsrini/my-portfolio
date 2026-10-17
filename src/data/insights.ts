@@ -17,7 +17,7 @@ export type Block =
   | { type: "roles"; caption: string; tiers: { tier: string; purpose: string; roles: { name: string; does: string }[] }[] }
   | { type: "table"; caption: string; head: string[]; rows: string[][]; sources?: { label: string; href: string }[] }
   // A hand-drawn architecture diagram, picked by name from the article page.
-  | { type: "diagram"; name: "shared-data-platform" | "time-model" | "single-customer-view" | "single-customer-view-integration"; caption: string };
+  | { type: "diagram"; name: "shared-data-platform" | "time-model" | "single-customer-view" | "single-customer-view-integration" | "kyc-journey"; caption: string };
 
 /** The readable words in a block, for reading time. */
 function blockWords(b: Block): string[] {
@@ -60,6 +60,11 @@ export const articles: Article[] = [
       {
         type: "p",
         text: "Every false positive costs an analyst's time. Every missed match costs far more. When sanctions screening or transaction monitoring drowns a team in alerts, the usual response is to adjust the thresholds: loosen them and the noise drops, but so does your protection. I've worked on KYC, sanctions and watchlist screening, beneficial ownership and transaction monitoring, and the lesson I keep relearning is that most false positives are created long before the screening engine runs. They start with identity.",
+      },
+      {
+        type: "diagram",
+        name: "kyc-journey",
+        caption: "Onboarding a business as one journey: what the applicant sees, what the platform does, and where people decide. The dashed line is the feedback loop that keeps screening honest.",
       },
       { type: "h2", text: "Where the noise comes from" },
       {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Contact from "@/components/Contact";
+import KycJourney from "@/components/KycJourney";
 import Reveal from "@/components/Reveal";
 import ScvArchitecture from "@/components/ScvArchitecture";
 import ScvIntegration from "@/components/ScvIntegration";
@@ -140,6 +141,7 @@ function renderBlock(block: Block, i: number) {
           {block.name === "time-model" && <TimeModel />}
           {block.name === "single-customer-view" && <ScvArchitecture />}
           {block.name === "single-customer-view-integration" && <ScvIntegration />}
+          {block.name === "kyc-journey" && <KycJourney />}
           <figcaption className="mt-3 text-sm text-muted">{block.caption}</figcaption>
         </figure>
       );

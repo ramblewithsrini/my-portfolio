@@ -38,6 +38,10 @@ export default function InsightsPage() {
               Short, practical pieces on architecture, data, AI and leadership — drawn from
               real programmes, with the numbers left in.
             </p>
+            <p className="mt-4 text-sm text-foreground/80">
+              <span className="mr-2 text-accent-2">▸</span>
+              {visibleArticles.length} pieces published · conference speaker since 2007
+            </p>
           </Reveal>
         </div>
       </section>

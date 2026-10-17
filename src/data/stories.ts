@@ -85,7 +85,7 @@ export const stories: Record<string, Story> = {
         title: "P3: 10–12 partner portals into one",
         challenge: "Successive mergers and years of keep-the-lights-on fixes had left partners with 10–12 overlapping applications and portals, each with its own login, notifications and password.",
         approach: "Consolidated them into P3 (Partner Product and Portal): one portal rebuilt on React.js, with single sign-on through Okta — one login, one set of notifications, one password. The UI was modernised as part of the PCI DSS 4.0 work.",
-        outcome: "A 23% cost reduction, plus an engineering saving as separate teams came together as one central team. P3 now serves 400K+ partners, issuers and merchants across Discover, Diners Club and PULSE, with 1,000–1,250 logins a day.",
+        outcome: "A 23% cost reduction, plus an engineering saving as separate teams came together as one central team. P3 now serves partners, issuers and merchants across Discover, Diners Club and PULSE.",
       },
       {
         title: "Moving debit cards onto the Discover network",

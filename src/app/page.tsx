@@ -11,6 +11,7 @@ import {
   chapters,
   glance,
   impact,
+  influence,
   intro,
   now,
   philosophy,
@@ -19,11 +20,19 @@ import {
   summary,
   uniqueness,
 } from "@/data/about";
+import { visibleArticles } from "@/data/insights";
 import { relationshipLabels, testimonials } from "@/data/testimonials";
 import { sourceUrl } from "@/data/underTheHood";
 
 const teaser = testimonials.find((t) => t.teaser && !t.hidden);
 const testimonialCount = testimonials.filter((t) => !t.hidden).length;
+
+// Live counts for the {articles} and {recommendations} tokens in about.ts.
+function fillCounts(text: string) {
+  return text
+    .replace("{articles}", String(visibleArticles.length))
+    .replace("{recommendations}", String(testimonialCount));
+}
 
 function ChapterHeader({ chapter }: { chapter: (typeof chapters)[number] }) {
   return (
@@ -128,7 +137,7 @@ export default function AboutPage() {
                   className="border-t border-border py-3 first-of-type:border-t-0 first-of-type:pt-0"
                 >
                   <dt className="text-xs text-muted">{g.label}</dt>
-                  <dd className="mt-0.5 font-medium">{g.value}</dd>
+                  <dd className="mt-0.5 font-medium">{fillCounts(g.value)}</dd>
                 </div>
               ))}
               </dl>
@@ -269,6 +278,43 @@ export default function AboutPage() {
               </div>
             </div>
           </Reveal>
+        </div>
+        </MobileMore>
+        </div>
+      </section>
+
+      {/* Influence */}
+      <section id="influence" className="mx-auto max-w-6xl scroll-mt-32 px-5 py-20 sm:px-8">
+        <SectionHeading title={influence.title} />
+        <Reveal>
+          <p className="max-w-5xl type-title">
+            {influence.headline}{" "}
+            <span className="text-gradient">{influence.headlineAccent}</span>
+          </p>
+        </Reveal>
+        <div className="mt-16">
+        <MobileMore label="Show where I have influence" size="md">
+        <div className="grid gap-4 md:grid-cols-2">
+          {influence.arenas.map((a, i) => (
+            <Reveal key={a.eyebrow} delay={(i % 2) * 120} className="h-full">
+              <article className="flex h-full flex-col rounded-3xl border border-border bg-surface p-7">
+                <p className="type-eyebrow text-accent">{a.eyebrow}</p>
+                <h3 className="mt-3 font-display text-2xl font-bold tracking-tight">{a.title}</h3>
+                <ul className="mt-5 space-y-3">
+                  {a.items.map((item) => (
+                    <li key={item.text}>
+                      <Link href={item.href} className="group flex gap-3 leading-relaxed text-muted hover:text-foreground">
+                        <span className="mt-0.5 text-accent-2 transition-transform group-hover:translate-x-0.5" aria-hidden>
+                          ▸
+                        </span>
+                        {fillCounts(item.text)}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </Reveal>
+          ))}
         </div>
         </MobileMore>
         </div>

@@ -19,7 +19,7 @@ export const glance = [
   { label: "Worked in", value: "India · US · UK · Saudi Arabia · UAE" },
   { label: "Experience", value: "25 years · 15+ in consulting" },
   { label: "Recognition", value: "Employee of the Year on three client accounts · conference speaker since 2007" },
-  { label: "Governance", value: "Deputy Chair of an enterprise design governance board · 50–75 designs a year" },
+  { label: "Influence", value: "Deputy Chair, enterprise design governance board · {articles} published pieces · {recommendations} recommendations" },
   {
     label: "Focus",
     value: "Regulated industries — fintech, payments, insurtech, airlines, telecoms, retail",
@@ -57,6 +57,52 @@ export const uniqueness = {
     body: "The combination is rare: someone engineers trust, executives back, clients believe and suppliers respect — because I've stood where each of them stands.",
     rooms: ["Engineers", "Architects", "Executives", "Clients", "Vendors"],
   },
+};
+
+// "Where I have influence": four arenas, each item backed by a page on the site.
+// {articles} and {recommendations} are filled in with live counts by the page.
+export const influence = {
+  title: "Where I have influence",
+  headline: "Influence isn't a title.",
+  headlineAccent: "It's what changes because you were in the room.",
+  arenas: [
+    {
+      eyebrow: "In the boardroom",
+      title: "Decisions won with evidence",
+      items: [
+        { text: "Won Investment Council approval for a £40M convergence, framed around the merger's own goal", href: "/insights/converging-144-applications-after-a-merger" },
+        { text: "Changed a CIO's plan: kept a critical mainframe running safely instead of a rushed replacement", href: "/insights/saying-no-safely" },
+        { text: "Stopped a platform move 120 days before go-live, after several presentations made the evidence win", href: "/leadership" },
+      ],
+    },
+    {
+      eyebrow: "Across the enterprise",
+      title: "Standards others build to",
+      items: [
+        { text: "Deputy Chair of the enterprise design governance board, reviewing 50–75 designs a year across the company", href: "/experience/discover" },
+        { text: "Ran an architecture community of practice, and defined career pathways for architects", href: "/experience/discover" },
+        { text: "Won six projects over to a shared platform through workshops, not mandates", href: "/insights/winning-consumers-for-a-shared-platform" },
+      ],
+    },
+    {
+      eyebrow: "In the industry",
+      title: "A voice beyond my employer",
+      items: [
+        { text: "Spoke at IBM's MDM conference at Hursley and the Pitney Bowes conference in Dallas, and gave a short talk at a Neo4j event in London", href: "/experience/pitney-bowes" },
+        { text: "{articles} published case studies and articles on architecture, data, AI and leadership", href: "/insights" },
+        { text: "{recommendations} recommendations from managers, peers and the people I've led", href: "/testimonials" },
+      ],
+    },
+    {
+      eyebrow: "With people",
+      title: "Leaders who grow leaders",
+      items: [
+        { text: "Grew engineers and architects into senior roles, and mentored a hire who later became a CTO", href: "/leadership" },
+        { text: "Nominated someone in my team for the President's Award, made the case, and won it for them", href: "/leadership" },
+        { text: "Co-led a 400-member employee resource group: career panels, leadership talks and a podcast-style interview show, mentoring 15+ colleagues", href: "#beyond-work" },
+      ],
+    },
+  ],
 };
 
 export const progression = {
@@ -176,9 +222,10 @@ export const chapters = [
     number: "01",
     title: "Who I am",
     short: "Who I am",
-    teaser: "What makes me different — and how I grew from developer to technology leader.",
+    teaser: "What makes me different, where I have influence, and how I grew from developer to technology leader.",
     sections: [
       { id: "different", title: "What makes me different" },
+      { id: "influence", title: "Where I have influence" },
       { id: "progression", title: "From code to leadership" },
     ],
   },

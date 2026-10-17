@@ -41,7 +41,7 @@ export const stories: Record<string, Story> = {
       { label: "Reporting to", value: "Head of Application Architecture" },
       { label: "Remit", value: "Partner Enablement and Experience, plus platform convergence after the Capital One merger" },
       { label: "Team", value: "30-person architecture & engineering organisation, led through Architecture and Engineering Managers" },
-      { label: "Platforms", value: "Discover and Diners partner-experience and payment platforms, integrated with settlement, fraud and disputes" },
+      { label: "Platforms", value: "Nine partner-experience and payment platforms across the Discover, Diners Club and PULSE networks: seven run by my teams (in-house builds, Salesforce and ServiceNow) and two run by payment processors; integrated with settlement, fraud and disputes" },
       { label: "Data", value: "Data strategy and governance for the domain" },
       { label: "Stakeholders", value: "Product, business and executive leadership; the post-merger Integration Management Office" },
       { label: "Scale", value: "200M transactions a day at 10K+ TPS, against 99.999% availability expectations" },
@@ -85,7 +85,25 @@ export const stories: Record<string, Story> = {
         title: "P3: 10–12 partner portals into one",
         challenge: "Successive mergers and years of keep-the-lights-on fixes had left partners with 10–12 overlapping applications and portals, each with its own login, notifications and password.",
         approach: "Consolidated them into P3 (Partner Product and Portal): one portal rebuilt on React.js, with single sign-on through Okta — one login, one set of notifications, one password. The UI was modernised as part of the PCI DSS 4.0 work.",
-        outcome: "A 23% cost reduction, plus an engineering saving as separate teams came together as one central team.",
+        outcome: "A 23% cost reduction, plus an engineering saving as separate teams came together as one central team. P3 now serves 400K+ partners, issuers and merchants across Discover, Diners Club and PULSE, with 1,000–1,250 logins a day.",
+      },
+      {
+        title: "Moving debit cards onto the Discover network",
+        challenge: "After the merger, the debit card portfolio had to move from the Visa and Mastercard networks onto the Discover network, without customers noticing anything except that their cards kept working.",
+        approach: "Led the authorisation and tokenisation changes, front end and back end, and coordinated settlement and disputes across teams. Before cutover we proved it with live end-to-end transactions on the new network (the 'bubble gum test').",
+        outcome: "The debit migration completed in 2026; credit is planned to follow in 2028 as network acceptance grows.",
+      },
+      {
+        title: "Cross-border payments: Canada and India",
+        challenge: "Discover and Diners cards issued and used across countries had to settle correctly in local currencies and meet each country's rules.",
+        approach: "My platforms handled CAD and INR amounts, carried Canada and India transactions through settlement and disputes, and onboarded issuers and partners in both countries. India processing ran in an in-country cloud to meet RBI data localisation rules.",
+        outcome: "Multi-currency settlement and disputes for Discover and Diners cards, with data kept where the regulator requires it.",
+      },
+      {
+        title: "Fraud and financial crime controls",
+        challenge: "Faster onboarding and higher volumes could not come at the cost of fraud or compliance.",
+        approach: "Real-time fraud checks in authorisation, a fraud case workflow on Activiti, and partner and merchant fraud controls at onboarding and in monitoring; the reworked onboarding integrated with the teams who owned due diligence.",
+        outcome: "Stronger controls alongside faster onboarding. I've written about this in 'Fewer false positives: anti-money laundering starts with identity'.",
       },
       {
         title: "PCI DSS 4.0, delivered",
@@ -182,6 +200,9 @@ export const stories: Record<string, Story> = {
       "Datadog",
       "ServiceNow",
       "Salesforce",
+      "Activiti (BPMN)",
+      "Network tokenisation",
+      "Tableau",
     ],
     leadershipStory: {
       title: "From stressed, siloed teams to one team",
@@ -255,7 +276,7 @@ export const stories: Record<string, Story> = {
       {
         title: "Expense and invoice management",
         challenge: "Expenses and invoices flowed through separate systems.",
-        approach: "Lead Architect for Concur and invoice management, integrating Concur, DocuWare and TrustWeaver.",
+        approach: "Lead Architect for Concur and invoice management, integrating Concur, DocuWare and TrustWeaver, and the SAP Finance interfaces that carried multi-currency supplier payments across Ricoh's European subsidiaries.",
       },
       {
         title: "Enterprise API management and data quality",
@@ -606,6 +627,7 @@ export const stories: Record<string, Story> = {
       { label: "Clients", value: "Qwest, British Airways, SITA, Singapore Airlines, Hawaiian Airlines, Saudi Arabian Airlines" },
       { label: "Integration", value: "IBM integration suite (Saudia), Progress (BA Travel Programme), WSO2 (BA SOA governance); airline schedule messaging; Amadeus and Sabre" },
       { label: "Delivery", value: "Coordinated client, onsite and offshore teams; liaised with product vendors" },
+      { label: "Worked in", value: "Chennai, the US (including Atlanta), London, Saudi Arabia and Dubai" },
     ],
     outcomes: [
       { value: "$25M", label: "Saudia integration programme" },
@@ -617,12 +639,12 @@ export const stories: Record<string, Story> = {
       {
         date: "Mar 2001 – Nov 2004",
         title: "Lead Developer — Qwest (US telecoms)",
-        body: "Customer Request Management for a US telecoms provider; coordinated client, onsite and offshore teams.",
+        body: "Customer Request Management for a US telecoms provider; coordinated client, onsite and offshore teams. In 2004, back in India, I built a young team from scratch and moved the platform's production support offshore, a big step at the time.",
       },
       {
         date: "May 2004 – May 2005",
         title: "Technical Lead — British Airways",
-        body: "Technical Lead and Integration Architect on ba.com, including Manage My Booking.",
+        body: "Technical Lead and Integration Architect on ba.com, including Manage My Booking, and Technical Lead for the inflight experience app.",
       },
       {
         date: "Jun 2005 – Apr 2006",
@@ -644,7 +666,7 @@ export const stories: Record<string, Story> = {
       {
         date: "Dec 2007 – Apr 2009",
         title: "Lead Solution Architect — Saudi Arabian Airlines",
-        body: "Architect of the airline-wide integration platform on the IBM integration suite.",
+        body: "Architect of the airline-wide integration platform on the IBM integration suite, leading the team in Saudi Arabia and Dubai.",
       },
       {
         date: "2008",

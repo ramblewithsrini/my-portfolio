@@ -22,7 +22,7 @@ export const glance = [
   { label: "Governance", value: "Deputy Chair of an enterprise design governance board · 50–75 designs a year" },
   {
     label: "Focus",
-    value: "Regulated industries — fintech, payments, insurtech, airlines, retail",
+    value: "Regulated industries — fintech, payments, insurtech, airlines, telecoms, retail",
   },
   { label: "Clearance", value: "Eligible for SC" },
   { label: "Availability", value: "Available immediately" },

@@ -247,8 +247,8 @@ export const projects: Project[] = [
     client: "TalkMusically · Co-founder & CTO (part-time) · 2012–2016",
     impact: "~£1.5M raised · own codec",
     description:
-      "Alongside my full-time roles, I co-founded a VoIP start-up whose app let people talk and share music live on the same call. As CTO I led the technology, including our own codec to carry music and voice together on one channel, and helped the founding team raise close to £1.5M. The company filed a patent application for the approach; it has since closed.",
-    tech: ["VoIP", "Audio codec", "Start-up", "Fundraising"],
+      "Alongside my full-time roles, I co-founded a VoIP start-up whose app let people talk and share music live on the same call. As CTO I led the technology, including our cross-platform mobile app (React Native, iOS and Android) and our own codec to carry music and voice together on one channel, and helped the founding team raise close to £1.5M. The company filed a patent application for the approach; it has since closed.",
+    tech: ["VoIP", "Audio codec", "React Native", "Start-up", "Fundraising"],
   },
 ];
 

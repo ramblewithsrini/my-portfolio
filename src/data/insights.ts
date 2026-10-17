@@ -50,6 +50,96 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "fewer-false-positives-aml-starts-with-identity",
+    title: "Fewer false positives: anti-money laundering starts with identity",
+    dek: "Most teams fight screening noise by tuning thresholds. In my experience the real fix sits upstream, in how you capture, match and connect the people and businesses you onboard.",
+    date: "2026-10-17",
+    status: "published",
+    tags: ["KYC", "KYB", "AML", "Financial crime", "Data"],
+    blocks: [
+      {
+        type: "p",
+        text: "Every false positive costs an analyst's time. Every missed match costs far more. When sanctions screening or transaction monitoring drowns a team in alerts, the usual response is to adjust the thresholds: loosen them and the noise drops, but so does your protection. I've worked on KYC, sanctions and watchlist screening, beneficial ownership and transaction monitoring, and the lesson I keep relearning is that most false positives are created long before the screening engine runs. They start with identity.",
+      },
+      { type: "h2", text: "Where the noise comes from" },
+      {
+        type: "p",
+        text: "Screening compares the people and businesses you know about with lists of people you must not serve. If what you know is thin or messy, the engine has nothing to separate a customer from a sanctioned namesake except the name itself. The hardest problems I've met were always the same four:",
+      },
+      {
+        type: "list",
+        items: [
+          "Name matching: the same person or company written in different spellings, scripts, word orders and abbreviations.",
+          "Data quality: missing dates of birth, countries or registration numbers, so a common name is all there is to compare.",
+          "Ownership chains: a business that looks clean until you follow who really owns or controls it.",
+          "Volume: when every weak match becomes an alert, analysts stop trusting the queue, and real risk hides in the noise.",
+        ],
+      },
+      { type: "h2", text: "Fix the data at the front door" },
+      {
+        type: "p",
+        text: "The cheapest place to remove a false positive is onboarding. On a partner platform I led, onboarding a business took 73 days, with manual steps, repeated requests for the same information and little visibility of where an application stood. We reworked it so business data was captured once, in a structured form, and reused across every check. Workflow automation removed the hand-offs, and partners and staff could see the status at any point. Onboarding fell to 5–7 days.",
+      },
+      {
+        type: "p",
+        text: "What we didn't automate mattered just as much. The due diligence decisions stayed with the risk and compliance teams who owned them; the platform's job was to bring them complete, consistent data and route the work. Faster onboarding and stronger controls are not a trade-off when the data is right at the start.",
+      },
+      { type: "h2", text: "Resolve the entity, not the string" },
+      {
+        type: "p",
+        text: "A name is a weak identifier. Matching gets far better when you compare the whole entity: date of birth, nationality, address, company registration number, directors and known associates. Standardise these before you match (transliteration, address formats, legal suffixes such as Ltd and Limited), then score across all of them. A strong name match with a conflicting date of birth and country is usually a different person; a weaker name match with the same registration number usually isn't.",
+      },
+      {
+        type: "p",
+        text: "I've spoken at an industry conference about graph-based identity resolution, and built an entity resolution lab that I measure against a known answer set. The principle carries straight into AML: decide who someone is once, carefully, and screen that resolved identity, rather than screening every raw record and its spelling mistakes.",
+      },
+      { type: "h2", text: "Ownership is a graph problem" },
+      {
+        type: "p",
+        text: "Know your business is really know who is behind the business. Beneficial ownership runs through chains of companies, nominees and shared directors, often across borders. In tables it becomes a tangle of joins; as a graph it becomes a question you can ask directly: who sits at the end of these ownership paths, and do any of them appear on a list? Graphs also show the patterns rules miss, such as circular ownership or many businesses sharing one address or director.",
+      },
+      { type: "h2", text: "Tune with evidence, not instinct" },
+      {
+        type: "p",
+        text: "Thresholds still matter, but they should be set against evidence. Build a labelled set of past alerts, true and false, and measure precision and recall before and after every change. Segment the thresholds by risk, so a high-risk jurisdiction or product is not screened like a low-risk one. And feed analyst decisions back in: every closed alert is a training example and a test case.",
+      },
+      {
+        type: "table",
+        caption: "Levers that cut false positives, and what to watch",
+        head: ["Lever", "What it cuts", "The risk to watch"],
+        rows: [
+          ["Capture structured data once at onboarding", "Alerts caused by missing or inconsistent details", "Customer friction if you ask for too much, too early"],
+          ["Match on the whole entity, not the name", "Namesake matches on common names", "Bad reference data creates false confidence"],
+          ["Resolve identities before screening", "Duplicate alerts for the same person or business", "A wrong merge hides a real match; keep the review step"],
+          ["Model ownership as a graph", "Manual digging through ownership chains", "Stale company data; refresh it on a schedule"],
+          ["Risk-based, evidence-tested thresholds", "Blanket noise in low-risk segments", "Missing real risk; always measure recall, not just volume"],
+        ],
+      },
+      { type: "h2", text: "Transaction monitoring inherits the same problem" },
+      {
+        type: "p",
+        text: "Monitoring rules look at behaviour, but behaviour only means something when it is linked to the right customer, business and owners. If one person appears as three customers, structuring across accounts looks innocent; if two unrelated customers are merged, one innocent pattern looks suspicious. The quality of every monitoring alert depends on the identity work done at onboarding.",
+      },
+      { type: "h2", text: "Where AI helps, and where people stay" },
+      {
+        type: "p",
+        text: "Machine learning and AI are useful here: prioritising alerts, suggesting likely dispositions, summarising the evidence behind a match. On a platform I led, we used rules plus machine learning to absorb a large surge in work, with people deciding the cases that needed judgement. The same pattern fits financial crime. Let models rank and explain; keep accountable humans making the decision, with a clear audit trail of why.",
+      },
+      { type: "h2", text: "What I'd tell another team" },
+      {
+        type: "list",
+        items: [
+          "Before you touch a threshold, look at the data feeding the screening engine.",
+          "Capture structured identity data once, at onboarding, and reuse it everywhere.",
+          "Screen resolved entities, not raw records.",
+          "Treat beneficial ownership as a graph, and keep it fresh.",
+          "Measure precision and recall on a labelled set; volume alone tells you nothing.",
+          "Use AI to rank and explain alerts, and keep people accountable for the decision.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "the-customers-we-couldnt-see",
     title: "Case study: the customers we couldn't see",
     dek: "How an insurer built a single customer and household view, why we hid the matching engine behind our own layer, and why we went live cautious.",

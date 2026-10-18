@@ -15,16 +15,16 @@ export default async function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#07070b",
+          background: "#2b2d33",
           borderRadius: 14,
-          color: "#f4f4f6",
+          color: "#f4f1ed",
           fontSize: 34,
           fontWeight: 700,
           letterSpacing: -1,
           fontFamily: "Space Grotesk",
         }}
       >
-        SV<span style={{ color: "#c6ff3d" }}>.</span>
+        SV<span style={{ color: "#d4735e" }}>.</span>
       </div>
     ),
     { ...size, fonts: await ogFonts() },

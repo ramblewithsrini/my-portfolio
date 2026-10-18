@@ -4,7 +4,7 @@ import { profile } from "@/data/portfolio";
 export default function Contact() {
   return (
     <section id="contact" className="px-5 pb-16 sm:px-8">
-      <Reveal className="relative mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-accent-2 via-[#4b3bd6] to-[#1b1640] px-8 py-20 text-center sm:px-16 sm:py-28">
+      <Reveal className="relative mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-feature-from via-feature-via to-feature-to px-8 py-20 text-center text-white sm:px-16 sm:py-28">
         <div className="grid-bg absolute inset-0" aria-hidden />
         <p className="type-eyebrow relative text-white/70">
           Contact

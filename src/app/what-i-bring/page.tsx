@@ -131,7 +131,7 @@ export default function WhatIBringPage() {
           {r.panel && (
             <Reveal className="mt-6">
               <div className="rounded-3xl border border-accent-2/40 bg-gradient-to-br from-accent-2/[0.08] via-surface to-surface p-8 sm:p-10">
-                <p className="type-eyebrow text-[#c5b8ff]">
+                <p className="type-eyebrow text-accent-2-soft">
                   {r.panel.eyebrow}
                 </p>
                 <h3 className="mt-3 type-heading">

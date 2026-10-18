@@ -15,9 +15,9 @@ const filters: { key: Relationship | "all"; label: string }[] = [
 ];
 
 const badgeStyles: Record<Relationship, string> = {
-  managed: "border-accent-2/50 text-[#b3a3ff]",
+  managed: "border-accent-2/50 text-accent-2-soft",
   reported: "border-accent/50 text-accent",
-  worked: "border-[#5fe3c0]/50 text-[#5fe3c0]",
+  worked: "border-accent-3/50 text-accent-3",
 };
 
 // Long recommendations start collapsed so the wall stays scannable.

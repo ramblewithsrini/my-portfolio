@@ -15,15 +15,15 @@ export default async function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#07070b",
-          color: "#f4f4f6",
+          background: "#2b2d33",
+          color: "#f4f1ed",
           fontSize: 92,
           fontWeight: 700,
           letterSpacing: -3,
           fontFamily: "Space Grotesk",
         }}
       >
-        SV<span style={{ color: "#c6ff3d" }}>.</span>
+        SV<span style={{ color: "#d4735e" }}>.</span>
       </div>
     ),
     { ...size, fonts: await ogFonts() },

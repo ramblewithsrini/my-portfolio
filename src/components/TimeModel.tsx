@@ -10,7 +10,7 @@ const MUTED = "var(--muted)";
 const groups = [
   { name: "Migrate", count: 48, color: "var(--accent-2)", does: "High value, poor fit: move to AWS" },
   { name: "Invest", count: 28, color: "var(--accent)", does: "High value, good fit: build on it" },
-  { name: "Tolerate", count: 14, color: "#5fe3c0", does: "Good fit, low value: run as is" },
+  { name: "Tolerate", count: 14, color: "var(--accent-3)", does: "Good fit, low value: run as is" },
   { name: "Eliminate", count: 10, color: MUTED, does: "Low value, poor fit: retire it" },
 ];
 const total = groups.reduce((n, g) => n + g.count, 0);

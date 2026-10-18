@@ -25,8 +25,8 @@ const fieldLabels: Record<Field, string> = {
 };
 
 const sourceStyles: Record<SourceSystem, string> = {
-  Policy: "border-accent-2/60 text-[#c5b8ff]",
-  Claims: "border-[#5fe3c0]/60 text-[#5fe3c0]",
+  Policy: "border-accent-2/60 text-accent-2-soft",
+  Claims: "border-accent-3/60 text-accent-3",
   Marketing: "border-accent/60 text-accent",
 };
 
@@ -78,7 +78,7 @@ function Slider(props: {
         max={props.max}
         value={props.value}
         onChange={(e) => props.onChange(Number(e.target.value))}
-        className="mt-2 w-full accent-[#c6ff3d]"
+        className="mt-2 w-full accent-[var(--accent)]"
       />
     </div>
   );
@@ -367,7 +367,7 @@ export default function MdmPlayground(props: {
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {result.households.map((h) => (
           <li key={h.key} className="rounded-2xl border border-accent-2/40 bg-accent-2/[0.07] p-5">
-            <p className="type-eyebrow text-[#c5b8ff]">
+            <p className="type-eyebrow text-accent-2-soft">
               {h.members.length > 1 ? `Household of ${h.members.length}` : "Single household"}
             </p>
             <p className="mt-2 text-sm text-muted">{standardiseAddress(h.members[0].values.address.value)}</p>

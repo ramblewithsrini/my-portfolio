@@ -257,7 +257,7 @@ export default function AboutPage() {
             =
           </span>
           <Reveal className="flex-1">
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent-2 via-[#4b3bd6] to-[#1b1640] p-8 sm:p-10">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-feature-from via-feature-via to-feature-to p-8 text-white sm:p-10">
               <div className="grid-bg absolute inset-0" aria-hidden />
               <div className="relative grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
                 <div>
@@ -403,7 +403,7 @@ export default function AboutPage() {
                 className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface p-8 transition-colors hover:border-accent/50"
               >
                 <span
-                  className="absolute -right-4 -top-6 font-display text-[8rem] leading-none font-bold text-white/[0.03] transition-colors group-hover:text-accent/10"
+                  className="absolute -right-4 -top-6 font-display text-[8rem] leading-none font-bold text-foreground/[0.03] transition-colors group-hover:text-accent/10"
                   aria-hidden
                 >
                   {i + 1}

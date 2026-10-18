@@ -25,17 +25,17 @@ export default async function Image() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px 80px",
-          background: "#07070b",
+          background: "#f4f1ed",
           backgroundImage:
-            "radial-gradient(circle at 88% 8%, rgba(124,92,255,0.55), transparent 45%), radial-gradient(circle at 0% 100%, rgba(198,255,61,0.22), transparent 45%)",
-          color: "#f4f4f6",
+            "radial-gradient(circle at 88% 8%, rgba(168,79,59,0.18), transparent 45%), radial-gradient(circle at 0% 100%, rgba(43,45,51,0.08), transparent 45%)",
+          color: "#2b2d33",
           fontFamily: "Space Grotesk",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", fontSize: 40, fontWeight: 700 }}>
             {profile.initials}
-            <span style={{ color: "#c6ff3d" }}>.</span>
+            <span style={{ color: "#a84f3b" }}>.</span>
           </div>
           <div
             style={{
@@ -43,13 +43,13 @@ export default async function Image() {
               alignItems: "center",
               gap: 12,
               fontSize: 26,
-              color: "#c6ff3d",
-              border: "2px solid rgba(198,255,61,0.5)",
+              color: "#a84f3b",
+              border: "2px solid rgba(168,79,59,0.5)",
               borderRadius: 999,
               padding: "10px 26px",
             }}
           >
-            <div style={{ width: 14, height: 14, borderRadius: 999, background: "#c6ff3d" }} />
+            <div style={{ width: 14, height: 14, borderRadius: 999, background: "#a84f3b" }} />
             Available immediately
           </div>
         </div>
@@ -65,7 +65,7 @@ export default async function Image() {
               fontSize: 44,
               lineHeight: 1.15,
               fontWeight: 700,
-              backgroundImage: "linear-gradient(100deg, #c6ff3d 10%, #5fe3c0 50%, #7c5cff 90%)",
+              backgroundImage: "linear-gradient(100deg, #a84f3b 10%, #c4644f 50%, #4a4e57 90%)",
               backgroundClip: "text",
               color: "transparent",
             }}
@@ -84,15 +84,15 @@ export default async function Image() {
             height: 270,
             borderRadius: 999,
             objectFit: "cover",
-            border: "6px solid #c6ff3d",
+            border: "6px solid #a84f3b",
           }}
         />
         </div>
 
-        <div style={{ display: "flex", gap: 22, fontSize: 28, color: "#9a9aab" }}>
+        <div style={{ display: "flex", gap: 22, fontSize: 28, color: "#5f636a" }}>
           {["25 years", "Payments & fintech", "Consulting & in-house", "London"].flatMap((fact, i) => [
             i > 0 && (
-              <span key={`dot-${i}`} style={{ color: "#7c5cff" }}>
+              <span key={`dot-${i}`} style={{ color: "#a84f3b" }}>
                 ·
               </span>
             ),

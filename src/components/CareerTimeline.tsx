@@ -14,7 +14,7 @@ const ticks = Array.from({ length: lastYear - firstYear + 2 }, (_, i) => firstYe
 
 const typeStyles = {
   "in-house": "border-accent/60 bg-accent/15 hover:bg-accent/30 text-accent",
-  consulting: "border-accent-2/60 bg-accent-2/20 hover:bg-accent-2/35 text-[#c5b8ff]",
+  consulting: "border-accent-2/60 bg-accent-2/20 hover:bg-accent-2/35 text-accent-2-soft",
 };
 
 export default function CareerTimeline() {

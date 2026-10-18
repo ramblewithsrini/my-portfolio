@@ -130,7 +130,7 @@ export default function ExperiencePage() {
                     className={`rounded-full border px-2.5 py-0.5 text-xs ${
                       job.type === "in-house"
                         ? "border-accent/50 text-accent"
-                        : "border-accent-2/50 text-[#c5b8ff]"
+                        : "border-accent-2/50 text-accent-2-soft"
                     }`}
                   >
                     {job.type === "in-house" ? "In-house" : "Consulting"}

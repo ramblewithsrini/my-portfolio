@@ -33,7 +33,7 @@ const decisionStyles: Record<Decision, { label: string; className: string }> = {
 };
 
 // One colour per institution, for the graph and the chips.
-const PALETTE = ["#c6ff3d", "#7c5cff", "#5fe3c0", "#ff8a65", "#4fc3f7", "#f06292", "#ffd54f", "#a1887f"];
+const PALETTE = ["var(--accent)", "var(--accent-2)", "var(--accent-3)", "#ff8a65", "#4fc3f7", "#f06292", "#ffd54f", "#a1887f"];
 
 function Slider(props: { id: string; label: string; value: number; min: number; max: number; suffix?: string; onChange: (v: number) => void }) {
   return (
@@ -54,7 +54,7 @@ function Slider(props: { id: string; label: string; value: number; min: number; 
         max={props.max}
         value={props.value}
         onChange={(e) => props.onChange(Number(e.target.value))}
-        className="mt-2 w-full accent-[#c6ff3d]"
+        className="mt-2 w-full accent-[var(--accent)]"
       />
     </div>
   );
@@ -400,7 +400,7 @@ export default function ResearchGraphLab({ data }: { data: Dataset }) {
                   y1={a.y}
                   x2={b.x}
                   y2={b.y}
-                  stroke={on ? "#c6ff3d" : "currentColor"}
+                  stroke={on ? "var(--accent)" : "currentColor"}
                   className={on ? "" : "text-foreground/15"}
                   strokeWidth={Math.min(6, 0.8 + l.papers)}
                 />
@@ -423,7 +423,7 @@ export default function ResearchGraphLab({ data }: { data: Dataset }) {
                   role="button"
                   aria-label={`${p.name}, ${instName(p.institutions.at(-1)?.id ?? "")}`}
                 >
-                  <circle cx={at.x} cy={at.y} r={r} fill={colourOf(p)} stroke={selected === p.id || on ? "#ffffff" : "none"} strokeWidth={2.5} />
+                  <circle cx={at.x} cy={at.y} r={r} fill={colourOf(p)} stroke={selected === p.id || on ? "var(--foreground)" : "none"} strokeWidth={2.5} />
                   <text x={at.x} y={at.y + r + 13} textAnchor="middle" className="fill-foreground text-[12px]">
                     {p.name}
                   </text>

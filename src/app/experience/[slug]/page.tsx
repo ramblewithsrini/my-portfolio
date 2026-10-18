@@ -71,7 +71,7 @@ export default async function RolePage(props: PageProps<"/experience/[slug]">) {
                 className={`rounded-full border px-3 py-1 font-medium ${
                   job.type === "in-house"
                     ? "border-accent/50 text-accent"
-                    : "border-accent-2/50 text-[#c5b8ff]"
+                    : "border-accent-2/50 text-accent-2-soft"
                 }`}
               >
                 {job.type === "in-house" ? "In-house" : "Consulting"}

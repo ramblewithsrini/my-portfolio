@@ -112,6 +112,8 @@ export const roleValues: RoleValue[] = [
       "AI-ready data: trusted, governed data that analytics and AI can safely build on",
       "Governed AI in production — an AI agent and an AI vulnerability remediation assistant at Discover, conversational AI at Ricoh — with guardrails a regulator would recognise",
       "Single and household customer views on MDM that feed marketing and analytics",
+      "Master data across every domain I've worked in: customer, merchant, partner and supplier",
+      "AI governance written down: I co-wrote a policy on approved tools, data protection, human review and monitoring",
       "Data strategy and governance: metadata curation, reference data, data quality and survivorship",
       "Modern data platforms: data at rest, OLTP/OLAP integration, data lakes and warehouses",
       "Regulatory data solutions: GDPR compliance for McDonald's, a KYC solution with EY",
@@ -148,6 +150,7 @@ export const roleValues: RoleValue[] = [
       "Resilience as a culture: multi-region design, CI/CD and automated quality gates",
       "Regulation delivered, not just designed: PCI DSS 4.0 across the payment platforms — MFA, PAN tokenisation, centralised logging and unsupported software retired",
       "Delivery at scale through mergers, platform convergence and volume surges",
+      "Fixed dates that land: every twice-yearly network release on its date, with no major incidents",
       "Governed AI adoption that makes good teams faster: velocity baselined first, then tracked sprint by sprint",
     ],
     evidence: [

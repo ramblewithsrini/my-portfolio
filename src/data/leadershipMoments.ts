@@ -18,7 +18,7 @@ export type LeadershipMoment = {
 
 export const momentsIntro = {
   title: "Leadership moments",
-  lead: "Five real situations: what was at stake, how it looked from the other side, what I did and what changed. Names are left out on purpose.",
+  lead: "Seven real situations: what was at stake, how it looked from the other side, what I did and what changed. Names are left out on purpose.",
 };
 
 export const leadershipMoments: LeadershipMoment[] = [
@@ -121,5 +121,45 @@ export const leadershipMoments: LeadershipMoment[] = [
     ],
     lesson: "Never estimate work you haven't done before on your own. Find someone who has.",
     labels: { theirSide: "Why it looked simple", whatIDid: "What I did" },
+  },
+  {
+    id: "partner-to-account",
+    theme: "Holding a partner to account",
+    title: "When the partner fell behind",
+    teaser: "An outsourced modernisation programme was slipping, and then it caused an outage. I escalated step by step, with evidence.",
+    situation: [
+      "We were modernising a family of applications. The plan was to start with the least-used, lowest-impact application, upgrade it and build reusable components, then migrate the rest using them. Delivery was fully outsourced to a systems integrator.",
+      "Delivery quality was poor, the schedule slipped, and then there was a production outage.",
+    ],
+    labels: { theirSide: "Why it mattered" },
+    theirSide:
+      "The first applications mattered most: they were where the reusable components were built, so any problem there would repeat across everything that followed.",
+    whatIDid: [
+      "I started with the partner's project team, working with them directly on what had to change. When the results didn't improve, I escalated to their engagement manager, and then, together with our VP of Engineering, to the head of their business unit.",
+    ],
+    whatChanged: [
+      "The partner changed people on the team. We gradually recovered the lost time, quality improved, and the final applications migrated with no production incidents.",
+    ],
+    lesson: "Escalate in steps, with evidence, and bring your own leadership with you. The aim is to fix delivery, not to win the argument.",
+  },
+  {
+    id: "not-signing-off",
+    theme: "Holding the line",
+    title: "The phase I wouldn't sign off",
+    teaser: "A partner delivered phase one on time, but not as designed. I refused to sign it off, and then helped them fix it.",
+    situation: [
+      "On a shared customer platform, we had agreed the design with our implementation partner up front: every customer change published as an event, so any system could subscribe. We had also agreed coding standards and design reviews at every phase.",
+      "Under time and budget pressure, the partner built point-to-point integrations instead, and the code wasn't to standard. Contractually, they could argue phase one was delivered.",
+    ],
+    theirSide:
+      "I'd spent ten years at a systems integrator myself, so I knew the pressure they were under. Point-to-point was quicker to build, and it met the phase-one deadline.",
+    whatIDid: [
+      "I raised it with both project managers and didn't sign it off. The shortcut would have cost us later: every new consumer would have needed another custom integration.",
+      "Then I made the right thing easy. I wrote the event-publishing code templates myself, so the rewrite was quick.",
+    ],
+    whatChanged: [
+      "The rewrite cost phase one a short delay, and saved far more later. Phase one went live on the event design, and six projects went on to reuse the platform without new integration work.",
+    ],
+    lesson: "Hold the line on what is expensive to undo, and make it easy for the partner to do the right thing.",
   },
 ];

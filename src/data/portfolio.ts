@@ -97,6 +97,22 @@ export const experience: Job[] = [
     ],
   },
   {
+    slug: "hicx",
+    short: "HICX",
+    type: "consulting",
+    role: "Principal Architect, Pre-Sales",
+    company: "HICX",
+    start: "Apr 2020",
+    end: "Jul 2020",
+    startDate: "2020-04",
+    endDate: "2020-07",
+    highlights: [
+      "Pre-sales and solution design for a supplier master data SaaS product, for European customers.",
+      "Wrote Java code for the product itself: a single supplier view, and dynamic discounting (early supplier payment in exchange for a sliding discount).",
+      "Worked on supplier bank-account verification (a penny test before payment), integrated with SAP Finance.",
+    ],
+  },
+  {
     slug: "pitney-bowes",
     short: "Pitney Bowes",
     type: "consulting",

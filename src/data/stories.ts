@@ -114,7 +114,7 @@ export const stories: Record<string, Story> = {
       {
         title: "Absorbing a 360% surge with Agentic AI",
         challenge: "The Capital One merger drove a surge in referrals — the cases merchants raise when a transaction doesn't go through.",
-        approach: "Introduced an AI agent into the Referral Management Service that triages, classifies and prioritises every referral, and resolves the simple cases itself. Live in four months. My team designed the backend for scale: APIs, workflow automation, integration patterns and a referral search bot that cut manual processing.",
+        approach: "Introduced an AI agent into the Referral Management Service that triages, classifies and prioritises every referral, and resolves the simple cases itself. Live in four months. My team designed the backend for scale: APIs, workflow automation, integration patterns, a referral search bot that cut manual processing, and a mobile app for the service, designed and built by my team.",
         outcome: "The same customer service centre team absorbed the surge within SLA, with less reliance on temporary contractors.",
       },
       {
@@ -127,6 +127,12 @@ export const stories: Record<string, Story> = {
         challenge: "Industry changes to card numbering meant the payment network had to handle variable-length issuer numbers (IINs/BINs) and account numbers of 6 to 19 digits.",
         approach: "My team upgraded the network's validation, routing and processing for every issuer configuration.",
         outcome: "Accurate transaction validation and routing across issuer configurations.",
+      },
+      {
+        title: "Network releases on fixed dates",
+        challenge: "Twice a year the network shipped scheme rule changes on a hard date. Issuers, acquirers and processors had to adopt them too, and certify against them before the date.",
+        approach: "De-risked every release with a release train: milestones, readiness gates and a go/no-go decision; end-to-end testing with partners; feature flags, so changes shipped early and switched on at the network date; and rehearsed rollback and cutover plans, inside a code freeze and a controlled change window. Between network releases, my teams released every three-week sprint.",
+        outcome: "Every network release landed on its date with no major incidents.",
       },
       {
         title: "Faster, safer releases",
@@ -155,13 +161,13 @@ export const stories: Record<string, Story> = {
       {
         title: "AI that makes good teams faster",
         challenge: "AI tools promised faster delivery, but in a regulated payments environment they had to be safe, and the gain had to be real.",
-        approach: "Rolled out AI-assisted development in three stages, choosing tools on capability, cost, security and vendor lock-in, with velocity baselined first and tracked sprint by sprint. Designed and owned an AI vulnerability remediation assistant on Anthropic's Claude that scans production libraries, flags vulnerable versions and suggests fixes.",
+        approach: "Co-wrote the AI governance policy with risk, security and enterprise teams: approved tools and use cases, what data may go into AI tools, human review of AI output, and risk assessment and monitoring. Evaluated GitHub Copilot, Anthropic Claude and Salesforce Agentforce, and built an AI and automation team from scratch. Rolled out AI-assisted development in three stages, choosing tools on capability, cost, security and vendor lock-in, with velocity baselined first and tracked sprint by sprint. Designed and owned an AI vulnerability remediation assistant, built by my team and run in production on Anthropic's Claude, that scans production libraries, flags vulnerable versions and suggests fixes.",
         outcome: "Team velocity rose from 10–15 to 45–60 story points a sprint within six months.",
       },
       {
         title: "Data strategy & governance",
         challenge: "Data was spread across in-house, SaaS and legacy applications, with no shared view of what it meant or where it lived.",
-        approach: "Led metadata curation and the strategy for data at rest; integrated OLTP and OLAP workloads; drove ingestion into the data lake; and anchored it all in domain-driven data models and data governance. With Enterprise Data Management, my team set the governance process and guidelines and ran workshops to roll them out across the payments network; moved metadata curation to a single 'push' model, managed centrally in Hackolade and published to Alation; and used AI (Copilot and generative AI) to reconcile every data model with production.",
+        approach: "Led metadata curation and the strategy for data at rest; integrated OLTP and OLAP workloads; drove ingestion into the data lake; and anchored it all in domain-driven data models and data governance. With Enterprise Data Management, my team set the governance process and guidelines and ran workshops to roll them out across the payments network; moved metadata curation to a single 'push' model, managed centrally in Hackolade and published to Alation; and used AI (Copilot and generative AI) to reconcile every data model with production. Defined the data retention policy, built semantic models and ran data quality management. Master data was platform-built rather than a packaged MDM tool: customer and merchant profiles, partner data with KYC and KYB checks from onboarding, hierarchies in MongoDB Atlas, and reference data (ISO country and currency codes, merchant category codes and sanctions lists) in the IIN/BIN system.",
         outcome: "95% of data models in sync with production and compliant with governance and naming standards — supporting data design for digital payments, fraud, risk, partner enablement, settlements and disputes.",
       },
     ],
@@ -203,6 +209,11 @@ export const stories: Record<string, Story> = {
       "Activiti (BPMN)",
       "Network tokenisation",
       "Tableau",
+      "Kafka Connect",
+      "Oracle GoldenGate",
+      "Feature flags",
+      "Salesforce Agentforce",
+      "GitHub Copilot",
     ],
     leadershipStory: {
       title: "From stressed, siloed teams to one team",
@@ -279,6 +290,12 @@ export const stories: Record<string, Story> = {
         approach: "Lead Architect for Concur and invoice management, integrating Concur, DocuWare and TrustWeaver, and the SAP Finance interfaces that carried multi-currency supplier payments across Ricoh's European subsidiaries.",
       },
       {
+        title: "Supplier master data",
+        challenge: "Supplier data fed finance and payments across Ricoh's European businesses, so it had to be consistent and trusted.",
+        approach: "Architect and Governance Lead for supplier master data: in charge of the domain models, the MDM rules and integration, and data quality.",
+        outcome: "One governed model for supplier data, alongside the customer master data I'd built earlier at Allianz and Pitney Bowes.",
+      },
+      {
         title: "Enterprise API management and data quality",
         challenge: "Integration across the enterprise needed consistency, control and trusted data.",
         approach: "Managed the statement-of-work process for an enterprise-wide API management gateway; defined integration patterns for downstream systems and designed the data quality management process.",
@@ -304,6 +321,7 @@ export const stories: Record<string, Story> = {
       "TrustWeaver",
       "API management",
       "Data quality management",
+      "Supplier master data",
     ],
     leadershipStory: {
       title: "Leading without authority",
@@ -394,7 +412,7 @@ export const stories: Record<string, Story> = {
       {
         title: "Data governance by design",
         challenge: "Clients needed a practical strategy for data quality and governance, not just a product.",
-        approach: "Led due-diligence workshops to shape each client's data governance strategy — data quality and ETL transformations.",
+        approach: "Led due-diligence workshops to shape each client's data governance strategy — data quality and ETL transformations — built semantic models, and ran a Collibra proof of concept. Brought in location and address intelligence (geocoding and address correction) through Spectrum, for data solutions clients used commercially.",
       },
       {
         title: "Winning the right work",
@@ -416,6 +434,9 @@ export const stories: Record<string, Story> = {
       "IoT",
       "Smart cities",
       "AWS",
+      "Collibra (proof of concept)",
+      "Geocoding & address data",
+      "Semantic models",
     ],
     leadershipStory: {
       title: "Leaving clients self-sufficient",
@@ -479,7 +500,7 @@ export const stories: Record<string, Story> = {
       {
         title: "A shared digital platform for Allianz UK",
         challenge: "Separate solutions for every project meant duplicated build, higher running costs and more delivery risk.",
-        approach: "Formulated and implemented the vision and strategy for the next generation of digital services, designed the Customer Hub and generic services, and defined the target operating model.",
+        approach: "Formulated and implemented the vision and strategy for the next generation of digital services, designed the Customer Hub and generic services, and defined the target operating model. Assessed Informatica and Reltio alongside IBM and open-source MDM, ran a Collibra proof of concept, defined the data retention policy and built semantic models.",
         outcome: "Faster delivery and a lower cost of ownership than building and maintaining separate solutions — and a robust platform that de-risked future projects.",
       },
       {
@@ -526,6 +547,11 @@ export const stories: Record<string, Story> = {
       "Federated ESB",
       "Containerisation",
       "Test automation",
+      "IBM DataStage",
+      "IBM Cognos",
+      "Oracle GoldenGate",
+      "Kafka Connect",
+      "Collibra (proof of concept)",
     ],
     quotes: [
       "Srini was the MDM Solution Architect working at Allianz.",
@@ -588,7 +614,7 @@ export const stories: Record<string, Story> = {
     },
     leadership: [
       "Earn the next piece of work through the current one: delivery is the best business development.",
-      "Run a team across three countries as one practice, with shared standards and methods.",
+      "Run a team across three countries as one practice, with shared standards and methods, and an architecture community of practice to spread them.",
       "Work as one architecture community with the client's own solution architects.",
     ],
     lessons: [

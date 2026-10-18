@@ -5,7 +5,7 @@ export const intro = {
   eyebrow: "About me",
   title: "Fluent at sea level.",
   titleAccent: "Trusted at 30,000 feet.", // non-breaking space keeps "30,000 feet" together
-  lead: "If you need someone to take a complex, regulated technology estate and turn it into a funded plan that actually ships, that's what I do. Most recently I led architecture, engineering and data for the partner and payment platforms of a global payments network: 200M transactions a day at 99.999%, carried through a merger, a £40M convergence and PCI DSS 4.0. I started as a developer in 2001, and that's still my edge: I can go deep into the code with an engineer in the morning, make the investment case to an executive board in the afternoon, and translate faithfully between the two.",
+  lead: "If you need someone to take a complex, regulated technology estate and turn it into a funded plan that actually ships, that's what I do. Most recently I led architecture, engineering and data for the partner and payment platforms of a global payments network: 200M transactions a day at 99.999%, carried through a merger, a multi-year platform convergence and PCI DSS 4.0. I started as a developer in 2001, and that's still my edge: I can go deep into the code with an engineer in the morning, make the investment case to an executive board in the afternoon, and translate faithfully between the two.",
 };
 
 export const portrait = {
@@ -70,7 +70,7 @@ export const influence = {
       eyebrow: "In the boardroom",
       title: "Decisions won with evidence",
       items: [
-        { text: "Won Investment Council approval for a £40M convergence, framed around the merger's own goal", href: "/insights/converging-144-applications-after-a-merger" },
+        { text: "Won executive approval for a multi-year convergence, framed around the merger's own goal", href: "/insights/converging-144-applications-after-a-merger" },
         { text: "Changed a CIO's plan: kept a critical mainframe running safely instead of a rushed replacement", href: "/insights/saying-no-safely" },
         { text: "Stopped a platform move 120 days before go-live, after several presentations made the evidence win", href: "/leadership" },
       ],
@@ -155,7 +155,7 @@ export const philosophy = {
       word: "Delivery",
       qualifier: "always",
       body: "Care and clarity only matter when they ship. I hold a high bar for outcomes and resilience, and I own the hard days as well as the good ones.",
-      evidence: "A £40M convergence approved, with measurable three-year targets",
+      evidence: "A multi-year convergence approved, with measurable three-year targets",
     },
   ],
 };
@@ -164,7 +164,7 @@ export const now = {
   title: "My situation",
   paragraphs: [
     "My role ended in August 2026, made redundant following an acquisition.",
-    "Restructuring is something I understand from the inside — I directed the £40M, 144-platform convergence programme after the merger. Being on the other side of it hasn't changed my view: well-run integration is how organisations get stronger.",
+    "Restructuring is something I understand from the inside — I directed the platform convergence programme after the merger. Being on the other side of it hasn't changed my view: well-run integration is how organisations get stronger.",
     "It has also given me something rare in a 25-year career: time to step back, sharpen my tools and choose my next chapter deliberately.",
   ],
   lookingFor: {
@@ -190,7 +190,7 @@ export const now = {
 export const principles = [
   {
     title: "Start with the investment case",
-    body: "Architecture earns its place when it changes a business decision. A £40M platform convergence I led began as an evidence base for an Investment Council — not a diagram.",
+    body: "Architecture earns its place when it changes a business decision. A multi-year platform convergence I led began as an evidence base for an investment decision — not a diagram.",
   },
   {
     title: "Silos are a trust problem",
@@ -271,7 +271,7 @@ export const summary = {
       href: "/leadership",
     },
     {
-      text: "Steered a global payments network through a merger without dropping below 99.999% availability: mapped the combined estate, tested it for the extra load, and won approval for a £40M convergence by deciding, application by application, what deserved to survive.",
+      text: "Steered a global payments network through a merger without dropping below 99.999% availability: mapped the combined estate, tested it for the extra load, and won approval for a multi-year convergence by deciding, application by application, what deserved to survive.",
       href: "/insights/converging-144-applications-after-a-merger",
     },
     {
@@ -304,12 +304,12 @@ export const impact = [
   { value: "360%", label: "Surge absorbed with Agentic AI, same team", href: "/experience/discover" },
   { value: "27%", label: "Fewer support calls via an AI chatbot", href: "/experience/ricoh" },
   { value: "21%", label: "Better customer-matching rates (master data)", href: "/experience/allianz" },
-  { value: "10–12 → 1", label: "Partner portals consolidated, cutting cost by 23%", href: "/experience/discover" },
+  { value: "Many → 1", label: "Overlapping partner portals consolidated into one, cutting cost by 23%", href: "/experience/discover" },
   { value: "4x", label: "Team velocity in six months of AI-assisted delivery (10–15 → 45–60 story points a sprint)", href: "/experience/discover" },
   { value: "86", label: "Integrations designed for a $500M Oracle Cloud programme", href: "/experience/ricoh" },
-  { value: "95%", label: "Of 140+ data models governed and in sync with production", href: "/experience/discover" },
+  { value: "95%", label: "Of data models governed and in sync with production", href: "/experience/discover" },
   { value: "#1", label: "Top-rated manager of a larger team, company-wide (2025 survey)", href: "/leadership" },
-  { value: "£40M", label: "Convergence across 144 platforms", href: "/experience/discover" },
+  { value: "M&A", label: "Post-merger convergence, decided application by application", href: "/experience/discover" },
   { value: "£1.5M+", label: "Annual revenue from a function I built", href: "/experience/interglobe" },
 ];
 
@@ -344,7 +344,7 @@ export const bookshelf = {
       title: "The 7 Habits of Highly Effective People",
       author: "Stephen R. Covey",
       idea: "Understand before you try to be understood, and start with the end in mind.",
-      inPractice: "Discovery workshops before any solution design, and a North Star before any roadmap — from consulting clients to a £40M platform convergence.",
+      inPractice: "Discovery workshops before any solution design, and a North Star before any roadmap — from consulting clients to a post-merger platform convergence.",
       href: "/experience/discover",
       linkLabel: "The payments case study",
     },

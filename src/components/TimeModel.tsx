@@ -1,4 +1,4 @@
-// Gartner TIME classification of a 144-application estate: a donut of the split
+// Gartner TIME classification of an application estate, as shares: a donut of the split
 // beside the TIME grid (business value against technical fitness).
 // Drawn as one SVG; scrolls sideways on narrow phones.
 
@@ -8,10 +8,10 @@ const FG = "var(--foreground)";
 const MUTED = "var(--muted)";
 
 const groups = [
-  { name: "Migrate", count: 69, color: "var(--accent-2)", does: "High value, poor fit: move to AWS" },
-  { name: "Invest", count: 40, color: "var(--accent)", does: "High value, good fit: build on it" },
-  { name: "Tolerate", count: 20, color: "#5fe3c0", does: "Good fit, low value: run as is" },
-  { name: "Eliminate", count: 15, color: MUTED, does: "Low value, poor fit: retire it" },
+  { name: "Migrate", count: 48, color: "var(--accent-2)", does: "High value, poor fit: move to AWS" },
+  { name: "Invest", count: 28, color: "var(--accent)", does: "High value, good fit: build on it" },
+  { name: "Tolerate", count: 14, color: "#5fe3c0", does: "Good fit, low value: run as is" },
+  { name: "Eliminate", count: 10, color: MUTED, does: "Low value, poor fit: retire it" },
 ];
 const total = groups.reduce((n, g) => n + g.count, 0);
 // Where each donut segment starts, as a share of the whole.
@@ -36,7 +36,7 @@ export default function TimeModel() {
         viewBox="0 0 1000 380"
         className="min-w-[680px] w-full"
         role="img"
-        aria-label={`Of ${total} applications: ${groups.map((g) => `${g.count} ${g.name}`).join(", ")}. On the TIME grid, Invest is high business value and high technical fitness; Migrate is high value but poor fitness; Tolerate is low value but good fitness; Eliminate is low value and poor fitness.`}
+        aria-label={`Share of the estate: ${groups.map((g) => `${g.name} about ${g.count}%`).join(", ")}. On the TIME grid, Invest is high business value and high technical fitness; Migrate is high value but poor fitness; Tolerate is low value but good fitness; Eliminate is low value and poor fitness.`}
         style={{ fontFamily: "var(--font-inter), sans-serif" }}
       >
         {/* Donut */}
@@ -59,8 +59,8 @@ export default function TimeModel() {
             );
           })}
         </g>
-        <text x={190} y={186} textAnchor="middle" fill={FG} fontSize={40} fontWeight={700}>{total}</text>
-        <text x={190} y={212} textAnchor="middle" fill={MUTED} fontSize={13}>applications</text>
+        <text x={190} y={186} textAnchor="middle" fill={FG} fontSize={30} fontWeight={700}>Estate</text>
+        <text x={190} y={212} textAnchor="middle" fill={MUTED} fontSize={13}>share by decision</text>
 
         {/* TIME grid */}
         {cells.map(([name, col, row]) => {
@@ -72,8 +72,7 @@ export default function TimeModel() {
               <rect x={x} y={y} width={cw} height={ch} rx={12} fill={SURFACE} stroke={g.color} strokeWidth={1.5} />
               <rect x={x + 18} y={y + 22} width={12} height={12} rx={3} fill={g.color} />
               <text x={x + 38} y={y + 33} fill={FG} fontSize={15} fontWeight={700}>{name.toUpperCase()}</text>
-              <text x={x + 18} y={y + 84} fill={FG} fontSize={38} fontWeight={700}>{g.count}</text>
-              <text x={x + 76} y={y + 84} fill={MUTED} fontSize={13}>{Math.round((g.count / total) * 100)}%</text>
+              <text x={x + 18} y={y + 84} fill={FG} fontSize={38} fontWeight={700}>~{g.count}%</text>
               <text x={x + 18} y={y + 116} fill={MUTED} fontSize={12}>{g.does}</text>
             </g>
           );

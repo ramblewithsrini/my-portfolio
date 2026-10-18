@@ -45,7 +45,7 @@ export const roleValues: RoleValue[] = [
     intro:
       "Twenty-five years from developer to TOGAF-certified enterprise architect. I design target states that are fundable, deliverable and owned by the teams who run them — and I stay with them until they land.",
     value: [
-      "North Stars and target architectures tied to investment cases — like the £40M, 144-platform convergence at Discover",
+      "North Stars and target architectures tied to investment cases — like the post-merger platform convergence at Discover",
       "A post-merger playbook: map the combined estate (LeanIX, capability map, Gartner TIME), test it for the combined load (SLOs, SLAs, capacity), then rationalise",
       "Governance that speeds teams up: Deputy Chair of an enterprise design governance board reviewing 50–75 designs a year, with ADRs and delegated approvals",
       "Modern patterns applied pragmatically: event-driven, DDD, CQRS, hexagonal, multi-region cloud",
@@ -120,7 +120,7 @@ export const roleValues: RoleValue[] = [
       { value: "21%", label: "Better MDM matching rates at Allianz UK" },
       { value: "4 months", label: "From decision to live: governed Agentic AI at Discover" },
       { value: "27%", label: "Fewer support-desk emails and calls via conversational AI at Ricoh" },
-      { value: "95%", label: "Of 140+ data models in sync with production and governed, at Discover" },
+      { value: "95%", label: "Of data models in sync with production and governed, at Discover" },
     ],
     quote:
       "He had a rare ability to translate complicated architectural decisions into practical discussions, making him an outstanding partner to Product Management.",
@@ -140,7 +140,7 @@ export const roleValues: RoleValue[] = [
     focus: "Teams, delivery and resilience",
     headline: "Engineering organisations that deliver — with people who want to stay.",
     intro:
-      "I've led a 30-person architecture and engineering organisation through its managers, for payment platforms processing 200M transactions a day — through a merger, a platform convergence, PCI DSS 4.0 and a post-merger surge.",
+      "I've led an architecture and engineering organisation through its managers, for payment platforms processing 200M transactions a day — through a merger, a platform convergence, PCI DSS 4.0 and a post-merger surge.",
     value: [
       "Leaders who grow leaders: clear decision rights, service ownership and coaching",
       "Functions built from the ground up, across the UK, US and India",

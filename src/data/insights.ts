@@ -295,7 +295,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "The decision was his, and he accepted the recommendation. The failover was approved, and a roadmap to exit the mainframe was worked out. It was also why, when we later shaped the £40M convergence programme, the mainframe exit sat outside its three-year scope.",
+        text: "The decision was his, and he accepted the recommendation. The failover was approved, and a roadmap to exit the mainframe was worked out. It was also why, when we later shaped the convergence programme, the mainframe exit sat outside its three-year scope.",
       },
       {
         type: "p",
@@ -315,15 +315,15 @@ export const articles: Article[] = [
   },
   {
     slug: "converging-144-applications-after-a-merger",
-    title: "Case study: 144 applications, and what deserved to survive",
-    dek: "A merger, a public promise of savings and an estate built one decision at a time: how we decided what to keep, and how that became a £40M, three-year investment case.",
+    title: "Case study: after a merger, what deserved to survive",
+    dek: "A merger, a public promise of savings and an estate built one decision at a time: how we decided what to keep, and how that became a three-year investment case.",
     date: "2026-10-10",
     status: "published",
     tags: ["Case study", "Architecture", "Mergers", "Financial services"],
     blocks: [
       {
         type: "p",
-        text: "The merger was announced with a promise. When the global card network I worked for was acquired by a larger bank, the deal came with a public commitment to cost savings. Before long, that promise had become a question on my desk: across 144 partner and payment applications, which ones deserved to survive?",
+        text: "The merger was announced with a promise. When the global card network I worked for was acquired by a larger bank, the deal came with a public commitment to cost savings. Before long, that promise had become a question on my desk: across our whole estate of partner and payment applications, which ones deserved to survive?",
       },
       { type: "h2", text: "An estate built one sensible decision at a time" },
       {
@@ -371,12 +371,12 @@ export const articles: Article[] = [
       {
         type: "diagram",
         name: "time-model",
-        caption: "The 144 applications on Gartner's TIME grid: business value against technical fitness",
+        caption: "The application estate on Gartner's TIME grid, as shares: business value against technical fitness",
       },
       { type: "h2", text: "The people behind the Eliminate box" },
       {
         type: "p",
-        text: "On a diagram, Eliminate is just a box with 15 applications in it. In a meeting room, it is people. Some owners and their teams heard 'eliminate' and feared it meant their jobs, or a smaller role. That fear was understandable, and helping them through it was the biggest ask of the whole programme.",
+        text: "On a diagram, Eliminate is just a box of applications. In a meeting room, it is people. Some owners and their teams heard 'eliminate' and feared it meant their jobs, or a smaller role. That fear was understandable, and helping them through it was the biggest ask of the whole programme.",
       },
       {
         type: "p",
@@ -389,7 +389,7 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "My team reverse-engineered the application and found more than 15 functional gaps and a compliance risk. That left me asking the Investment Council for the opposite of the saving they expected: keep paying for the SaaS platform. It took several presentations. The evidence won, and the move was stopped. A saving that creates a compliance risk isn't a saving.",
+        text: "My team reverse-engineered the application and found more than 15 functional gaps and a compliance risk. That left me asking the investment committee for the opposite of the saving they expected: keep paying for the SaaS platform. It took several presentations. The evidence won, and the move was stopped. A saving that creates a compliance risk isn't a saving.",
       },
       { type: "h2", text: "Making the case" },
       {
@@ -398,11 +398,11 @@ export const articles: Article[] = [
       },
       {
         type: "p",
-        text: "The final decision sat with the divisional CIO. My job was to give him the facts, the figures and the reasoning behind every recommendation, so the decision was his, backed by our evidence. He agreed the proposal, and the Investment Council approved £40M for a three-year programme against four targets.",
+        text: "The final decision sat with the divisional CIO. My job was to give him the facts, the figures and the reasoning behind every recommendation, so the decision was his, backed by our evidence. He agreed the proposal, and the investment was approved for a three-year programme against four targets.",
       },
       {
         type: "table",
-        caption: "The three-year targets behind the £40M case",
+        caption: "The three-year targets behind the investment case",
         head: ["Target", "Goal", "Why it matters"],
         rows: [
           ["Compliance", "Every system compliant", "Risk removed, not just moved"],
@@ -1152,7 +1152,7 @@ export const articles: Article[] = [
       { type: "h3", text: "7. Retire duplicates with evidence, not deadlines" },
       {
         type: "p",
-        text: "Consolidation is where platforms win or lose their credibility. When I secured approval for a £40M convergence across 144 applications, the case rested on evidence about duplication, cost and risk.",
+        text: "Consolidation is where platforms win or lose their credibility. When I secured approval for a multi-year convergence across a large application estate, the case rested on evidence about duplication, cost and risk.",
       },
       {
         type: "p",

@@ -71,7 +71,7 @@ export const leadershipMoments: LeadershipMoment[] = [
       "The goal made sense. Consolidation was about cutting duplicate platforms and cost, and the renewal date created real pressure to act. Nobody wanted to pay for a platform they planned to retire.",
     whatIDid: [
       "With no requirements to work from, I asked my team to reverse-engineer the application and recover its high-level requirements. Comparing those with the in-house platform showed more than 15 functional gaps, and a compliance risk if the rebuild wasn't finished in time.",
-      "That meant asking the Investment Council for budget to keep an extra ServiceNow instance: the opposite of the saving they expected. It took several presentations before the evidence won the argument.",
+      "That meant asking the investment committee for budget to keep an extra ServiceNow instance: the opposite of the saving they expected. It took several presentations before the evidence won the argument.",
     ],
     whatChanged: [
       "The premature move was stopped, and the application stayed on ServiceNow.",

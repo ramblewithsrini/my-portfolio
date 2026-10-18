@@ -7,7 +7,7 @@ export const profile = {
   headline: "Architecture, Engineering, Data & AI Leader",
   tagline:
     "25 years turning complex financial-services estates into investment cases, target architectures and executable roadmaps.",
-  bio: "Most recently Head of Technology for Partner Experience and Payments at Discover Financial Services, leading a 30-person architecture and engineering organisation — and the data strategy — for its payment platforms.",
+  bio: "Most recently Head of Technology for Partner Experience and Payments at Discover Financial Services, leading the architecture and engineering organisation — and the data strategy — for its payment platforms.",
   location: "London, UK",
   availability: "Available immediately · Eligible for SC Clearance",
   email: "srini.vankee@gmail.com",
@@ -65,11 +65,11 @@ export const experience: Job[] = [
     endDate: "2026-08",
     highlights: [
       "Owned the target architecture and transition roadmap for partner-enablement and payment platforms processing 200M transactions a day at 10K+ TPS.",
-      "Led and coached a 30-person architecture and engineering organisation through Architecture and Engineering Managers.",
+      "Led and coached an architecture and engineering organisation through Architecture and Engineering Managers.",
       "Led data strategy and governance: metadata curation, data at rest, OLTP/OLAP integration and data lake ingestion, built on domain-driven data models.",
-      "Ran post-merger technology landscaping after the Capital One acquisition (LeanIX, capability map, Gartner TIME) and a scalability assessment (SLOs, SLAs, response times, capacity), then secured Investment Council approval and directed the £40M, 144-platform convergence programme.",
+      "Ran post-merger technology landscaping after the Capital One acquisition (LeanIX, capability map, Gartner TIME) and a scalability assessment (SLOs, SLAs, response times, capacity), then secured executive approval and directed the multi-year convergence programme.",
       "Deputy Chair of the enterprise design governance board, reviewing 50–75 designs a year across the company; owned the architecture decision records for my area and replaced heavy approvals with standards and delegated decision rights.",
-      "Consolidated 10–12 overlapping partner applications and portals into P3, one React.js portal with Okta single sign-on, cutting cost by 23%.",
+      "Consolidated overlapping partner applications and portals into P3, one React.js portal with Okta single sign-on, cutting cost by 23%.",
       "Drove AWS East/West multi-region resilience, CI/CD and automated quality controls to support 99.999% availability.",
       "Delivered PCI DSS 4.0 across the payment platforms with legal and audit: MFA, PAN tokenisation at rest, in motion and in view, centralised logging, unsupported software retired, and an executive status dashboard.",
       "Designed and owned an AI vulnerability remediation assistant on Anthropic's Claude that scans production libraries, flags vulnerable versions and suggests fixes; rolled out AI-assisted delivery that took team velocity from 10–15 to 45–60 story points a sprint in six months.",
@@ -192,9 +192,9 @@ export const projects: Project[] = [
     title: "Post-merger platform convergence",
     caseStudy: "discover",
     client: "Discover Financial Services",
-    impact: "£40M · 144 platforms",
+    impact: "Post-merger convergence",
     description:
-      "Built the evidence base that secured Investment Council funding for enterprise capacity after the Capital One merger, then directed convergence across 144 platforms and applications.",
+      "Built the evidence base that secured funding for enterprise capacity after the Capital One merger, then directed convergence across the platform and application estate.",
     tech: ["Architecture strategy", "Investment cases", "Rationalisation"],
   },
   {

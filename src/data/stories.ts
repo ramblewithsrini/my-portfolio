@@ -40,8 +40,8 @@ export const stories: Record<string, Story> = {
     scope: [
       { label: "Reporting to", value: "Head of Application Architecture" },
       { label: "Remit", value: "Partner Enablement and Experience, plus platform convergence after the Capital One merger" },
-      { label: "Team", value: "30-person architecture & engineering organisation, led through Architecture and Engineering Managers" },
-      { label: "Platforms", value: "Nine partner-experience and payment platforms across the Discover, Diners Club and PULSE networks: seven run by my teams (in-house builds, Salesforce and ServiceNow) and two run by payment processors; integrated with settlement, fraud and disputes" },
+      { label: "Team", value: "Architecture & engineering organisation, led through Architecture and Engineering Managers" },
+      { label: "Platforms", value: "Partner-experience and payment platforms across the Discover, Diners Club and PULSE networks: in-house builds, Salesforce and ServiceNow run by my teams, plus platforms run by payment processors; integrated with settlement, fraud and disputes" },
       { label: "Data", value: "Data strategy and governance for the domain" },
       { label: "Stakeholders", value: "Product, business and executive leadership; the post-merger Integration Management Office" },
       { label: "Scale", value: "200M transactions a day at 10K+ TPS, against 99.999% availability expectations" },
@@ -50,7 +50,7 @@ export const stories: Record<string, Story> = {
       { value: "73 → 5–7", label: "Days to onboard a partner" },
       { value: "360%", label: "Volume surge absorbed by the same service team" },
       { value: "200M", label: "Transactions a day" },
-      { value: "£40M", label: "Convergence across 144 platforms" },
+      { value: "3-year", label: "Post-merger convergence, approved" },
     ],
     milestones: [
       {
@@ -82,8 +82,8 @@ export const stories: Record<string, Story> = {
         outcome: "Onboarding cut to 5–7 days, depending on the merchant, with a unified customer experience — and my team scaled onboarding capacity tenfold, from 100 to 1,000 requests a day, with 97% of primary service requests completing in under 500 ms.",
       },
       {
-        title: "P3: 10–12 partner portals into one",
-        challenge: "Successive mergers and years of keep-the-lights-on fixes had left partners with 10–12 overlapping applications and portals, each with its own login, notifications and password.",
+        title: "P3: many partner portals into one",
+        challenge: "Successive mergers and years of keep-the-lights-on fixes had left partners with a dozen overlapping applications and portals, each with its own login, notifications and password.",
         approach: "Consolidated them into P3 (Partner Product and Portal): one portal rebuilt on React.js, with single sign-on through Okta — one login, one set of notifications, one password. The UI was modernised as part of the PCI DSS 4.0 work.",
         outcome: "A 23% cost reduction, plus an engineering saving as separate teams came together as one central team. P3 now serves partners, issuers and merchants across Discover, Diners Club and PULSE.",
       },
@@ -91,7 +91,7 @@ export const stories: Record<string, Story> = {
         title: "Moving debit cards onto the Discover network",
         challenge: "After the merger, the debit card portfolio had to move from the Visa and Mastercard networks onto the Discover network, without customers noticing anything except that their cards kept working.",
         approach: "Led the authorisation and tokenisation changes, front end and back end, and coordinated settlement and disputes across teams. Before cutover we proved it with live end-to-end transactions on the new network (the 'bubble gum test').",
-        outcome: "The debit migration completed in 2026; credit is planned to follow in 2028 as network acceptance grows.",
+        outcome: "The debit migration completed in 2026.",
       },
       {
         title: "Cross-border payments: Canada and India",
@@ -102,7 +102,7 @@ export const stories: Record<string, Story> = {
       {
         title: "Fraud and financial crime controls",
         challenge: "Faster onboarding and higher volumes could not come at the cost of fraud or compliance.",
-        approach: "Real-time fraud checks in authorisation, a fraud case workflow on Activiti, and partner and merchant fraud controls at onboarding and in monitoring; the reworked onboarding integrated with the teams who owned due diligence.",
+        approach: "Fraud and financial-crime controls across authorisation, case handling and partner onboarding; the reworked onboarding integrated with the teams who owned due diligence.",
         outcome: "Stronger controls alongside faster onboarding. I've written about this in 'Fewer false positives: anti-money laundering starts with identity'.",
       },
       {
@@ -115,7 +115,7 @@ export const stories: Record<string, Story> = {
         title: "Absorbing a 360% surge with Agentic AI",
         challenge: "The Capital One merger drove a surge in referrals — the cases merchants raise when a transaction doesn't go through.",
         approach: "Introduced an AI agent into the Referral Management Service that triages, classifies and prioritises every referral, and resolves the simple cases itself. Live in four months. My team designed the backend for scale: APIs, workflow automation, integration patterns and a referral search bot that cut manual processing.",
-        outcome: "The same customer service centre team absorbed the surge within SLA, handling up to 750 referrals a day, with less reliance on temporary contractors.",
+        outcome: "The same customer service centre team absorbed the surge within SLA, with less reliance on temporary contractors.",
       },
       {
         title: "Secure partner access with Okta",
@@ -138,7 +138,7 @@ export const stories: Record<string, Story> = {
         title: "Merger-ready resilience",
         challenge: "The post-merger volume surge put availability, SLAs and SLOs at risk.",
         approach: "Mapped the combined estate (LeanIX discovery, a capability map and Gartner TIME for every application) and ran a scalability assessment covering SLOs and SLAs, response times, and capacity and disk sizing, so the merged platforms could carry the combined load. Prioritised the scalability work with the Integration Management Office, and scaled capacity rapidly with third-party contractors. Made service health visible in Datadog: dashboards for SLOs, availability and performance, alerting for incident response, and service-health reporting to leadership and the business.",
-        outcome: "The platforms held their 99.999% availability target through a smooth transition of the Capital One network; secured Investment Council approval and directed the £40M, 144-platform convergence programme.",
+        outcome: "The platforms held their 99.999% availability target through a smooth transition of the Capital One network; secured executive approval and directed the multi-year convergence programme.",
       },
       {
         title: "Keeping the mainframe running, safely",
@@ -162,7 +162,7 @@ export const stories: Record<string, Story> = {
         title: "Data strategy & governance",
         challenge: "Data was spread across in-house, SaaS and legacy applications, with no shared view of what it meant or where it lived.",
         approach: "Led metadata curation and the strategy for data at rest; integrated OLTP and OLAP workloads; drove ingestion into the data lake; and anchored it all in domain-driven data models and data governance. With Enterprise Data Management, my team set the governance process and guidelines and ran workshops to roll them out across the payments network; moved metadata curation to a single 'push' model, managed centrally in Hackolade and published to Alation; and used AI (Copilot and generative AI) to reconcile every data model with production.",
-        outcome: "95% of 140+ data models, across 120+ databases, in sync with production and compliant with governance and naming standards — supporting data design for digital payments, fraud, risk, partner enablement, settlements and disputes.",
+        outcome: "95% of data models in sync with production and compliant with governance and naming standards — supporting data design for digital payments, fraud, risk, partner enablement, settlements and disputes.",
       },
     ],
     tech: [

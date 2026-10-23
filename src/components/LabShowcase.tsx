@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { labIntro, mdmLabPublished } from "@/data/mdmLab";
+import { referralLabPublished } from "@/data/referralAgent";
 import { researchLabPublished } from "@/data/researchLab";
 
 // Hands-on, interactive demos: shown on /lab and under Case studies & insights.
@@ -14,7 +15,38 @@ export default function LabShowcase({ id = "lab", heading = true }: { id?: strin
           <p className="mt-2 max-w-2xl text-muted">Hands-on, interactive demos — try them in your browser.</p>
         </>
       )}
-      <Reveal className={heading ? "mt-8" : ""}>
+      {referralLabPublished && (
+        <Reveal className={heading ? "mt-8" : ""}>
+          <div className="rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/[0.08] via-surface to-accent-2/[0.06] p-8 sm:p-10">
+            <p className="type-eyebrow text-accent">Lab · Agentic AI</p>
+            <h3 className="mt-3 font-display text-3xl font-bold tracking-tight">
+              An AI agent that knows <span className="text-gradient">when to hand over.</span>
+            </h3>
+            <p className="mt-4 max-w-3xl leading-relaxed text-muted">
+              Claude investigates card-payment referrals with tools; a policy layer in code decides what actually
+              happens. In a stress test, a smaller model that was never told the rules got 24 of 30 cases right on
+              its own: the policy layer caught five more, including two lost cards it tried to wave through.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href="/lab/referral-agent"
+                className="rounded-full bg-accent px-6 py-3 font-semibold text-background transition-transform hover:scale-105"
+              >
+                Replay the agent →
+              </Link>
+              <a
+                href="https://github.com/ramblewithsrini/referral-agent"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-border px-6 py-3 font-semibold transition-colors hover:border-foreground"
+              >
+                Code on GitHub ↗
+              </a>
+            </div>
+          </div>
+        </Reveal>
+      )}
+      <Reveal className={referralLabPublished || heading ? "mt-6" : ""}>
         <div className="rounded-3xl border border-accent/40 bg-gradient-to-br from-accent/[0.07] via-surface to-accent-2/[0.07] p-8 sm:p-10">
           <p className="type-eyebrow text-accent">{labIntro.eyebrow}</p>
           <h3 className="mt-3 font-display text-3xl font-bold tracking-tight">

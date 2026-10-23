@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ]
     : [];
   const lab = mdmLabPublished
-    ? ["/lab", "/lab/mdm", "/lab/mdm/two-ways", "/lab/research-graph"].map((path) => ({
+    ? ["/lab", "/lab/mdm", "/lab/mdm/two-ways", "/lab/research-graph", "/lab/referral-agent"].map((path) => ({
         url: `${siteUrl}${path}`,
         changeFrequency: "monthly" as const,
         priority: 0.6,

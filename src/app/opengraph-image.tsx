@@ -50,7 +50,7 @@ export default async function Image() {
             }}
           >
             <div style={{ width: 14, height: 14, borderRadius: 999, background: "#a84f3b" }} />
-            Available immediately
+            Open to permanent roles
           </div>
         </div>
 

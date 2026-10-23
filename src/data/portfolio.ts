@@ -9,7 +9,7 @@ export const profile = {
     "25 years turning complex financial-services estates into investment cases, target architectures and executable roadmaps.",
   bio: "Most recently Head of Technology for Partner Experience and Payments at Discover Financial Services, leading the architecture and engineering organisation — and the data strategy — for its payment platforms.",
   location: "London, UK",
-  availability: "Available immediately · Eligible for SC Clearance",
+  availability: "Open to permanent leadership roles · Eligible for SC Clearance",
   email: "srini.vankee@gmail.com",
   // Add a PDF at public/resume.pdf and set this to "/resume.pdf" to show the
   // "Download résumé" button.

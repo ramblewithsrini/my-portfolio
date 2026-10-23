@@ -14,7 +14,7 @@ export const portrait = {
 };
 
 export const glance = [
-  { label: "Seeking", value: "Director / Head of Engineering, Architecture or Data & AI" },
+  { label: "Seeking", value: "Permanent Director / Head of Engineering, Architecture or Data & AI" },
   { label: "Based in", value: "London, UK" },
   { label: "Worked in", value: "India · US · UK · Saudi Arabia · UAE" },
   { label: "Experience", value: "25 years · 15+ in consulting" },
@@ -25,7 +25,7 @@ export const glance = [
     value: "Regulated industries — fintech, payments, insurtech, airlines, telecoms, retail",
   },
   { label: "Clearance", value: "Eligible for SC" },
-  { label: "Availability", value: "Available immediately" },
+  { label: "Availability", value: "In an interim technical leadership role · open to permanent roles" },
 ];
 
 export const uniqueness = {
@@ -161,12 +161,33 @@ export const philosophy = {
 };
 
 export const now = {
-  title: "My situation",
+  title: "Now",
   paragraphs: [
-    "My role ended in August 2026, made redundant following an acquisition.",
-    "Restructuring is something I understand from the inside — I directed the platform convergence programme after the merger. Being on the other side of it hasn't changed my view: well-run integration is how organisations get stronger.",
-    "It has also given me something rare in a 25-year career: time to step back, sharpen my tools and choose my next chapter deliberately.",
+    "I'm currently in an interim technical leadership role.",
+    "Before that, I spent three years leading architecture, engineering and data for the partner and payment platforms of a global card network, through its acquisition and the convergence that followed. Seeing a merger from the inside taught me that well-run integration is how organisations get stronger.",
+    "I'm open to the right permanent leadership role, and I'm choosing it deliberately.",
   ],
+  strongFit: {
+    title: "Where I'd be a strong fit",
+    items: [
+      "A complex, regulated estate that needs one funded plan everyone can explain",
+      "A merger or platform convergence: deciding what deserves to survive",
+      "Bringing AI into engineering safely, with governance that makes teams faster",
+      "Teams that need trust rebuilt and delivery back on track",
+    ],
+  },
+  buildingNow: {
+    title: "What I'm building right now",
+    body: "I still build to learn: most recently a research knowledge graph with entity resolution, GraphRAG and an MCP server, measured against a fixed evaluation set.",
+    links: [
+      { label: "The knowledge graph lab", href: "/lab/research-graph" },
+      { label: "How I measured it", href: "/insights/knowledge-graph-graphrag-mcp" },
+    ],
+  },
+  howIStart: {
+    label: "See how I'd start in your role",
+    href: "/insights/first-90-days-director-of-engineering",
+  },
   lookingFor: {
     summary:
       "Senior roles where I can turn complex estates into investment cases and deliverable roadmaps — and grow the next generation of leaders.",
@@ -178,10 +199,6 @@ export const now = {
       {
         label: "Consulting",
         roles: ["Pre-sales", "Client engagement", "Customer-facing leadership"],
-      },
-      {
-        label: "Contract & interim",
-        roles: ["Interim architecture leadership", "Platform & solution architecture", "AI delivery"],
       },
     ],
   },
@@ -242,9 +259,9 @@ export const chapters = [
     number: "03",
     title: "Where I am now",
     short: "Now",
-    teaser: "My situation, the roles I'm looking for, and why I built this site.",
+    teaser: "What I'm doing now, where I'd be a strong fit, and why I built this site.",
     sections: [
-      { id: "situation", title: "My situation" },
+      { id: "situation", title: "Now" },
       { id: "built", title: "Built with Claude Code" },
     ],
   },
@@ -358,12 +375,6 @@ export const bookshelf = {
     },
   ],
   podcast: "And I keep learning: Simon Sinek's podcast, A Bit of Optimism, is a regular listen.",
-  currentlyReading: {
-    title: "The Infinite Game",
-    author: "Simon Sinek",
-    image: "/images/reading-the-infinite-game.jpg",
-    alt: "Srini reading The Infinite Game by Simon Sinek at home",
-  },
 };
 
 export const beyondWork = {

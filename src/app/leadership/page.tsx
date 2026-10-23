@@ -170,32 +170,12 @@ export default function LeadershipPage() {
           ))}
         </ul>
         <Reveal className="mt-6">
-          <div className="grid items-stretch gap-6 overflow-hidden rounded-3xl border border-border bg-surface sm:grid-cols-[minmax(0,16rem)_1fr]">
-            <div className="relative aspect-[3/4] sm:aspect-auto">
-              <Image
-                src={bookshelf.currentlyReading.image}
-                alt={bookshelf.currentlyReading.alt}
-                fill
-                sizes="(min-width: 640px) 16rem, 100vw"
-                className="object-cover object-[50%_35%]"
-              />
-            </div>
-            <div className="flex flex-col justify-center gap-5 p-7 sm:py-10 sm:pl-0 sm:pr-10">
-              <p className="type-eyebrow text-accent">Currently reading</p>
-              <p className="font-display text-3xl leading-tight font-bold tracking-tight">
-                {bookshelf.currentlyReading.title}
-                <span className="mt-1 block text-base font-normal text-muted">
-                  {bookshelf.currentlyReading.author}
-                </span>
-              </p>
-              <p className="border-t border-border pt-5 text-foreground/85">
-                <span className="mr-2" aria-hidden>
-                  🎧
-                </span>
-                {bookshelf.podcast}
-              </p>
-            </div>
-          </div>
+          <p className="rounded-3xl border border-border bg-surface p-7 text-foreground/85">
+            <span className="mr-2" aria-hidden>
+              🎧
+            </span>
+            {bookshelf.podcast}
+          </p>
         </Reveal>
       </section>
 

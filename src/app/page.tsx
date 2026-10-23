@@ -488,6 +488,17 @@ export default function AboutPage() {
             {now.paragraphs.map((p) => (
               <p key={p}>{p}</p>
             ))}
+            <div className="rounded-3xl border border-border bg-surface p-7 text-base sm:text-lg">
+              <p className="type-eyebrow text-accent">{now.buildingNow.title}</p>
+              <p className="mt-3 text-foreground/85">{now.buildingNow.body}</p>
+              <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                {now.buildingNow.links.map((l) => (
+                  <Link key={l.href} href={l.href} className="font-semibold text-accent hover:underline">
+                    {l.label} →
+                  </Link>
+                ))}
+              </div>
+            </div>
           </Reveal>
           <Reveal delay={150}>
             <div className="h-full rounded-3xl border border-accent/40 bg-accent/[0.06] p-8">
@@ -495,6 +506,15 @@ export default function AboutPage() {
                 What I&apos;m looking for
               </p>
               <p className="mt-4 text-lg leading-relaxed">{now.lookingFor.summary}</p>
+              <p className="type-eyebrow mt-6 text-muted">{now.strongFit.title}</p>
+              <ul className="mt-3 space-y-2">
+                {now.strongFit.items.map((item) => (
+                  <li key={item} className="flex gap-3 leading-relaxed">
+                    <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
               <div className="mt-6 space-y-5">
                 {now.lookingFor.tracks.map((t) => (
                   <div key={t.label}>
@@ -514,7 +534,13 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
-              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+              <Link
+                href={now.howIStart.href}
+                className="mt-7 inline-block rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-background transition-transform hover:scale-105"
+              >
+                {now.howIStart.label} →
+              </Link>
+              <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
                 <Link
                   href="/what-i-bring"
                   className="font-semibold text-accent hover:underline"

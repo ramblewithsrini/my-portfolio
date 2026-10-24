@@ -130,14 +130,11 @@ export default function AboutPage() {
               <p className="type-eyebrow mb-5 text-muted">
                 At a glance
               </p>
-              {/* Two columns: short values pair up side by side, long ones span the card */}
-              <dl className="grid grid-flow-row-dense grid-cols-2 gap-x-5">
-              {glance.map((g, i) => (
+              <dl>
+              {glance.filter((g) => g.inCard).map((g, i) => (
                 <div
                   key={g.label}
-                  className={`border-t border-border py-3 ${i === 0 ? "border-t-0 pt-0" : ""} ${
-                    fillCounts(g.value).length > 30 ? "col-span-2" : ""
-                  }`}
+                  className={`border-t border-border py-3 ${i === 0 ? "border-t-0 pt-0" : ""}`}
                 >
                   <dt className="text-xs text-muted">{g.label}</dt>
                   <dd className="mt-0.5 font-medium">{fillCounts(g.value)}</dd>
@@ -145,6 +142,20 @@ export default function AboutPage() {
               ))}
               </dl>
             </div>
+          </Reveal>
+
+          {/* The rest of "At a glance": a full-width band under the opening and the photo card */}
+          <Reveal intro delay={450} className="lg:col-span-2">
+            <dl className="grid gap-x-10 border-t border-border pt-3 sm:grid-cols-2 lg:grid-cols-3">
+              {glance
+                .filter((g) => !g.inCard)
+                .map((g) => (
+                  <div key={g.label} className="py-3">
+                    <dt className="text-xs text-muted">{g.label}</dt>
+                    <dd className="mt-0.5 font-medium">{fillCounts(g.value)}</dd>
+                  </div>
+                ))}
+            </dl>
           </Reveal>
         </div>
       </section>

@@ -13,9 +13,10 @@ export const portrait = {
   alt: "Srini Vankeepuram, smiling, in a dark jacket",
 };
 
+// inCard: shown under the photo; the rest sit in a grid under the opening text.
 export const glance = [
-  { label: "Seeking", value: "Permanent Director / Head of Engineering, Architecture or Data & AI" },
-  { label: "Based in", value: "London, UK" },
+  { label: "Seeking", value: "Permanent Director / Head of Engineering, Architecture or Data & AI", inCard: true },
+  { label: "Based in", value: "London, UK", inCard: true },
   { label: "Worked in", value: "India · US · UK · Saudi Arabia · UAE" },
   { label: "Experience", value: "25 years · 15+ in consulting" },
   { label: "Recognition", value: "Employee of the Year on three client accounts · conference speaker since 2007" },
@@ -25,7 +26,7 @@ export const glance = [
     value: "Regulated industries — fintech, payments, insurtech, airlines, telecoms, retail",
   },
   { label: "Clearance", value: "Eligible for SC" },
-  { label: "Availability", value: "In an interim technical leadership role · open to permanent roles" },
+  { label: "Availability", value: "In an interim technical leadership role · open to permanent roles", inCard: true },
 ];
 
 export const uniqueness = {

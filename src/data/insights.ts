@@ -50,6 +50,147 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "from-architect-to-engineering-leader",
+    title: "From architect to engineering leader: what carries over, and what I had to unlearn",
+    dek: "What an engineering leader actually needs, where an architecture background helps, and the hardest habit I had to break: knowing the answer and not giving it.",
+    date: "2026-10-25",
+    status: "published",
+    tags: ["Leadership", "Engineering leadership", "Architecture", "People"],
+    blocks: [
+      {
+        type: "p",
+        text: "Early in my architecture career I kept seeing the same pattern. We would agree the principles, the teams would deliver on time, and on paper everything matched. Then, months later, the business asked for something new, or asked for it faster, and we found the shortcuts. Nobody had ignored the architecture on purpose. They had followed the rules without knowing why the rules mattered, and under deadline pressure a rule you don't understand is the first thing to bend.",
+      },
+      {
+        type: "p",
+        text: "That was my turning point. The gap wasn't technical. It was a gap in understanding, and closing it took leadership: explaining the why, making the right way the easy way, and staying with the teams while they built. That is when I realised the job I wanted wasn't drawing the architecture. It was leading the people who build it.",
+      },
+      {
+        type: "p",
+        text: "I'm sometimes asked, politely, whether an architect can really run engineering. It's a fair question, so here is my honest answer: what the job needs, what an architecture background brings to it, and what I had to unlearn.",
+      },
+      { type: "h2", text: "What an engineering leader actually needs" },
+      {
+        type: "p",
+        text: "Strip away the titles and an engineering leader is accountable for a few things that don't change, whether the organisation is ten people or a hundred:",
+      },
+      {
+        type: "list",
+        items: [
+          "Delivery people can rely on: work that ships when it should, at a quality that doesn't come back to bite.",
+          "Healthy teams: the right people, growing, trusted, and safe to raise problems early.",
+          "Leaders who lead: managers who own their teams' outcomes, with clear decision rights, rather than everything routing through one person.",
+          "Data, not instinct: knowing how the teams are really doing, and acting on it.",
+          "Judgement on trade-offs: speed against quality, build against buy, new features against technical debt.",
+          "Translation: turning business goals into engineering plans, and engineering reality into language executives can fund.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Notice that most of that list is about people and delivery, not design. That's deliberate. An engineering leader is measured by what the teams ship and how they feel doing it, not by the elegance of the diagrams.",
+      },
+      { type: "h2", text: "Where an architecture background helps" },
+      {
+        type: "p",
+        text: "An architect spends years learning to see how parts depend on each other, what breaks when one changes, and what a decision will cost three years later. Those habits carry straight into leading engineering.",
+      },
+      {
+        type: "list",
+        items: [
+          "Teams are a system too. The way teams are organised shapes the software they build, so I design team boundaries, ownership and hand-offs with the same care as service boundaries.",
+          "Trade-offs are the daily job. Architects make and record decisions under uncertainty. As a leader I write decisions down with the reasons, agree who decides what, and turn decisions into guardrails rather than gates.",
+          "Translation comes naturally. Building investment cases for executive boards is architecture work. It's also exactly what a leader needs to win funding, headcount and time for the work that matters.",
+          "The long view. Architects carry the cost of technical debt in their heads. A leader with that instinct protects time to pay it down before it slows every release.",
+          "Credibility with engineers. Teams can tell whether a leader understands their work. I still build, which keeps my questions honest.",
+        ],
+      },
+      { type: "h2", text: "Why, what and how, in one place" },
+      {
+        type: "p",
+        text: "Much of an architect's job is managing stakeholders: sitting with business leaders, product, risk and executives, and explaining why a change matters and what it needs to be. An engineering leader owns the other half: how it gets built, by whom, and by when.",
+      },
+      {
+        type: "p",
+        text: "In many organisations those two halves sit with different people, and the meaning gets thinner at every hand-over. The why becomes a requirement, the requirement becomes a ticket, and by the time it reaches the team the reason has gone. That is exactly the gap I described at the start.",
+      },
+      {
+        type: "p",
+        text: "A leader who has done both can keep the why, the what and the how aligned. Teams hear the reasons first-hand, so they can make good calls on their own. Stakeholders get honest answers about cost, risk and timing, from someone who understands both the business goal and the engineering reality. And when a trade-off has to be made, it's made once, with the whole picture, instead of being argued over across three hand-overs.",
+      },
+      {
+        type: "p",
+        text: "To be clear, this isn't about taking over product's role or becoming the person everything routes through. It's the opposite. I work alongside product so the business reasoning survives the journey into engineering, and so engineering's realities flow back to stakeholders early. And I pass the why on to managers and teams, so they can carry it without me in the room.",
+      },
+      { type: "h2", text: "The hardest thing I had to unlearn" },
+      {
+        type: "p",
+        text: "As an architect, I usually knew how the system should be designed, and the quickest route was to say so. But every time I handed over the answer, I took away the team's chance to own it. It was the same mistake as my turning point, seen from the other side: a solution handed down is understood no better than a rule handed down.",
+      },
+      {
+        type: "p",
+        text: "So I changed how I used what I knew. Instead of providing the solution, I used my knowledge to question it: to find the gaps, test the edge cases and ask what would happen when things went wrong. The team still got the benefit of my experience, but the design, and the understanding behind it, became theirs. Questions like these did more than any design document:",
+      },
+      {
+        type: "list",
+        items: [
+          "What happens when the volume doubles?",
+          "How do we roll this back if it fails at two in the morning?",
+          "Who else will need this data next year, and how will they get it?",
+          "What would make this hard to change in six months?",
+        ],
+      },
+      {
+        type: "p",
+        text: "It was genuinely hard. Holding back an answer you already have feels slow, and sometimes it is slow, the first time. But teams that work out the design understand why it matters, and that understanding is what holds when the deadline bites.",
+      },
+      { type: "h2", text: "People management is the multiplier" },
+      {
+        type: "p",
+        text: "Architecture knowledge makes a leader useful. How you treat people decides whether teams give you their best. The habits that made the biggest difference for me were simple, and none of them are architectural:",
+      },
+      {
+        type: "list",
+        items: [
+          "Own the mistakes as the leader, give the credit away, and keep blame out of the room. Teams that aren't defending themselves start collaborating.",
+          "Make good work visible to the people who decide careers, rather than waiting for a promotion case to do it.",
+          "With a team that had lost the business's trust, listen to both sides first, share progress openly every week, and take the difficult conversations myself.",
+          "Bring change in step by step, with the team. When we introduced AI-assisted development, we measured where we started and tracked it sprint by sprint. Velocity went from 10–15 to 45–60 story points within six months, and the team owned the result.",
+          "Measure the health of the team as seriously as its delivery. Over three years, only one person chose to leave.",
+        ],
+      },
+      {
+        type: "p",
+        text: "I've written about several of these moments, from both sides, in my leadership stories.",
+      },
+      { type: "h2", text: "What it looks like in delivery" },
+      {
+        type: "p",
+        text: "The combination shows up in results, not in diagrams. On the platforms I led at a card network, partner onboarding went from 73 days to five to seven; the same service team absorbed a 360% surge in work with the help of a governed AI agent; and every twice-yearly network release, with rule changes that issuers, acquirers and processors had to certify against, landed on its fixed date with no major incidents. Each of those needed a good design. Each was delivered by teams who understood why the design mattered.",
+      },
+      { type: "h2", text: "If you're an architect thinking about the move" },
+      {
+        type: "list",
+        items: [
+          "Spend more of your week on people than on designs, and protect that time.",
+          "Explain the why behind every principle, until the team can explain it back.",
+          "Ask before you answer. Your knowledge is the safety net, not the blueprint.",
+          "Lead through your managers, and let them own their teams' outcomes.",
+          "Measure delivery and team health, not architectural purity.",
+          "Keep building something, so your questions stay honest.",
+        ],
+      },
+      { type: "h2", text: "If you're hiring an engineering leader with an architecture background" },
+      {
+        type: "p",
+        text: "Don't ask whether they can design systems; they can. Ask how they get teams to own decisions, how they grow managers, what they measure, and what they did the last time a team was struggling. The best answers will be about people, and the architecture will show up in the quality of their questions.",
+      },
+      {
+        type: "quote",
+        text: "As an architect I was paid to have the answer. As a leader, my job is to make sure the team finds it, and understands why it's right.",
+      },
+    ],
+  },
+  {
     slug: "governed-ai-agent-policy-layer",
     title: "Let the agent propose, let the policy decide: a governed AI agent, stress-tested",
     dek: "An AI agent that triages declined card payments, with the rules enforced in code outside the model. The interesting result came when I took the rules out of its prompt.",

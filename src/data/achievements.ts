@@ -187,8 +187,8 @@ export const achievements: Achievement[] = [
     linkLabel: "Read the story",
   },
   {
-    title: "Hiring for the gaps, growing people",
-    outcome: "Hired for the team's gaps and for potential, ran an architecture community of practice across the company, defined career pathways for architects and coached people to AWS certification. Near-zero attrition followed.",
+    title: "Hiring for the gaps, growing leaders",
+    outcome: "Hired for the team's gaps and for potential, then grew people into leaders: I nominated a team member for a company-wide award, made the case and won it. Ran an architecture community of practice across the company, defined career pathways for architects and coached people to AWS certification. Near-zero attrition followed.",
     lenses: ["leadership"],
     href: "/leadership#visible",
     linkLabel: "Read the story",

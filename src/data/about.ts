@@ -315,22 +315,6 @@ export const summary = {
   ],
 };
 
-// Headline results across the career, shown as a grid under the summary.
-export const impact = [
-  { value: "200M", label: "Transactions a day", href: "/experience/discover" },
-  { value: "73 → 5–7", label: "Days to onboard a partner", href: "/experience/discover" },
-  { value: "360%", label: "Surge absorbed with Agentic AI, same team", href: "/experience/discover" },
-  { value: "27%", label: "Fewer support calls via an AI chatbot", href: "/experience/ricoh" },
-  { value: "21%", label: "Better customer-matching rates (master data)", href: "/experience/allianz" },
-  { value: "Many → 1", label: "Overlapping partner portals consolidated into one, cutting cost by 23%", href: "/experience/discover" },
-  { value: "4x", label: "Team velocity in six months of AI-assisted delivery (10–15 → 45–60 story points a sprint)", href: "/experience/discover" },
-  { value: "86", label: "Integrations designed for a $500M Oracle Cloud programme", href: "/experience/ricoh" },
-  { value: "95%", label: "Of data models governed and in sync with production", href: "/experience/discover" },
-  { value: "#1", label: "Top-rated manager of a larger team, company-wide (2025 survey)", href: "/leadership" },
-  { value: "M&A", label: "Post-merger convergence, decided application by application", href: "/experience/discover" },
-  { value: "£1.5M+", label: "Annual revenue from a function I built", href: "/experience/interglobe" },
-];
-
 // Compact "how I built this site" card on About; the detail is on /under-the-hood.
 export const builtCard = {
   title: "Built with Claude Code",

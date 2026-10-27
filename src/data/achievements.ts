@@ -3,18 +3,20 @@
 // Public wording rules apply (no team sizes, budgets or internal names).
 // Employers are described by industry here; the linked pages carry the names.
 
-export type Lens = "architecture" | "leadership" | "advisory";
+export type Lens = "architecture" | "leadership" | "data" | "advisory";
 
 // Key order sets the order of the filter buttons and the lens bands.
 export const lensLabels: Record<Lens, string> = {
   leadership: "Leadership",
   architecture: "Architecture",
+  data: "Data & AI",
   advisory: "Advisory & Transformation",
 };
 
 // One line under each lens band, saying what the lens covers.
 export const lensSummaries: Record<Lens, string> = {
   architecture: "Enterprise integration, platforms built to carry real load, and the decisions that kept them safe.",
+  data: "Data people trust, and AI that's governed before it's scaled.",
   leadership: "Teams across three countries, platforms modernised, partners held to account and a practice built from zero.",
   advisory: "Change sold, shaped and steered: pre-sales, innovation labs, a network migration and post-merger convergence.",
 };
@@ -27,9 +29,17 @@ export const lensStats: Record<Lens, Stat[]> = {
     { value: "112", label: "Systems integrated for a major national airline, including Amadeus and Sabre", href: "/experience/tcs" },
     { value: "86", label: "Integrations designed for a global technology company's $500M Oracle Cloud programme", href: "/experience/ricoh" },
     { value: "200M", label: "Transactions a day on the payment platforms I owned the architecture for", href: "/experience/discover" },
-    { value: "21%", label: "Better customer-matching rates (master data)", href: "/experience/allianz" },
+    { value: "4 tiers", label: "Resilience model mapping every application to availability and recovery targets (SLO/SLA, RTO/RPO)", href: "/experience/discover" },
+    { value: "CAD · INR", label: "Cross-border card processing for Canada and India, with in-country processing for India's data rules", href: "/experience/discover" },
+    { value: "PCI DSS 4.0", label: "Delivered across the payment platforms: MFA, PAN tokenisation, centralised logging", href: "/experience/discover" },
+  ],
+  data: [
+    { value: "21%", label: "Better customer-matching rates (master data)", href: "/insights/the-customers-we-couldnt-see" },
     { value: "95%", label: "Of data models governed and in sync with production", href: "/experience/discover" },
     { value: "27%", label: "Fewer support calls via an AI chatbot", href: "/experience/ricoh" },
+    { value: "In production", label: "An AI vulnerability remediation assistant on Anthropic's Claude, with a person reviewing every fix", href: "/experience/discover" },
+    { value: "AI policy", label: "Co-wrote my organisation's AI governance policy: approved tools, data rules, human review", href: "/experience/discover" },
+    { value: "Open code", label: "Three public labs I built myself: a knowledge graph with GraphRAG, an MDM engine and a governed AI agent", href: "/lab" },
   ],
   leadership: [
     { value: "UK · India · US", label: "Teams led across three countries, run as one organisation", href: "/experience/discover" },
@@ -109,9 +119,51 @@ export const achievements: Achievement[] = [
   {
     title: "An AI vulnerability remediation assistant",
     outcome: "Built on Anthropic's Claude: scans production libraries, flags vulnerable versions and suggests fixes, with a person reviewing every fix.",
+    lenses: ["data", "architecture"],
+    href: "/experience/discover",
+    linkLabel: "See the details",
+  },
+  {
+    title: "Payments, end to end",
+    outcome: "Platforms covering partner onboarding with KYB checks, authorisation, tokenisation, settlement and disputes, including cross-border processing for Canada and India.",
     lenses: ["architecture"],
     href: "/experience/discover",
     linkLabel: "See the details",
+  },
+  {
+    title: "A resilience tier for every application",
+    outcome: "Mapped every application in the estate to a four-tier resilience model, with latency, availability and recovery targets set through the design board, and failover tested every six months by SRE.",
+    lenses: ["architecture"],
+    href: "/experience/discover",
+    linkLabel: "See the details",
+  },
+  {
+    title: "AI governance before AI adoption",
+    outcome: "Co-wrote my organisation's AI governance policy (approved tools, what data may go in, human review, risk and monitoring), evaluated Copilot, Claude and Agentforce, then rolled out AI-assisted delivery in three stages.",
+    lenses: ["data", "leadership"],
+    href: "/experience/discover",
+    linkLabel: "See the details",
+  },
+  {
+    title: "A governed AI agent, live in four months",
+    outcome: "An agent built on rules and machine learning, with a person in the loop, went live in four months and absorbed a 360% post-merger surge with the same team.",
+    lenses: ["data", "leadership"],
+    href: "/insights/absorbing-a-360-percent-surge",
+    linkLabel: "Read the case study",
+  },
+  {
+    title: "Identity resolution for global banks",
+    outcome: "Identity resolution and business hierarchies for global banks, and KYB checks built into partner onboarding; presented graph-based identity resolution at a data conference in Dallas.",
+    lenses: ["data", "advisory"],
+    href: "/experience/pitney-bowes",
+    linkLabel: "See the details",
+  },
+  {
+    title: "Still hands-on",
+    outcome: "Three labs I built and published with open code: a knowledge graph with entity resolution and GraphRAG, an MDM matching engine, and a governed AI agent with a replayable stress test.",
+    lenses: ["data", "architecture"],
+    href: "/lab",
+    linkLabel: "See the labs",
   },
   {
     title: "Platform modernisation, from customer experience to modern architecture",
@@ -151,7 +203,7 @@ export const achievements: Achievement[] = [
   {
     title: "AI-assisted delivery, rolled out in three stages",
     outcome: "Team velocity rose from 10–15 to 45–60 story points a sprint within six months.",
-    lenses: ["leadership"],
+    lenses: ["leadership", "data"],
     href: "/insights/leading-distributed-teams-through-agentic-ai",
     linkLabel: "Read the article",
   },
@@ -177,11 +229,11 @@ export const achievements: Achievement[] = [
     linkLabel: "Read the story",
   },
   {
-    title: "Innovation labs, then and now",
-    outcome: "Architected an airline innovation lab whose demos were shown to airline CEOs and CTOs and used by major airlines, then helped build a second lab and presented it to a major Gulf airline. Today I still build public labs: a knowledge graph with GraphRAG, an MDM engine and a governed AI agent.",
+    title: "Airline innovation labs",
+    outcome: "Architected an airline innovation lab whose demos were shown to airline CEOs and CTOs and used by major airlines, then helped build a second lab and presented it to a major Gulf airline.",
     lenses: ["advisory", "architecture"],
-    href: "/lab",
-    linkLabel: "See the labs",
+    href: "/experience/tcs",
+    linkLabel: "See the details",
   },
   {
     title: "On stage and recognised",
@@ -214,7 +266,7 @@ export const achievements: Achievement[] = [
   {
     title: "A single customer view for a large insurer",
     outcome: "Matching rates 21% better, and a household view that let marketing cross-sell.",
-    lenses: ["advisory", "architecture"],
+    lenses: ["data", "advisory", "architecture"],
     href: "/insights/the-customers-we-couldnt-see",
     linkLabel: "Read the case study",
   },

@@ -39,7 +39,7 @@ export const lensStats: Record<Lens, Stat[]> = {
     { value: "27%", label: "Fewer support calls via an AI chatbot", href: "/experience/ricoh" },
     { value: "In production", label: "An AI vulnerability remediation assistant on Anthropic's Claude, with a person reviewing every fix", href: "/experience/discover" },
     { value: "AI policy", label: "Co-wrote my organisation's AI governance policy: approved tools, data rules, human review", href: "/experience/discover" },
-    { value: "Open code", label: "Three public labs I built myself: a knowledge graph with GraphRAG, an MDM engine and a governed AI agent", href: "/lab" },
+    { value: "Open code", label: "Public labs I built myself, including a governed AI agent, a knowledge graph with GraphRAG, a RAG assistant and an MDM engine", href: "/lab" },
   ],
   leadership: [
     { value: "UK · India · US", label: "Teams led across three countries, run as one organisation", href: "/experience/discover" },
@@ -160,7 +160,7 @@ export const achievements: Achievement[] = [
   },
   {
     title: "Still hands-on",
-    outcome: "Three labs I built and published with open code: a knowledge graph with entity resolution and GraphRAG, an MDM matching engine, and a governed AI agent with a replayable stress test.",
+    outcome: "Hands-on labs I built and published with open code, including a governed AI agent with a replayable stress test, a knowledge graph with GraphRAG, a measured RAG assistant and an MDM matching engine.",
     lenses: ["data", "architecture"],
     href: "/lab",
     linkLabel: "See the labs",

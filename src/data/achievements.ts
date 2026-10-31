@@ -7,8 +7,8 @@ export type Lens = "architecture" | "leadership" | "data" | "advisory";
 
 // Key order sets the order of the filter buttons and the lens bands.
 export const lensLabels: Record<Lens, string> = {
-  leadership: "Leadership",
-  architecture: "Architecture",
+  leadership: "Engineering & Architecture Leadership",
+  architecture: "Enterprise Architecture",
   data: "Data & AI",
   advisory: "Advisory & Transformation",
 };

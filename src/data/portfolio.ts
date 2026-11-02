@@ -4,7 +4,7 @@
 export const profile = {
   name: "Srini Vankeepuram",
   initials: "SV",
-  headline: "Architecture, Engineering, Data & AI Leader",
+  headline: "Architecture, Engineering & Data Leader · Regulated Platforms in Change",
   tagline:
     "25 years turning complex financial-services estates into investment cases, target architectures and executable roadmaps.",
   bio: "Most recently Head of Technology for Partner Experience and Payments at Discover Financial Services, leading the architecture and engineering organisation — and the data strategy — for its payment platforms.",
@@ -148,6 +148,7 @@ export const experience: Job[] = [
       "Defined the vision, strategy and target operating model for the shared digital platform — adopted by six projects; recognised by the steering committee as a key reason for the programme's success.",
       "Led and managed a 15-person TCS implementation team, onsite and offshore.",
       "Contributed to and defined the approach for release, configuration and test automation practices for corporate IT developments.",
+      "Supported Allianz's merger with another insurance company (2016–17) with technology due diligence on the other insurer's systems and enterprise software.",
       "Shaped the IBM relationship with procurement — licensing, SOWs and a pilot POC — and managed third-party implementation partners.",
       "Developed the containerisation strategy for the Customer Data Solution and designed federated ESB patterns.",
       "Presented Allianz's single customer view at IBM's MDM conference at Hursley (2016).",

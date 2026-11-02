@@ -137,8 +137,8 @@ export const stories: Record<string, Story> = {
       {
         title: "Faster, safer releases",
         challenge: "Legacy Java applications on WebSphere were slow and manual to deploy.",
-        approach: "My team completed the move from WebSphere Application Server to OpenShift, modernising deployment patterns and automating build and release.",
-        outcome: "Deployment lead time cut by 80–90%, with more repeatable releases.",
+        approach: "My team completed the move from WebSphere Application Server to OpenShift, modernising deployment patterns and automating build and release. On the Diners Club platforms, my teams strengthened CI/CD and end-to-end test automation, and set quality gates on all new code.",
+        outcome: "Deployment lead time cut by 80–90%. On the Diners Club platforms, release time fell from 3–4 weeks to under a week (urgent fixes in about 4 hours), and automated test coverage rose from about 30% to 80%, with 80% required on all new code.",
       },
       {
         title: "Merger-ready resilience",
@@ -161,8 +161,8 @@ export const stories: Record<string, Story> = {
       {
         title: "AI that makes good teams faster",
         challenge: "AI tools promised faster delivery, but in a regulated payments environment they had to be safe, and the gain had to be real.",
-        approach: "Co-wrote the AI governance policy with risk, security and enterprise teams: approved tools and use cases, what data may go into AI tools, human review of AI output, and risk assessment and monitoring. Evaluated GitHub Copilot, Anthropic Claude and Salesforce Agentforce, and built an AI and automation team from scratch. Rolled out AI-assisted development in three stages, choosing tools on capability, cost, security and vendor lock-in, with velocity baselined first and tracked sprint by sprint. Designed and owned an AI vulnerability remediation assistant, built by my team and run in production on Anthropic's Claude, that scans production libraries, flags vulnerable versions and suggests fixes.",
-        outcome: "Team velocity rose from 10–15 to 45–60 story points a sprint within six months.",
+        approach: "Co-wrote the AI governance policy with risk, security and enterprise teams: approved tools and use cases, what data may go into AI tools, human review of AI output, and risk assessment and monitoring. Evaluated GitHub Copilot, Anthropic Claude and Salesforce Agentforce, and built an AI and automation team from scratch. Rolled out AI-assisted development in three stages, choosing tools on capability, cost, security and vendor lock-in, with velocity baselined first and tracked sprint by sprint. Designed and owned an AI vulnerability remediation assistant, built by my team and run in production on Anthropic's Claude, that scans production libraries, flags vulnerable versions and suggests fixes. My team also delivered and maintained a Salesforce Agentforce assistant for partner service, used directly by partners and by service staff, with a person in the loop.",
+        outcome: "Team velocity rose from 10–15 to 45–60 story points a sprint within six months, and the Agentforce assistant cut partner service workload by about 15%.",
       },
       {
         title: "Data strategy & governance",
@@ -513,6 +513,11 @@ export const stories: Record<string, Story> = {
         challenge: "The platform depended on IBM products and on a third-party implementation partner.",
         approach: "Worked with procurement to shape the IBM relationship — products, licence management, consulting, statements of work and a pilot POC — and kept the TCS implementation team, onsite and offshore, working as one team with ours.",
       },
+      {
+        title: "Technology due diligence for a merger with another insurer",
+        challenge: "When Allianz was merging with another insurance company (2016–17), it needed to know what the other insurer's systems did and how they would fit.",
+        approach: "Carried out technology due diligence on the other insurer's systems and enterprise software (what each was used for and where it overlapped with Allianz), and helped shape the convergence that followed.",
+      },
     ],
     leadershipStory: {
       title: "Winning adoption, not mandating it",
@@ -742,7 +747,7 @@ export const stories: Record<string, Story> = {
       {
         title: "Hands-on engineering at Qwest",
         challenge: "Wholesale service delivery centres needed a single point of contact to track service requests through ordering, provisioning and billing.",
-        approach: "As Lead Developer, built the Instant Activation module and the web services other systems used to reach the Customer Request Management platform, and migrated ColdFusion pages to J2EE on WebLogic with Struts.",
+        approach: "As Lead Developer, built the Instant Activation module and the web services other systems used to reach the Customer Request Management platform, and migrated ColdFusion pages to J2EE on WebLogic with Struts. Then, back in India in 2004, I built my first team from scratch and led it through moving the platform's production support offshore.",
       },
       {
         title: "Pre-sales that won work",

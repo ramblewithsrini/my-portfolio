@@ -139,7 +139,7 @@ export const achievements: Achievement[] = [
   },
   {
     title: "AI governance before AI adoption",
-    outcome: "Co-wrote my organisation's AI governance policy (approved tools, what data may go in, human review, risk and monitoring), evaluated Copilot, Claude and Agentforce, then rolled out AI-assisted delivery in three stages.",
+    outcome: "Co-wrote my organisation's AI governance policy (approved tools, what data may go in, human review, risk and monitoring), evaluated Copilot, Claude and Agentforce, then rolled out AI-assisted delivery in three stages. A partner service assistant on Agentforce, with a person in the loop, cut workload by about 15%.",
     lenses: ["data", "leadership"],
     href: "/experience/discover",
     linkLabel: "See the details",
@@ -167,7 +167,7 @@ export const achievements: Achievement[] = [
   },
   {
     title: "Platform modernisation, from customer experience to modern architecture",
-    outcome: "My teams rebuilt the partner portal from scratch on React with single sign-on, and moved a 14-year-old payments portfolio from WebSphere and Java 8 to OpenShift on AWS, Java 21 and Spring Boot 3, with no customer disruption.",
+    outcome: "My teams rebuilt the partner portal from scratch on React with single sign-on, and moved a 14-year-old payments portfolio from WebSphere and Java 8 to OpenShift on AWS, Java 21 and Spring Boot 3, with no customer disruption. Release time fell from 3–4 weeks to under a week, and test coverage rose from about 30% to 80%.",
     lenses: ["leadership", "architecture"],
     href: "/experience/discover",
     linkLabel: "See the details",

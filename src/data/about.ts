@@ -15,7 +15,7 @@ export const portrait = {
 
 // inCard: shown under the photo; the rest sit in a grid under the opening text.
 export const glance = [
-  { label: "Seeking", value: "Permanent Director / Head of Engineering, Architecture or Data & AI", inCard: true },
+  { label: "Seeking", value: "Permanent Head of Architecture, Engineering or Data · regulated platforms in change: payments, mergers, modernisation, governed AI", inCard: true },
   { label: "Based in", value: "London, UK", inCard: true },
   { label: "Worked in", value: "India · US · UK · Saudi Arabia · UAE" },
   { label: "Experience", value: "25 years · 15+ in consulting" },
@@ -179,10 +179,10 @@ export const now = {
   },
   buildingNow: {
     title: "What I'm building right now",
-    body: "I still build to learn: most recently a research knowledge graph with entity resolution, GraphRAG and an MCP server, measured against a fixed evaluation set.",
+    body: "I still build to learn: most recently a governed AI agent that triages referrals, where the agent proposes and a written policy decides, with replayable runs, a stress test and a clear hand-over to a person.",
     links: [
-      { label: "The knowledge graph lab", href: "/lab/research-graph" },
-      { label: "How I measured it", href: "/insights/knowledge-graph-graphrag-mcp" },
+      { label: "The governed AI agent lab", href: "/lab/referral-agent" },
+      { label: "How the policy layer works", href: "/insights/governed-ai-agent-policy-layer" },
     ],
   },
   howIStart: {

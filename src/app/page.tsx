@@ -10,6 +10,7 @@ import {
   beyondWork,
   builtCard,
   chapters,
+  everySeat,
   glance,
   influence,
   intro,
@@ -95,7 +96,10 @@ export default function AboutPage() {
               </h1>
             </Reveal>
             <Reveal intro delay={200}>
-              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
+              <p className="mt-8 max-w-2xl text-xl font-medium leading-snug text-foreground sm:text-2xl">
+                {intro.identity}
+              </p>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
                 {intro.lead}
               </p>
             </Reveal>
@@ -158,6 +162,46 @@ export default function AboutPage() {
                 ))}
             </dl>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Every seat: product, architecture, engineering, teaching */}
+      <section id="every-seat" aria-labelledby="every-seat-title" className="mx-auto max-w-6xl scroll-mt-32 px-5 pb-16 sm:px-8">
+        <Reveal>
+          <h2 id="every-seat-title" className="type-eyebrow text-accent">
+            {everySeat.title}
+          </h2>
+          <p className="mt-3 max-w-4xl type-title">
+            {everySeat.headline}{" "}
+            <span className="text-gradient">{everySeat.headlineAccent}</span>
+          </p>
+          <p className="mt-4 max-w-2xl text-lg text-muted">{everySeat.lead}</p>
+        </Reveal>
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
+          {everySeat.seats.map((s, i) => (
+            <Reveal key={s.seat} delay={i * 100} className="h-full">
+              <article className="flex h-full flex-col rounded-3xl border border-border bg-surface p-7">
+                <h3 className="font-display text-2xl font-bold tracking-tight">{s.seat}</h3>
+                <p className="mt-2 text-muted">{s.line}</p>
+                <ul className="mt-5 flex-1 space-y-2.5">
+                  {s.proofs.map((proof) => (
+                    <li key={proof} className="flex gap-3 leading-snug">
+                      <span className="mt-0.5 text-accent-2" aria-hidden>
+                        ▸
+                      </span>
+                      {proof}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={s.link.href}
+                  className="mt-6 border-t border-border pt-4 text-sm font-semibold text-accent hover:underline"
+                >
+                  {s.link.label} →
+                </Link>
+              </article>
+            </Reveal>
+          ))}
         </div>
       </section>
 

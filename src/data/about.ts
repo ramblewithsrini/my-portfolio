@@ -5,6 +5,8 @@ export const intro = {
   eyebrow: "About me",
   title: "Fluent at sea level.",
   titleAccent: "Trusted at 30,000 feet.", // non-breaking space keeps "30,000 feet" together
+  // Approved identity line (3 Nov 2026): keep word for word.
+  identity: "A technology leader who has done the job in every seat (product, architecture and engineering), so I can own a regulated platform end to end and change it safely.",
   lead: "If you need someone to take a complex, regulated technology estate and turn it into a funded plan that actually ships, that's what I do. Most recently I led architecture, engineering and data for the partner and payment platforms of a global payments network: 200M transactions a day at 99.999%, carried through a merger, a multi-year platform convergence and PCI DSS 4.0. I started as a developer in 2001, and that's still my edge: I can go deep into the code with an engineer in the morning, make the investment case to an executive board in the afternoon, and translate faithfully between the two.",
 };
 
@@ -15,7 +17,7 @@ export const portrait = {
 
 // inCard: shown under the photo; the rest sit in a grid under the opening text.
 export const glance = [
-  { label: "Seeking", value: "Permanent Head of Architecture, Engineering or Data · regulated platforms in change: payments, mergers, modernisation, governed AI", inCard: true },
+  { label: "Seeking", value: "Permanent Head of Technology, or product, architecture or engineering leadership · regulated client- and partner-facing platforms", inCard: true },
   { label: "Based in", value: "London, UK", inCard: true },
   { label: "Worked in", value: "India · US · UK · Saudi Arabia · UAE" },
   { label: "Experience", value: "25 years · 15+ in consulting" },
@@ -28,6 +30,59 @@ export const glance = [
   { label: "Clearance", value: "Eligible for SC" },
   { label: "Availability", value: "In an interim technical leadership role · open to permanent roles", inCard: true },
 ];
+
+// "Every seat": the four seats I've worked in, each with a few real proofs.
+// Facts trace to the CV facts file; no budgets, internal system names or vendors.
+export const everySeat = {
+  title: "Every seat",
+  headline: "I've done the job in every seat,",
+  headlineAccent: "so I know what each one needs.",
+  lead: "Product, architecture, engineering and teaching. Each seat made me better at the others.",
+  seats: [
+    {
+      seat: "Product",
+      line: "I start with the customer and the partner.",
+      proofs: [
+        "Product Manager for a shared digital platform at Allianz: led UX research and set the design standards with the UX team",
+        "Made the case for and ran a partner platform that cut onboarding from 73 days to 5–7",
+        "Technical Lead for ba.com Manage My Booking",
+        "Co-founder and CTO of TalkMusically: led UX research and designed the customer and mobile journeys",
+      ],
+      link: { label: "The insurance case study", href: "/experience/allianz" },
+    },
+    {
+      seat: "Architecture",
+      line: "I decide what the estate should become, and win the case for it.",
+      proofs: [
+        "Won approval for the convergence of 144 applications after the Capital One acquisition",
+        "Deputy Chair of the enterprise design board",
+        "Technical Design Authority Lead at British Airways",
+      ],
+      link: { label: "How the convergence was won", href: "/insights/converging-144-applications-after-a-merger" },
+    },
+    {
+      seat: "Engineering",
+      line: "I make change safe to ship.",
+      proofs: [
+        "Modernised a payments portfolio: release time cut from 3–4 weeks to under one",
+        "Kept payment platforms at 99.999% availability, at 200M transactions a day",
+        "Put governed AI into production: an agent live in four months",
+      ],
+      link: { label: "The payments case study", href: "/experience/discover" },
+    },
+    {
+      seat: "Teaching and growing people",
+      line: "I leave people stronger than I found them.",
+      proofs: [
+        "Built a product training course and trained 100+ people",
+        "Led a drive that got 25 people TIBCO-certified in 12 months",
+        "Ran numerous TOGAF sessions, and defined career pathways for architects",
+        "Parent Governor",
+      ],
+      link: { label: "How I grow people", href: "/leadership" },
+    },
+  ],
+};
 
 export const uniqueness = {
   title: "What makes me different",
@@ -195,7 +250,7 @@ export const now = {
     tracks: [
       {
         label: "In-house",
-        roles: ["Engineering leadership", "Architecture leadership", "Data & AI leadership"],
+        roles: ["Head of Technology", "Product & platform leadership", "Engineering leadership", "Architecture leadership", "Data & AI leadership"],
       },
       {
         label: "Consulting",

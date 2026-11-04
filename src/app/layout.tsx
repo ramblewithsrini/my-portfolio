@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
 });
 
-const defaultTitle = `${profile.name} — ${profile.headline}`;
+const defaultTitle = `${profile.name} | ${profile.headline}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

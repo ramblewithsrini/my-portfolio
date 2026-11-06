@@ -188,6 +188,7 @@ export const experience: Job[] = [
       "Technical architect in the founding team of TCS's airline innovation lab: designed and built demonstrations, presented them to airline CEOs and CTOs, and saw them used by British Airways, KLM and SITA.",
       "Progressed from Lead Developer to Lead Solution Architect over ten years, across Qwest, British Airways, SITA, Singapore Airlines and Hawaiian Airlines.",
       "Recognised as Employee of the Year on three accounts: Qwest, Saudi Arabian Airlines and British Airways.",
+      "Chosen from about 1,500 colleagues to represent my delivery centre in TCS's PCMM Level 4 final assessment (the Carnegie Mellon People Capability Maturity Model).",
       "Technical Lead and Integration Architect on British Airways' ba.com, including Manage My Booking; delivered a custom eCommerce platform for EHSN (Eastern Home Shopping Network), a Taiwanese retailer.",
       "Supported pre-sales for opportunities worth $3M to $25M, contributing to wins worth $50M.",
     ],

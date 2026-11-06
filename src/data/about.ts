@@ -21,7 +21,7 @@ export const glance = [
   { label: "Based in", value: "London, UK", inCard: true },
   { label: "Worked in", value: "India · US · UK · Saudi Arabia · UAE" },
   { label: "Experience", value: "25 years · 15+ in consulting" },
-  { label: "Recognition", value: "Employee of the Year on three client accounts · conference speaker since 2007" },
+  { label: "Recognition", value: "Employee of the Year on three client accounts · chosen to represent my TCS delivery centre in a PCMM Level 4 assessment · conference speaker since 2007" },
   { label: "Influence", value: "Deputy Chair, enterprise design governance board · {articles} published pieces · {recommendations} recommendations" },
   {
     label: "Focus",

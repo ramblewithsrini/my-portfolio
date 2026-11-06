@@ -729,10 +729,10 @@ export const stories: Record<string, Story> = {
         approach: "Technical Lead and Integration Architect on British Airways' ba.com, including Manage My Booking, connecting the website to the airline's booking and operational systems; and delivered a custom-built eCommerce platform for EHSN (Eastern Home Shopping Network), a retailer in Taiwan.",
       },
       {
-        title: "Recognised by three clients' accounts",
+        title: "Recognised by three clients' accounts, and chosen to represent TCS",
         challenge: "Earning trust on demanding, long-running client engagements.",
         approach: "Delivered across telecoms and airline programmes as a developer, technical lead and architect.",
-        outcome: "Recognised as Employee of the Year on three accounts: Qwest, Saudi Arabian Airlines and British Airways.",
+        outcome: "Recognised as Employee of the Year on three accounts: Qwest, Saudi Arabian Airlines and British Airways. I was also chosen from about 1,500 colleagues to represent my delivery centre in TCS's PCMM Level 4 final assessment (the Carnegie Mellon People Capability Maturity Model).",
       },
       {
         title: "Messaging architecture for BA's Travel Programme",

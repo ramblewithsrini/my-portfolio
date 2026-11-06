@@ -670,7 +670,7 @@ export const stories: Record<string, Story> = {
       {
         date: "Mar 2001 – Nov 2004",
         title: "Lead Developer — Qwest (US telecoms)",
-        body: "Customer Request Management for a US telecoms provider; coordinated client, onsite and offshore teams. In 2004, back in India, I built a young team from scratch and moved the platform's production support offshore, a big step at the time.",
+        body: "Customer Request Management for a US telecoms provider; coordinated client, onsite and offshore teams. Chosen as Qwest's Project of the Year in 2003, its first MQ integration. In 2004, back in India, I built a young team from scratch and moved the platform's production support offshore, a big step at the time.",
       },
       {
         date: "May 2004 – May 2005",
@@ -748,6 +748,7 @@ export const stories: Record<string, Story> = {
         title: "Hands-on engineering at Qwest",
         challenge: "Wholesale service delivery centres needed a single point of contact to track service requests through ordering, provisioning and billing.",
         approach: "As Lead Developer, built the Instant Activation module and the web services other systems used to reach the Customer Request Management platform, and migrated ColdFusion pages to J2EE on WebLogic with Struts. Then, back in India in 2004, I built my first team from scratch and led it through moving the platform's production support offshore.",
+        outcome: "Chosen as Qwest's Project of the Year in 2003, and the first Qwest project to integrate over MQ.",
       },
       {
         title: "Pre-sales that won work",
